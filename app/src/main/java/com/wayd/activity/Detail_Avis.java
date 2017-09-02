@@ -19,7 +19,6 @@ public class Detail_Avis extends MenuDrawerNew implements  AsyncTaches.AsyncGetA
     private RatingBar RT_note;
     private ImageView IMG_photo;
 
-    private ImageView IMG_photol;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
