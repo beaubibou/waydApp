@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dip"
+    android:theme="@style/AppBaseTheme">
+
+    <EditText
+        android:id="@+id/commentaire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:hint="@string/popup_commentaires_description"
+        android:inputType="textMultiLine"
+        android:maxLength="@string/maxLengtCommentaireActivite"
+        android:maxLines="5"
+        android:paddingBottom="10dip" />
+
+</RelativeLayout>

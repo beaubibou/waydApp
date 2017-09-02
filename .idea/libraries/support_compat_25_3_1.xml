@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="support-compat-25.3.1">
+    <ANNOTATIONS>
+      <root url="file://D:/Dropbox/WAYD/apkSigned" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://D:/android/.android/build-cache/beb26c5e0e93ae5f1e2c54c1661791fe05e55671/output/jars/classes.jar!/" />
+      <root url="file://D:/android/.android/build-cache/beb26c5e0e93ae5f1e2c54c1661791fe05e55671/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://D:/android/android-sdk/extras/android/m2repository/com/android/support/support-compat/25.3.1/support-compat-25.3.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,65 @@
+AGGREGATED OVER LAST 24 HOURS:
+Per-Package Stats:
+  * com.android.deskclock / u0a21:
+      * com.android.deskclock / u0a21:
+               TOTAL: 0.00%
+            Receiver: 0.00%
+            (Cached): 100% (2.6MB-4.2MB-4.6MB/1.6MB-2.8MB-3.1MB over 55)
+
+Summary:
+  * com.android.deskclock / u0a21:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 100% (2.6MB-4.2MB-4.6MB/1.6MB-2.8MB-3.1MB over 55)
+
+Run time Stats:
+  SOn /Norm: +9h58m45s7ms
+       Mod : +3h58m26s746ms
+      TOTAL: +13h57m11s753ms
+
+          Start time: 2017-04-06 18:31:11
+  Total elapsed time: +13h57m19s885ms (partial) libdvm.so chromeview
+
+AGGREGATED OVER LAST 3 HOURS:
+Per-Package Stats:
+  * com.android.deskclock / u0a21:
+      * com.android.deskclock / u0a21:
+               TOTAL: 0.00%
+            Receiver: 0.00%
+            (Cached): 100% (2.6MB-4.0MB-4.4MB/1.6MB-2.6MB-3.0MB over 13)
+
+Summary:
+  * com.android.deskclock / u0a21:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 100% (2.6MB-4.0MB-4.4MB/1.6MB-2.6MB-3.0MB over 13)
+
+Run time Stats:
+  SOn /Norm: +2h58m2s34ms
+       Mod : +57m38s375ms
+      TOTAL: +3h55m40s409ms
+
+          Start time: 2017-04-22 17:40:13
+  Total elapsed time: +3h55m43s758ms (partial) libdvm.so chromeview
+
+CURRENT STATS:
+Per-Package Stats:
+  * com.android.deskclock / u0a21:
+      * com.android.deskclock / u0a21:
+               TOTAL: 0.00%
+            Receiver: 0.00%
+            (Cached): 100% (2.6MB-4.0MB-4.4MB/1.6MB-2.6MB-3.0MB over 5)
+
+Summary:
+  * com.android.deskclock / u0a21:
+           TOTAL: 0.00%
+        Receiver: 0.00%
+        (Cached): 100% (2.6MB-4.0MB-4.4MB/1.6MB-2.6MB-3.0MB over 5)
+
+Run time Stats:
+  SOn /Norm: +52m36s628ms
+       Mod : +2m47s64ms (running)
+      TOTAL: +55m23s692ms
+
+          Start time: 2017-04-22 21:09:16
+  Total elapsed time: +55m25s825ms (partial) libdvm.so chromeview

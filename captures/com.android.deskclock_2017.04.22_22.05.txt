@@ -1,0 +1,13 @@
+Applications Graphics Acceleration Info:
+Uptime: 3354608 Realtime: 3354608
+
+** Graphics info for pid 2154 [com.android.deskclock] **
+Profile data in ms:
+
+View hierarchy:
+
+
+Total ViewRootImpl: 0
+Total Views:        0
+Total DisplayList:  0.00 kB
+

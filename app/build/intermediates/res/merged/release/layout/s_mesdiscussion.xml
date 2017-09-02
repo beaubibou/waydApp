@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:id="@+id/id_messagebalise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:visibility="gone"
+                android:gravity="center_horizontal"
+                tools:text="Organisez ou participez à des activités pour ajouter des Waydeurs à votre sphère" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlmessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rlreponse">
+
+            <ListView
+                android:id="@+id/LV_listeMessages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#ffd440"
+                android:layout_margin="5dp"
+                android:dividerHeight="1dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
