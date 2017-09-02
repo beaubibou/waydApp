@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/signaleractivite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/s_signaleractivite_signaler"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:id="@+id/titreactivite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            tools:text='Vous souhaitez signaler "NomActivite"' />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/s_signaleractivite_pourquoi"
+            android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+
+
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/suspecte"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/imgfleche1"
+                        android:layout_toStartOf="@+id/imgfleche1"
+                        android:background="@drawable/borduretextfondblanc"
+                        android:gravity="left|center"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/s_signaleractivite_suspecte"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:drawableRight="@mipmap/ic_next"
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/titre1"/>
+
+
+                    <TextView
+                        android:paddingLeft="15dp"
+                        android:layout_marginTop="2dp"
+                        android:id="@+id/dangereuse"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/borduretextfondblanc"
+                        android:gravity="left|center"
+                        android:drawableRight="@mipmap/ic_next"
+                        android:text="@string/s_signaleractivite_dangereuse"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/titre1"/>
+
+
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:paddingLeft="15dp"
+                        android:background="@drawable/borduretextfondblanc"
+                        android:id="@+id/illicite"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                       android:gravity="left|center"
+                        android:text="@string/s_signaleractivite_illicite"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:drawableRight="@mipmap/ic_next"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/titre1"/>
+
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/gratuite_payante"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/borduretextfondblanc"
+                        android:gravity="left|center"
+                        android:text="@string/s_signaleractivite_gratuitepayante"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold"
+                        android:drawableRight="@mipmap/ic_next"
+                        android:textSize="@dimen/titre1"
+                        />
+
+
+                    <TextView
+                        android:layout_marginTop="2dp"
+                        android:paddingLeft="15dp"
+                        android:id="@+id/autres"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/borduretextfondblanc"
+                        android:gravity="left|center"
+                        android:text="@string/s_signaleractivite_autre"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        style="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold"
+                        android:drawableRight="@mipmap/ic_next"
+                        android:textSize="@dimen/titre1"
+                        />
+
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppBaseTheme"
+
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/id_motcle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:hint="@string/f_critererecherche_hint_motcle"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:theme="@style/ThemeEditTextLight"
+            android:textSize="@dimen/titre1"
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_vertical"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:gravity="center_horizontal"
+                android:hint="@string/f_critererecherche_hint_saisiradresse"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:textSize="@dimen/titre2"
+                android:theme="@style/ThemeEditTextLight"
+
+                />
+
+            <CheckBox
+                android:id="@+id/id_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/f_critererecherche_ck_gps" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+           android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/f_critererecherche_minprogress"
+                android:textColor="#000000"
+                android:textSize="@dimen/titre1" />
+
+            <SeekBar
+                android:id="@+id/id_seek_rayon"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="10"
+                android:progressDrawable="@drawable/seekbarrayon" />
+
+
+            <TextView
+                android:id="@+id/id_affichermax"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="#000000"
+                tools:text="10 KM"
+                android:textSize="@dimen/titre1"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           >
+            <TextView
+                android:id="@+id/txtcategorie"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/titre1"
+                android:text="@string/f_critererecherche_categorie"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+            <Spinner
+                android:id="@+id/id_typeactivite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/txtcategorie"
+                android:layout_gravity="center_vertical"
+                android:spinnerMode="dialog" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/rechercheactivite"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:background="#ffa440"
+                android:gravity="center"
+                android:text="@string/f_critererecherche_recherche"
+                android:textColor="#000000"
+                android:textSize="@dimen/titre1"
+                />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/id_debutdans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wayd</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_liste_avis_activity">ListeAvis_activity</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="facebook_app_id">123403101550569</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+
+    <!-- Example settings for Data & Sync -->
+
+    <!-- Example settings for Notifications -->
+
+    <!-- Strings related to login -->
+
+
+    <style name="DefaultButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#979797</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:shadowColor">#f9f9f9</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
+    <string name="title_activity_barredemenu">barredemenu</string>
+    <string name="title_activity_def_preference">DefPreference</string>
+    <string name="title_activity_testonglet">Testonglet</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_ameliorerwayd">ameliorerwayd</string>
+
+    <!-- ********************* MENU DRAWER *****************************-->
+
+    <string name="menu_drawer_rechercher">Rechercher</string>
+    <string name="menu_drawer_proposer">Proposer</string>
+    <string name="menu_drawer_masphere">Ma sphère</string>
+    <string name="menu_drawer_mesactivite">Mes activités</string>
+    <string name="menu_drawer_ameliorerwayd">Améliorer Wayd</string>
+    <string name="menu_drawer_apropos">À propos de Wayd</string>
+    <string name="menu_drawer_deconnexion">Deconnexion</string>
+
+
+    <!-- ********************* changepwd.xml *****************************-->
+
+    <string name="changepwd_ancienmotdepasse">Ancien mot de passe</string>
+    <string name="changepwd_nouveaumotdepasse">Nouveau mot de passe</string>
+
+
+
+    <!-- ********************* donneavis.xml *****************************-->
+
+    <string name="donneavis_commentpassee">Comment ça s\'est passée ?</string>
+    <string name="donneavis_hint_consigne">Avis (120 caractères maximum) </string>
+    <string name="donneavis_button_valider">Valider</string>
+    <string name="donneavis_switchAmi">Ajoutez à vos amis</string>
+
+    <!-- ********************* apropos.xml *****************************-->
+
+    <string name="apropos_pourandroid">Pour Android</string>
+    <string name="apropos_marques">WAYD sont des marques de WAYD</string>
+    <string name="apropos_logos">WAYD\'COMMUNITY et les logos</string>
+    <string name="apropos_version">Version</string>
+    <string name="apropos_waydcommunty">WAYD\'COMMUNITY</string>
+    <string name="apropos_conditions">Conditions générales</string>
+
+    <!-- ********************* cgu.xml *****************************-->
+
+    <string name="cgu_condition">Conditions d\'utilisations</string>
+    <string name="cgu_button_accept">J\'ACCEPTE LES CONDITIONS D\'UTILISATIONS</string>
+
+    <!-- ********************* f_critererecherche.xml *****************************-->
+
+    <string name="f_critererecherche_hint_motcle">Mots clés</string>
+    <string name="f_critererecherche_hint_saisiradresse">Veuillez saisir une adresse</string>
+    <string name="f_critererecherche_ck_gps">GPS</string>
+    <string name="f_critererecherche_minprogress">0 M</string>
+    <string name="f_critererecherche_categorie">Catégories : </string>
+    <string name="f_critererecherche_recherche">Rechercher</string>
+
+    <!-- ********************* f_profil.xml *****************************-->
+
+    <string name="f_profil_modifier">Modifier</string>
+    <string name="f_profil_masquer">Masquer</string>
+    <string name="f_profil_description">Votre description</string>
+
+    <!-- ********************* f_stats.xml *****************************-->
+
+    <string name="f_stats_participation">Participation</string>
+    <string name="f_stats_participations">Participations</string>
+
+    <string name="f_stats_activite">Activité</string>
+    <string name="f_stats_activites">Activités</string>
+
+    <string name="f_stats_commentaire">Commentaire</string>
+    <string name="f_stats_commentaires">Commentaires</string>
+
+    <string name="f_stats_cercle">Cercle</string>
+
+
+    <!-- ********************* inscription.xml *****************************-->
+
+    <string name="inscription_rejoignez">Rejoignez la communauté Wayd aujourd\'hui</string>
+    <string name="inscription_hint_mail">Adresse e-mail (valide)</string>
+    <string name="inscription_hint_mdp">Mot de passe (6 caractères minimum)</string>
+    <string name="inscription_hint_confirmmdp">Confirmer le mot de passe </string>
+    <string name="inscription_ck_mdp">Afficher le mot de passe</string>
+    <string name="inscription_button_inscription">S\'inscrire</string>
+
+
+    <!-- ********************* login.xml *****************************-->
+
+    <string name="login_prbconnexion">Problème de connexion ?</string>
+    <string name="login_apropos">A propos de WAYD</string>
+    <string name="login_buttonconnexion">Connexion</string>
+    <string name="login_ck_affichermdp">Afficher le mot de passe</string>
+    <string name="login_mdpoublie">Mot de passe oublié ?</string>
+    <string name="login_sinscrire">S\'inscrire su Wayd</string>
+    <string name="login_pasdecompte">Pas encore de compte ?</string>
+
+
+    <!-- ********************* menu_list.xml *****************************-->
+
+    <string name="menu_list_partemps">Temps restant</string>
+    <string name="menu_list_pardistance">Distance</string>
+
+    <!-- *********************pop_signaleractivite.xml *****************************-->
+
+    <string name="pop_signaleractivite_raison">Quelle est la raison ?</string>
+
+    <!-- *********************popup_donneavis.xml *****************************-->
+
+    <string name="pop_donneavis_commentaires">Proposez votre avis</string>
+    <string name="pop_donneavis_titre">Donnez votre avis</string>
+    <string name="pop_donneavis_OK">"Noter"</string>
+    <string name="pop_donneavis_No">"Annuler"</string>
+
+
+
+    <!-- *********************popup_commentaires.xml *****************************-->
+
+    <string name="popup_commentaires_description">"Description de l'activité ..."</string>
+
+    <!-- *********************popup_descriptionprofil.xml *****************************-->
+
+    <string name="popup_descriptionprofil_descritpion">Votre description ...</string>
+
+    <!-- *********************popup_modifieActivite.xml *****************************-->
+
+    <string name="popup_modificationActivite_hintDescritpion">"Description de l'activité."</string>
+    <string name="popup_modificationActivite_hintTitre">"Titre"</string>
+    <string name="popup_modificationActivite_Sauve">"Modifier"</string>
+    <string name="popup_modificationActivite_Annule">"Annuler"</string>
+    <string name="popup_modificationActivite_titre">"Modifier votre activité"</string>
+    <string name="popup_modificationActivite_MaxWaydeurs">"Nombre de Waydeurs"</string>
+
+    <!-- *********************premiereconnexion.xml *****************************-->
+
+    <string name="premiereconnexion_bienvenue">Bienvenue sur Wayd</string>
+    <string name="premiereconnexion_infos">"Avant d'utiliser le service, nous avons besoin de 3 informations :"</string>
+    <string name="premiereconnexion_infopseudo">"Un pseudo unique qui sera visible sur l'application"</string>
+    <string name="premiereconnexion_hintpseudo">Pseudo (12 caractères maximum)</string>
+    <string name="premiereconnexion_datenaissance">Une date de naissance*</string>
+    <string name="premiereconnexion_sexe">Un sexe</string>
+    <string name="premiereconnexion_buttonconfirme">Je confirme</string>
+    <string name="premiereconnexion_infoscomplementaire">"*Informations masquées par défaut. Pourquoi est-ce nécessaire d'indiquer mon âge et mon sexe ?"</string>
+
+
+    <!-- *********************s_detailactivite.xml *****************************-->
+
+    <string name="s_detailactivite_signaler">"Signaler l'activité"</string>
+
+    <!-- Par le code -->
+    <string name="s_detailactivite_complet">"Complète"</string>
+    <string name="s_detailactivite_nbrinscrit">"Nombre d'inscrits : "</string>
+
+    <!-- *********************s_listeamis.xml *****************************-->
+
+    <string name="s_listeamis_rechercher">"Rechercher"</string>
+    <string name="s_listeamis_textinfo">"Organisez ou participez à des activités pour ajouter des Waydeurs à votre sphère"</string>
+
+    <!-- *********************s_menu_principal.xml *****************************-->
+
+    <string name="s_menu_principal_rechercher">"Je recherche"</string>
+    <string name="s_menu_principal_proposer">"Je propose"</string>
+    <string name="s_menu_principal_ennuie">"Je m'ennuie"</string>
+    <string name="s_menu_principal_indicateurs">"Statistiques"</string>
+
+    <!-- *********************s_mesmessages.xml *****************************-->
+
+    <string name="s_mesmessages_envoyer">"Envoyer un message"</string>
+    <!-- Par le code -->
+    <string name="s_mesmessages_noResutat">"Pas de message pour le moment"</string>
+
+
+    <!-- *********************s_mesmessagesactivite.xml *****************************-->
+    <!-- Par le code -->
+    <string name="s_mesmessagesactivite_noResutat">"Ce canal de communication vous permettra d\'échanger des messages le temps de l'activité."</string>
+
+
+    <!-- *********************s_unprofil.xml *****************************-->
+
+    <string name="s_unprofil_signaler">"Signaler"</string>
+
+
+    <!-- *********************s_messuggestions.xml *****************************-->
+
+    <string name="s_messuggestions_alleza">"Paramétrer mes suggestions"</string>
+
+    <!-- *********************signalerbug.xml *****************************-->
+
+    <string name="signalerbug_prbconnexion">"Problème de connexion"</string>
+    <string name="signalerbug_texteinfo">"Vous rencontrer un problème de connexion ? Indiquez votre adresse de connexion et précisez votre problème."</string>
+    <string name="signalerbug_hintmail">"Adresse email"</string>
+    <string name="signalerbug_hintchamplibre">"Champ libre"</string>
+    <string name="signalerbug_buttonvalider">"Valider"</string>
+
+    <!-- *********************s_proposeactivite.xml *****************************-->
+
+    <string name="s_proposeactivite_hintitre">"Titre"</string>
+    <string name="s_proposeactivite_hintdescription">"Description de l'activité (facultatif)"</string>
+    <string name="s_proposeactivite_hintnoadresse">"Veuillez saisir une adresse"</string>
+    <string name="s_proposeactivite_ckgps">"GPS"</string>
+    <string name="s_proposeactivite_duree">"Durée de l'\activité: "</string>
+    <string name="s_proposeactivite_categorie">"Catégorie: "</string>
+    <string name="s_proposeactivite_waydeurs">"Waydeurs: "</string>
+    <string name="s_proposeactivite_deuxpoints">":"</string>
+    <string name="s_proposeactivite_buttonposter">"Poster"</string>
+
+
+    <!-- *********************s_signaleractivite.xml *****************************-->
+
+    <string name="s_signaleractivite_signaler">"Signaler une activité :"</string>
+    <string name="s_signaleractivite_pourquoi">"Pourquoi la signaler ?"</string>
+    <string name="s_signaleractivite_suspecte">"Cette activité est suspecte"</string>
+    <string name="s_signaleractivite_dangereuse">"Elle est dangereuse"</string>
+    <string name="s_signaleractivite_illicite">"Elle est illicite"</string>
+    <string name="s_signaleractivite_gratuitepayante">"Elle est indiquée gratuite mais est payante"</string>
+    <string name="s_signaleractivite_autre">"Autres raisons"</string>
+
+    <!-- *********************s_signaleramelioration.xml *****************************-->
+
+    <string name="s_signaleramelioration_titre">"Une suggestion, une idée ?"</string>
+    <string name="s_signaleramelioration_aideznous">"Aidez-nous à améliorer Wayd, c'est une communauté nous sommes à votre écoute"</string>
+    <string name="s_signaleramelioration_hintchamplibre">"Champ libre"</string>
+    <string name="s_signaleramelioration_buttonvalider">"Valider"</string>
+
+
+    <!-- *********************s_signalerprofil.xml *****************************-->
+
+    <string name="s_signalerprofil_titre">"Signaler un profil :"</string>
+    <string name="s_signalerprofil_quesepassetil">"Que se passe-t-il ?"</string>
+    <string name="s_signalerprofil_harcele">"Ce profil me harcèle"</string>
+    <string name="s_signalerprofil_proposincorrect">"Il tient des propos insultants/racistes"</string>
+    <string name="s_signalerprofil_entreprise">"Il représente une entreprise"</string>
+    <string name="s_signalerprofil_autres">"Autres raisons"</string>
+
+    <!-- ActiviteAdapter -->
+
+    <!-- par le code -->
+    <string name="ActiviteAdapter_complet">"Complète"</string>
+
+    <!-- MesActiviteAdapter -->
+
+    <!-- par le code -->
+    <string name="MesActiviteAdapter_complet">"Complète"</string>
+    <!-- F_listActivite -->
+
+    <!-- par le code -->
+    <string name="F_listActivite_noResutat">"Aucune activité n'est disponible. Modifie tes critères ou propose une activité."</string>
+    <string name="F_listActivite_noResutatBalise">"Aucune activité n'est disponible. Vous pouvez activer la balise pour proposer une activité."</string>
+
+    <!-- F_MesActivitesEnCours -->
+
+    <!-- par le code -->
+    <string name="F_MesActivitesEnCours_noResutat">"Vous n'avez pas d'activité en cours."</string>
+
+
+    <!-- Liste_Amis -->
+
+
+    <!-- par le code -->
+    <string name="Liste_Amis_noResutat">"Organisez ou participez à des activités pour ajouter des Waydeurs à votre sphère."</string>
+
+    <!-- MesDiscussions -->
+    <!-- par le code -->
+    <string name="MesDiscussions_noResutat">"Vous n'avez pas de message en cours."</string>
+
+    <!-- UnProfil -->
+    <!-- par le code -->
+    <string name="UnProfil_noDescriptionHomme">"Ce waydeur n'a pas encore renseigné sa description"</string>
+    <string name="UnProfil_noDescriptionFemme">"Cette waydeuse n'a pas encore renseigné sa description"</string>
+    <string name="UnProfil_noDescriptionMasque">"Ce waydeur ou cette Waydeuse n'a pas encore renseigné sa description"</string>
+
+
+    <!-- MesNotifications.java -->
+    <!-- par le code -->
+    <string name="MesNotifications_noResutat">"Pas de nouvelle notification pour le moment"</string>
+
+    <!-- MesSuggestions.java -->
+    <!-- par le code -->
+    <string name="MesSuggestions_noResutat">"Pas de suggestion pour le moment. Vous pouvez modifier vos paramètres en cliquant ci-dessous"</string>
+
+    <!-- SignalerActivite.java -->
+    <!-- par le code -->
+    <string name="SignalerActivite_description">"Vous souhaitez signaler "</string>
+
+    <!-- SignalerProfil.java -->
+    <!-- par le code -->
+    <string name="SignalerProfil_description">"Vous souhaitez signaler "</string>
+
+    <!-- Premiere connexion.java -->
+    <!-- par le code -->
+    <string name="pseudoVide">"Pseudo vide"</string>
+
+
+
+
+
+    <!--ProposeActivite.java -->
+    <string name="proposeactivite_defautTitre">"Je suis disponible"</string>
+    <string name="proposeactivite_defautCommentaire">"Si vous êtes dans le coin et que vous vous ennuyez, bienvenue !"</string>
+    <string name="proposeactivite_err_titre">"Titre obligatoire"</string>
+    <string name="proposeactivite_err_titreLong">"Votre titre est trop long"</string>
+    <string name="proposeactivite_creationactivite">"Création de votre activité"</string>
+    <string name="proposeactivite_err_saisieadresse">"Renseignez l'adresse"</string>
+    <string name="proposeactivite_err_adresse">"Adresse non valide"</string>
+
+
+    <!--commun -->
+    <!-- par le code -->
+    <string name="commun_hintsaisiradresse">"Saisir l'adresse"</string>
+
+
+
+
+    <!--*********************************************************** Alert Dialog****************-->
+
+    <!-- Suppression de l'activité admin-->
+    <string name="suppression_activiteadminTitre">"Suppression de l'activite en mode ADMIN"</string>
+    <string name="suppression_activiteadminMessage">"Supprimer?"</string>
+    <string name="suppression_activiteadminOK">"Oui"</string>
+    <string name="suppression_activiteadminNo">"Annuler"</string>
+
+
+    <!--Ajoute ami -->
+    <string name="ajouteAmi_Titre">"Voulez vous l'ajouter à votre sphère"</string>
+    <string name="ajouteAmi_Message">"Confirmer ?"</string>
+    <string name="ajouteAmi_OK">"Oui"</string>
+    <string name="ajouteAmi_No">"Annuler"</string>
+
+
+    <!--SignalerProfil -->
+    <string name="SignalerProfil_Titre">"Signaler un profil"</string>
+    <string name="SignalerProfil_Message">"Confirmer ?"</string>
+    <string name="SignalerProfil_OK">"Oui"</string>
+    <string name="SignalerProfil_No">"Annuler"</string>
+
+
+    <!--Supprimer participant-->
+
+    <string name="SupprimerParticipant_Titre">"Suppression du participant"</string>
+    <string name="SupprimerParticipant_Message">"Confirmer ?"</string>
+    <string name="SupprimerParticipant_OK">"Oui"</string>
+    <string name="SupprimerParticipant_No">"Annuler"</string>
+
+
+    <!-- Suppression de l'activité -->
+    <string name="suppression_activiteTitre">"Suppression de l'activite"</string>
+    <string name="suppression_activiteMessage">"Supprimer ?"</string>
+    <string name="suppression_activiteOK">"Oui"</string>
+    <string name="suppression_activiteNo">"Annuler"</string>
+
+    <!-- Ajoute Suggestion -->
+    <string name="AjouteSuggestion_Titre">"Proposez une suggestion"</string>
+    <string name="AjouteSuggestion_Message">"Confirmer ?"</string>
+    <string name="AjouteSuggestion_OK">"Oui"</string>
+    <string name="AjouteSuggestion_No">"Annuler"</string>
+
+    <!-- SupprimeNotification -->
+    <string name="SupprimeNotification_Titre">"Supprimer la notification"</string>
+    <string name="SupprimeNotification_Message">"Confirmer ?"</string>
+    <string name="SupprimeNotification_OK">"Oui"</string>
+    <string name="SupprimeNotification_No">"Annuler"</string>
+
+    <!-- DemandeMail -->
+    <string name="DemandeMail_Titre">"Saisir l'e-mail"</string>
+    <string name="DemandeMail_Message">"Saisissez votre e-mail"</string>
+    <string name="DemandeMail_OK">"Réinitialiser"</string>
+    <string name="DemandeMail_No">"Annuler"</string>
+
+    <!-- ChangerPhoto -->
+    <string name="ChangerPhoto_Titre">"Modifier ma photo"</string>
+
+    <!-- SupprimeAmi -->
+    <string name="SupprimeAmi_Titre">"Supprimer un ami"</string>
+    <string name="SupprimeAmi_Message">"Confirmer ?"</string>
+    <string name="SupprimeAmi_OK">"Oui"</string>
+    <string name="SupprimeAmi_No">"Annuler"</string>
+
+    <!-- SupprimeDiscussion -->
+    <string name="SupprimeDiscussion_Titre">"Supprimer la conversation"</string>
+    <string name="SupprimeDiscussion_Message">"Confirmer ? Cette opération est irréversible."</string>
+    <string name="SupprimeDiscussion_OK">"Oui"</string>
+    <string name="SupprimeDiscussion_No">"Annuler"</string>
+
+    <!-- SupprimeMessage -->
+    <string name="SupprimeMessage_Titre">"Supprimer le message"</string>
+    <string name="SupprimeMessage_Message">"Confirmer ? "</string>
+    <string name="SupprimeMessage_OK">"Oui"</string>
+    <string name="SupprimeMessage_No">"Annuler"</string>
+
+    <!-- SupprimeMessageActivite -->
+    <string name="SupprimeMessageActivite_Titre">"Supprimer le message"</string>
+    <string name="SupprimeMessageActivite_Message">"Confirmer ? "</string>
+    <string name="SupprimeMessageActivite_OK">"Oui"</string>
+    <string name="SupprimeMessageActivite_No">"Annuler"</string>
+
+    <!-- SignalerActivite -->
+    <string name="SignalerActivite_Titre">"Signaler l'activité"</string>
+    <string name="SignalerActivite_Message">"Confirmer ? "</string>
+    <string name="SignalerActivite_OK">"Oui"</string>
+    <string name="SignalerActivite_No">"Annuler"</string>
+    <string name="SignalerActivite_ErreurRaisonVide">"Le commentaire n'est pas valide"</string>
+
+    <!-- ChangementMDP -->
+    <string name="ChangementMDP_Titre">"Changement du mot de passe"</string>
+    <string name="ChangementMDP_Message">"Confirmer ? "</string>
+    <string name="ChangementMDP_OK">"Oui"</string>
+    <string name="ChangementMDP_No">"Annuler"</string>
+
+
+    <!-- DecritActivite -->
+    <string name="DecritActivite_Titre">"Décrivez votre activité"</string>
+    <string name="DecritActivite_Message">"Confirmer ? "</string>
+    <string name="DecritActivite_OK">"Valider"</string>
+    <string name="DecritActivite_No">"Annuler"</string>
+
+
+    <!-- GpsInfo -->
+    <string name="GpsInfo_Titre">"GPS Configuration"</string>
+    <string name="GpsInfo_Message">"Votre GPS n'est pas actif. Voulez vous l'activer dans les paramètres ?"</string>
+    <string name="GpsInfo_OK">"Configurer"</string>
+    <string name="GpsInfo_No">"Annuler"</string>
+
+
+    <!-- MotifSignalement -->
+    <string name="SignalActiviteMotif_Titre">"Signalement"</string>
+    <string name="SignalActiviteMotif_Message">"Signaler"</string>
+    <string name="SignalActiviteMotif_OK">"Signaler"</string>
+    <string name="SignalActiviteMotif_No">"Annuler"</string>
+
+
+    <!-- MotifSignalement -->
+    <string name="SignalProfilMotif_Titre">"Signalement"</string>
+    <string name="SignalProfilMotif_Message">"Signaler"</string>
+    <string name="SignalProfilMotif_OK">"Signaler"</string>
+    <string name="SignalProfilMotif_No">"Annuler"</string>
+
+
+    <!-- DescriptionProfil -->
+    <string name="DescriptionProfil_Titre">"Renseignez votre profil"</string>
+    <string name="DescriptionProfil_Message">""</string>
+    <string name="DescriptionProfil_OK">"Valider"</string>
+    <string name="DescriptionProfil_No">"Annuler"</string>
+
+    <!-- ConfirmeParticipation -->
+    <string name="ConfirmeParticipation_Titre">"Participation"</string>
+    <string name="ConfirmeParticipation_Message">"Confirmez votre participation ?"</string>
+    <string name="ConfirmeParticipation_OK">"Oui"</string>
+    <string name="ConfirmeParticipation_No">"Annuler"</string>
+
+    <!-- AnnuleSonActivite -->
+    <string name="AnnuleSonActivite_Titre">"Annulation"</string>
+    <string name="AnnuleSonActivite_Message">"Voulez vous annuler votre activité ?"</string>
+    <string name="AnnuleSonActivite_OK">"Oui"</string>
+    <string name="AnnuleSonActivite_No">"Annuler"</string>
+
+    <!-- AnnuleSaParticipation -->
+    <string name="AnnuleSaParticipation_Titre">"Annulation"</string>
+    <string name="AnnuleSaParticipation_Message">"Voulez vous annuler votre participation ?"</string>
+    <string name="AnnuleSaParticipation_OK">"Oui"</string>
+    <string name="AnnuleSaParticipation_No">"Annuler"</string>
+
+
+    <!-- InfoPremiereConnexion -->
+    <string name="InfoPremiereConnexion_Titre">"Information"</string>
+    <string name="InfoPremiereConnexion_Message">"Wayd n'utilisera jamais vos informations personnelles
+        à des fins commerciales. Mais pourquoi le sexe et l'âge ? Ces deux informations serviront à des
+        fins de statistiques, pour améliorer le service et vous offrir la meilleure expérience d'utilisation
+        possible."</string>
+    <string name="InfoPremiereConnexion_OK">"J'ai compris"</string>
+    <string name="InfoPremiereConnexion_No">"Annuler"</string>
+
+    <!--*****************************************************************************************-->
+
+    <!--Toast dialog-->
+
+    <string name="activiteSupprimee">"L'activité a été supprimée"</string>
+    <string name="compteCree">"Le compte a été crée, un e-mail de confirmation vous a été envoyé"</string>
+    <string name="consigenMdp">"Le mot de passe doit contenir 6 caractéres"</string>
+    <string name="mailExistDeja">"L'adresse e-mail existe déjà"</string>
+    <string name="mailObligatoire">"E-mail obligatoire"</string>
+    <string name="mdpObligatoire">"Mot de passe obligatoire"</string>
+    <string name="mailNonConforme">"Adresse e-mail non conforme"</string>
+    <string name="prefrenceMisAjour">"Préférences sauvegardées"</string>
+    <string name="mailNonConfirme">"E-mail non confirmé"</string>
+    <string name="prbSignale">"Votre demande sera traitée rapidement"</string>
+    <string name="messageTropLong">"Votre message est trop long"</string>
+    <string name="comptePasActive">"Votre compte n'est pas activé"</string>
+    <string name="renseignerMail">"Veuillez renseigner votre e-mail"</string>
+    <string name="validerLienMail">"Merci de valider le lien dans envoyé à votre adresse e-mail"</string>
+    <string name="noCompteExist">"L'authentification a échouée. Mauvais mot de passe ou compte inexistant"</string>
+    <string name="mdpIncorrect">"L'authentification a échouée. Mauvais mot de passe ou compte inexistant"</string>
+
+
+    <string name="erreurInconnue">"Une erreur est survenue "</string>
+    <string name="messageBienvenue">"Bienvenue "</string>
+    <string name="accesRefuse">"Accès refusé "</string>
+    <string name="noInscription">"Vous n'êtes plus inscrit "</string>
+    <string name="problemeObligatoire">"La description du problème est obligatoire"</string>
+    <string name="nomObligatoire">"Pseudo obligatoire"</string>
+    <string name="dateNaissanceObligatoire">"Date de naissance obligatoire"</string>
+    <string name="mdpObigatoires">"Veuilez saisir correctement les deux mots de passe "</string>
+    <string name="mdpChange">"Mot de passe changé"</string>
+    <string name="creationActivite">"Création de votre activité"</string>
+    <string name="noAdresse"> "Veuillez saisir l'adresse"</string>
+    <string name="err_adresse"> "Adresse non valide"</string>
+    <string name="echecAuth"> "L'authentification a échoué"</string>
+
+
+    <!-- Snack bar -->
+
+    <string name="noActivite">"Voulez-vous émettre une balise ?"</string>
+    <string name="noResult">"Il n'y a pas de résultat, veuillez modifier vos critères"</string>
+
+    <!-- Onglet-RechercheActiviteNew-->
+    <string name="onglet_Criteres">"Critères"</string>
+    <string name="onglet_Resultat">"Résultat"</string>
+    <string name="onglet_Carte">"Carte"</string>
+    <string name="btn_rechercheZone">"Recherchez dans cette zone"</string>
+
+    <!-- Constante -->
+    <string name="maxLengtAvis">"120"</string>
+    <string name="maxLengtMessage">"120"</string>
+    <string name="maxLengtTitreProposeActivite">"50"</string>
+    <string name="maxLengtLibelleProposeActivite">"200"</string>
+    <string name="maxLengtSignaleActivite">"200"</string>
+    <string name="maxLengtCommentaireActivite">"200"</string>
+    <string name="maxLengtDescriptionProfil">"200"</string>
+    <string name="maxLengtPseudo">"12"</string>
+
+
+    <string-array name="actionphoto">
+        <item>Prendre une photo</item>
+        <item>Choisir parmi mes photos</item>
+    </string-array>
+
+    <string-array name="sexe">
+        <item>Femme</item>
+        <item>Homme</item>
+        <item>Autre</item>
+    </string-array>
+    <string name="title_activity_apropos">Apropos</string>
+    <string name="title_activity_cgu">Cgu</string>
+    <string name="updateNotificationPref">"La diffusion des notifications est mis à jour"</string>
+    <string name="title_activity_test">test</string>
+
+</resources>

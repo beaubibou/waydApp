@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#ffd740</color>
+    <color name="colorAccent">#ffe57f</color>
+    <color name="primaryDark">#252525</color>
+    <color name="altertDialog_Fondbutton">#ffffff</color>
+    <color name="altertDialog_Textbutton">#ffa440</color>
+
+</resources>

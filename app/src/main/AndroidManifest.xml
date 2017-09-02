@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.application.wayd">
+
+    <uses-permission android:name="com.vogella.android.locationapi.maps.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <permission android:name="com.javapapers.android.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logowayde"
+        android:label="@string/app_name"
+        android:theme="@style/AppBaseTheme">
+        <activity
+            android:name="com.wayd.activity.LoginWayde"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+              android:name="android.support.multidex.MultiDexApplication"
+
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.wayd.activity.Map_ListeActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="com.wayd.activity.ProposeActivites"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.MesDiscussions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.MesActivites"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.AmeliorerWayd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.RechercheActiviteNew"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.DonneAvis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.SignalerActivite"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.SignalerProfil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.Detail_Avis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.MesSuggestions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.DetailActivite"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="notificationSuggestion" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wayd.activity.MesMessages"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.MesNotifications"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.Liste_Amis"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.main.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.MesMessagesActvite"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.Inscription"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.MenuDrawerNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.Map_MontreActivite"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.MesPreferences"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.wayd.activity.PremiereConnexion"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.MenuNoDrawer"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.PrbConnexion"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.UnProfil"
+            android:label="@string/title_activity_testonglet"
+            android:screenOrientation="portrait" />
+
+
+        <service android:name="com.wayd.activity.FCMInitializationService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.wayd.activity.FCMCallbackService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.wayd.bean.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_wayd" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <activity android:name="com.wayd.activity.Statistique" />
+        <activity
+            android:name="com.wayd.activity.Apropos"
+            android:label="@string/title_activity_apropos" />
+        <activity
+            android:name="com.wayd.activity.Cgu"
+            android:label="@string/title_activity_cgu" />
+    </application>
+
+</manifest>

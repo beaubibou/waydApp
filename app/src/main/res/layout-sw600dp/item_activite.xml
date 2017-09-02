@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#FFFFFF"
+    android:padding="5dp"
+
+
+    >
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/iconactivite"
+            android:layout_marginLeft="10dp"
+            android:layout_width="@dimen/photo2"
+            android:layout_height="@dimen/photo2"
+            android:src="@drawable/com_facebook_profile_picture_blank_square"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/distance"
+            tools:text=" à X mètres"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/pseudo"
+            android:textSize="@dimen/titre1"/>
+
+        <TextView
+            android:id="@+id/dateactivite"
+            android:layout_width="wrap_content"
+            android:maxWidth="320dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="%titre activitélllllmmmmllllllllllll"
+            android:textStyle="normal|bold"
+            android:ellipsize="end"
+            android:layout_marginRight="10dp"
+            android:lines="1"
+            android:textSize="@dimen/titre1"
+            android:layout_above="@+id/iconcActivite"
+            android:layout_alignStart="@+id/pseudo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/amidepuis"
+            tools:text="%X participants sur X "
+            android:textSize="@dimen/titre1"
+            android:layout_above="@+id/tempsrestant"
+            android:layout_alignStart="@+id/dateactivite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tempsrestant"
+            tools:text="Tps restant"
+            android:layout_alignTop="@+id/note"
+            android:layout_alignStart="@+id/amidepuis"
+            />
+
+        <RatingBar
+            android:id="@+id/note"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:progressTint="@android:color/holo_blue_dark"
+            android:progressBackgroundTint="@android:color/holo_blue_dark"
+            android:secondaryProgressTint="@android:color/holo_blue_dark"
+
+
+            android:layout_below="@+id/iconactivite"
+            android:layout_alignEnd="@+id/iconactivite" />
+
+        <TextView
+            android:id="@+id/pseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="%Pseudo"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/iconactivite"
+            android:textSize="@dimen/titre1"/>
+
+        <ImageView
+            android:id="@+id/iconcActivite"
+            android:layout_width="@dimen/photo3"
+            android:layout_height="@dimen/photo3"
+            app:srcCompat="@drawable/com_facebook_button_icon_blue"
+            android:layout_alignBottom="@+id/tempsrestant"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginEnd="18dp" />
+
+
+</RelativeLayout>

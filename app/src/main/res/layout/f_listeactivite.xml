@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="@dimen/titre1"
+                android:layout_marginTop="15dp"
+                android:id="@+id/id_messagebalise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:gravity="center_horizontal"
+                tools:text="Organisez ou participez à des activités pour ajouter des Waydeurs à votre sphère" />
+
+            <ImageView
+
+                android:id="@+id/id_flechebas"
+                app:srcCompat="@mipmap/flechebas2"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/id_messagebalise"
+                android:layout_width="60dp" />
+
+        </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlmessage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/rlreponse">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ListView
+
+            android:id="@+id/listeActivite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#ffd440"
+            android:dividerHeight="1dp" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

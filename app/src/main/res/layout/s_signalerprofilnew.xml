@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#fff"
+    android:padding="10dp"
+    android:theme="@style/AppBaseTheme">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="@string/s_signalerprofil_titre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signalerprofil"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            tools:text="Vous souhaitez signaler NomDuProfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titreprofil"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:text="@string/s_signalerprofil_quesepassetil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt3"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="#ffd440"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/llrl1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="1dp">
+
+
+                <TextView
+
+                    android:id="@+id/harcele"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/imgfleche1"
+                    android:layout_toStartOf="@+id/imgfleche1"
+                    android:background="#fff"
+                    android:layout_gravity="left"
+                    android:gravity="left|center"
+                    android:text="@string/s_signalerprofil_harcele"
+                    android:textAllCaps="false"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imgfleche1"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="#ffffff"
+                    android:paddingRight="5dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@mipmap/ic_next" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/llrl2">
+
+                <ImageView
+                    android:paddingRight="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#fff"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/ic_next"
+                    android:id="@+id/imgfleche2"
+                    android:scaleType="fitCenter"
+                    android:layout_width="20dp" />
+
+                <Button
+
+
+                    android:text="@string/s_signalerprofil_proposincorrect"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/insultant"
+                    android:gravity="left|center"
+                    android:background="#fff"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:layout_toLeftOf="@+id/imgfleche2"
+                    android:layout_toStartOf="@+id/imgfleche2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/llrl3">
+
+                <ImageView
+                    android:paddingRight="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#fff"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/ic_next"
+                    android:id="@+id/imgfleche3"
+                    android:scaleType="fitCenter"
+                    android:layout_width="20dp" />
+
+                <Button
+
+                    android:text="@string/s_signalerprofil_entreprise"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/entreprise"
+                    android:gravity="left|center"
+                    android:background="#fff"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:layout_toLeftOf="@+id/imgfleche3"
+                    android:layout_toStartOf="@+id/imgfleche3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/llrl4">
+
+                <ImageView
+                    android:paddingRight="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#fff"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@mipmap/ic_next"
+                    android:id="@+id/imgfleche4"
+                    android:scaleType="fitCenter"
+                    android:layout_width="20dp" />
+
+                <Button
+
+                    android:text="@string/s_signalerprofil_autres"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:id="@+id/autre"
+                    android:gravity="left|center"
+                    android:background="#fff"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:layout_toLeftOf="@+id/imgfleche4"
+                    android:layout_toStartOf="@+id/imgfleche4" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

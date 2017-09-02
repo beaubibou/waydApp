@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "902442853604",
+    "firebase_url": "https://wayd-c0414.firebaseio.com",
+    "project_id": "wayd-c0414",
+    "storage_bucket": "wayd-c0414.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902442853604:android:c10506c93b40b932",
+        "android_client_info": {
+          "package_name": "com.application.wayd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902442853604-gspl5ma48ni8hqof10o1im2vonfrcpfk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.application.wayd",
+            "certificate_hash": "5b70280d9153c71fd56cd5896f0c1568ff4965a2"
+          }
+        },
+        {
+          "client_id": "902442853604-9b05k6gnfjdum44fo21q2rpbfedn9n7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBc5MmxG3H0L7H5u4wQTxJVx3j_kJYKb8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "902442853604-9b05k6gnfjdum44fo21q2rpbfedn9n7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
