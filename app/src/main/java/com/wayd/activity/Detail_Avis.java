@@ -13,7 +13,7 @@ import com.wayd.bean.Avis;
 import com.wayd.bean.Outils;
 
 public class Detail_Avis extends MenuDrawerNew implements  AsyncTaches.AsyncGetAvis.AsyncGetAvisListener{
-    //private TextView TV_titreActivite;
+    private TextView TV_titreActivite;
     private TextView TV_commentaire,TV_DateAvis;
 
     private RatingBar RT_note;
@@ -46,7 +46,7 @@ public class Detail_Avis extends MenuDrawerNew implements  AsyncTaches.AsyncGetA
     public void loopBack_GetAvis(Avis result) {
         if (result != null) {
 
-            //     TV_titreActivite.setText(result.getTitreactivite());
+            //    TV_titreActivite.setText(result.getTitreactivite());
             TV_DateAvis.setText(result.getDateNotationStr());
             TV_commentaire.setText(result.getAvis());
             RT_note.setIsIndicator(true);
