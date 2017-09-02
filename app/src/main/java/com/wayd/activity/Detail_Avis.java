@@ -16,7 +16,7 @@ public class Detail_Avis extends MenuDrawerNew implements  AsyncTaches.AsyncGetA
     //Test git
     private TextView TV_titreActivite;
     private TextView TV_commentaire,TV_DateAvis;
-
+    //gituh
     private RatingBar RT_note;
     private ImageView IMG_photo;
 
