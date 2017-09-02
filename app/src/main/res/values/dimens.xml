@@ -15,6 +15,8 @@
     <dimen name="photo1">80dp</dimen>
     <dimen name="photo2">60dp</dimen>
     <dimen name="photo3">30dp</dimen>
+    <!--Padding utiliser pour les items des spinners utilisant defautspinnerttem. Il conditionne l'espace des items dans la liste proposée-->
+    <dimen name="paddingSpinner">15dp</dimen>
 
 
     <!-- Default screen margins, per the Android Design guidelines. -->

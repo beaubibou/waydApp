@@ -73,7 +73,6 @@ public class Outils {
         if (listtypeactivitecomplete.get(f).getId()==idTypeActivite)
             return f;
 
-
         return 0;
 
     }

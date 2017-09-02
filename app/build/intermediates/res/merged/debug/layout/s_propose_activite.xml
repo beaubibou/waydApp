@@ -88,88 +88,79 @@
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+       <GridLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           >
 
             <TextView
+                android:padding="@dimen/paddingSpinner"
                 android:id="@+id/txt_dureeactivite"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
                 android:text="@string/s_proposeactivite_duree"
                 android:textSize="@dimen/titre1"
+                android:layout_column="1"
+                android:layout_row="1"
 
                 />
 
             <Spinner
                 android:id="@+id/dureeactivite"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:layout_gravity="left"
 
                 />
 
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            >
-
             <TextView
+                android:padding="@dimen/paddingSpinner"
                 android:id="@+id/txtcategorie"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
                 android:text="@string/s_proposeactivite_categorie"
-                 android:textSize="@dimen/titre1"
+                android:textSize="@dimen/titre1"
+                android:layout_column="1"
+                android:layout_row="2"
 
                 />
 
             <Spinner
                 android:id="@+id/id_typeactivite"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:spinnerMode="dropdown" />
-        </LinearLayout>
+                android:layout_gravity="left"
+                android:spinnerMode="dropdown"
+                android:layout_column="2"
+                android:layout_row="2"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
 
             <TextView
+                android:padding="@dimen/paddingSpinner"
                 android:id="@+id/txt_nbrwaydeurs"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:text="@string/s_proposeactivite_waydeurs"
                 android:textSize="@dimen/titre1"
-                android:gravity="center_vertical"/>
+
+                android:layout_column="1"
+                android:layout_row="3"/>
 
             <Spinner
                 android:id="@+id/nbrmaxwayd"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="left"
+                android:layout_column="2"
+                android:layout_row="3"
                 />
-        </LinearLayout>
+       </GridLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/id_buttonPropose"
