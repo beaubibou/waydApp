@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.wayd.bean.Outils;
 
 public class Cgu extends MenuNoDrawer {
-
+    //Test git
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

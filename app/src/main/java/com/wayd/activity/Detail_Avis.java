@@ -13,6 +13,7 @@ import com.wayd.bean.Avis;
 import com.wayd.bean.Outils;
 
 public class Detail_Avis extends MenuDrawerNew implements  AsyncTaches.AsyncGetAvis.AsyncGetAvisListener{
+    //Test git
     private TextView TV_titreActivite;
     private TextView TV_commentaire,TV_DateAvis;
 
