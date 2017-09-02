@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FFFFFF">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iconactivite"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/com_facebook_profile_picture_blank_square"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/note"
+        android:layout_marginStart="21dp"
+        android:layout_alignTop="@+id/iconactivite"
+        android:layout_toEndOf="@+id/iconactivite" />
+
+    <TextView
+        tools:text="Date avis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateavis"
+        android:layout_below="@+id/iconactivite"
+        android:layout_alignEnd="@+id/note" />
+
+    <TextView
+        tools:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentaire"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/dateavis"
+        android:layout_alignStart="@+id/iconactivite" />
+</RelativeLayout>

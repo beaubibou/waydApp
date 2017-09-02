@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    xmlns:tools="http://schemas.android.com/tools"
+
+  >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        tools:text="categorie"
+        android:textColor="#000000"
+        android:gravity="left|center"
+        android:paddingLeft="15dp"
+
+        android:id="@+id/id_typeactivitenom" />
+</LinearLayout>

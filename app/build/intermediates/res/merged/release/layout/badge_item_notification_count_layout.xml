@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Adding Badge (Item Count)/Notification Count to Android Button-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:orientation="horizontal"
+    android:background="@color/primary"
+
+    >
+
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:id="@+id/badge_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <Button
+                android:id="@+id/tdb_mail"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dip"
+                android:background="@mipmap/ic_courriel2"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/badge_nbrmessagenonlu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/relative_layout"
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/badge_layout1">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="">
+
+            <Button
+                android:id="@+id/tdb_notification"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dip"
+                android:background="@mipmap/ic_notificati" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/badge_nbrnotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/relative_layout1" android:text=""
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/badge_layout1">
+
+        <RelativeLayout
+            android:id="@+id/relative_suggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="">
+
+            <Button
+                android:id="@+id/tdb_suggestion"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_marginTop="5dip"
+                android:background="@mipmap/ic_suggestion3" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/badge_nbrsuggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/relative_suggestion" android:text=""
+            android:textColor="#FFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

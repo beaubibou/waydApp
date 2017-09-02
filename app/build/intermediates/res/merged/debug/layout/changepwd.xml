@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dip">
+
+    <EditText
+        android:id="@+id/oldpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/changepwd_ancienmotdepasse"
+        android:paddingBottom="10dip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:inputType="textPassword"
+        android:textSize="@dimen/titre1"/>
+    <EditText
+        android:id="@+id/newpass"
+        android:hint="@string/changepwd_nouveaumotdepasse"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/oldpass"
+        android:inputType="textPassword"
+        android:textSize="@dimen/titre1"/>
+
+</RelativeLayout>
