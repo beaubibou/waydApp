@@ -96,7 +96,7 @@ public class UnProfil extends MenuDrawerNew implements AsyncTaches.AsyncGetProfi
 
         TextView TV_Profil = (TextView) findViewById(R.id.signalerprofil);
         if (Outils.personneConnectee.getId() == profil.getIdpersonne())
-            TV_Profil.setVisibility(View.INVISIBLE);// Enleve le bouton signaler si c'est mon profil
+            TV_Profil.setVisibility(View.GONE);// Enleve le bouton signaler si c'est mon profil
         else
             TV_Profil.setVisibility(View.VISIBLE);// Enleve le bouton signaler si c'est mon profil
 

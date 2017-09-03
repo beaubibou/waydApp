@@ -27,6 +27,9 @@
     <dimen name="paddingButton">15dp</dimen>
 
     <dimen name="paddingEditTextSingle">20dp</dimen>
+    <dimen name="paddingTextview0">20dp</dimen>
+    <dimen name="paddingTextview1">15dp</dimen>
+
 </resources>
 
 
