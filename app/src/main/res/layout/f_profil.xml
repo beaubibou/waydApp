@@ -222,7 +222,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:background="@drawable/borduretext"
+                    android:background="@drawable/borduretextfondblanc"
                     android:textSize="@dimen/titre2"
                     android:gravity="left"
                     android:hint="@string/f_profil_description"
