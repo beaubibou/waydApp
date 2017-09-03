@@ -11,7 +11,10 @@
     <item name="mr_dialog_fixed_width_major" type="dimen">50%</item>
     <item name="mr_dialog_fixed_width_minor" type="dimen">70%</item>
     <dimen name="paddingButton">15dp</dimen>
+    <dimen name="paddingEditTextSingle">20dp</dimen>
     <dimen name="paddingSpinner">30dp</dimen>
+    <dimen name="paddingTextview0">20dp</dimen>
+    <dimen name="paddingTextview1">15dp</dimen>
     <dimen name="photo0">210dp</dimen>
     <dimen name="photo1">160dp</dimen>
     <dimen name="photo2">120dp</dimen>

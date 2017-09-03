@@ -978,6 +978,8 @@
     <dimen name="paddingButton">10dp</dimen>
     <dimen name="paddingEditTextSingle">15dp</dimen>
     <dimen name="paddingSpinner">14dp</dimen>
+    <dimen name="paddingTextview0">15dp</dimen>
+    <dimen name="paddingTextview1">10dp</dimen>
     <dimen name="photo0">110dp</dimen>
     <dimen name="photo1">80dp</dimen>
     <dimen name="photo2">60dp</dimen>

@@ -231,7 +231,7 @@
     <string name="s_proposeactivite_hintdescription">"Description de l'activité (facultatif)"</string>
     <string name="s_proposeactivite_hintnoadresse">"Veuillez saisir une adresse"</string>
     <string name="s_proposeactivite_ckgps">"GPS"</string>
-    <string name="s_proposeactivite_duree">"Durée de l'\activité: "</string>
+    <string name="s_proposeactivite_duree">"Durée de l\'activité:" </string>
     <string name="s_proposeactivite_categorie">"Catégorie: "</string>
     <string name="s_proposeactivite_waydeurs">"Waydeurs: "</string>
     <string name="s_proposeactivite_deuxpoints">":"</string>

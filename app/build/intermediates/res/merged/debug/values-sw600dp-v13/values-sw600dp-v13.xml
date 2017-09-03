@@ -29,6 +29,8 @@
     <dimen name="paddingButton">15dp</dimen>
     <dimen name="paddingEditTextSingle">20dp</dimen>
     <dimen name="paddingSpinner">20dp</dimen>
+    <dimen name="paddingTextview0">20dp</dimen>
+    <dimen name="paddingTextview1">15dp</dimen>
     <dimen name="photo0">140dp</dimen>
     <dimen name="photo1">105dp</dimen>
     <dimen name="photo2">80dp</dimen>
