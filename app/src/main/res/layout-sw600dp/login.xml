@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCoordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffd440">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <RelativeLayout
+                android:id="@+id/ly_connexionfbetg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ly_connexionclassic"
+                android:layout_centerHorizontal="true"
+                >
+
+                <LinearLayout
+                    android:id="@+id/LO_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
+                    >
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_button"
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
+                          android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/btn_google"
+                        android:layout_width="75dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="false"
+                        android:cropToPadding="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@mipmap/icon_google" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+
+                android:id="@+id/prbconnexion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/login_prbconnexion"
+                android:textSize="@dimen/titre2"
+                android:layout_alignTop="@+id/apropos"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/apropos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/login_apropos"
+                android:textSize="@dimen/titre2"/>
+
+            <RelativeLayout
+                android:id="@+id/ly_logowaydbt"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_above="@+id/ly_connexionfbetg"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <ImageView
+                    android:id="@+id/img_WAYDBT"
+                    android:layout_width="@dimen/photo1"
+                    android:layout_height="@dimen/photo1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:adjustViewBounds="false"
+
+
+                    app:srcCompat="@mipmap/ic_iconwaydbc" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ly_connexionclassic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <LinearLayout
+                    android:id="@+id/LO_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true">
+
+                    <EditText
+                        android:id="@+id/ET_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:backgroundTint="#FFFFFF"
+                         android:inputType="textEmailAddress"
+                        android:text="pmestivier@club.fr"
+                        android:textSize="@dimen/titre1"
+                        />
+
+                    <EditText
+                        android:id="@+id/ET_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        android:text="azerty"
+                        android:textSize="@dimen/titre1"
+                        />
+
+                    <Button
+
+                        android:id="@+id/button_loginwayde"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#FFE740"
+                        android:text="@string/login_buttonconnexion"
+                        android:textSize="@dimen/titre1"/>
+
+
+
+                    <CheckBox
+                        android:id="@+id/id_affmdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/login_ck_affichermdp"
+                        android:textSize="@dimen/titre1"/>
+
+                    <TextView
+                        android:id="@+id/id_mdpoublie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/login_mdpoublie"
+                        android:textSize="@dimen/titre1"/>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ly_pasdecompte"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/prbconnexion"
+                android:layout_below="@+id/ly_connexionclassic">
+
+                <TextView
+                    android:id="@+id/button_nouveaucompte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/login_sinscrire"
+                    android:textAppearance="@android:style/TextAppearance.Holo.Large"
+                   android:textColor="#FFA440"
+                    android:textStyle="normal|bold"
+                    android:textSize="@dimen/titre1"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#000"
+                    android:id="@+id/rl_pasdecompte2"
+                    android:layout_above="@+id/button_nouveaucompte"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/pasencorecompte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/soulignenoirfondjaune"
+                        android:text="@string/login_pasdecompte"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                        android:textColor="#000000"
+                        android:textStyle="normal|bold"
+                        android:textSize="@dimen/titre1"
+
+                         />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

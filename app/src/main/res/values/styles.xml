@@ -34,7 +34,7 @@
 
 
     <style name="ThemeOverlay.AppCompat.navTheme">
-       <!-- Color of text and icon when SELECTED -->
+        <!-- Color of text and icon when SELECTED -->
         <item name="colorPrimary">#000000</item>
         <!-- Background color when SELECTED -->
         <item name="colorControlHighlight">#fff</item>
@@ -53,7 +53,7 @@
          -->
     </style>
 
-<!--
+    <!--
     <style name="spinnerItemStyle">
         <item name="android:paddingLeft">15dp</item>
         <item name="android:textSize">@dimen/titre1</item>
@@ -73,7 +73,7 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-<!-- Exemple De titre à appliquer avec textApparence-->
+    <!-- Exemple De titre à appliquer avec textApparence-->
     <style name="titre1" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:textSize">@dimen/titre1</item>
         <item name="android:textAllCaps">true</item>
@@ -81,22 +81,12 @@
 
     </style>
 
+    <style name="AppBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <!-- <color name="black_overlay">#66000000</color>
        <color name="colour_highlight_grey">#ff666666</color> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </resources>

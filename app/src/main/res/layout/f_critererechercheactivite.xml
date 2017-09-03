@@ -104,30 +104,33 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <GridLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-           >
+            android:layout_gravity="center_horizontal"
+            >
             <TextView
+                android:padding="@dimen/paddingSpinner"
                 android:id="@+id/txtcategorie"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentStart="true"
-                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:textSize="@dimen/titre1"
                 android:text="@string/f_critererecherche_categorie"
+                android:layout_column="1"
+                android:layout_row="1"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
             <Spinner
                 android:id="@+id/id_typeactivite"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/txtcategorie"
-                android:layout_gravity="center_vertical"
-                android:spinnerMode="dialog" />
+                android:layout_gravity="left"
+                android:layout_column="2"
+                android:layout_row="1"
+                 />
 
-        </LinearLayout>
+        </GridLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -149,6 +152,7 @@
                 android:text="@string/f_critererecherche_recherche"
                 android:textColor="#000000"
                 android:textSize="@dimen/titre1"
+
                 />
 
         </LinearLayout>

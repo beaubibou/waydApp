@@ -206,6 +206,7 @@ public class F_CritereRechecheActivite extends Fragment implements GoogleApiClie
         spinnerFiltreactivite = (Spinner) rootView.findViewById(R.id.id_typeactivite);
         TypeActivityAdapter typeActivieAdapter = new TypeActivityAdapter(getActivity(), listtypeactivitecomplete);
         spinnerFiltreactivite.setAdapter(typeActivieAdapter);
+
         typeActivieAdapter.notifyDataSetChanged();
         spinnerFiltreactivite.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

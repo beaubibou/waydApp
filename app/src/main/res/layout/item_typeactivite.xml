@@ -13,7 +13,7 @@
         tools:text="categorie"
         android:textColor="#000000"
         android:gravity="left|center"
-        android:padding="15dp"
+        android:padding="@dimen/paddingSpinner"
         android:textSize="@dimen/titre1"
         android:id="@+id/id_typeactivitenom"
 

@@ -568,6 +568,7 @@
     <string name="title_activity_apropos">Apropos</string>
     <string name="title_activity_cgu">Cgu</string>
     <string name="title_activity_test">test</string>
+    <string name="title_activity_test_layout">TestLayout</string>
 
 
 </resources>
