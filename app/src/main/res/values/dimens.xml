@@ -16,7 +16,16 @@
     <dimen name="photo2">60dp</dimen>
     <dimen name="photo3">30dp</dimen>
 
+    <dimen name="marge0">48dp</dimen>
+    <dimen name="marge1">36dp</dimen>
+    <dimen name="marge2">24dp</dimen>
+    <dimen name="marge3">12dp</dimen>
+
+    <dimen name="paddingEditTextSingle">15dp</dimen>
+
+    <dimen name="paddingButton">10dp</dimen>
     <!--Padding utiliser pour les items des spinners utilisant defautspinnerttem. Il conditionne l'espace des items dans la liste proposée-->
+    <dimen name="paddingSpinner">14dp</dimen>
 
 
     <!-- Default screen margins, per the Android Design guidelines. -->

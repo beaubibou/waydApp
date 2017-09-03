@@ -20,8 +20,14 @@
     <dimen name="design_snackbar_padding_vertical_2lines">@dimen/design_snackbar_padding_vertical</dimen>
     <dimen name="design_tab_scrollable_min_width">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="marge0">80dp</dimen>
+    <dimen name="marge1">60dp</dimen>
+    <dimen name="marge2">40dp</dimen>
+    <dimen name="marge3">20dp</dimen>
     <item name="mr_dialog_fixed_width_major" type="dimen">60%</item>
     <item name="mr_dialog_fixed_width_minor" type="dimen">90%</item>
+    <dimen name="paddingButton">15dp</dimen>
+    <dimen name="paddingEditTextSingle">20dp</dimen>
     <dimen name="paddingSpinner">20dp</dimen>
     <dimen name="photo0">140dp</dimen>
     <dimen name="photo1">105dp</dimen>
@@ -39,8 +45,18 @@
         <item name="windowActionBar">false</item>
 
 
-        
-        
+        <!--
+           For the resting Spinner style
+          <item name="android:spinnerItemStyle">
+              @style/spinnerItemStyle
+          </item>
+
+           For each individual Spinner list item once clicked on
+          <item name="android:spinnerDropDownItemStyle">
+              @style/spinnerDropDownItemStyle
+          </item>
+  -->
+        <!-- Espance des menus du drawer et des liste par défaut-->
         <item name="android:listPreferredItemHeightSmall">72dp</item>
 
     </style>
@@ -53,16 +69,18 @@
         <item name="android:textAllCaps">true</item>
     </style>
     <style name="ThemeEditTextLight">
-        
+        <!-- Coleur de la ligne sous l'edit text quand non selectionné -->
         <item name="colorControlNormal">#BDBDBD</item>
-        
+        <!-- text color -->
         <item name="android:textColor">#000000</item>
-        
+        <!-- hint text color
+        <item name="android:textColorHint">#FF0000</item>
+         -->
     </style>
     <style name="ThemeOverlay.AppCompat.navTheme">
-       
+       <!-- Color of text and icon when SELECTED -->
         <item name="colorPrimary">#000000</item>
-        
+        <!-- Background color when SELECTED -->
         <item name="colorControlHighlight">#fff</item>
 
     </style>

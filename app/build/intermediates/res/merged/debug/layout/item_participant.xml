@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:background="#FFFFFF"
+    android:padding="5dp"
+    >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iconactivite"
+            android:layout_width="@dimen/photo3"
+            android:layout_height="@dimen/photo3"
+            android:src="@drawable/com_facebook_profile_picture_blank_square"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/primary"/>
+
+        <TextView
+            android:id="@+id/pseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="10dp"
+            tools:text="%Pseudo"
+            android:textStyle="normal|bold"
+            android:textSize="@dimen/titre1"
+            android:layout_toEndOf="@+id/iconactivite"
+            android:layout_below="@+id/linearLayout" />
+
+        <LinearLayout
+             android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/linearLayout2">
+
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/note"
+            style = "?android:attr/ratingBarStyleSmall"
+            android:isIndicator="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iconactivite"
+            android:layout_alignStart="@+id/pseudo" />
+
+
+</RelativeLayout>

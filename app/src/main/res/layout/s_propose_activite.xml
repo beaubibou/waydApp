@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/marge3"
+        android:layout_marginRight="@dimen/marge3"
         android:background="#FFFFFF"
         android:orientation="vertical">
 
@@ -22,16 +22,16 @@
             style="@style/Base.TextAppearance.AppCompat.Large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="@dimen/marge2"
+            android:background="@drawable/borduretextfondblancfilet"
             android:gravity="center"
             android:hint="@string/s_proposeactivite_hintitre"
             android:imeOptions="actionNext"
             android:inputType="text"
             android:lines="1"
             android:maxLength="@string/maxLengtTitreProposeActivite"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:background="@drawable/borduretextfondblancfilet"
+            android:paddingBottom="@dimen/paddingEditTextSingle"
+            android:paddingTop="@dimen/paddingEditTextSingle"
             android:textSize="@dimen/titre1"
 
             />
@@ -41,7 +41,7 @@
             style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/marge2"
             android:focusable="false"
             android:gravity="center"
             android:hint="@string/s_proposeactivite_hintdescription"
@@ -72,8 +72,10 @@
                 android:hint="@string/s_proposeactivite_hintnoadresse"
                 android:inputType="textMultiLine"
                 android:maxLines="3"
+                android:lines="1"
                 android:theme="@style/ThemeEditTextLight"
                 android:textSize="@dimen/titre2"
+                android:padding="@dimen/paddingEditTextSingle"
 
                />
 
@@ -92,6 +94,8 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_gravity="center_horizontal"
+           android:layout_marginTop="@dimen/marge3"
+
            >
 
             <TextView
@@ -168,14 +172,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginLeft="@dimen/marge0"
+            android:layout_marginRight="@dimen/marge0"
+            android:layout_marginTop="@dimen/marge2"
             android:background="#ffa440"
             android:gravity="center"
             android:text="@string/s_proposeactivite_buttonposter"
             android:textColor="#000000"
-            android:textSize="@dimen/titre1" />
+            android:textSize="@dimen/titre1"
+            android:padding="@dimen/paddingButton"/>
 
     </LinearLayout>
 
