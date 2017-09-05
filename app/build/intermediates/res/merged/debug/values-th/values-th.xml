@@ -95,6 +95,8 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"เปิดบนโทรศัพท์"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"ลงชื่อเข้าใช้"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"ลงชื่อเข้าใช้ด้วย Google"</string>
+    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"เบ็ดเตล็ด"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"เบ็ดเตล็ด"</string>
     <string name="messenger_send_button_text">ส่ง</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"ปุ่ม \"แคสต์\""</string>
     <string msgid="5088427771788648085" name="mr_cast_button_connected">"ปุ่ม \"แคสต์\" เชื่อมต่อแล้ว"</string>

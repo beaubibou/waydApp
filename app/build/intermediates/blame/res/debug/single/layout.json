@@ -1,7 +1,7 @@
 [
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_mini_controller.xml",
-        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_mini_controller.xml"
+        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_mini_controller.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\s_propose_activite.xml",
@@ -37,7 +37,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_help_text.xml",
-        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_help_text.xml"
+        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_help_text.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_blue_large.xml",
@@ -65,7 +65,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_row_layout.xml",
-        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
+        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_chooser_dialog.xml",
@@ -117,7 +117,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_progress.xml",
-        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_progress.xml"
+        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_progress.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\unprofil.xml",
@@ -157,7 +157,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_fragment.xml",
-        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_fragment.xml"
+        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_fragment.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mr_controller_material_dialog_b.xml",
@@ -321,7 +321,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_intro_overlay.xml",
-        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_intro_overlay.xml"
+        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_intro_overlay.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\detail_avis.xml",
@@ -364,12 +364,12 @@
         "source": "D:\\android\\.android\\build-cache\\a199c58d2f9289118ac97f0365459907ba701a10\\output\\res\\layout\\notification_template_media_custom.xml"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\s_mesdiscussion.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_mesdiscussion.xml"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_icon_group.xml",
         "source": "D:\\android\\.android\\build-cache\\a199c58d2f9289118ac97f0365459907ba701a10\\output\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\s_mesdiscussion.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_mesdiscussion.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_preference.xml",
@@ -409,7 +409,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_tracks_chooser_dialog_layout.xml",
-        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
+        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
@@ -509,7 +509,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_powered_by_google.xml",
-        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
@@ -609,7 +609,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\cast_expanded_controller_activity.xml",
-        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_expanded_controller_activity.xml"
+        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_expanded_controller_activity.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_commentaireactivite.xml",
@@ -625,6 +625,6 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_autocomplete_item_prediction.xml",
-        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_item_prediction.xml"
+        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_item_prediction.xml"
     }
 ]

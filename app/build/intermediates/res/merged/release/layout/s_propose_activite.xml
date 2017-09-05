@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:gravity="center">
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,14 +20,12 @@
         android:background="#FFFFFF"
         android:orientation="vertical">
 
-
         <EditText
             android:id="@+id/dateactivite"
             style="@style/Base.TextAppearance.AppCompat.Large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/marge2"
-
             android:gravity="center"
             android:hint="@string/s_proposeactivite_hintitre"
             android:imeOptions="actionNext"
@@ -44,7 +46,9 @@
             android:focusable="false"
             android:gravity="center"
             android:hint="@string/s_proposeactivite_hintdescription"
-            android:lines="3"
+
+            android:lines="1"
+            android:maxLines="3"
             android:maxLength="@string/maxLengtLibelleProposeActivite"
              android:textSize="@dimen/texte2"
            />
@@ -163,7 +167,6 @@
                 />
        </GridLayout>
 
-
         <Button
             android:id="@+id/id_buttonPropose"
             style="@style/Base.TextAppearance.AppCompat.Large"
@@ -175,11 +178,12 @@
             android:layout_marginTop="@dimen/marge2"
             android:background="#ffa440"
             android:gravity="center"
+            android:padding="@dimen/paddingButton"
             android:text="@string/s_proposeactivite_buttonposter"
             android:textColor="#000000"
-            android:textSize="@dimen/texte2"
-            android:padding="@dimen/paddingButton"/>
+            android:textSize="@dimen/texte2" />
 
     </LinearLayout>
+</ScrollView>
 
-</RelativeLayout>
+</LinearLayout>

@@ -5,7 +5,7 @@
     <string msgid="2888745622334830481" name="cast_closed_captions">"Titlovi"</string>
     <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"Titlovi su nedostupni"</string>
     <string msgid="4431992200264667209" name="cast_disconnect">"Prekini vezu"</string>
-    <string msgid="5668979866539349222" name="cast_expanded_controller_ad_image_description">"Slika koja se prikazuje dok je na cast prijemniku pokrenut oglas"</string>
+    <string msgid="5668979866539349222" name="cast_expanded_controller_ad_image_description">"Slika koja se prikazuje dok je na prijemniku Casta pokrenut oglas"</string>
     <string msgid="9069517964239146855" name="cast_expanded_controller_ad_in_progress">"Oglas u toku…"</string>
     <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"Omot albuma"</string>
     <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"Prijenos uživo"</string>
@@ -54,6 +54,8 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Otvori na telefonu"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Prijavi se"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Prijavi se pomoću Googlea"</string>
+    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Razno"</string>
+    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Razno"</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Obriši pretraživanje"</string>
     <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Traži"</string>
     <string msgid="368094699078615544" name="s1">"Sačuvaj sliku"</string>
