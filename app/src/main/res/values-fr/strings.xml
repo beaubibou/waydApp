@@ -560,7 +560,6 @@
     <string name="maxLengtDescriptionProfil">"200"</string>
     <string name="maxLengtPseudo">"12"</string>
 
-
     <string-array name="actionphoto">
         <item>Prendre une photo</item>
         <item>Choisir parmi mes photos</item>
@@ -575,5 +574,6 @@
     <string name="title_activity_cgu">Cgu</string>
     <string name="updateNotificationPref">"La diffusion des notifications est mis à jour"</string>
     <string name="title_activity_test">test</string>
+    <string name="title_activity_test_layout">TestLayout</string>
 
 </resources>

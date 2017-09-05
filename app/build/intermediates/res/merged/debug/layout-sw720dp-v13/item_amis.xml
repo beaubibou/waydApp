@@ -37,22 +37,22 @@
         android:textColor="@android:color/black"
         android:layout_marginLeft="10dp"
         tools:text="%Pseudo"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/iconactivite"
         android:layout_marginStart="22dp" />
 
     <ImageView
-        android:layout_width="@dimen/photo3"
-        android:layout_height="@dimen/photo3"
+        android:layout_width="@dimen/photo1"
+        android:layout_height="@dimen/photo1"
         app:srcCompat="@mipmap/information"
         android:layout_alignParentTop="true"
         android:layout_alignEnd="@+id/messageami"
         android:id="@+id/informationami" />
 
     <ImageView
-        android:layout_width="@dimen/photo3"
-        android:layout_height="@dimen/photo3"
+        android:layout_width="@dimen/photo1"
+        android:layout_height="@dimen/photo1"
         app:srcCompat="@mipmap/ic_envelloppeok"
         android:id="@+id/messageami"
         android:layout_marginEnd="19dp"
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dans votre cercle depuis le "
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_below="@+id/pseudo"
         android:layout_toEndOf="@+id/iconactivite"
         android:layout_marginTop="10dp" />
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:text="depuis le"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_alignBaseline="@+id/textView4"
         android:layout_alignBottom="@+id/textView4"
         android:layout_toEndOf="@+id/textView4" />

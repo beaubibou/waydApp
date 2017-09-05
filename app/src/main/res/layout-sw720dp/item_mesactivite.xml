@@ -26,10 +26,9 @@
             android:id="@+id/distance"
             android:lines="1"
             tools:text=" à X mètres"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/tempsrestant"
-            android:layout_marginStart="55dp" />
+            android:layout_toEndOf="@+id/pseudo" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -60,13 +59,13 @@
             android:layout_marginLeft="10dp"
             tools:text="%Pseudo"
             android:layout_marginStart="21dp"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/iconactivite" />
 
         <ImageView
-            android:layout_width="@dimen/photo3"
-            android:layout_height="@dimen/photo3"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
             app:srcCompat="@mipmap/information"
             android:layout_alignParentTop="true"
             android:layout_alignEnd="@+id/message"
@@ -79,11 +78,11 @@
             tools:text="%X participants sur X "
             android:layout_above="@+id/note"
             android:layout_alignStart="@+id/dateactivite"
-            android:textSize="@dimen/titre1"/>
+            android:textSize="@dimen/texte2"/>
 
         <ImageView
-            android:layout_width="@dimen/photo3"
-            android:layout_height="@dimen/photo3"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
             app:srcCompat="@mipmap/ic_envelloppeok"
             android:id="@+id/message"
             android:layout_alignTop="@+id/iconcActivite"
@@ -100,14 +99,14 @@
             android:ellipsize="end"
             android:lines="1"
             android:textStyle="normal|bold"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
             android:layout_above="@+id/iconcActivite"
             android:layout_alignStart="@+id/pseudo" />
 
         <ImageView
             android:id="@+id/iconcActivite"
-            android:layout_width="@dimen/photo3"
-            android:layout_height="@dimen/photo3"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
             app:srcCompat="@drawable/com_facebook_favicon_blue"
             android:layout_alignBottom="@+id/tempsrestant"
             android:layout_toStartOf="@+id/message"

@@ -4,7 +4,8 @@
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="15dip">
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip">>
     <de.hdodenhof.circleimageview.CircleImageView
 
         android:id="@+id/iconactivite"
@@ -23,12 +24,12 @@
         android:textColor="@android:color/black"
         android:layout_marginLeft="15dp"
         tools:text="%Pseudo"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/iconactivite" />
     <TextView
         android:id="@+id/dateactivite"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_width="wrap_content"
         android:maxWidth="220dp"
         android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
 
     <TextView
         android:id="@+id/titre"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/pseudo"
@@ -58,7 +59,7 @@
 
     <EditText
         android:id="@+id/commentaire"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/pop_donneavis_commentaires"
@@ -90,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:text="@string/donneavis_switchAmi"
         android:layout_below="@+id/commentaire"
         android:layout_alignParentStart="true" />

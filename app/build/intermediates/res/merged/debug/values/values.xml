@@ -950,10 +950,10 @@
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
-    <dimen name="marge0">48dp</dimen>
-    <dimen name="marge1">36dp</dimen>
+    <dimen name="marge1">12dp</dimen>
     <dimen name="marge2">24dp</dimen>
-    <dimen name="marge3">12dp</dimen>
+    <dimen name="marge3">36dp</dimen>
+    <dimen name="marge4">48dp</dimen>
     <dimen name="mr_controller_volume_group_list_item_height">68dp</dimen>
     <dimen name="mr_controller_volume_group_list_item_icon_size">24dp</dimen>
     <dimen name="mr_controller_volume_group_list_max_height">288dp</dimen>
@@ -978,12 +978,12 @@
     <dimen name="paddingButton">10dp</dimen>
     <dimen name="paddingEditTextSingle">15dp</dimen>
     <dimen name="paddingSpinner">14dp</dimen>
-    <dimen name="paddingTextview0">15dp</dimen>
     <dimen name="paddingTextview1">10dp</dimen>
-    <dimen name="photo0">110dp</dimen>
-    <dimen name="photo1">80dp</dimen>
+    <dimen name="paddingTextview2">15dp</dimen>
+    <dimen name="photo1">30dp</dimen>
     <dimen name="photo2">60dp</dimen>
-    <dimen name="photo3">30dp</dimen>
+    <dimen name="photo3">80dp</dimen>
+    <dimen name="photo4">110dp</dimen>
     <dimen name="place_autocomplete_button_padding">16dp</dimen>
     <dimen name="place_autocomplete_powered_by_google_height">40dp</dimen>
     <dimen name="place_autocomplete_powered_by_google_start">16dp</dimen>
@@ -994,8 +994,9 @@
     <dimen name="place_autocomplete_progress_horizontal_margin">16dp</dimen>
     <dimen name="place_autocomplete_progress_size">24dp</dimen>
     <dimen name="place_autocomplete_separator_start">72dp</dimen>
-    <dimen name="titre1">14dp</dimen>
-    <dimen name="titre2">12dp</dimen>
+    <dimen name="texte1">12dp</dimen>
+    <dimen name="texte2">14dp</dimen>
+    <dimen name="texte3">18dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
     <item name="action_bar_activity_content" type="id"/>
@@ -3370,7 +3371,7 @@
         <item name="android:textColor">#4b5164</item>
     </style>
     <style name="titre1" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:textSize">@dimen/titre1</item>
+        <item name="android:textSize">@dimen/texte2</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">#00FF00</item>
 

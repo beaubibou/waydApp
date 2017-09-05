@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
@@ -44,8 +44,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:orientation="vertical"
+
                 >
 
 
@@ -66,7 +66,8 @@
                         android:textColor="@android:color/black"
                         android:drawableRight="@mipmap/ic_next"
                         style="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textSize="@dimen/texte2"/>
 
 
                     <TextView
@@ -82,7 +83,8 @@
                         android:textAllCaps="false"
                         android:textColor="@android:color/black"
                         style="@style/Base.TextAppearance.AppCompat.Medium"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textSize="@dimen/texte2"/>
 
 
 
@@ -99,7 +101,8 @@
                         android:textColor="@android:color/black"
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:drawableRight="@mipmap/ic_next"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textSize="@dimen/texte2"/>
 
 
                     <TextView
@@ -116,6 +119,7 @@
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textStyle="bold"
                         android:drawableRight="@mipmap/ic_next"
+                        android:textSize="@dimen/texte2"
                         />
 
 
@@ -133,6 +137,7 @@
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textStyle="bold"
                         android:drawableRight="@mipmap/ic_next"
+                        android:textSize="@dimen/texte2"
                         />
 
             </LinearLayout>

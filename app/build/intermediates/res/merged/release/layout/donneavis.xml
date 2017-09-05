@@ -36,7 +36,8 @@
                     tools:text="Titre activité"
                     android:textAlignment="center"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                    android:textStyle="normal|bold" />
+                    android:textStyle="normal|bold"
+                    android:textSize="@dimen/texte2"/>
 
                 <TextView
                     android:id="@+id/titre1"
@@ -47,7 +48,7 @@
                     android:textAlignment="textStart"
 
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/texte1" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -67,6 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="4"
+               android:textSize="@dimen/texte2"
                     android:hint="@string/donneavis_hint_consigne"
                     android:inputType="none"
                     android:maxLength="@string/maxLengtAvis"
@@ -84,7 +86,8 @@
                         tools:text="nbrcara"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true" />
+                        android:layout_alignParentEnd="true"
+                        android:textSize="@dimen/texte2"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -96,10 +99,12 @@
 
                         android:id="@+id/id_noterprofil"
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
+                        android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:background="#ffa440"
-                        android:text="@string/donneavis_button_valider" />
+                        android:text="@string/donneavis_button_valider"
+                        android:padding="20dp"
+                        android:textSize="@dimen/texte2"/>
 
                 </RelativeLayout>
 
@@ -129,8 +134,8 @@
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/iconactivite"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="@dimen/photo2"
+                        android:layout_height="@dimen/photo2"
                         app:civ_border_color="@color/primary"
                         app:civ_border_width="2dp"
                         android:layout_alignParentTop="true"
@@ -153,7 +158,8 @@
                         android:layout_height="wrap_content"
                         tools:text="%Pseudo"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
-                        android:textColor="#000" />
+                        android:textColor="#000"
+                        android:textSize="@dimen/texte2"/>
 
                     <TextView
                         android:id="@+id/sexe"
@@ -163,7 +169,8 @@
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_alignParentBottom="true"
                         android:layout_alignLeft="@+id/ck_activesexe"
-                        android:layout_alignStart="@+id/ck_activesexe" />
+                        android:layout_alignStart="@+id/ck_activesexe"
+                        android:textSize="@dimen/texte2"/>
 
                     <TextView
                         android:id="@+id/ck_activesexe"
@@ -173,7 +180,8 @@
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_centerVertical="true"
                         android:layout_alignLeft="@+id/pseudo"
-                        android:layout_alignStart="@+id/pseudo" />
+                        android:layout_alignStart="@+id/pseudo"
+                        android:textSize="@dimen/texte2"/>
                 </RelativeLayout>
 
             </RelativeLayout>

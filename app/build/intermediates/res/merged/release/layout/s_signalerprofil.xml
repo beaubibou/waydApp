@@ -12,7 +12,7 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
@@ -22,7 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/signalerprofil"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/texte2"/>
 
         <TextView
             android:layout_marginTop="10dp"
@@ -30,7 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/titreprofil"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textSize="@dimen/texte2"/>
 
         <TextView
             android:layout_marginTop="5dp"
@@ -38,18 +40,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/txt3"
-            android:textSize="18sp" />
+            android:textSize="@dimen/texte2" />
 
         <LinearLayout
             android:layout_marginTop="10dp"
-
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
-
-
-
 
                 <TextView
                     android:drawableRight="@mipmap/ic_next"
@@ -66,9 +63,8 @@
                     style="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textColor="@android:color/black"
                     android:layout_toLeftOf="@+id/imgfleche1"
-                    android:layout_toStartOf="@+id/imgfleche1" />
-
-
+                    android:layout_toStartOf="@+id/imgfleche1"
+                    android:textSize="@dimen/texte2"/>
 
 
 
@@ -88,7 +84,8 @@
                     android:textAllCaps="false"
                     style="@style/Base.TextAppearance.AppCompat.Medium"
                     android:layout_toLeftOf="@+id/imgfleche2"
-                    android:layout_toStartOf="@+id/imgfleche2" />
+                    android:layout_toStartOf="@+id/imgfleche2"
+                    android:textSize="@dimen/texte2"/>
 
 
 
@@ -107,6 +104,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
+                    android:textSize="@dimen/texte2"
 />
                 <TextView
                     android:drawableRight="@mipmap/ic_next"
@@ -122,6 +120,7 @@
                     style="@style/Base.TextAppearance.AppCompat.Medium"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
+                    android:textSize="@dimen/texte2"
                    />
 
         </LinearLayout>

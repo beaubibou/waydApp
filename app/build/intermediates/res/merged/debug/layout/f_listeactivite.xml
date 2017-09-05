@@ -14,7 +14,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:textSize="@dimen/titre1"
+                android:textSize="@dimen/texte2"
                 android:layout_marginTop="15dp"
                 android:id="@+id/id_messagebalise"
                 android:layout_width="match_parent"

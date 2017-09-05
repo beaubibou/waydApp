@@ -33,7 +33,7 @@
             android:textStyle="normal"
             tools:text="%Dernier message"
             android:ellipsize="end"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
             android:layout_toStartOf="@+id/id_datecreation" />
 
         <TextView
@@ -47,7 +47,7 @@
             tools:text="%Pseudo"
             android:ellipsize="end"
             android:textStyle="bold"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
             android:layout_toStartOf="@+id/nbrnonlus"
             android:layout_toEndOf="@+id/iconactivite" />
 

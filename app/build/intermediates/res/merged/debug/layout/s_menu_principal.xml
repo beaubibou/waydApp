@@ -10,7 +10,7 @@
 
     <Button
 
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:visibility="invisible"
         android:text="@string/s_menu_principal_indicateurs"
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:background="#FFA740"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_marginTop="@dimen/marge2"
         android:layout_marginLeft="@dimen/marge2"
         android:layout_marginRight="@dimen/marge2"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marge2"
         android:layout_marginRight="@dimen/marge2"
-        android:textSize="@dimen/titre1"/>
+        android:textSize="@dimen/texte2"/>
 
 
     <Button
@@ -51,7 +51,7 @@
         android:background="#FFE740"
         android:padding="@dimen/paddingButton"
         android:text="@string/s_menu_principal_proposer"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:layout_marginTop="@dimen/marge2"
         android:layout_marginLeft="@dimen/marge2"
         android:layout_marginRight="@dimen/marge2"

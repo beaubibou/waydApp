@@ -33,6 +33,7 @@
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
         app:theme="@style/ThemeOverlay.AppCompat.navTheme"
+        app:itemTextAppearance="@style/MenuItems"
         />
 
 

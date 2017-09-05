@@ -20,23 +20,24 @@
     <dimen name="design_snackbar_padding_vertical_2lines">@dimen/design_snackbar_padding_vertical</dimen>
     <dimen name="design_tab_scrollable_min_width">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="marge0">80dp</dimen>
-    <dimen name="marge1">60dp</dimen>
+    <dimen name="marge1">20dp</dimen>
     <dimen name="marge2">40dp</dimen>
-    <dimen name="marge3">20dp</dimen>
+    <dimen name="marge3">60dp</dimen>
+    <dimen name="marge4">80dp</dimen>
     <item name="mr_dialog_fixed_width_major" type="dimen">60%</item>
     <item name="mr_dialog_fixed_width_minor" type="dimen">90%</item>
     <dimen name="paddingButton">15dp</dimen>
     <dimen name="paddingEditTextSingle">20dp</dimen>
     <dimen name="paddingSpinner">20dp</dimen>
-    <dimen name="paddingTextview0">20dp</dimen>
     <dimen name="paddingTextview1">15dp</dimen>
-    <dimen name="photo0">140dp</dimen>
-    <dimen name="photo1">105dp</dimen>
+    <dimen name="paddingTextview2">20dp</dimen>
+    <dimen name="photo1">40dp</dimen>
     <dimen name="photo2">80dp</dimen>
-    <dimen name="photo3">40dp</dimen>
-    <dimen name="titre1">21dp</dimen>
-    <dimen name="titre2">14dp</dimen>
+    <dimen name="photo3">105dp</dimen>
+    <dimen name="photo4">140dp</dimen>
+    <dimen name="texte1">14dp</dimen>
+    <dimen name="texte2">21dp</dimen>
+    <dimen name="texte3">28dp</dimen>
     <integer name="design_snackbar_text_max_lines">1</integer>
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 

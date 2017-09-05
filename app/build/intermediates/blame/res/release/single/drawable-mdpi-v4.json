@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png",
-        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
         "source": "D:\\android\\.android\\build-cache\\a199c58d2f9289118ac97f0365459907ba701a10\\output\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png",
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable-mdpi-v4\\quantum_ic_replay_white_24.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",

@@ -67,7 +67,7 @@
                         android:drawableRight="@mipmap/ic_next"
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textStyle="bold"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
 
                     <TextView
@@ -84,7 +84,7 @@
                         android:textColor="@android:color/black"
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textStyle="bold"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
 
 
@@ -102,7 +102,7 @@
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:drawableRight="@mipmap/ic_next"
                         android:textStyle="bold"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
 
                     <TextView
@@ -119,7 +119,7 @@
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textStyle="bold"
                         android:drawableRight="@mipmap/ic_next"
-                        android:textSize="@dimen/titre1"
+                        android:textSize="@dimen/texte2"
                         />
 
 
@@ -137,7 +137,7 @@
                         style="@style/Base.TextAppearance.AppCompat.Medium"
                         android:textStyle="bold"
                         android:drawableRight="@mipmap/ic_next"
-                        android:textSize="@dimen/titre1"
+                        android:textSize="@dimen/texte2"
                         />
 
             </LinearLayout>

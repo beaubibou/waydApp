@@ -8,14 +8,8 @@
     <stroke android:width="2dp"
 
         android:color="#FFDC40"/>
-    <corners android:radius="5dp" />
-    <gradient
+    <corners android:radius="1dp" />
 
-        android:startColor="#FFFFFF"
-
-        android:endColor="#FFFFFF"
-
-        android:type="linear"
-
-        android:angle="270"/>
+    <solid
+        android:color="#FFFFFF" />
 </shape>

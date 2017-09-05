@@ -31,13 +31,13 @@
             android:id="@+id/nompref"
             android:layout_marginStart="21dp"
             android:layout_marginLeft="29dp"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/iconcActivite" />
 
         <ImageView
-            android:layout_width="@dimen/photo3"
-            android:layout_height="@dimen/photo3"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
             android:layout_centerVertical="true"
             app:srcCompat="@drawable/com_facebook_button_icon_blue"
             android:id="@+id/iconcActivite" />

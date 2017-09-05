@@ -9,20 +9,21 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
-    <dimen name="titre1">14dp</dimen>
-    <dimen name="titre2">12dp</dimen>
-    <dimen name="photo0">110dp</dimen>
-    <dimen name="photo1">80dp</dimen>
+    <dimen name="texte3">18dp</dimen>
+    <dimen name="texte2">14dp</dimen>
+    <dimen name="texte1">12dp</dimen>
+    <dimen name="photo4">110dp</dimen>
+    <dimen name="photo3">80dp</dimen>
     <dimen name="photo2">60dp</dimen>
-    <dimen name="photo3">30dp</dimen>
+    <dimen name="photo1">30dp</dimen>
 
-    <dimen name="marge0">48dp</dimen>
-    <dimen name="marge1">36dp</dimen>
+    <dimen name="marge4">48dp</dimen>
+    <dimen name="marge3">36dp</dimen>
     <dimen name="marge2">24dp</dimen>
-    <dimen name="marge3">12dp</dimen>
+    <dimen name="marge1">12dp</dimen>
 
     <dimen name="paddingEditTextSingle">15dp</dimen>
-    <dimen name="paddingTextview0">15dp</dimen>
+    <dimen name="paddingTextview2">15dp</dimen>
     <dimen name="paddingTextview1">10dp</dimen>
 
     <dimen name="paddingButton">10dp</dimen>

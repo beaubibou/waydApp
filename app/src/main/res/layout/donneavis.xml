@@ -37,7 +37,7 @@
                     android:textAlignment="center"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                     android:textStyle="normal|bold"
-                    android:textSize="@dimen/titre1"/>
+                    android:textSize="@dimen/texte2"/>
 
                 <TextView
                     android:id="@+id/titre1"
@@ -48,7 +48,7 @@
                     android:textAlignment="textStart"
 
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                    android:textSize="@dimen/titre2" />
+                    android:textSize="@dimen/texte1" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="4"
-               android:textSize="@dimen/titre1"
+               android:textSize="@dimen/texte2"
                     android:hint="@string/donneavis_hint_consigne"
                     android:inputType="none"
                     android:maxLength="@string/maxLengtAvis"
@@ -87,7 +87,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -104,7 +104,7 @@
                         android:background="#ffa440"
                         android:text="@string/donneavis_button_valider"
                         android:padding="20dp"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
                 </RelativeLayout>
 
@@ -159,7 +159,7 @@
                         tools:text="%Pseudo"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
                         android:textColor="#000"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
                     <TextView
                         android:id="@+id/sexe"
@@ -170,7 +170,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_alignLeft="@+id/ck_activesexe"
                         android:layout_alignStart="@+id/ck_activesexe"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
                     <TextView
                         android:id="@+id/ck_activesexe"
@@ -181,7 +181,7 @@
                         android:layout_centerVertical="true"
                         android:layout_alignLeft="@+id/pseudo"
                         android:layout_alignStart="@+id/pseudo"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
                 </RelativeLayout>
 
             </RelativeLayout>

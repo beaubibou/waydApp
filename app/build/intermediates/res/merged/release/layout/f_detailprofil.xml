@@ -30,6 +30,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:paddingBottom="30dp"
+                android:textSize="@dimen/texte2"
                 />
 
 </ScrollView>

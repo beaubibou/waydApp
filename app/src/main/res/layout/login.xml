@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="@string/login_prbconnexion"
-                android:textSize="@dimen/titre2"
+                android:textSize="@dimen/texte1"
                 android:layout_alignTop="@+id/apropos"
                 android:layout_alignParentStart="true" />
 
@@ -74,7 +74,7 @@
                 android:layout_marginBottom="15dp"
                 android:layout_marginRight="10dp"
                 android:text="@string/login_apropos"
-                android:textSize="@dimen/titre2"/>
+                android:textSize="@dimen/texte1"/>
 
             <RelativeLayout
                 android:id="@+id/ly_logowaydbt"
@@ -121,7 +121,7 @@
                         android:backgroundTint="#FFFFFF"
                          android:inputType="textEmailAddress"
                         android:text="pmestivier@club.fr"
-                        android:textSize="@dimen/titre1"
+                        android:textSize="@dimen/texte2"
                         />
 
                     <EditText
@@ -133,7 +133,7 @@
                         android:ems="10"
                         android:inputType="textPassword"
                         android:text="azerty"
-                        android:textSize="@dimen/titre1"
+                        android:textSize="@dimen/texte2"
                         />
 
                     <Button
@@ -146,7 +146,7 @@
                         android:layout_marginTop="10dp"
                         android:background="#FFE740"
                         android:text="@string/login_buttonconnexion"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
 
 
@@ -157,7 +157,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:text="@string/login_ck_affichermdp"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
                     <TextView
                         android:id="@+id/id_mdpoublie"
@@ -166,7 +166,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
                         android:text="@string/login_mdpoublie"
-                        android:textSize="@dimen/titre1"/>
+                        android:textSize="@dimen/texte2"/>
 
 
                 </LinearLayout>
@@ -188,7 +188,7 @@
                     android:textAppearance="@android:style/TextAppearance.Holo.Large"
                    android:textColor="#FFA440"
                     android:textStyle="normal|bold"
-                    android:textSize="@dimen/titre1"
+                    android:textSize="@dimen/texte2"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
 
@@ -210,7 +210,7 @@
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                         android:textColor="#000000"
                         android:textStyle="normal|bold"
-                        android:textSize="@dimen/titre1"
+                        android:textSize="@dimen/texte2"
 
                          />
                 </RelativeLayout>

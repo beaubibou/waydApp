@@ -14,8 +14,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/iconactivite"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/photo2"
+            android:layout_height="@dimen/photo2"
             android:src="@drawable/com_facebook_profile_picture_blank_square"
             app:civ_border_color="@color/primary"
             app:civ_border_width="2dp" />
@@ -33,6 +33,7 @@
             android:textStyle="normal"
             tools:text="%Dernier message"
             android:ellipsize="end"
+            android:textSize="@dimen/texte2"
             android:layout_toStartOf="@+id/id_datecreation" />
 
         <TextView
@@ -45,6 +46,8 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             tools:text="%Pseudo"
             android:ellipsize="end"
+            android:textStyle="bold"
+            android:textSize="@dimen/texte2"
             android:layout_toStartOf="@+id/nbrnonlus"
             android:layout_toEndOf="@+id/iconactivite" />
 

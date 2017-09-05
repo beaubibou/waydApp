@@ -16,7 +16,8 @@
             android:id="@+id/recherchezone"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="24dp" />
+            android:layout_marginTop="24dp"
+            android:textSize="@dimen/texte2"/>
 
         <fragment
         android:id="@+id/map"

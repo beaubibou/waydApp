@@ -429,6 +429,7 @@
     <string name="title_activity_liste_avis_activity">ListeAvis_activity</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_test">test</string>
+    <string name="title_activity_test_layout">TestLayout</string>
     <string name="title_activity_testonglet">Testonglet</string>
     <string name="updateNotificationPref">"La diffusion des notifications est mis à jour"</string>
     <string name="validerLienMail">"Merci de valider le lien dans envoyé à votre adresse e-mail"</string>

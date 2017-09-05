@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.wayd"
-    android:versionCode="1965"
+    android:versionCode="2030"
     android:versionName="Wayd 1.1." >
 
     <uses-sdk
-        android:minSdkVersion="17"
+        android:minSdkVersion="21"
         android:targetSdkVersion="25" />
 
     <uses-permission android:name="com.vogella.android.locationapi.maps.permission.MAPS_RECEIVE" />

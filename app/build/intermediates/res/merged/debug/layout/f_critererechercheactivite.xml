@@ -4,20 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppBaseTheme"
-
     >
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/marge3"
-        android:layout_marginRight="@dimen/marge3"
-        android:background="#FFFFFF"
+        android:layout_marginLeft="@dimen/marge1"
+        android:layout_marginRight="@dimen/marge1"
         android:orientation="vertical"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
-
 
         <EditText
             android:id="@+id/id_motcle"
@@ -30,7 +26,7 @@
             android:inputType="text"
             android:maxLines="1"
             android:theme="@style/ThemeEditTextLight"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
             android:padding="@dimen/paddingEditTextSingle"
 
             />
@@ -53,9 +49,9 @@
                 android:hint="@string/f_critererecherche_hint_saisiradresse"
                 android:inputType="textMultiLine"
                 android:maxLines="3"
-                android:textSize="@dimen/titre2"
+                android:textSize="@dimen/texte1"
                 android:theme="@style/ThemeEditTextLight"
-android:padding="@dimen/paddingEditTextSingle"
+                android:padding="@dimen/paddingEditTextSingle"
                 />
 
             <CheckBox
@@ -65,14 +61,13 @@ android:padding="@dimen/paddingEditTextSingle"
                 android:checked="false"
                 android:text="@string/f_critererecherche_ck_gps" />
 
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/marge2"
-            android:layout_marginTop="@dimen/marge2"
+            android:layout_marginTop="@dimen/marge1"
            android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -83,14 +78,14 @@ android:padding="@dimen/paddingEditTextSingle"
                 android:layout_height="wrap_content"
                 android:text="@string/f_critererecherche_minprogress"
                 android:textColor="#000000"
-                android:textSize="@dimen/titre1" />
+                android:textSize="@dimen/texte2" />
 
             <SeekBar
                 android:id="@+id/id_seek_rayon"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/marge2"
                 android:layout_weight="10"
-                android:progressDrawable="@drawable/seekbarrayon" />
+                 />
 
             <TextView
                 android:id="@+id/id_affichermax"
@@ -100,7 +95,7 @@ android:padding="@dimen/paddingEditTextSingle"
                 android:gravity="right"
                 android:textColor="#000000"
                 tools:text="10 KM"
-                android:textSize="@dimen/titre1"
+                android:textSize="@dimen/texte2"
                 />
 
         </LinearLayout>
@@ -117,7 +112,7 @@ android:padding="@dimen/paddingEditTextSingle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:textSize="@dimen/titre1"
+                android:textSize="@dimen/texte2"
                 android:text="@string/f_critererecherche_categorie"
                 android:layout_column="1"
                 android:layout_row="1"
@@ -143,17 +138,16 @@ android:padding="@dimen/paddingEditTextSingle"
 
             <Button
                 android:id="@+id/rechercheactivite"
-                style="@style/Base.TextAppearance.AppCompat.Large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginLeft="@dimen/marge0"
-                android:layout_marginRight="@dimen/marge0"
+                android:layout_marginLeft="@dimen/marge4"
+                android:layout_marginRight="@dimen/marge4"
                 android:background="#ffa440"
                 android:gravity="center"
                 android:text="@string/f_critererecherche_recherche"
                 android:textColor="#000000"
-                android:textSize="@dimen/titre1"
+                android:textSize="@dimen/texte2"
                 android:padding="@dimen/paddingButton"
 
                 />

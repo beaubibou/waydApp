@@ -27,7 +27,7 @@
                 android:textAlignment="center"
                 android:gravity="center_horizontal"
                 android:visibility="gone"
-                android:textSize="@dimen/titre1"
+                android:textSize="@dimen/texte2"
 
                 />
         </RelativeLayout>
@@ -85,7 +85,7 @@
                     android:maxLength="@string/maxLengtMessage"
                     android:layout_marginLeft="10dp"
                     android:layout_alignParentStart="true"
-                    android:textSize="@dimen/titre1"
+                    android:textSize="@dimen/texte2"
                     android:inputType="textMultiLine|textShortMessage"
                     android:layout_toStartOf="@+id/id_envoyer"
                     android:hint="@string/s_mesmessages_envoyer"

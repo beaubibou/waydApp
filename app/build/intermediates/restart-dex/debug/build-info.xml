@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="24"
+    api-level="21"
     build-mode="COLD"
-    density="420dpi"
+    density="xhdpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1504449356286"
+    timestamp="1504545200005"
     token="9022034702471868994"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="9252" />
+        duration="5087" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="56" />
+        duration="12" />
     <task
         name="verifier"
-        duration="7" />
+        duration="6" />
 
     <artifact
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -36,19 +39,16 @@
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
         type="SPLIT" />
     <artifact
-        location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
         type="SPLIT" />
     <artifact
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -62,19 +62,19 @@
 
     <build
         build-mode="FULL"
-        timestamp="1504440254861"
+        timestamp="1504544915331"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -83,13 +83,13 @@
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
@@ -103,10 +103,13 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1504449356286"
+        timestamp="1504545200005"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -118,19 +121,16 @@
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\slices\slice_8.apk"

@@ -27,7 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/suggestion"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/texte2"/>
 
         </RelativeLayout>
 
@@ -41,7 +42,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/titreactivite"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/texte2"/>
 
         </RelativeLayout>
 
@@ -50,41 +52,36 @@
             android:layout_height="match_parent"
             >
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:padding="1dp"
-                android:background="#ffd440"
-                android:layout_above="@+id/validersuggestion">
                 <EditText
 
                     android:hint="@string/s_signaleramelioration_hintchamplibre"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:id="@+id/listesouci"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                     android:inputType="textMultiLine"
                     android:imeOptions="actionSend"
-
-                    android:padding="5dp"
+                    android:padding="15dp"
                     android:gravity="left"
-                    android:background="#fff"
-                    android:lines="6"
-                    android:textSize="18sp" />
-            </RelativeLayout>
-
+                    android:background="@drawable/borduretextfondblanc"
+                    android:maxLines="12"
+                    android:lines="12"
+                    android:maxLength="300"
+                    android:textSize="@dimen/texte2"
+                    android:layout_marginTop="39dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
 
             <Button
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:background="#ffa740"
                 android:text="@string/s_signaleramelioration_buttonvalider"
                 android:layout_width="wrap_content"
-                android:layout_height="35dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/validersuggestion"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="40dp" />
+                android:textSize="@dimen/texte2"
+                android:layout_below="@+id/listesouci"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 

@@ -4,13 +4,14 @@
     android:layout_height="fill_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:padding="15dip">
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip">>
     <de.hdodenhof.circleimageview.CircleImageView
 
         android:id="@+id/iconactivite"
         android:layout_marginLeft="10dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/photo2"
+        android:layout_height="@dimen/photo2"
         android:src="@drawable/com_facebook_profile_picture_blank_square"
         app:civ_border_width="2dp"
         app:civ_border_color="@color/primary"
@@ -23,10 +24,12 @@
         android:textColor="@android:color/black"
         android:layout_marginLeft="15dp"
         tools:text="%Pseudo"
+        android:textSize="@dimen/texte2"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/iconactivite" />
     <TextView
         android:id="@+id/dateactivite"
+        android:textSize="@dimen/texte2"
         android:layout_width="wrap_content"
         android:maxWidth="220dp"
         android:layout_height="wrap_content"
@@ -41,6 +44,7 @@
 
     <TextView
         android:id="@+id/titre"
+        android:textSize="@dimen/texte2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/pseudo"
@@ -55,6 +59,7 @@
 
     <EditText
         android:id="@+id/commentaire"
+        android:textSize="@dimen/texte2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/pop_donneavis_commentaires"
@@ -77,7 +82,6 @@
         android:numStars="5"
         android:layout_centerInParent="true"
         android:layout_below="@+id/iconactivite"
-
         android:layout_marginTop="14dp"
         android:id="@+id/note"
         />
@@ -87,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-
+        android:textSize="@dimen/texte2"
         android:text="@string/donneavis_switchAmi"
         android:layout_below="@+id/commentaire"
         android:layout_alignParentStart="true" />

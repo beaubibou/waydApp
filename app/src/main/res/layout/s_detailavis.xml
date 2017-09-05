@@ -36,7 +36,7 @@
         android:id="@+id/dateavis"
         android:layout_below="@+id/iconactivite"
         android:layout_alignEnd="@+id/note"
-        android:textSize="@dimen/titre1"/>
+        android:textSize="@dimen/texte2"/>
 
     <TextView
         tools:text="TextView"
@@ -46,5 +46,5 @@
         android:layout_marginTop="39dp"
         android:layout_below="@+id/dateavis"
         android:layout_alignStart="@+id/iconactivite"
-        android:textSize="@dimen/titre1"/>
+        android:textSize="@dimen/texte2"/>
 </RelativeLayout>

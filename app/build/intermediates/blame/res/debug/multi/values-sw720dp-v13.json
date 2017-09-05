@@ -89,11 +89,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 25,
                         "startColumn": 4,
-                        "startOffset": 847,
+                        "startOffset": 1005,
                         "endColumn": 37,
-                        "endOffset": 880
+                        "endOffset": 1038
                     }
                 }
             },
@@ -108,11 +108,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 24,
                         "startColumn": 4,
-                        "startOffset": 886,
+                        "startOffset": 966,
                         "endColumn": 37,
-                        "endOffset": 919
+                        "endOffset": 999
                     }
                 }
             },
@@ -127,11 +127,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 22,
+                        "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 925,
+                        "startOffset": 927,
                         "endColumn": 37,
-                        "endOffset": 958
+                        "endOffset": 960
                     }
                 }
             },
@@ -146,11 +146,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 23,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 964,
+                        "startOffset": 888,
                         "endColumn": 37,
-                        "endOffset": 997
+                        "endOffset": 921
                     }
                 }
             },
@@ -203,11 +203,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 26,
+                        "startLine": 28,
                         "startColumn": 4,
-                        "startOffset": 1078,
+                        "startOffset": 1119,
                         "endColumn": 44,
-                        "endOffset": 1118
+                        "endOffset": 1159
                     }
                 }
             },
@@ -222,11 +222,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 28,
+                        "startLine": 30,
                         "startColumn": 4,
-                        "startOffset": 1126,
+                        "startOffset": 1167,
                         "endColumn": 52,
-                        "endOffset": 1174
+                        "endOffset": 1215
                     }
                 }
             },
@@ -241,11 +241,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 798,
+                        "startOffset": 839,
                         "endColumn": 45,
-                        "endOffset": 839
+                        "endOffset": 880
                     }
                 }
             },
@@ -260,11 +260,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 29,
+                        "startLine": 32,
                         "startColumn": 4,
-                        "startOffset": 1180,
+                        "startOffset": 1270,
                         "endColumn": 47,
-                        "endOffset": 1223
+                        "endOffset": 1313
                     }
                 }
             },
@@ -279,11 +279,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 30,
+                        "startLine": 31,
                         "startColumn": 4,
-                        "startOffset": 1229,
+                        "startOffset": 1221,
                         "endColumn": 47,
-                        "endOffset": 1272
+                        "endOffset": 1264
                     }
                 }
             },
@@ -292,17 +292,17 @@
                     "startLine": 17,
                     "startColumn": 4,
                     "startOffset": 790,
-                    "endColumn": 38,
-                    "endOffset": 824
+                    "endColumn": 37,
+                    "endOffset": 823
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 496,
-                        "endColumn": 38,
-                        "endOffset": 530
+                        "startOffset": 657,
+                        "endColumn": 37,
+                        "endOffset": 690
                     }
                 }
             },
@@ -310,18 +310,18 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 829,
+                    "startOffset": 828,
                     "endColumn": 38,
-                    "endOffset": 863
+                    "endOffset": 862
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 536,
+                        "startOffset": 617,
                         "endColumn": 38,
-                        "endOffset": 570
+                        "endOffset": 651
                     }
                 }
             },
@@ -329,18 +329,18 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 868,
+                    "startOffset": 867,
                     "endColumn": 38,
-                    "endOffset": 902
+                    "endOffset": 901
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 576,
+                        "startOffset": 577,
                         "endColumn": 38,
-                        "endOffset": 610
+                        "endOffset": 611
                     }
                 }
             },
@@ -348,18 +348,18 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 907,
-                    "endColumn": 37,
+                    "startOffset": 906,
+                    "endColumn": 38,
                     "endOffset": 940
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 616,
-                        "endColumn": 37,
-                        "endOffset": 649
+                        "startOffset": 537,
+                        "endColumn": 38,
+                        "endOffset": 571
                     }
                 }
             },
@@ -374,11 +374,11 @@
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 418,
+                        "startOffset": 496,
                         "endColumn": 37,
-                        "endOffset": 451
+                        "endOffset": 529
                     }
                 }
             },
@@ -406,9 +406,28 @@
                     "startLine": 23,
                     "startColumn": 4,
                     "startOffset": 1021,
-                    "endLine": 47,
+                    "endColumn": 37,
+                    "endOffset": 1054
+                },
+                "from": {
+                    "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 418,
+                        "endColumn": 37,
+                        "endOffset": 451
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1059,
+                    "endLine": 48,
                     "endColumn": 12,
-                    "endOffset": 1869
+                    "endOffset": 1907
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\styles.xml",
@@ -424,12 +443,12 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 1874,
-                    "endLine": 51,
+                    "startOffset": 1912,
+                    "endLine": 52,
                     "endColumn": 12,
-                    "endOffset": 1984
+                    "endOffset": 2022
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\styles.xml",
@@ -445,12 +464,12 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 1989,
-                    "endLine": 55,
+                    "startOffset": 2027,
+                    "endLine": 56,
                     "endColumn": 12,
-                    "endOffset": 2172
+                    "endOffset": 2210
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\styles.xml",
@@ -466,12 +485,12 @@
             },
             {
                 "to": {
-                    "startLine": 56,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 2177,
-                    "endLine": 64,
+                    "startOffset": 2215,
+                    "endLine": 65,
                     "endColumn": 12,
-                    "endOffset": 2535
+                    "endOffset": 2573
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\styles.xml",
@@ -487,12 +506,12 @@
             },
             {
                 "to": {
-                    "startLine": 65,
+                    "startLine": 66,
                     "startColumn": 4,
-                    "startOffset": 2540,
-                    "endLine": 71,
+                    "startOffset": 2578,
+                    "endLine": 72,
                     "endColumn": 12,
-                    "endOffset": 2805
+                    "endOffset": 2843
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\styles.xml",
@@ -508,12 +527,12 @@
             },
             {
                 "to": {
-                    "startLine": 72,
+                    "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 2810,
-                    "endLine": 74,
+                    "startOffset": 2848,
+                    "endLine": 75,
                     "endColumn": 12,
-                    "endOffset": 2907
+                    "endOffset": 2945
                 },
                 "from": {
                     "file": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw720dp\\styles.xml",

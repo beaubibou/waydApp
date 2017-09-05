@@ -75,7 +75,7 @@
 
     <!-- Exemple De titre à appliquer avec textApparence-->
     <style name="titre1" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:textSize">@dimen/titre1</item>
+        <item name="android:textSize">@dimen/texte2</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">#00FF00</item>
 

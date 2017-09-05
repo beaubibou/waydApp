@@ -22,7 +22,7 @@
                 android:visibility="gone"
                 android:gravity="center_horizontal"
                 tools:text="Pas d'activité"
-                android:textSize="@dimen/titre1"/>
+                android:textSize="@dimen/texte2"/>
         </RelativeLayout>
 
         <RelativeLayout

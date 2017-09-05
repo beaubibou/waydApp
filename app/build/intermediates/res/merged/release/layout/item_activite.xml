@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/distance"
             tools:text=" à X mètres"
-            android:layout_alignParentTop="true"
+            android:layout_alignBaseline="@+id/pseudo"
+            android:layout_alignBottom="@+id/pseudo"
             android:layout_toEndOf="@+id/pseudo" />
 
         <TextView
@@ -40,17 +41,15 @@
             android:ellipsize="end"
             android:layout_marginRight="10dp"
             android:lines="1"
-            android:layout_below="@+id/pseudo"
-            android:layout_alignLeft="@+id/pseudo"
-            android:layout_alignStart="@+id/pseudo"
-            android:layout_alignParentEnd="true" />
+            android:layout_above="@+id/amidepuis"
+            android:layout_alignStart="@+id/pseudo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/amidepuis"
             tools:text="%X participants sur X "
-            android:layout_below="@+id/dateactivite"
+            android:layout_above="@+id/tempsrestant"
             android:layout_alignStart="@+id/dateactivite" />
 
         <TextView
@@ -58,8 +57,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/tempsrestant"
             tools:text="Tps restant"
-            android:layout_alignBottom="@+id/note"
-            android:layout_alignStart="@+id/dateactivite" />
+            android:layout_alignTop="@+id/note"
+            android:layout_alignStart="@+id/amidepuis" />
 
         <RatingBar
             android:id="@+id/note"
@@ -71,6 +70,8 @@
             android:progressBackgroundTint="@android:color/holo_blue_dark"
             android:secondaryProgressTint="@android:color/holo_blue_dark"
             android:layout_alignParentStart="true"
+
+
             />
 
         <TextView
@@ -78,18 +79,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
-            android:layout_marginLeft="15dp"
             tools:text="%Pseudo"
+            android:layout_marginLeft="10dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/iconactivite" />
+            android:layout_toEndOf="@+id/note" />
 
         <ImageView
             android:id="@+id/iconcActivite"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
+            app:srcCompat="@drawable/com_facebook_button_icon_blue"
             android:layout_alignBottom="@+id/tempsrestant"
-            android:layout_alignEnd="@+id/dateactivite"
-            app:srcCompat="@drawable/com_facebook_button_icon_blue" />
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginEnd="18dp" />
 
 
 </RelativeLayout>

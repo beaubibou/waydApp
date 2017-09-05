@@ -7,13 +7,12 @@
     tools:background="#FFFFFF"
     android:padding="5dp"
 
-
     >
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/iconactivite"
             android:layout_marginLeft="10dp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/photo2"
+            android:layout_height="@dimen/photo2"
             android:src="@drawable/com_facebook_profile_picture_blank_square"
             app:civ_border_width="2dp"
             app:civ_border_color="@color/primary"

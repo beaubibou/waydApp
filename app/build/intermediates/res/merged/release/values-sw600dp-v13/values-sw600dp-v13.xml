@@ -8,6 +8,9 @@
     <dimen name="abc_config_prefDialogWidth">580dp</dimen>
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="design_navigation_max_width">320dp</dimen>
     <dimen name="design_snackbar_action_inline_max_width">0dp</dimen>
     <dimen name="design_snackbar_background_corner_radius">2dp</dimen>
@@ -16,9 +19,77 @@
     <dimen name="design_snackbar_min_width">320dp</dimen>
     <dimen name="design_snackbar_padding_vertical_2lines">@dimen/design_snackbar_padding_vertical</dimen>
     <dimen name="design_tab_scrollable_min_width">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="marge1">20dp</dimen>
+    <dimen name="marge2">40dp</dimen>
+    <dimen name="marge3">60dp</dimen>
+    <dimen name="marge4">80dp</dimen>
     <item name="mr_dialog_fixed_width_major" type="dimen">60%</item>
     <item name="mr_dialog_fixed_width_minor" type="dimen">90%</item>
+    <dimen name="paddingButton">15dp</dimen>
+    <dimen name="paddingEditTextSingle">20dp</dimen>
+    <dimen name="paddingSpinner">20dp</dimen>
+    <dimen name="paddingTextview1">15dp</dimen>
+    <dimen name="paddingTextview2">20dp</dimen>
+    <dimen name="photo1">40dp</dimen>
+    <dimen name="photo2">80dp</dimen>
+    <dimen name="photo3">105dp</dimen>
+    <dimen name="photo4">140dp</dimen>
+    <dimen name="texte1">14dp</dimen>
+    <dimen name="texte2">21dp</dimen>
+    <dimen name="texte3">28dp</dimen>
     <integer name="design_snackbar_text_max_lines">1</integer>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
+
+        <!--
+           For the resting Spinner style
+          <item name="android:spinnerItemStyle">
+              @style/spinnerItemStyle
+          </item>
+
+           For each individual Spinner list item once clicked on
+          <item name="android:spinnerDropDownItemStyle">
+              @style/spinnerDropDownItemStyle
+          </item>
+  -->
+        <!-- Espance des menus du drawer et des liste par défaut-->
+        <item name="android:listPreferredItemHeightSmall">72dp</item>
+
+    </style>
+    <style name="MenuItems" parent="AppBaseTheme">
+        <item name="android:textSize">20sp</item>
+
+    </style>
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="ThemeEditTextLight">
+        <!-- Coleur de la ligne sous l'edit text quand non selectionné -->
+        <item name="colorControlNormal">#BDBDBD</item>
+        <!-- text color -->
+        <item name="android:textColor">#000000</item>
+        <!-- hint text color
+        <item name="android:textColorHint">#FF0000</item>
+         -->
+    </style>
+    <style name="ThemeOverlay.AppCompat.navTheme">
+       <!-- Color of text and icon when SELECTED -->
+        <item name="colorPrimary">#000000</item>
+        <!-- Background color when SELECTED -->
+        <item name="colorControlHighlight">#fff</item>
+
+    </style>
+    <style name="TwoWayView">
+        <item name="android:orientation">horizontal</item>
+    </style>
     <style name="Widget.Design.TabLayout" parent="Base.Widget.Design.TabLayout">
         <item name="tabGravity">center</item>
         <item name="tabMode">fixed</item>

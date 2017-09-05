@@ -26,7 +26,7 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             tools:text="Pas de suggestions"
             android:visibility="gone"
-            android:textSize="@dimen/titre1"/>
+            android:textSize="@dimen/texte2"/>
         <Button
             android:id="@+id/id_mesprefnces"
             android:background="#ffd440"
@@ -39,7 +39,7 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:gravity="center"
             android:visibility="gone"
-            android:textSize="@dimen/titre1"
+            android:textSize="@dimen/texte2"
 
             />
 

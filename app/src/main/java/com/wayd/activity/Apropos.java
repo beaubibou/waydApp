@@ -21,7 +21,7 @@ public class Apropos extends AppCompatActivity {
         TextView TV_NUMversion = (TextView) findViewById(R.id.version);
         try {
             PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
-      int versionCode = info.versionCode;
+             int versionCode = info.versionCode;
             String versionName = info.versionName+versionCode;
             TV_NUMversion.setText(versionName);
 

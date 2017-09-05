@@ -59,10 +59,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_alignBottom="@+id/apropos"
-                android:layout_alignParentStart="true"
+                android:text="@string/login_prbconnexion"
+                android:textSize="@dimen/texte1"
                 android:layout_alignTop="@+id/apropos"
-                android:text="@string/login_prbconnexion" />
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/apropos"
@@ -73,7 +73,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="15dp"
                 android:layout_marginRight="10dp"
-                android:text="@string/login_apropos" />
+                android:text="@string/login_apropos"
+                android:textSize="@dimen/texte1"/>
 
             <RelativeLayout
                 android:id="@+id/ly_logowaydbt"
@@ -108,9 +109,9 @@
                     android:id="@+id/LO_log"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
                     android:orientation="vertical"
-                    android:weightSum="1">
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true">
 
                     <EditText
                         android:id="@+id/ET_login"
@@ -118,32 +119,34 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
                         android:backgroundTint="#FFFFFF"
-                        android:ems="10"
-                        android:inputType="textEmailAddress"
-                        android:text="pmestivier@club.fr" />
+                         android:inputType="textEmailAddress"
+                        android:text="pmestivier@club.fr"
+                        android:textSize="@dimen/texte2"
+                        />
 
                     <EditText
                         android:id="@+id/ET_pwd"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
                         android:backgroundTint="#FFFFFF"
                         android:ems="10"
                         android:inputType="textPassword"
                         android:text="azerty"
-
+                        android:textSize="@dimen/texte2"
                         />
 
                     <Button
 
                         android:id="@+id/button_loginwayde"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
                         android:background="#FFE740"
-                        android:text="@string/login_buttonconnexion" />
+                        android:text="@string/login_buttonconnexion"
+                        android:textSize="@dimen/texte2"/>
 
 
 
@@ -153,15 +156,17 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="5dp"
-                        android:text="@string/login_ck_affichermdp" />
+                        android:text="@string/login_ck_affichermdp"
+                        android:textSize="@dimen/texte2"/>
 
                     <TextView
                         android:id="@+id/id_mdpoublie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="left"
+                        android:layout_gravity="center"
                         android:layout_marginTop="5dp"
-                        android:text="@string/login_mdpoublie" />
+                        android:text="@string/login_mdpoublie"
+                        android:textSize="@dimen/texte2"/>
 
 
                 </LinearLayout>
@@ -181,10 +186,9 @@
                     android:layout_gravity="center"
                     android:text="@string/login_sinscrire"
                     android:textAppearance="@android:style/TextAppearance.Holo.Large"
-                    tools:text=""
-                    android:textColor="#FFA440"
+                   android:textColor="#FFA440"
                     android:textStyle="normal|bold"
-
+                    android:textSize="@dimen/texte2"
                     android:layout_centerVertical="true"
                     android:layout_centerHorizontal="true" />
 
@@ -201,14 +205,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-
                         android:background="@drawable/soulignenoirfondjaune"
                         android:text="@string/login_pasdecompte"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                         android:textColor="#000000"
                         android:textStyle="normal|bold"
+                        android:textSize="@dimen/texte2"
 
-                        tools:text="Pas encore de compte ?" />
+                         />
                 </RelativeLayout>
 
             </RelativeLayout>

@@ -25,11 +25,11 @@
             android:textAlignment="center"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             tools:text="Pas de suggestions"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:textSize="@dimen/texte2"/>
         <Button
             android:id="@+id/id_mesprefnces"
             android:background="#ffd440"
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -39,6 +39,7 @@
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:gravity="center"
             android:visibility="gone"
+            android:textSize="@dimen/texte2"
 
             />
 

@@ -9,7 +9,8 @@
         <item
 
             android:id="@+id/id_rechercher"
-            android:title="@string/menu_drawer_rechercher" />
+            android:title="@string/menu_drawer_rechercher"
+            />
         <item
             android:id="@+id/id_proposer"
             android:title="@string/menu_drawer_proposer" />
@@ -19,7 +20,8 @@
             android:title="@string/menu_drawer_masphere" />
         <item
             android:id="@+id/id_mesactivite"
-            android:title="@string/menu_drawer_mesactivite" />
+            android:title="@string/menu_drawer_mesactivite"
+            />
 
     </group>
 

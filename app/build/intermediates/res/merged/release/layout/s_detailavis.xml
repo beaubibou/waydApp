@@ -11,8 +11,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iconactivite"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/photo2"
+        android:layout_height="@dimen/photo2"
         android:src="@drawable/com_facebook_profile_picture_blank_square"
         app:civ_border_width="2dp"
         app:civ_border_color="#FFFFFF"
@@ -35,7 +35,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/dateavis"
         android:layout_below="@+id/iconactivite"
-        android:layout_alignEnd="@+id/note" />
+        android:layout_alignEnd="@+id/note"
+        android:textSize="@dimen/texte2"/>
 
     <TextView
         tools:text="TextView"
@@ -44,5 +45,6 @@
         android:id="@+id/commentaire"
         android:layout_marginTop="39dp"
         android:layout_below="@+id/dateavis"
-        android:layout_alignStart="@+id/iconactivite" />
+        android:layout_alignStart="@+id/iconactivite"
+        android:textSize="@dimen/texte2"/>
 </RelativeLayout>

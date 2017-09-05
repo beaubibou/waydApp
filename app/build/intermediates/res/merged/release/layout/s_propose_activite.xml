@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/marge1"
+        android:layout_marginRight="@dimen/marge1"
         android:background="#FFFFFF"
         android:orientation="vertical">
 
@@ -22,30 +22,32 @@
             style="@style/Base.TextAppearance.AppCompat.Large"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="@dimen/marge2"
+
             android:gravity="center"
             android:hint="@string/s_proposeactivite_hintitre"
             android:imeOptions="actionNext"
             android:inputType="text"
             android:lines="1"
             android:maxLength="@string/maxLengtTitreProposeActivite"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:background="@drawable/borduretextfondblancfilet"
+            android:paddingBottom="@dimen/paddingEditTextSingle"
+            android:paddingTop="@dimen/paddingEditTextSingle"
+            android:textSize="@dimen/texte2"
+
             />
 
         <EditText
             android:id="@+id/commentaire"
-            style="@style/Base.TextAppearance.AppCompat.Medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/marge2"
             android:focusable="false"
             android:gravity="center"
             android:hint="@string/s_proposeactivite_hintdescription"
             android:lines="3"
             android:maxLength="@string/maxLengtLibelleProposeActivite"
-            android:background="@drawable/borduretextfondblanc"/>
+             android:textSize="@dimen/texte2"
+           />
 
 
         <LinearLayout
@@ -68,7 +70,11 @@
                 android:hint="@string/s_proposeactivite_hintnoadresse"
                 android:inputType="textMultiLine"
                 android:maxLines="3"
+                android:lines="1"
                 android:theme="@style/ThemeEditTextLight"
+                android:textSize="@dimen/texte1"
+                android:padding="@dimen/paddingEditTextSingle"
+
                />
 
             <CheckBox
@@ -76,118 +82,103 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="false"
-                android:text="@string/s_proposeactivite_ckgps" />
+                android:text="@string/s_proposeactivite_ckgps"
+                android:textSize="@dimen/texte2"/>
 
         </LinearLayout>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+       <GridLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="@dimen/marge1"
+
+           >
 
             <TextView
+                android:padding="@dimen/paddingSpinner"
                 android:id="@+id/txt_dureeactivite"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
-                android:layout_width="160dp"
-                android:layout_height="42dp"
-                android:gravity="center_vertical"
-                android:text="@string/s_proposeactivite_duree" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/s_proposeactivite_deuxpoints"
-                android:textSize="18sp" />
+                android:text="@string/s_proposeactivite_duree"
+                android:textSize="@dimen/texte2"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_gravity="left"
+                />
 
             <Spinner
                 android:id="@+id/dureeactivite"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:layout_gravity="left"
                 />
 
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
             <TextView
+                android:padding="@dimen/paddingSpinner"
                 android:id="@+id/txtcategorie"
-                android:layout_width="130dp"
-                android:layout_height="46dp"
-                android:gravity="center_vertical"
-                android:text="@string/s_proposeactivite_categorie"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/s_proposeactivite_deuxpoints"
-                android:textSize="18sp" />
+                android:text="@string/s_proposeactivite_categorie"
+                android:textSize="@dimen/texte2"
+                android:layout_column="1"
+                android:layout_row="2"
+                android:layout_gravity="left"
+
+                />
 
             <Spinner
                 android:id="@+id/id_typeactivite"
-                android:layout_width="0dp"
-                android:layout_height="46dp"
-                android:layout_weight="0.86"
-                android:gravity="center_vertical"
-                android:spinnerMode="dialog" />
-        </LinearLayout>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:spinnerMode="dropdown"
+                android:layout_column="2"
+                android:layout_row="2"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
 
             <TextView
+                android:padding="@dimen/paddingSpinner"
                 android:id="@+id/txt_nbrwaydeurs"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:text="@string/s_proposeactivite_waydeurs" />
-
-            <TextView
-                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/s_proposeactivite_deuxpoints"
-                android:textSize="18sp" />
+                android:text="@string/s_proposeactivite_waydeurs"
+                android:textSize="@dimen/texte2"
+                android:layout_column="1"
+                android:layout_row="3"
+                android:layout_gravity="left"/>
 
             <Spinner
                 android:id="@+id/nbrmaxwayd"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
+                android:layout_gravity="left"
+                android:layout_column="2"
+                android:layout_row="3"
+                />
+       </GridLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/id_buttonPropose"
             style="@style/Base.TextAppearance.AppCompat.Large"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="50dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginLeft="@dimen/marge4"
+            android:layout_marginRight="@dimen/marge4"
+            android:layout_marginTop="@dimen/marge2"
             android:background="#ffa440"
             android:gravity="center"
             android:text="@string/s_proposeactivite_buttonposter"
             android:textColor="#000000"
-            android:textSize="18sp" />
+            android:textSize="@dimen/texte2"
+            android:padding="@dimen/paddingButton"/>
 
     </LinearLayout>
 

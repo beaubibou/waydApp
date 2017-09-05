@@ -1,66 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="#FFFFFF"
+    android:background="@mipmap/fondwaydblancxxxhdpi"
+    android:orientation="vertical"
 
     >
 
-    <RelativeLayout
-        android:id="@+id/home"
+    <Button
+
+        android:textSize="@dimen/texte2"
+        android:visibility="invisible"
+        android:text="@string/s_menu_principal_indicateurs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/admin"
+        android:layout_marginTop="@dimen/marge2"
+        android:layout_marginLeft="@dimen/marge2"
+        android:layout_marginRight="@dimen/marge2"
+        android:padding="@dimen/paddingButton"/>
+    <Button
+        android:text="@string/s_menu_principal_ennuie"
+        android:id="@+id/ennuie"
+        android:background="#FFA740"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@mipmap/fondwaydblancxxxhdpi"
-        android:padding="30dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:textSize="@dimen/texte2"
+        android:layout_marginTop="@dimen/marge2"
+        android:layout_marginLeft="@dimen/marge2"
+        android:layout_marginRight="@dimen/marge2"
+        android:padding="@dimen/paddingButton"/>
+    <Button
+        android:padding="@dimen/paddingButton"
+        android:text="@string/s_menu_principal_rechercher"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/marge2"
+        android:background="#FFC740"
+        android:id="@+id/recherche"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marge2"
+        android:layout_marginRight="@dimen/marge2"
+        android:textSize="@dimen/texte2"/>
 
-        <Button
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/s_menu_principal_proposer"
-            android:background="#FFE740"
-            android:id="@+id/propose"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            />
 
-        <Button
-            android:text="@string/s_menu_principal_rechercher"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="20dp"
-            android:background="#FFC740"
-            android:id="@+id/recherche"
-            android:layout_height="40dp"
-            android:layout_above="@+id/propose"
-            android:layout_alignLeft="@+id/propose"
-            android:layout_alignStart="@+id/propose" />
+    <Button
+        android:id="@+id/propose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFE740"
+        android:padding="@dimen/paddingButton"
+        android:text="@string/s_menu_principal_proposer"
+        android:textSize="@dimen/texte2"
+        android:layout_marginTop="@dimen/marge2"
+        android:layout_marginLeft="@dimen/marge2"
+        android:layout_marginRight="@dimen/marge2"
 
-        <Button
-            android:text="@string/s_menu_principal_ennuie"
-            android:id="@+id/ennuie"
-            android:background="#FFA740"
+        />
 
-            android:layout_height="40dp"
-            android:layout_width="match_parent"
 
-            android:layout_marginBottom="20dp"
-            android:layout_above="@+id/recherche"
-            android:layout_alignLeft="@+id/recherche"
-            android:layout_alignStart="@+id/recherche" />
 
-        <Button
-            android:visibility="invisible"
-            android:text="@string/s_menu_principal_indicateurs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/admin"
-            android:layout_above="@+id/ennuie"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="13dp"
-            android:layout_alignParentEnd="true" />
 
-    </RelativeLayout>
 
-</RelativeLayout>
+
+
+
+</LinearLayout>

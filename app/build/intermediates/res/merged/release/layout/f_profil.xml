@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/myCoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:background="#FFF"
 
         >
 
@@ -18,10 +18,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:orientation="vertical"
             android:layout_alignParentTop="true"
-            android:orientation="vertical">
+            android:layout_alignParentStart="true">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -35,6 +34,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_margin="10dp"
                     android:gravity="center"
+                    android:textSize="@dimen/texte2"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
                     android:textColor="#000"
                     tools:text="%Pseudo" />
@@ -48,8 +48,8 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/avatar"
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
+                    android:layout_width="@dimen/photo4"
+                    android:layout_height="@dimen/photo4"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/com_facebook_profile_picture_blank_square"
@@ -68,14 +68,12 @@
                     <Button
                         android:id="@+id/changephoto"
                         android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:background="#1AFFA440"
+                        android:layout_height="wrap_content"
+                         android:background="#1AFFA440"
                         android:text="@string/f_profil_modifier"
                         android:textAllCaps="false"
-                        android:textSize="12sp"
 
-                        />
+                        android:layout_alignParentStart="true" />
 
 
                 </RelativeLayout>
@@ -126,7 +124,7 @@
                                 android:layout_centerInParent="true"
                                 android:checked="true"
                                 android:text="@string/f_profil_masquer"
-
+                                android:textSize="@dimen/texte2"
                                 android:textAlignment="textStart" />
                         </RelativeLayout>
 
@@ -143,8 +141,8 @@
                     <Button
 
                         android:id="@+id/changemdp"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="@dimen/photo1"
+                        android:layout_height="@dimen/photo1"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center"
                         android:background="@android:drawable/ic_lock_idle_lock" />
@@ -174,6 +172,7 @@
                                 android:layout_centerInParent="true"
                                 android:textAlignment="center"
                                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                               android:textSize="@dimen/texte2"
                                 tools:text="12/12/2012" />
                         </RelativeLayout>
 
@@ -187,7 +186,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
                                 android:checked="true"
-                                android:text="@string/f_profil_masquer" />
+                                android:text="@string/f_profil_masquer"
+                                android:textSize="@dimen/texte2"/>
                         </RelativeLayout>
 
                     </LinearLayout>
@@ -204,8 +204,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
-
-               >
+                >
 
                 <TextView
                     android:id="@+id/commentaires"
@@ -214,19 +213,18 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:ems="10"
+                    android:background="@drawable/borduretextfondblanc"
+                    android:textSize="@dimen/texte1"
                     android:gravity="left"
                     android:hint="@string/f_profil_description"
                     android:padding="10dp"
-                    android:scrollbars="vertical"
-                    android:background="@drawable/borduretext"/>
+                    android:scrollbars="vertical" />
 
             </RelativeLayout>
         </LinearLayout>
 
 
     </RelativeLayout>
-
     <android.support.design.widget.FloatingActionButton
 
         android:id="@+id/saveprofil"

@@ -86,8 +86,8 @@
 
         <ImageView
             android:id="@+id/iconcActivite"
-            android:layout_width="@dimen/photo3"
-            android:layout_height="@dimen/photo3"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
             app:srcCompat="@drawable/com_facebook_button_icon_blue"
             android:layout_alignBottom="@+id/tempsrestant"
             android:layout_alignParentEnd="true"

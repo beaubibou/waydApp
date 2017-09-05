@@ -14,12 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:paddingTop="@dimen/paddingTextview1"
-        android:layout_marginRight="@dimen/marge3"
+        android:layout_marginRight="@dimen/marge1"
         android:text="@string/s_unprofil_signaler"
         android:textColor="@color/com_facebook_blue"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         android:textStyle="bold"
-         android:visibility="visible" />
+        android:visibility="visible" />
 
     <TextView
 
@@ -30,14 +30,14 @@
         android:layout_gravity="center"
         android:padding="@dimen/paddingTextview1"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
-        android:textSize="@dimen/titre1"
+        android:textSize="@dimen/texte2"
         tools:text="TextView" />
 
 
     <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/iconactivite"
-                    android:layout_width="@dimen/photo1"
-                    android:layout_height="@dimen/photo1"
+                    android:layout_width="@dimen/photo3"
+                    android:layout_height="@dimen/photo3"
                     app:civ_border_width="2dp"
                     app:civ_border_color="#FFFFFF"
                     android:layout_gravity="center"

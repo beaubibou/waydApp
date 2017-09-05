@@ -24,8 +24,8 @@
 
             <Button
                 android:id="@+id/tdb_mail"
-                android:layout_width="@dimen/photo3"
-                android:layout_height="@dimen/photo3"
+                android:layout_width="@dimen/photo1"
+                android:layout_height="@dimen/photo1"
                 android:layout_marginTop="5dip"
                 android:background="@mipmap/ic_courriel2"/>
 
@@ -61,8 +61,8 @@
 
             <Button
                 android:id="@+id/tdb_notification"
-                android:layout_width="@dimen/photo3"
-                android:layout_height="@dimen/photo3"
+                android:layout_width="@dimen/photo1"
+                android:layout_height="@dimen/photo1"
                 android:layout_marginTop="5dip"
                 android:background="@mipmap/ic_notificati" />
         </RelativeLayout>
@@ -94,8 +94,8 @@
 
             <Button
                 android:id="@+id/tdb_suggestion"
-                android:layout_width="@dimen/photo3"
-                android:layout_height="@dimen/photo3"
+                android:layout_width="@dimen/photo1"
+                android:layout_height="@dimen/photo1"
                 android:layout_marginTop="5dip"
                 android:background="@mipmap/ic_suggestion3" />
         </RelativeLayout>

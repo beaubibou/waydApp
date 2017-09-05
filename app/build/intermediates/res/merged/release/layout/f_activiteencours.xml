@@ -21,7 +21,8 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:visibility="gone"
                 android:gravity="center_horizontal"
-                tools:text="Pas d'activité" />
+                tools:text="Pas d'activité"
+                android:textSize="@dimen/texte2"/>
         </RelativeLayout>
 
         <RelativeLayout

@@ -27,7 +27,8 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:visibility="gone"
-                tools:text="Pas de notifications" />
+                tools:text="Pas de notifications"
+                android:textSize="@dimen/texte2"/>
         </RelativeLayout>
 
         <RelativeLayout

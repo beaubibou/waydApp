@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.wayd"
-    android:versionCode="1631"
+    android:versionCode="2036"
     android:versionName="Wayd 1.1." >
 
     <uses-sdk
@@ -222,8 +222,8 @@
             android:name="com.wayd.activity.Cgu"
             android:label="@string/title_activity_cgu" />
         <activity
-            android:name="com.wayd.activity.test"
-            android:label="@string/title_activity_test"
+            android:name="com.wayd.activity.TestLayout"
+            android:label="@string/title_activity_test_layout"
             android:theme="@style/AppBaseTheme" />
         <activity
             android:name="com.facebook.FacebookActivity"

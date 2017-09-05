@@ -24,8 +24,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iconactivite"
-                android:layout_width="@dimen/photo1"
-                android:layout_height="@dimen/photo1"
+                android:layout_width="@dimen/photo3"
+                android:layout_height="@dimen/photo3"
                 app:civ_border_width="2dp"
                 app:civ_border_color="#FFFFFF"
                 android:layout_alignParentTop="true"
@@ -64,14 +64,14 @@
                 android:layout_centerVertical="true"
                 android:layout_alignLeft="@+id/pseudo"
                 android:layout_alignStart="@+id/pseudo"
-                android:textSize="@dimen/titre1"/>
+                android:textSize="@dimen/texte2"/>
 
             <TextView
                 tools:text="Pseudo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/pseudo"
-                android:textSize="@dimen/titre1"
+                android:textSize="@dimen/texte2"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
                 />
 
@@ -84,14 +84,11 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:textSize="@dimen/titre1"/>
+                android:textSize="@dimen/texte2"/>
         </RelativeLayout>
 
 
-
     </RelativeLayout>
-
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -149,7 +146,7 @@
                             android:background="#FFFFFF"
                             android:scaleType="centerInside"
                             app:srcCompat="@mipmap/ic_gpsok"
-                            android:textSize="@dimen/titre1"/>
+                            android:textSize="@dimen/texte2"/>
 
                         <ImageButton
                             android:id="@+id/inscription"
@@ -193,7 +190,7 @@
                         android:layout_centerHorizontal="true"
 
                         android:textStyle="normal|bold"
-                        android:textSize="@dimen/titre1"
+                        android:textSize="@dimen/texte2"
                         />
 
                 </RelativeLayout>
@@ -223,7 +220,7 @@
                             android:textAlignment="viewStart"
                             android:layout_alignParentTop="true"
                             android:layout_centerHorizontal="true"
-                            android:textSize="@dimen/titre2"/>
+                            android:textSize="@dimen/texte1"/>
 
                     </RelativeLayout>
 
@@ -242,7 +239,7 @@
                             android:id="@+id/terminedans"
                             android:layout_centerHorizontal="true"
                             android:layout_alignParentTop="true"
-                            android:textSize="@dimen/titre2" />
+                            android:textSize="@dimen/texte1" />
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -268,7 +265,7 @@
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                         android:layout_height="150dp"
                         android:scrollbars = "vertical"
-                        android:textSize="@dimen/titre1"
+                        android:textSize="@dimen/texte2"
                         android:background="@drawable/borduretextfondblanc"
                         />
                 </RelativeLayout>
@@ -296,7 +293,7 @@
                         android:layout_height="match_parent"
                         android:weightSum="2"
                         android:id="@+id/LL_participants"
-                        android:background="@drawable/borduretext">
+                        android:background="@drawable/borduretextfondblanc">
 
 
                         <RelativeLayout
