@@ -16,12 +16,12 @@
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_checked.png"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi\\ic_iconwaydbc.png",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_iconwaydbc.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi\\ic_crayon.png",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_crayon.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi\\ic_iconwaydbc.png",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_iconwaydbc.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi\\ic_uncheckcouleur.png",

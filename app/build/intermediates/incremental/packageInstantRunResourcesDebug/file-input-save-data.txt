@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Sep 05 21:46:48 CEST 2017
+#Tue Sep 05 22:14:08 CEST 2017
 835.base=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\resources-debug.ap_
 100.set=ANDROID_RESOURCE
 57.file=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxxhdpi-v4\\ic_group_expand_11.png

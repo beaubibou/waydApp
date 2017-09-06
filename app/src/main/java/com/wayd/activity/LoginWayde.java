@@ -87,63 +87,40 @@ public class LoginWayde extends AppCompatActivity implements
 
         super.onCreate(savedInstanceState);
 
+        // permet de ne pas réouvrir la fenetre login quand l'appli est en background
         if (!isTaskRoot()) {
-            finish();// permet de ne pas réouvrir la fenetre login quand l'appli est en background
+            finish();
             return;
         }
-
 
 
         setContentView(R.layout.login);
         intSignGoogle();
         mAuth = FirebaseAuth.getInstance();
-       // Log.d("popo++++", "************************************"+FirebaseInstanceId.getInstance().getToken());
         gestionAutorisation();// Demande l'autorisation du GPS
 
+        // Si l'utilisateur change de status d authehtification
+        // On ne gere que le cas ou il est null - Cas d une deconnexion
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
-                    // User is signed in
-                    //  System.out.println("++++++++++++++" + Outils.isConnectFromGoogle());
-                    if (!user.isEmailVerified() && Outils.isConnectFromPwd()) {
+                Log.d("LoginWayde","Changegment de l etat d'authentication de l'utilisateur") ;
 
-                        Toast toast = Toast.makeText(LoginWayde.this, R.string.comptePasActive, Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 0);
-                        toast.show();
-
-                        if (threadTdb != null) {
-                            threadTdb.arret();
-                            threadTdb.cancel(true);
-                            Outils.connected = false;
-                            LoginManager.getInstance().logOut();
-                            return;
-                        }
-                    }
-
-                    if (user.isEmailVerified() || Outils.isConnectFaceBook() || Outils.isConnectFromGoogle()) {
-                        //   Outils.uid = user.getUid();
-                        if (!Outils.connected) {
-                            Outils.connected = true;// Lros de la demande du jeton l'authetification change. On met cetet variable pour ne pas
-                            getJeton();
-                        }
-                    }
-                } else {
+                if (user == null) {
+                  Log.d("LoginWayde","Deconnexion de l'user") ;
 
                     if (threadTdb != null) {
                         threadTdb.arret();
                         threadTdb.cancel(true);
                         Outils.connected = false;
-                        LoginManager.getInstance().logOut();
+                     //   LoginManager.getInstance().logOut();
 
                     }
                 }
                 // ...
             }
-        }
-
-        ;
+        }   ;
 
 
         initBouttonConnexionWayd();
@@ -157,21 +134,58 @@ public class LoginWayde extends AppCompatActivity implements
 
                 findViewById(R.id.ET_pwd);
 
-        initBouttonConnexGoogle();
+     initBouttonConnexGoogle();
 
 
-        initCk_Mdp();
+      initCk_Mdp();
 
-        initMdpOublie();
+      initMdpOublie();
 
-        if (!
-                isOnline())
+     testResau();
+    initTextView_Apropos();
+    initTextView_ProblemeConnexion();
 
-        {
-            afficheMessageSnack();
-        }
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        connexion( currentUser);
+
+        //   ConnexionByUser();
+
+    }
+
+    // Une fois l'utilisateur récupere on récupere le jeton
+    private void connexion(FirebaseUser currentUser) {
+
+        if (currentUser==null)return;
+
+        currentUser.getToken(true)
+
+                .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+                    public void onComplete(@NonNull Task<GetTokenResult> task) {
+                        if (task.isSuccessful()) {
+                            Outils.jeton = task.getResult().getToken();
+                            Outils.connected = true;
+                            connexionWayd();
+
+                        } else {
+
+                            try {
+                                throw task.getException();
+                            } catch (Exception e) {
+                                Toast toast = Toast.makeText(getBaseContext(),e.getMessage(), Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+                            }
+
+                        }
+
+                    }
+                });
+
+    }
 
 
+
+    private void initTextView_Apropos() {
         TextView TV_Apropos = (TextView) findViewById(R.id.apropos);
         TV_Apropos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -183,7 +197,9 @@ public class LoginWayde extends AppCompatActivity implements
 
             }
         });
+    }
 
+    private void initTextView_ProblemeConnexion() {
 
         TextView TV_PrbConnexion = (TextView) findViewById(R.id.prbconnexion);
         TV_PrbConnexion.setOnClickListener(new View.OnClickListener() {
@@ -196,12 +212,15 @@ public class LoginWayde extends AppCompatActivity implements
 
             }
         });
+    }
 
+    private void testResau() {
+        if (!
+                isOnline())
 
-
-
-        //   ConnexionByUser();
-
+        {
+            afficheMessageSnack();
+        }
     }
 
     private void afficheMessageSnack() {
@@ -380,6 +399,10 @@ public class LoginWayde extends AppCompatActivity implements
                 .requestEmail()
 
                 .build();
+
+
+
+
         mGoogleApiClient = new GoogleApiClient.Builder(this)
 
                 .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
@@ -398,6 +421,73 @@ public class LoginWayde extends AppCompatActivity implements
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification Google", "Connexion...", true);
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RC_SIGN_IN) {//
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            if (result.isSuccess()) {
+                // Google Sign In was successful, authenticate with Firebase
+                GoogleSignInAccount account = result.getSignInAccount();
+                firebaseAuthWithGoogle(account);
+                return;
+            }
+
+        }
+
+        if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+
+
+
+    }
+
+    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
+
+
+        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        mAuth.signInWithCredential(credential)
+
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
+                    @Override
+
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        // signed in user can be handled in the listener.
+
+                        if (!task.isSuccessful()) {
+                            if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+                            mAuth.signOut();
+                            System.out.println( task.getException());
+                            try {
+                                throw task.getException();
+                            } catch (Exception e) {
+
+                                Toast toast = Toast.makeText(getBaseContext(),e.getMessage(), Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+                            }
+
+
+                        }
+                        if (task.isSuccessful()){
+
+                            if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+                            Log.d("LoginWayde","Firebase  user google récupéreré");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            connexion(user);
+
+                        }
+
+
+
+                    }
+
+                });
 
     }
 
@@ -429,75 +519,9 @@ public class LoginWayde extends AppCompatActivity implements
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == RC_SIGN_IN) {//
-            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            if (result.isSuccess()) {
-                // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = result.getSignInAccount();
-                firebaseAuthWithGoogle(account);
-                return;
-            }
-
-        }
-
-        if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
 
 
 
-    }
-
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-
-        mAuth.signInWithCredential(credential)
-
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-
-                    @Override
-
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        // signed in user can be handled in the listener.
-
-
-                        if (!task.isSuccessful()) {
-                            mProgressDialogFb.dismiss();
-                            System.out.println("***********************pas bon");
-                            mAuth.signOut();
-                            System.out.println( task.getException());
-                            try {
-                                throw task.getException();
-                            } catch (FirebaseAuthWeakPasswordException e) {
-
-                            } catch (FirebaseAuthInvalidUserException e) {
-                                Toast toast = Toast.makeText(getBaseContext(), R.string.noCompteExist, Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
-
-                            } catch (FirebaseAuthInvalidCredentialsException e) {
-                                Toast toast = Toast.makeText(getBaseContext(), R.string.mdpIncorrect
-                                        , Toast.LENGTH_SHORT);
-                                toast.setGravity(Gravity.CENTER, 0, 0);
-                                toast.show();
-
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-
-
-                        }
-
-
-                    }
-
-                });
-
-    }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {// Echec connexion google
@@ -573,33 +597,12 @@ public class LoginWayde extends AppCompatActivity implements
 
     }
 
-    private void getJeton() {
-        final FirebaseUser mUser = mAuth.getCurrentUser();
 
-        mUser.getToken(true)
-                .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
-                    public void onComplete(@NonNull Task<GetTokenResult> task) {
-                        if (task.isSuccessful()) {
-
-                            Outils.jeton = task.getResult().getToken();
-                           connexionWayd();
-
-                        } else {
-                            // Handle error -> task.getException();
-                        }
-                    }
-                });
-
-    }
 
     private void connexionWayd() {
-        if (mProgressDialogFb == null){
-            mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification ", "Connexion...", true);
-            mProgressDialogFb.setTitle("Connexion au serveur ");
-        }
 
-            else
-         mProgressDialogFb.show();
+        mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Connexion Wayd ", "Connexion...", true);
+
         new AsyncTaches.AsyncConnexionWayd(this, Outils.jeton, LoginWayde.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
     }
@@ -625,14 +628,21 @@ public class LoginWayde extends AppCompatActivity implements
             return;
         }
 
-        mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification ", "Connexion...", true);
+        firebaseAuthWithPwd(email,password);
+
+    }
+
+    private void firebaseAuthWithPwd(String email,String password) {
+
+        mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification", "Connexion...", true);
+
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        mProgressDialogFb.dismiss();
-                        if (!task.isSuccessful()) {
 
+                        if (!task.isSuccessful()) {
+                            mProgressDialogFb.dismiss();
                             try {
                                 throw task.getException();
                             } catch (FirebaseAuthWeakPasswordException e) {
@@ -652,9 +662,22 @@ public class LoginWayde extends AppCompatActivity implements
 
                             }
 
+                        }
+                        if (task.isSuccessful()){
+
+                            mProgressDialogFb.dismiss();
+                            Log.d("LoginWayde","Firebase  user PWD récupéreré");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            if (user.isEmailVerified())
+                            connexion(user);
+                            else
+                            {   Toast toast = Toast.makeText(LoginWayde.this, R.string.comptePasActive, Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+                                mAuth.signOut();
+                            }
 
                         }
-
 
                         // ...
                     }

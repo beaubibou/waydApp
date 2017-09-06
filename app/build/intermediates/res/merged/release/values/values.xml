@@ -1035,7 +1035,7 @@
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="cast_libraries_material_featurehighlight_pulse_base_alpha">138</integer>
     <integer name="design_snackbar_text_max_lines">2</integer>
-    <integer name="google_play_services_version">11200000</integer>
+    <integer name="google_play_services_version">11020000</integer>
     <integer name="hide_password_duration">320</integer>
     <integer name="mr_controller_volume_group_list_animation_duration_ms">400</integer>
     <integer name="mr_controller_volume_group_list_fade_in_duration_ms">400</integer>
@@ -1307,7 +1307,6 @@
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="firebase_database_url" translatable="false">https://wayd-c0414.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">902442853604</string>
-    <string name="gcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="google_api_key" translatable="false">AIzaSyDBc5MmxG3H0L7H5u4wQTxJVx3j_kJYKb8</string>
     <string name="google_app_id" translatable="false">1:902442853604:android:c10506c93b40b932</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDBc5MmxG3H0L7H5u4wQTxJVx3j_kJYKb8</string>

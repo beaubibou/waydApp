@@ -252,8 +252,6 @@
     <string name="f_stats_participation">Participation</string>
     <string name="f_stats_participations">Participations</string>
     <string name="facebook_app_id">123403101550569</string>
-    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Divers"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Divers"</string>
     <string name="inscription_button_inscription">S\'inscrire</string>
     <string name="inscription_ck_mdp">Afficher le mot de passe</string>
     <string name="inscription_hint_confirmmdp">Confirmer le mot de passe </string>

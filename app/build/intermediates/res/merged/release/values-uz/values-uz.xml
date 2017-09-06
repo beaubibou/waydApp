@@ -10,12 +10,12 @@
     <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"Albom muqovasi"</string>
     <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"Jonli efir"</string>
     <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"Yuklanmoqda…"</string>
-    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"Tashlab ketish"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"O‘tkazib yuborish"</string>
     <string msgid="7884080323096468593" name="cast_forward">"Oldinga o‘tkazish"</string>
     <string msgid="6424889955881797947" name="cast_forward_10">"O‘n soniya oldinga o‘tkazish"</string>
     <string msgid="7868672855975238403" name="cast_forward_30">"O‘ttiz soniya oldinga o‘tkazish"</string>
     <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
-    <string msgid="5637297909372905371" name="cast_mute">"Ovozsiz qilish"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"Ovozni o‘chirish"</string>
     <string msgid="5319032370587661362" name="cast_notification_connected_message">"Ulandi: <ns1:g id="NAME">%1$s</ns1:g>"</string>
     <string msgid="2758865089947797888" name="cast_notification_connecting_message">"Ulanmoqda: <ns1:g id="NAME">%1$s</ns1:g>"</string>
     <string msgid="5232008641593292969" name="cast_notification_disconnect">"Aloqani uzish"</string>
@@ -54,8 +54,6 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"Telefonda ochish"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"Kirish"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"Google orqali kirish"</string>
-    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"Har xil"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"Har xil"</string>
     <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Qidiruv maydonini tozalash"</string>
     <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Qidirish"</string>
     <string msgid="368094699078615544" name="s1">"Rasmni saqlash"</string>

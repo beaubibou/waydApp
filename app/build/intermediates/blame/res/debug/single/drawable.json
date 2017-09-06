@@ -1,7 +1,7 @@
 [
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_seekbar_thumb.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_expanded_controller_seekbar_thumb.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_expanded_controller_seekbar_thumb.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_round.xml",
@@ -13,7 +13,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_stop_large.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_stop_large.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_stop_large.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_connected_light.xml",
@@ -25,7 +25,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_mute.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_mute.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_mute.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
@@ -33,43 +33,43 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_play_large.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_play_large.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_play_large.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_mini_controller_gradient_light.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_mini_controller_gradient_light.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_mini_controller_gradient_light.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_pause_large.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_pause_large.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_pause_large.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_skip_next.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_skip_next.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_skip_next.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_white_bg_round.xml",
         "source": "D:\\android\\.android\\build-cache\\2a2bb2bc5f90732fad4d50ed52ae7569efe7293d\\output\\res\\drawable\\messenger_button_white_bg_round.xml"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_pause.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_pause.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_pause.xml"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\soulignblancfondjaune.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\drawable\\soulignblancfondjaune.xml"
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light.xml",
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_media_stop_light.xml",
         "source": "D:\\android\\.android\\build-cache\\fd3ad2afbd21521477f86b8be6df2318c2238191\\output\\res\\drawable\\mr_media_stop_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\soulignblancfondjaune.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\drawable\\soulignblancfondjaune.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_media_play_light.xml",
@@ -77,31 +77,31 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_rewind30.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_rewind30.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_rewind30.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_skip_previous.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_skip_previous.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_skip_previous.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_closed_caption.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_closed_caption.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_closed_caption.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_stop.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_stop.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_stop.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_focused.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_text_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_skip_next.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_skip_next.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_skip_next.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\badge_item_count.xml",
@@ -109,11 +109,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_focused.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward10.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_forward10.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_forward10.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_dark.xml",
@@ -125,11 +125,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_normal.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_light_focused.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
@@ -165,11 +165,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_play.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_play.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_play.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_disconnect.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_disconnect.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_disconnect.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_send_button_icon.xml",
@@ -181,7 +181,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_skip_prev.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_skip_prev.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_skip_prev.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\messenger_button_blue_bg_selector.xml",
@@ -189,7 +189,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_disabled.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_dialog_material_background_dark.xml",
@@ -201,7 +201,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
@@ -213,7 +213,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_actionbar_bg_gradient_light.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_expanded_controller_actionbar_bg_gradient_light.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_expanded_controller_actionbar_bg_gradient_light.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_group_expand.xml",
@@ -233,7 +233,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_normal.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
@@ -241,15 +241,15 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_mute.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_mute.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_mute.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_skip_next.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_skip_next.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_skip_next.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_rewind30.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_rewind30.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_rewind30.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
@@ -261,15 +261,15 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_pause.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_pause.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_pause.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind30.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_rewind30.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_rewind30.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
@@ -281,7 +281,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_skip_prev.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_skip_prev.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_skip_prev.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
@@ -289,7 +289,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_forward30.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_forward30.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_forward30.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_media_play_dark.xml",
@@ -301,7 +301,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_disabled.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
@@ -321,11 +321,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind10.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_rewind10.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_rewind10.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward30.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_forward30.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_forward30.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_login_background.xml",
@@ -377,11 +377,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_forward30.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_forward30.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_forward30.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_rewind.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_rewind.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_rewind.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_media_pause_dark.xml",
@@ -389,7 +389,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_mini_controller_progress_drawable.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_mini_controller_progress_drawable.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_mini_controller_progress_drawable.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
@@ -397,7 +397,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_bg_gradient_light.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_expanded_controller_bg_gradient_light.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_expanded_controller_bg_gradient_light.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\borduretextfondblanc.xml",
@@ -409,7 +409,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_skip_ad_label_border.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_skip_ad_label_border.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_skip_ad_label_border.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_media_stop_dark.xml",
@@ -421,7 +421,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_small_icon.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_small_icon.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_small_icon.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_dialog_material_background_light.xml",
@@ -429,11 +429,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_play.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_play.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_play.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_closed_caption.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_closed_caption.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_closed_caption.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
@@ -445,11 +445,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_stop.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_stop.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_stop.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_forward.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_forward.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_forward.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
@@ -485,7 +485,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_expanded_controller_seekbar_track.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_expanded_controller_seekbar_track.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_expanded_controller_seekbar_track.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
@@ -497,7 +497,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_expanded_controller_pause.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_expanded_controller_pause.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_expanded_controller_pause.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_send_background.xml",
@@ -505,7 +505,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_mini_controller_play.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_mini_controller_play.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_mini_controller_play.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_button_connecting_light.xml",
@@ -521,7 +521,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_light_normal.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
@@ -545,11 +545,11 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_stop_live_stream.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\drawable\\cast_ic_notification_stop_live_stream.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\drawable\\cast_ic_notification_stop_live_stream.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cast_ic_notification_connecting.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3ae2618e197142adba4f91630ad1ad8c821d156\\output\\res\\drawable\\cast_ic_notification_connecting.xml"
+        "source": "D:\\android\\.android\\build-cache\\b4a9e0eef32db60be3064a9ba3cd28ad494db2b1\\output\\res\\drawable\\cast_ic_notification_connecting.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\borduretext.xml",
@@ -561,7 +561,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark_focused.xml",
-        "source": "D:\\android\\.android\\build-cache\\ad6f88360e54814b1f8a4e1d57a4680626562f2a\\output\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
+        "source": "D:\\android\\.android\\build-cache\\5c0b8181315f5a4fd5bb5cae3ddce0232458850b\\output\\res\\drawable\\common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\com_facebook_button_icon.xml",

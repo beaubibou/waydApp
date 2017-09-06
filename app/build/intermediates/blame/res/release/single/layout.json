@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\s_mesnotifications.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_mesnotifications.xml"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\s_detailavis.xml",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_detailavis.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\s_mesnotifications.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_mesnotifications.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\mr_chooser_list_item.xml",
@@ -17,27 +17,27 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\cast_tracks_chooser_dialog_layout.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_tracks_chooser_dialog_layout.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\place_autocomplete_fragment.xml",
-        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_fragment.xml"
-    },
-    {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_maps.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\activity_maps.xml"
+        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_fragment.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_popup_menu_header_item_layout.xml",
         "source": "D:\\android\\.android\\build-cache\\a199c58d2f9289118ac97f0365459907ba701a10\\output\\res\\layout\\abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\popup_commentaireactivite.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\popup_commentaireactivite.xml"
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\activity_maps.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\activity_maps.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\item_message.xml",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\item_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\popup_commentaireactivite.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\popup_commentaireactivite.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\menu_principal.xml",
@@ -64,16 +64,16 @@
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\signaleramelioration.xml"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\item_mesaaminew.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\item_mesaaminew.xml"
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\s_mesdiscussion.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_mesdiscussion.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\design_navigation_item_separator.xml",
         "source": "D:\\android\\.android\\build-cache\\fb3da0f09b95f3e3422eee387cc88fe551a29480\\output\\res\\layout\\design_navigation_item_separator.xml"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\s_mesdiscussion.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_mesdiscussion.xml"
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\item_mesaaminew.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\item_mesaaminew.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\design_navigation_item.xml",
@@ -165,7 +165,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\cast_expanded_controller_activity.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_expanded_controller_activity.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_expanded_controller_activity.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\badge_item_notification_count_layout.xml",
@@ -205,7 +205,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\cast_mini_controller.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_mini_controller.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_mini_controller.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\abc_dialog_title_material.xml",
@@ -285,7 +285,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\place_autocomplete_item_powered_by_google.xml",
-        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
+        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_item_powered_by_google.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\messenger_button_send_blue_round.xml",
@@ -309,7 +309,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\place_autocomplete_item_prediction.xml",
-        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_item_prediction.xml"
+        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_item_prediction.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\com_facebook_login_fragment.xml",
@@ -317,7 +317,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\cast_tracks_chooser_dialog_row_layout.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_tracks_chooser_dialog_row_layout.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\mes_discussions.xml",
@@ -357,7 +357,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\place_autocomplete_progress.xml",
-        "source": "D:\\android\\.android\\build-cache\\dc34bf28ef2f7c14f2b5fc39348064b9b92fc6a6\\output\\res\\layout\\place_autocomplete_progress.xml"
+        "source": "D:\\android\\.android\\build-cache\\1dea11500b1bedb1e69223e2d8dbde2764410dd4\\output\\res\\layout\\place_autocomplete_progress.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -373,7 +373,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\cast_intro_overlay.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_intro_overlay.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_intro_overlay.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\inscription.xml",
@@ -389,7 +389,7 @@
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\cast_help_text.xml",
-        "source": "D:\\android\\.android\\build-cache\\d3be686eb1b10a844815db7f8d2d722c87e90d31\\output\\res\\layout\\cast_help_text.xml"
+        "source": "D:\\android\\.android\\build-cache\\89cdb3b13f8c373409be4d289dbefa59b82c8660\\output\\res\\layout\\cast_help_text.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout\\pop_signaleractivite.xml",

@@ -29,7 +29,7 @@
     <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"עטיפת אלבום"</string>
     <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"זרם בשידור חי"</string>
     <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"טוען…"</string>
-    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"דילוג"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"דלג"</string>
     <string msgid="7884080323096468593" name="cast_forward">"העבר"</string>
     <string msgid="6424889955881797947" name="cast_forward_10">"העבר עשר שניות קדימה"</string>
     <string msgid="7868672855975238403" name="cast_forward_30">"העבר 30 שניות קדימה"</string>
@@ -44,8 +44,8 @@
     <string msgid="6432793028560778843" name="cast_rewind_10">"העבר עשר שניות לאחור"</string>
     <string msgid="4677199707225681325" name="cast_rewind_30">"העבר 30 שניות לאחור"</string>
     <string msgid="9078075166993780241" name="cast_seek_bar">"פקד חיפוש הפעלה"</string>
-    <string msgid="3991548379225047363" name="cast_skip_next">"ברצוני לדלג אל הפריט הבא"</string>
-    <string msgid="8369073097776576935" name="cast_skip_prev">"ברצוני לדלג לפריט הקודם"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"דלג אל הפריט הבא"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"דלג לפריט הקודם"</string>
     <string msgid="9191388946729723891" name="cast_stop">"עצור"</string>
     <string msgid="1219622777438777099" name="cast_stop_live_stream">"עצור סטרימינג בשידור חי"</string>
     <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"אודיו"</string>
@@ -71,10 +71,8 @@
     <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"‏האפליקציה <ns1:g id="APP_NAME">%1$s</ns1:g> לא תפעל ללא שירותי Google Play, שמתעדכנים כרגע."</string>
     <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"‏דרושה גרסה חדשה של שירותי Google Play. הגרסה תתעדכן בעצמה תוך זמן קצר."</string>
     <string msgid="5201977337835724196" name="common_open_on_phone">"פתח בטלפון"</string>
-    <string msgid="3441753203274453993" name="common_signin_button_text">"כניסה"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"היכנס"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"‏היכנס באמצעות Google"</string>
-    <string msgid="4133737464567140336" name="fcm_fallback_notification_channel_label">"שונות"</string>
-    <string msgid="9521340570209730" name="gcm_fallback_notification_channel_label">"שונות"</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"‏לחצן הפעלת Cast"</string>
     <string msgid="5088427771788648085" name="mr_cast_button_connected">"‏לחצן הפעלת Cast. מחובר"</string>
     <string msgid="2187642765091873834" name="mr_cast_button_connecting">"‏לחצן הפעלת Cast. מתחבר"</string>
