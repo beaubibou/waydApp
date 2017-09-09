@@ -286,6 +286,7 @@
     <string name="menu_drawer_deconnexion">Deconnexion</string>
     <string name="menu_drawer_masphere">Ma sphère</string>
     <string name="menu_drawer_mesactivite">Mes activités</string>
+    <string name="menu_drawer_partager">Partager</string>
     <string name="menu_drawer_proposer">Proposer</string>
     <string name="menu_drawer_rechercher">Rechercher</string>
     <string name="menu_list_pardistance">Distance</string>

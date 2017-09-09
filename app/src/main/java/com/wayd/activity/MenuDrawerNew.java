@@ -48,6 +48,8 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
     private final static int DECONNEXION = 9;
     private final static int AMELIORER = 10;
     private final static int APROPOS = 11;
+    private final static int SHARE = 12;
+
     private Activity currentActivity;
 
     private MenuItem menu_mesactivite, menu_masphere;
@@ -349,6 +351,12 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
                         Outils.principal.finish();
 
                         break;
+
+
+                    case SHARE:
+                        share();
+                        break;
+
                 }
 
                 selectionslide = -1;
@@ -498,6 +506,12 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
                 break;
 
 
+                    case R.id.id_partager:
+
+                        selectionslide = SHARE;
+
+                        break;
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawerlayout);
@@ -545,5 +559,17 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
         if (menudrawer != null) {
             udpateDrawer();
         }
+    }
+
+
+    private void share(){
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBodyText = "http://play.google.com/store/apps/details?id=com.application.wayd.";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Wayd lien");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+        startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
+
+
     }
 }

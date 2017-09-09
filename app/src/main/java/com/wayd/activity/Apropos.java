@@ -5,9 +5,12 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import com.application.wayd.R;
+
+import java.util.regex.Pattern;
 
 
 public class Apropos extends AppCompatActivity {
@@ -20,10 +23,16 @@ public class Apropos extends AppCompatActivity {
 
         TextView TV_NUMversion = (TextView) findViewById(R.id.version);
         try {
+            Log.d("version","Recuepre la version");
+
             PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
              int versionCode = info.versionCode;
             String versionName = info.versionName+versionCode;
             TV_NUMversion.setText(versionName);
+
+            String [] f=versionName.split(Pattern.quote("."));
+            for (String version:f)
+                Log.d("version",version);
 
         } catch (PackageManager.NameNotFoundException e) {
             // TODO Auto-generated catch block
