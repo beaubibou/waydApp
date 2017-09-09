@@ -561,15 +561,13 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
         }
     }
 
-
     private void share(){
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
-        String shareBodyText = "http://play.google.com/store/apps/details?id=com.application.wayd.";
+        String shareBodyText = "http://play.google.com/store/apps/details?id=com.application.wayd";
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Wayd lien");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
         startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
-
 
     }
 }
