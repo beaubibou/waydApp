@@ -41,4 +41,13 @@ public class Version {
     public void setMineur(int mineur) {
         this.mineur = mineur;
     }
+
+    // COmpate la version et le majeur. Dans le cas d'une mise à jour  BDD on change sur le serveur applicatin le version majeur
+    public boolean isAjour(Version derniereVersion) {
+
+        return !(derniereVersion.getMajeur() > this.getMajeur() ||
+                derniereVersion.getVersion() > this.getVersion());
+
+
+    }
 }

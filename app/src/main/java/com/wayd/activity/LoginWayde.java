@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -22,12 +23,14 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -520,9 +523,6 @@ public class LoginWayde extends AppCompatActivity implements
     }
 
 
-
-
-
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {// Echec connexion google
         if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
@@ -532,12 +532,15 @@ public class LoginWayde extends AppCompatActivity implements
     @Override
     public void loopBack_ConnexionWayd(Personne personne) {
 
+        if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+
+        if (!isVersionUpdate())return;
+
         if (personne == null) {
 
             mAuth.signOut();
             Outils.connected = false;
-            //Outils.personneConnectee.Raz();
-            // Outils.tableaudebord.Raz();
+
         }
 
         if (personne != null) {
@@ -574,7 +577,7 @@ public class LoginWayde extends AppCompatActivity implements
             }
 
         }
-        if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+
 
     }
 
@@ -597,12 +600,47 @@ public class LoginWayde extends AppCompatActivity implements
 
     }
 
+    // Compare la version dispobile sur le serveur et la version de application
+    public boolean isVersionUpdate(){
+
+        if (Outils.getVersionApk(getBaseContext()).isAjour( Outils.DERNIERE_VERSION_WAYD))
+            return true;
+
+
+
+        AlertDialog.Builder builder;
+
+        builder = new AlertDialog.Builder(LoginWayde.this);
+
+        builder.setTitle("Mise à jour ")
+                .setMessage("Une mise à jour obligatoire est disponible")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse("market://details?id=com.application.wayd"));
+                        startActivity(intent);
+                        // continue with delete
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
+
+
+        return false;
+
+
+    }
 
 
     private void connexionWayd() {
 
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Connexion Wayd ", "Connexion...", true);
-
         new AsyncTaches.AsyncConnexionWayd(this, Outils.jeton, LoginWayde.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
     }

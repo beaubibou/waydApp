@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -32,6 +34,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 import com.application.wayd.R;
 import com.facebook.Profile;
@@ -64,7 +67,7 @@ public class Outils {
     public static GPSTracker gps;
     public static final ReceiverGCM LOOP_BACK_RECEIVER_GCM = new ReceiverGCM();
     public static final ArrayList<TypeActivite> listtypeactivitecomplete = new ArrayList<>();
-
+    public static Version  DERNIERE_VERSION_WAYD=null;
     public static final BusMessaging busMessaging = new BusMessaging();
 
     public static int getIndiceTypeActivite(int idTypeActivite){// renvoi l'indice en fontion de l'id du typeactivite
@@ -76,6 +79,30 @@ public class Outils {
         return 0;
 
     }
+
+    public static Version getVersionApk(Context context){
+        PackageManager manager = context.getPackageManager();
+
+
+        try {
+            Log.d("version","Recupere la version");
+
+            PackageInfo info = manager.getPackageInfo(context.getPackageName(), 0);
+            int versionCode = info.versionCode;
+            String versionName = info.versionName+versionCode;
+            String [] decoupe=versionName.split(Pattern.quote("."));
+            for (String version:decoupe)
+                Log.d("version",version);
+
+            return new Version(Integer.parseInt(decoupe[1]),Integer.parseInt(decoupe[2]),Integer.parseInt(decoupe[3]));
+
+        } catch (PackageManager.NameNotFoundException e) {
+            // TODO Auto-generated catch block
+        }
+        return null;
+
+    }
+
 
     public static Date getDateFromSoapObject(Object objet) {
 

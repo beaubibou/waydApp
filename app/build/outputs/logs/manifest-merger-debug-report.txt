@@ -450,6 +450,7 @@ ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifes
 		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:202:13-56
 uses-sdk
 INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:multidex:1.0.1] D:\android\.android\build-cache\8cf422c338a96aebe3b7c2a06a43c3ef74f25462\output\AndroidManifest.xml:18:5-42
 MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] D:\android\.android\build-cache\2a2bb2bc5f90732fad4d50ed52ae7569efe7293d\output\AndroidManifest.xml:24:5-26:41
 MERGED from [com.google.android.gms:play-services:11.0.4] D:\android\.android\build-cache\5106958e35a29fa42b4892d2cb102d831c63eb61\output\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-ads:11.0.4] D:\android\.android\build-cache\b4b9d152ae92f52a63639085b9fc6806b3d7634b\output\AndroidManifest.xml:17:5-43
@@ -503,7 +504,6 @@ MERGED from [com.android.support:appcompat-v7:25.3.1] D:\android\.android\build-
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] D:\android\.android\build-cache\02f4671faa58f55a645f5138c7ee9c5886bced43\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.3.1] D:\android\.android\build-cache\bdd6399d89714fb2a0f138c217e26fe8b32d5bd2\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:palette-v7:25.3.1] D:\android\.android\build-cache\8f47a7741c47b347ca7a7fc432e2a8b3f3f126ea\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:multidex:1.0.1] D:\android\.android\build-cache\8cf422c338a96aebe3b7c2a06a43c3ef74f25462\output\AndroidManifest.xml:18:5-42
 MERGED from [com.google.firebase:firebase-auth:11.0.4] D:\android\.android\build-cache\4f56e1528e124eabf290a42b1b11bbcc38c15ff0\output\AndroidManifest.xml:17:5-43
 MERGED from [de.hdodenhof:circleimageview:2.1.0] D:\android\.android\build-cache\53276741652ee9518258d8303694a32a5fe94f5e\output\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] D:\android\.android\build-cache\328d8d12fde5d9f9e118606f2e8caf80614a301a\output\AndroidManifest.xml:5:5-7:41

@@ -3153,10 +3153,15 @@ public class AsyncTaches {
                     personneWs = new Wservice().getPersonnebyToken(Outils.jeton);//
                     if (personneWs != null) {
                         Outils.listtypeactivitecomplete.addAll(new Wservice().getListTypeActivite());
+                        Outils.DERNIERE_VERSION_WAYD=new Wservice().getVersion();
+                        Log.d("Version version","***************************************************"+Outils.DERNIERE_VERSION_WAYD.getVersion());
+                        Log.d("Version version",""+Outils.DERNIERE_VERSION_WAYD.getMajeur());
+                        Log.d("Version version",""+Outils.DERNIERE_VERSION_WAYD.getMineur());
+
                         return new Personne(personneWs);
                     }
                     nbtentative++;
-                    Thread.sleep(400);
+                    Thread.sleep(30);
 
                 }
 

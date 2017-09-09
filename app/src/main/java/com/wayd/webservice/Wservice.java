@@ -36,9 +36,10 @@ import com.wayd.bean.ProfilNotation;
 import com.wayd.bean.RetourMessage;
 import com.wayd.bean.TableauBord;
 import com.wayd.bean.TypeActivite;
+import com.wayd.bean.Version;
 
 public class Wservice {
- //  private final static String URL = "http://192.168.1.79:8080//wayd/services/WBservices?wsdl";
+// private final static String URL = "http://192.168.1.79:8080//wayd/services/WBservices?wsdl";
    private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
     private final static int timeoutws = 10000;
     private static final String NAMESPACE = "http://ws.wayd";
@@ -415,6 +416,50 @@ public class Wservice {
     }
 
 
+    public Version getVersion()
+            throws IOException, XmlPullParserException {
+
+        String METHOD = "getVersion";
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        envelope.bodyOut = request;
+
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //   SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+
+
+        if (envelope.bodyIn != null) {
+
+            SoapObject resultSOAP = (SoapObject) envelope.getResponse();
+
+            int version = Integer.parseInt((resultSOAP
+                    .getProperty("version").toString()));
+
+            int mineur = Integer.parseInt((resultSOAP
+                    .getProperty("mineur").toString()));
+
+            int majeur = Integer.parseInt((resultSOAP
+                    .getProperty("majeur").toString()));
+
+
+            return new Version(version,majeur,mineur);
+
+
+        }
+        return null;
+
+
+
+    }
 
 
 
