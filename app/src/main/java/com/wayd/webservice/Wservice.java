@@ -66,7 +66,6 @@ public class Wservice {
 
         if (SECURE) {
             HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
-         //   SslRequest.allowAllSSL();
 
             transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
 
