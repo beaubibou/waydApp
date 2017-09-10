@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Sep 10 22:29:39 CEST 2017
+#Sun Sep 10 22:39:05 CEST 2017
 835.base=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\resources-debug.ap_
 100.set=ANDROID_RESOURCE
 57.file=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\item_mesaaminew.xml

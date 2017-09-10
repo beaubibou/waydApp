@@ -61,6 +61,7 @@ public class F_Preferences extends Fragment implements AsyncTaches.AsyncUpdatePr
         TV_rayonMin.setText(RAYON_MIN_RECHERCHE+ "M");
 
         TV_rayonMax = (TextView) rootView.findViewById(R.id.id_affichermax);
+
         SK_rayon.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

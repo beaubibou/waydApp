@@ -1,4 +1,4 @@
-#Sun Sep 10 22:29:46 CEST 2017
+#Sun Sep 10 22:39:11 CEST 2017
 base.0=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_a8ea37d54ee8c81d883c47645a41d98a8cc04f94
 renamed.1=classes2.dex
 renamed.0=classes.dex
