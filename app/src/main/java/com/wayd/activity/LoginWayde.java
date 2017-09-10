@@ -603,6 +603,7 @@ public class LoginWayde extends AppCompatActivity implements
     // Compare la version dispobile sur le serveur et la version de application
     public boolean isVersionUpdate(){
 
+
         if (Outils.getVersionApk(getBaseContext()).isAjour( Outils.DERNIERE_VERSION_WAYD))
             return true;
 

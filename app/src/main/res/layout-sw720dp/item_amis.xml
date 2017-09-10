@@ -64,7 +64,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dans votre cercle depuis le "
+        android:text="Dans votre sphère depuis le "
         android:textSize="@dimen/texte2"
         android:layout_below="@+id/pseudo"
         android:layout_toEndOf="@+id/iconactivite"

@@ -1,6 +1,7 @@
 package com.wayd.activity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -21,6 +22,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 
 import android.widget.ArrayAdapter;
@@ -306,12 +308,24 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
             public void onClick(DialogInterface dialog, int which) {
                 TV_Commentaires.setText(ET_Commentaires.getText().toString());
 
+                // Ferme clavier
+                InputMethodManager imm = (InputMethodManager)getActivity().
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(
+                        ET_Commentaires.getWindowToken(), 0);
+
             }
         });
 
         //On crée un bouton "Annuler" à notre AlertDialog et on lui affecte un évènement
         adb.setNegativeButton(R.string.DescriptionProfil_No, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
+
+                // Ferme clavier
+                InputMethodManager imm = (InputMethodManager)getActivity().
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(
+                        ET_Commentaires.getWindowToken(), 0);
                 //Lorsque l'on cliquera sur annuler on quittera l'application
 
             }
@@ -339,6 +353,7 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
         ((Outils.DatePickerFragment) newFragment).setView(v);
         newFragment.show(getActivity().getSupportFragmentManager(), "datePicker");
     }
+
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 

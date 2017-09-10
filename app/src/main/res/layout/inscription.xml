@@ -12,11 +12,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_titreinscription"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:gravity="center"
-       android:textStyle="normal|bold"
+         android:gravity="center"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
         android:textSize="@dimen/texte3"
-        android:textColor="#fff" />
+        android:textColor="#000000" />
 
     <LinearLayout
 
@@ -40,7 +40,7 @@
             android:hint="@string/inscription_hint_mail"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
-            android:textSize="@dimen/texte2" />
+            android:textSize="@dimen/texte3" />
 
         <EditText
             android:padding="@dimen/paddingEditTextSingle"
@@ -50,7 +50,7 @@
             android:hint="@string/inscription_hint_mdp"
             android:inputType="textPassword"
             android:imeOptions="actionNext"
-            android:textSize="@dimen/texte2" />
+            android:textSize="@dimen/texte3" />
 
         <EditText
             android:padding="@dimen/paddingEditTextSingle"
@@ -61,7 +61,7 @@
             android:hint="@string/inscription_hint_confirmmdp"
             android:inputType="textPassword"
             android:imeOptions="actionNext"
-            android:textSize="@dimen/texte2" />
+            android:textSize="@dimen/texte3" />
 
         <CheckBox
             android:layout_marginTop="@dimen/marge2"

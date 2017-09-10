@@ -1057,7 +1057,7 @@
     <string name="AnnuleSonActivite_Titre">"Annulation"</string>
     <string name="ChangementMDP_Message">"Confirmer ? "</string>
     <string name="ChangementMDP_No">"Annuler"</string>
-    <string name="ChangementMDP_OK">"Oui"</string>
+    <string name="ChangementMDP_OK">"Changer"</string>
     <string name="ChangementMDP_Titre">"Changement du mot de passe"</string>
     <string name="ChangerPhoto_Titre">"Modifier ma photo"</string>
     <string name="ConfirmeParticipation_Message">"Confirmez votre participation ?"</string>
@@ -1280,6 +1280,7 @@
     <string name="creationActivite">"Création de votre activité"</string>
     <string name="dateNaissanceObligatoire">"Date de naissance obligatoire"</string>
     <string name="default_web_client_id" translatable="false">902442853604-9b05k6gnfjdum44fo21q2rpbfedn9n7a.apps.googleusercontent.com</string>
+    <string name="descriptionNotification">"Permet de recevoir les notifications..."</string>
     <string name="donneavis_button_valider">Valider</string>
     <string name="donneavis_commentpassee">Comment ça s\'est passée ?</string>
     <string name="donneavis_hint_consigne">Avis (120 caractères maximum) </string>
@@ -1307,9 +1308,9 @@
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="firebase_database_url" translatable="false">https://wayd-c0414.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">902442853604</string>
-    <string name="google_api_key" translatable="false">AIzaSyDBc5MmxG3H0L7H5u4wQTxJVx3j_kJYKb8</string>
+    <string name="google_api_key" translatable="false">AIzaSyC1O5GtmVThAeFp8i2BPk7pDFowm-oEDRk</string>
     <string name="google_app_id" translatable="false">1:902442853604:android:c10506c93b40b932</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDBc5MmxG3H0L7H5u4wQTxJVx3j_kJYKb8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC1O5GtmVThAeFp8i2BPk7pDFowm-oEDRk</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyAfiU_l60QXO_qMh9dgiDj_wfy9c_ZimUI
     </string>
@@ -1354,6 +1355,7 @@
     <string name="menu_list_pardistance">Distance</string>
     <string name="menu_list_partemps">Temps restant</string>
     <string name="messageBienvenue">"Bienvenue "</string>
+    <string name="messageSwintchNotification">"Recevoir les notifications"</string>
     <string name="messageTropLong">"Votre message est trop long"</string>
     <string name="messenger_send_button_text">Send</string>
     <string name="mr_button_content_description">Cast button</string>
@@ -1417,7 +1419,7 @@
     <string name="premiereconnexion_infopseudo">"Un pseudo unique qui sera visible sur l'application"</string>
     <string name="premiereconnexion_infos">"Avant d'utiliser le service, nous avons besoin de 3 informations :"</string>
     <string name="premiereconnexion_infoscomplementaire">"*Informations masquées par défaut. Pourquoi est-ce nécessaire d'indiquer mon âge et mon sexe ?"</string>
-    <string name="premiereconnexion_sexe">Un sexe</string>
+    <string name="premiereconnexion_sexe">Un sexe*</string>
     <string name="problemeObligatoire">"La description du problème est obligatoire"</string>
     <string name="proposeactivite_creationactivite">"Création de votre activité"</string>
     <string name="proposeactivite_defautCommentaire">"Si vous êtes dans le coin et que vous vous ennuyez, bienvenue !"</string>

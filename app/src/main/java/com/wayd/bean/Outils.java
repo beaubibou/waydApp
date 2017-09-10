@@ -19,6 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
@@ -119,6 +120,7 @@ public class Outils {
     }
 
 
+
     public static int getActiviteMipMap(int type) {
 
         switch (type) {
@@ -139,7 +141,7 @@ public class Outils {
             case TypeActivite.WAYDEURS_DISPO:
                 return R.mipmap.ic_suggestionwayd;
             case TypeActivite.AUTRE:
-                return R.mipmap.ic_entraide;
+                return R.mipmap.ic_autre;
             case TypeActivite.ENTRAIDE:
                 return R.mipmap.ic_entraide;
 

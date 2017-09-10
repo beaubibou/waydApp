@@ -24,7 +24,7 @@
     <string name="AnnuleSonActivite_Titre">"Annulation"</string>
     <string name="ChangementMDP_Message">"Confirmer ? "</string>
     <string name="ChangementMDP_No">"Annuler"</string>
-    <string name="ChangementMDP_OK">"Oui"</string>
+    <string name="ChangementMDP_OK">"Changer"</string>
     <string name="ChangementMDP_Titre">"Changement du mot de passe"</string>
     <string name="ChangerPhoto_Titre">"Modifier ma photo"</string>
     <string name="ConfirmeParticipation_Message">"Confirmez votre participation ?"</string>
@@ -228,6 +228,7 @@
     <string name="consigenMdp">"Le mot de passe doit contenir 6 caractéres"</string>
     <string name="creationActivite">"Création de votre activité"</string>
     <string name="dateNaissanceObligatoire">"Date de naissance obligatoire"</string>
+    <string name="descriptionNotification">"Permet de recevoir les notifications..."</string>
     <string name="donneavis_button_valider">Valider</string>
     <string name="donneavis_commentpassee">Comment ça s\'est passée ?</string>
     <string name="donneavis_hint_consigne">Avis (120 caractères maximum) </string>
@@ -292,6 +293,7 @@
     <string name="menu_list_pardistance">Distance</string>
     <string name="menu_list_partemps">Temps restant</string>
     <string name="messageBienvenue">"Bienvenue "</string>
+    <string name="messageSwintchNotification">"Recevoir les notifications"</string>
     <string name="messageTropLong">"Votre message est trop long"</string>
     <string name="messenger_send_button_text">Envoyer</string>
     <string msgid="3698378085901466129" name="mr_button_content_description">"Icône Cast"</string>
@@ -349,7 +351,7 @@
     <string name="premiereconnexion_infopseudo">"Un pseudo unique qui sera visible sur l'application"</string>
     <string name="premiereconnexion_infos">"Avant d'utiliser le service, nous avons besoin de 3 informations :"</string>
     <string name="premiereconnexion_infoscomplementaire">"*Informations masquées par défaut. Pourquoi est-ce nécessaire d'indiquer mon âge et mon sexe ?"</string>
-    <string name="premiereconnexion_sexe">Un sexe</string>
+    <string name="premiereconnexion_sexe">Un sexe*</string>
     <string name="problemeObligatoire">"La description du problème est obligatoire"</string>
     <string name="proposeactivite_creationactivite">"Création de votre activité"</string>
     <string name="proposeactivite_defautCommentaire">"Si vous êtes dans le coin et que vous vous ennuyez, bienvenue !"</string>

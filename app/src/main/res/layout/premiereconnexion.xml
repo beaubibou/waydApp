@@ -8,19 +8,20 @@
     <RelativeLayout
         android:background="#ffd440"
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="wrap_content">
 
         <TextView
-            android:layout_marginLeft="5dp"
+            android:padding="@dimen/paddingTextview2"
             android:layout_centerVertical="true"
             android:text="@string/premiereconnexion_bienvenue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
-            style="@style/Base.TextAppearance.AppCompat.Large"
             android:textStyle="normal|bold"
-            android:textAllCaps="false"
-            android:textSize="@dimen/texte2"/>
+            android:textAllCaps="true"
+            android:textSize="@dimen/texte3"
+            android:gravity="center"
+            android:textColor="#000000"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -71,7 +72,8 @@
                 android:maxLength="@string/maxLengtPseudo"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
-                android:textSize="@dimen/texte2"
+                android:textSize="@dimen/texte3"
+                android:padding="@dimen/texte2"
                 android:textStyle="normal"
                 android:maxLines="1" />
 
@@ -119,6 +121,7 @@
                 style="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="#000000"
                 android:text="@string/premiereconnexion_buttonconfirme"
+
                 android:textSize="@dimen/texte2"/>
 
 

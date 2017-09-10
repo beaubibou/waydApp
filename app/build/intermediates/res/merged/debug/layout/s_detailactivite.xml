@@ -276,7 +276,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/s_detailactivite_signaler"
                     android:textColor="#FFA440"
-                    android:textStyle="bold"
+                    android:textStyle="bold|italic"
                     android:visibility="invisible"
                     android:textAlignment="textEnd" />
 

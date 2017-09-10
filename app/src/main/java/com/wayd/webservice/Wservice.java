@@ -39,15 +39,15 @@ import com.wayd.bean.TypeActivite;
 import com.wayd.bean.Version;
 
 public class Wservice {
-// private final static String URL = "http://192.168.1.79:8080//wayd/services/WBservices?wsdl";
-   private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
+ private final static String URL = "http://192.168.1.79:8080//wayd/services/WBservices?wsdl";
+  //  private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
     private final static int timeoutws = 10000;
     private static final String NAMESPACE = "http://ws.wayd";
     private static final String SOAP_ACTION_PREFIX = "/";
     private static final String HOST = "wayd.fr";
     private static final int PORT = 8443;
     private static final String FILE = "/wayd/services/WBservices?wsdl";
-    private static final boolean SECURE = true;
+    private static final boolean SECURE = false;
 
     public Avis getAvis(int idnoter_, int idactivite, int idnotateur, int idpersonnenotee,int idDemandeur) throws IOException,
             XmlPullParserException {

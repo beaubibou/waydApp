@@ -101,27 +101,7 @@ public class F_Map_ListActivite extends SupportMapFragment implements
 
     private void setUpMap() {
 
-        //    mMap.setMyLocationEnabled(true);
-        //  mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        googleMap.getUiSettings().setMapToolbarEnabled(false);
-
-
-        //   mMap.setMyLocationEnabled(true);
-        //   mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        //   mMap.getUiSettings().setMapToolbarEnabled(false);
-
-        //  Marker hamburg = mMap.addMarker(new MarkerOptions().position(HAMBURG)
-        //          .title("Hamburg"));
-        //    Marker kiel = mMap.addMarker(new MarkerOptions()
-        //      .position(KIEL)
-        //   .title("Kiel")
-        //   .snippet("Kiel is cool")
-        //    .icon(BitmapDescriptorFactory
-        //              .fromResource(R.mipmap.ic_barrestorond)));
-
-        //  mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(HAMBURG, 15));
-
-        //    mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
+           googleMap.getUiSettings().setMapToolbarEnabled(false);
     }
 
     public void updateListe(int centrerSur) {
@@ -136,7 +116,6 @@ public class F_Map_ListActivite extends SupportMapFragment implements
         googleMap.clear();
 
         float taillePixel=convertDpToPixel(25f,getActivity().getBaseContext());
-        Log.d("TAILLE PIXEL*****","**************************************"+taillePixel);
         for (Activite activite : listeActivite) {
             LatLng activitePosition = new LatLng(activite.getLatitude(), activite.getLongitude());
            Bitmap icon = BitmapFactory.decodeResource(getResources(),Outils.getActiviteMipMap(activite.getIdTypeActite()));

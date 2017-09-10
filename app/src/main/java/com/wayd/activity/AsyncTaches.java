@@ -1276,8 +1276,8 @@ public class AsyncTaches {
                     tentative++;
                     Log.d("AsyncGetAdresse", "Tentative" + tentative.toString());
 
-                    // Geocoder geocoder = new Geocoder(mcontext);
-              //  addresses = geocoder.getFromLocation(latitude, longitude, 1);
+               // Geocoder geocoder = new Geocoder(mcontext);
+               // addresses = geocoder.getFromLocation(latitude, longitude, 1);
                 addresses=Outils.getFromLocation(latitude, longitude, 1);
                 if (addresses.size() == 0) return null;
                 return addresses.get(0);

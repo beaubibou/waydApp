@@ -39,7 +39,6 @@ import java.util.Iterator;
 public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.AsyncGetProfil.Async_GetProfilListener,
         AsyncTaches.AsyncGetListActivite.Async_GetListActiviteListener, AsyncTaches.AsyncAddActivite.Async_AddActiviteListener, AsyncTaches.AsyncGetActivite.Async_GetActiviteListener {
 
-
     // ******************Filtre par défaut *************************************
     //***************************************************************************
     static final int RAYON_RECHERCHE_DEFAUT = 2000;
@@ -49,17 +48,14 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
     private static final int ONGLET_CARTE = 2;
     private static final int NBR_MINIMUM_ACTIVITE_BALISE = 5;
     private static String NO_MOTCLE = "";
-
     public static final int TOUTE_ACTIVITE = -1;
     private int CENTRER_SUR;
-
     private Snackbar mySnackbar;
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-
     private final ImageView photop = null;
     private final TextView TV_age = null;
     private final TextView TV_pseudo = null;

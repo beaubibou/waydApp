@@ -172,7 +172,7 @@
     <string name="premiereconnexion_infopseudo">"Un pseudo unique qui sera visible sur l'application"</string>
     <string name="premiereconnexion_hintpseudo">Pseudo (12 caractères maximum)</string>
     <string name="premiereconnexion_datenaissance">Une date de naissance*</string>
-    <string name="premiereconnexion_sexe">Un sexe</string>
+    <string name="premiereconnexion_sexe">Un sexe*</string>
     <string name="premiereconnexion_buttonconfirme">Je confirme</string>
     <string name="premiereconnexion_infoscomplementaire">"*Informations masquées par défaut. Pourquoi est-ce nécessaire d'indiquer mon âge et mon sexe ?"</string>
 
@@ -437,7 +437,7 @@
     <!-- ChangementMDP -->
     <string name="ChangementMDP_Titre">"Changement du mot de passe"</string>
     <string name="ChangementMDP_Message">"Confirmer ? "</string>
-    <string name="ChangementMDP_OK">"Oui"</string>
+    <string name="ChangementMDP_OK">"Changer"</string>
     <string name="ChangementMDP_No">"Annuler"</string>
 
 
@@ -493,6 +493,10 @@
     <string name="AnnuleSaParticipation_OK">"Oui"</string>
     <string name="AnnuleSaParticipation_No">"Annuler"</string>
 
+    <!--F_notification-->
+
+    <string name="descriptionNotification">"Permet de recevoir les notifications..."</string>
+    <string name="messageSwintchNotification">"Recevoir les notifications"</string>
 
     <!-- InfoPremiereConnexion -->
     <string name="InfoPremiereConnexion_Titre">"Information"</string>

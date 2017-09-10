@@ -45,10 +45,19 @@
             android:title="@string/menu_drawer_apropos" />
 
         <item
+            android:id="@+id/id_partager"
+            android:title="@string/menu_drawer_partager"
+          />
+
+
+        <item
             android:id="@+id/id_deconnexion"
 
             android:title="@string/menu_drawer_deconnexion" />
     </group>
+
+
+
     <group
         android:id="@+id/group_settings4"
         android:checkableBehavior="single">

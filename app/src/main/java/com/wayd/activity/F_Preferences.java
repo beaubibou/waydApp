@@ -35,6 +35,8 @@ public class F_Preferences extends Fragment implements AsyncTaches.AsyncUpdatePr
     private SeekBar SK_rayon;
     private TextView TV_rayonMax, TV_rayonMin;
     private static int RAYON_MIN_RECHERCHE=100;
+    private final int RAYON_MAX_RECHERCHE=6000;
+
     private final ArrayList<Preference> listepreference = new ArrayList<>();
 
     public F_Preferences() {
@@ -81,7 +83,7 @@ public class F_Preferences extends Fragment implements AsyncTaches.AsyncUpdatePr
 
             }
         });
-        SK_rayon.setMax(10000-RAYON_MIN_RECHERCHE);
+        SK_rayon.setMax(RAYON_MAX_RECHERCHE-RAYON_MIN_RECHERCHE);
         SK_rayon.setProgress(Outils.personneConnectee.getRayon()-RAYON_MIN_RECHERCHE);
         FloatingActionButton savepref = (FloatingActionButton) rootView.findViewById(R.id.savepref);
         savepref.setOnClickListener(new View.OnClickListener() {
