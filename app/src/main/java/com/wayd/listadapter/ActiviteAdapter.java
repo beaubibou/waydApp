@@ -89,6 +89,7 @@ public class ActiviteAdapter extends BaseAdapter {
         TV_Distance.setText(Outils.personneConnectee.getDistanceActiviteStr(activite));
         photo.setImageDrawable(Outils.getAvatarDrawable(mContext, activite.getPhoto()));
         iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite()));
+
         if (activite.iscomplete()) {
             layoutItem.setBackgroundColor(Color.parseColor("#FFFFFF"));
             TV_nbrwaydeur.setTextColor(Color.parseColor("#FFAB00"));

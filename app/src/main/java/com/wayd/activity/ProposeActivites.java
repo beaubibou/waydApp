@@ -115,7 +115,7 @@ public class ProposeActivites extends MenuDrawerNew implements GoogleApiClient.O
 
     private void int_SP_TypeActivite() {
         spinnertypeactivite = (Spinner) findViewById(R.id.id_typeactivite);
-        typeActivieAdapter = new TypeActivityAdapter(this, Outils.listtypeactivitecomplete);
+        typeActivieAdapter = new TypeActivityAdapter(this, Outils.getListTypeActiviteWaydeur());
         spinnertypeactivite.setAdapter(typeActivieAdapter);
     }
 

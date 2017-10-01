@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.application.wayd.R;
 import com.wayd.bean.Activite;
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,6 +138,10 @@ public class MesActiviteAdapter extends BaseAdapter
             TV_nbrwaydeur.setTextColor(Color.parseColor("#000000"));
         }
 
+        if (activite.getTypeUser()== Profil.PRO)
+            Img_message.setVisibility(View.INVISIBLE);
+        else
+            Img_message.setVisibility(View.VISIBLE);
 
         layoutItem.setTag(position);
         layoutItem.setOnLongClickListener(new View.OnLongClickListener() {

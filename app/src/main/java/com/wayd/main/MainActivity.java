@@ -5,6 +5,7 @@ import com.application.wayd.R;
 import com.wayd.activity.MenuDrawerNew;
 import com.wayd.activity.MyLifecycleHandler;
 import com.wayd.activity.ProposeActivites;
+import com.wayd.activity.ProposeActivitesPro;
 import com.wayd.activity.RechercheActiviteNew;
 import com.wayd.activity.Statistique;
 
@@ -12,6 +13,7 @@ import com.wayd.activity.Statistique;
 import com.wayd.bean.GPSTracker;
 
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -103,10 +105,27 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
 
             case R.id.propose:
 
-                appel = new Intent(MainActivity.this,
-                        ProposeActivites.class);
-                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(appel);
+                switch (Outils.personneConnectee.getTypeUser()){
+
+                    case Profil.WAYDEUR:
+                        appel = new Intent(MainActivity.this,
+                                ProposeActivites.class);
+                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(appel);
+                        break;
+
+                    case Profil.PRO:
+                        appel = new Intent(MainActivity.this,
+                                ProposeActivitesPro.class);
+                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(appel);
+                        break;
+
+
+
+                }
+
+
 
                 break;
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.wayd"
-    android:versionCode="2195"
+    android:versionCode="2293"
     android:versionName="Wayd.1.1." >
 
     <uses-sdk
@@ -86,6 +86,10 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
+            android:name="com.wayd.activity.ProposeActivitesPro"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
             android:name="com.wayd.activity.MesDiscussions"
             android:screenOrientation="portrait" />
         <activity
@@ -124,6 +128,10 @@
         </activity>
         <activity
             android:name="com.wayd.activity.MesMessages"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.wayd.activity.DetailActivitePro"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
@@ -169,6 +177,10 @@
             android:name="com.wayd.activity.UnProfil"
             android:label="@string/title_activity_testonglet"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.MonProfilPro"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
 
         <service android:name="com.wayd.activity.FCMInitializationService" >
             <intent-filter>

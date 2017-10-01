@@ -4,6 +4,7 @@ package com.wayd.bean;
 import android.graphics.Bitmap;
 import android.net.Uri;
 
+import com.google.android.gms.internal.ty;
 import com.google.android.gms.maps.model.LatLng;
 
 import java.text.DecimalFormat;
@@ -14,6 +15,9 @@ import java.util.Date;
 
 public class Personne implements GPSTracker.positionGpsListener {
 
+    private  String siret;
+    private  String siteWeb;
+    private  String telephone;
     private int rayon;
     private boolean premiereconnexion;
     /**
@@ -40,6 +44,7 @@ public class Personne implements GPSTracker.positionGpsListener {
     private boolean admin = false;
     private boolean isGps,notification;
     private final ArrayList<PersonneChangeListener> listenerChangePersonne = new ArrayList<>();
+    private int typeUser;
 
     public boolean isNotification() {
         return notification;
@@ -84,7 +89,8 @@ public class Personne implements GPSTracker.positionGpsListener {
     public Personne(int id, String login, String mdp, String nom,
                     String pseudo, String ville, boolean actif, boolean verrouille,
                     int nbrecheccnx, Date datecreation, String message, String photostr, Date datenaissance, int sexe, String commentaire,
-                    boolean afficheage, boolean affichesexe, boolean premiereconnexion, int rayon, boolean admin,boolean notification) {
+                    boolean afficheage, boolean affichesexe, boolean premiereconnexion, int rayon, boolean admin,boolean notification,int typeUser,
+                    String siteWeb,String telephone,String siret) {
         super();
         this.id = id;
         this.login = login;
@@ -104,6 +110,42 @@ public class Personne implements GPSTracker.positionGpsListener {
         this.rayon = rayon;
         this.admin = admin;
         this.notification=notification;
+        this.typeUser= typeUser;
+        this.siteWeb=siteWeb;
+        this.telephone=telephone;
+        this.siret=siret;
+    }
+
+    public int getTypeUser() {
+        return typeUser;
+    }
+
+    public void setTypeUser(int typeUser) {
+        this.typeUser = typeUser;
+    }
+
+    public String getSiret() {
+        return siret;
+    }
+
+    public void setSiret(String siret) {
+        this.siret = siret;
+    }
+
+    public String getSiteWeb() {
+        return siteWeb;
+    }
+
+    public void setSiteWeb(String siteWeb) {
+        this.siteWeb = siteWeb;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public Personne(Personne p) {
@@ -128,6 +170,11 @@ public class Personne implements GPSTracker.positionGpsListener {
         this.admin = p.admin;
         this.rayon = p.getRayon();
         this.notification=p.isNotification();
+        this.typeUser=p.getTypeUser();
+        this.siret=p.getSiret();
+        this.telephone=p.getTelephone();
+        this.siteWeb=p.getSiteWeb();
+
 
     }
 

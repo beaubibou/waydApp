@@ -82,11 +82,12 @@ public class DetailActivite extends MenuDrawerNew implements
 
         idactivite = getIntent().getIntExtra("idactivite", 0);
         // verifie que la donéne ne vient pas de la notification
-        if (getIntent().getStringExtra("idactiviteFromNotification")!=null){
-      idactivite=Integer.valueOf(getIntent().getStringExtra("idactiviteFromNotification"));
+
+        if (getIntent().getStringExtra("idactiviteFromNotification") != null) {
+            idactivite = Integer.valueOf(getIntent().getStringExtra("idactiviteFromNotification"));
 
         }
-        System.out.println("activite à envoyer "+idactivite);
+        System.out.println("activite à envoyer " + idactivite);
         photop = (ImageView) findViewById(R.id.iconactivite);
         TV_pseudo = (TextView) findViewById(R.id.pseudo);
         TV_age = (TextView) findViewById(R.id.age);
@@ -105,7 +106,7 @@ public class DetailActivite extends MenuDrawerNew implements
         scrollView = (ScrollView) findViewById(R.id.scroll);
         LV_Participant.setAdapter(participantAdapter);
 
-         iconActivite = (ImageView) findViewById(R.id.iconActivite);
+        iconActivite = (ImageView) findViewById(R.id.iconActivite);
 
         swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
 
@@ -655,7 +656,7 @@ public class DetailActivite extends MenuDrawerNew implements
 
     private void effaceParticipant(Participant participant) {
         participantAeffacer = participant;
-        new AsyncTaches.AsyncEffaceParticipation(this,Outils.personneConnectee.getId(), participant.getId(), activiteSelectionne.getId(), DetailActivite.this)
+        new AsyncTaches.AsyncEffaceParticipation(this, Outils.personneConnectee.getId(), participant.getId(), activiteSelectionne.getId(), DetailActivite.this)
                 .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 

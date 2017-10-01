@@ -25,6 +25,7 @@ import com.wayd.bean.Activite;
 import com.wayd.bean.CritereRechercheActivite;
 import com.wayd.bean.MessageServeur;
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 import com.wayd.comparator.ComparateurFinActivite;
 import com.wayd.comparator.ComparatorDistanceActivite;
 import com.wayd.listadapter.ActiviteAdapter;
@@ -157,9 +158,27 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         if (!longClick) {
             Activite activite = (Activite) view.getTag();
-            Intent appel = new Intent(getActivity(), DetailActivite.class);
-            appel.putExtra("idactivite", activite.getId());
-            getActivity().startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+
+            Intent appel;
+            switch (activite.getTypeUser()) {
+
+                case Profil.WAYDEUR:
+                    appel = new Intent(getActivity(), DetailActivite.class);
+                    appel.putExtra("idactivite", activite.getId());
+                    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                    break;
+
+                case Profil.PRO:
+                    appel = new Intent(getActivity(), DetailActivitePro.class);
+                    appel.putExtra("idactivite", activite.getId());
+                    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                    break;
+
+            }
+
+
         }
         longClick = false;
     }

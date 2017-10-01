@@ -47,12 +47,12 @@ import java.util.List;
 @SuppressWarnings("DefaultFileTemplate")
 public class AsyncTaches {
 
-    final static int nbMaxTentative=10;
-    final static String MESSAGE_ECHEC_IO="Tentative ";
+    final static int nbMaxTentative = 10;
+    final static String MESSAGE_ECHEC_IO = "Tentative ";
 
 
     public static class AsyncGetListAmis extends AsyncTask<String, Integer, ArrayList<Ami>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -71,7 +71,8 @@ public class AsyncTaches {
 
         protected ArrayList<Ami> doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListAmis", "Tentative" + tentative.toString());
                     return (new Wservice().getListAmi(idpersonne));
@@ -88,7 +89,7 @@ public class AsyncTaches {
                 }
 
             }
-            while (tentative<nbMaxTentative && exeption==true);
+            while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -101,7 +102,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -140,7 +141,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetListActivite extends AsyncTask<String, String, ArrayList<Activite>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -172,28 +173,29 @@ public class AsyncTaches {
         protected ArrayList<Activite> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
 
                     Log.d("AsyncGetListActivite", "Tentative" + tentative.toString());
-                if (isfiltre)
-                    return new Wservice().getListActiviteAvenir(latitude, longitude, rayon, idtypeactivite, motcle, commencedans);
-                else
-                    return new Wservice().getListActiviteAvenirNocritere(latitude, longitude, rayon, motcle, commencedans);
+                    if (isfiltre)
+                        return new Wservice().getListActiviteAvenir(latitude, longitude, rayon, idtypeactivite, motcle, commencedans);
+                    else
+                        return new Wservice().getListActiviteAvenirNocritere(latitude, longitude, rayon, motcle, commencedans);
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -208,7 +210,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -246,7 +248,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetListDiscussion extends AsyncTask<String, Integer, ArrayList<Discussion>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -269,39 +271,41 @@ public class AsyncTaches {
         protected ArrayList<Discussion> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListDiscussion", "Tentative" + tentative.toString());
                     return (new Wservice().getListDiscussion(idpersonne));
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-               publishProgress(tentative);
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                    publishProgress(tentative);
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
 
         }
 
-// Permet d'afficher dans la  progress bar pour voir le nbr de tentativte de connexion
+        // Permet d'afficher dans la  progress bar pour voir le nbr de tentativte de connexion
         // en mode debug seulement. n'est implémenté que sur cette tache pour le modéle
         protected void onProgressUpdate(Integer... values) {
-          if (mProgressDialog!=null){
+            if (mProgressDialog != null) {
 
-            //  mProgressDialog.setTitle(values[0].toString());
+                //  mProgressDialog.setTitle(values[0].toString());
 
-          }
+            }
 
         }
+
         /**
          * @see AsyncTask#onPostExecute(Object)
          */
@@ -310,7 +314,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 if (afficeProgress) mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -343,7 +347,7 @@ public class AsyncTaches {
 
 
     public static class AsyncEffaceAmi extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final Async_EffaceAmiListener ecouteur;
@@ -363,17 +367,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceAmi", "Tentative" + tentative.toString());
 
                     return new Wservice().effaceAmi(idpersonne, idami);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -387,7 +392,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
 
@@ -416,7 +421,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncUpdatePreference extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final Async_UpdatePreferenceListener ecouteur;
@@ -439,16 +444,17 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncUpdatePreference", "Tentative" + tentative.toString());
-                return new Wservice().updatePreference(idpersonne, listpreference, rayon);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                    return new Wservice().updatePreference(idpersonne, listpreference, rayon);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -463,7 +469,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
 
@@ -492,7 +498,7 @@ public class AsyncTaches {
 
     public static class AsyncGetActivite extends AsyncTask<String, String, Activite> {
         // ProgressDialog mProgressDialog;
-        Integer tentative=0;
+        Integer tentative = 0;
         String messageretour;
         boolean exeption = false;
         final int idactivite;
@@ -512,24 +518,25 @@ public class AsyncTaches {
 
         @Override
         protected Activite doInBackground(String... params) {
-        do{
-            try { exeption=false;
-                tentative++;
-                Log.d("AsyncGetActivite", "Tentative" + tentative.toString());
-                return new Wservice().getActivite(idactivite);
+            do {
+                try {
+                    exeption = false;
+                    tentative++;
+                    Log.d("AsyncGetActivite", "Tentative" + tentative.toString());
+                    return new Wservice().getActivite(idactivite);
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Problème connexion serveur";
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Problème connexion serveur";
+                    exeption = true;
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-        }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
         }
@@ -542,7 +549,7 @@ public class AsyncTaches {
             //  activite=result;
             if (exeption) {
                 //     mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -566,7 +573,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAddParticipation extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final Async_AddParticipationListener ecouteur;
@@ -591,7 +598,8 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAddParticipation", "Tentative" + tentative.toString());
                     return (new Wservice().addParticipation(Outils.personneConnectee.getId(), idorganisateur, idactivite));
@@ -608,7 +616,7 @@ public class AsyncTaches {
                     exeption = true;
 
                 }
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -622,7 +630,8 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);   toast.setGravity(Gravity.CENTER, 0, 0);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
             }
@@ -652,7 +661,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncEffaceActivite extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final int idactivite;
@@ -676,24 +685,25 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceActivite", "Tentative" + tentative.toString());
                     return (new Wservice().effaceActivite(idpersonne, idactivite));
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
+                }
             }
-            }
-            while (tentative<nbMaxTentative && exeption==true);
+            while (tentative < nbMaxTentative && exeption == true);
 
             return null;
         }
@@ -706,7 +716,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -737,7 +747,7 @@ public class AsyncTaches {
 
     public static class AsyncEffaceParticipation extends AsyncTask<String, String, MessageServeur> {
 
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final int idactivite;
@@ -747,7 +757,7 @@ public class AsyncTaches {
         final Async_EffaceParticipationListener ecouteur;
         final Context mcontext;
 
-        public AsyncEffaceParticipation(Async_EffaceParticipationListener ecouteur,int idDemandeur,  int idAeffacer,  int idactivite, Context mcontext) {
+        public AsyncEffaceParticipation(Async_EffaceParticipationListener ecouteur, int idDemandeur, int idAeffacer, int idactivite, Context mcontext) {
             super();
             this.ecouteur = ecouteur;
             this.idactivite = idactivite;
@@ -764,26 +774,27 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceParticipati", "Tentative" + tentative.toString());
-                return (new Wservice().effaceParticipation(idDemandeur,idAeffacer, idactivite ));
+                    return (new Wservice().effaceParticipation(idDemandeur, idAeffacer, idactivite));
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
-                return null;
+            return null;
 
         }
 
@@ -795,7 +806,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -828,7 +839,7 @@ public class AsyncTaches {
 
     public static class AsyncGetProfil extends AsyncTask<String, String, Profil> {
         //    ProgressDialog mProgressDialog;
-        Integer tentative=0;
+        Integer tentative = 0;
         String messageretour;
         boolean exeption = false;
         final int idpersonne;
@@ -850,20 +861,21 @@ public class AsyncTaches {
         protected Profil doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetProfil", "Tentative" + tentative.toString());
                     return new Wservice().getFullProfil(idpersonne);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                exeption = true;
-                e.printStackTrace();
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    exeption = true;
+                    e.printStackTrace();
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -874,7 +886,7 @@ public class AsyncTaches {
         protected void onPostExecute(Profil result) {
             if (exeption) {
                 //          mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -907,7 +919,7 @@ public class AsyncTaches {
 
     public static class AsyncAddNotation extends AsyncTask<String, String, MessageServeur> {
 
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -937,21 +949,22 @@ public class AsyncTaches {
         @Override
         protected MessageServeur doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAddNotation", "Tentative" + tentative.toString());
-                   return new Wservice().addAvis(Outils.personneConnectee.getId(), idpersonne, idactivite, "", commentaire, note, demandeami);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                    return new Wservice().addAvis(Outils.personneConnectee.getId(), idpersonne, idactivite, "", commentaire, note, demandeami);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -960,7 +973,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur messageserveur) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -993,7 +1006,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAddActivite extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -1041,25 +1054,26 @@ public class AsyncTaches {
 
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAddActivite", "Tentative" + tentative.toString());
 
                     return new Wservice().addActivite(titre, libelle,
-                        idorganisateur, dureeBalise,
-                        idtypeactivite, latitude, longitude, adresse,
-                        nbmaxwaydeur, dureeActivite, jeton);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                            idorganisateur, dureeBalise,
+                            idtypeactivite, latitude, longitude, adresse,
+                            nbmaxwaydeur, dureeActivite, jeton);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                exeption = true;
-                e.printStackTrace();
-            }
+                } catch (XmlPullParserException e) {
+                    exeption = true;
+                    e.printStackTrace();
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -1068,7 +1082,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur messageserveur) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1094,7 +1108,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetMesActiviteEnCours extends AsyncTask<String, String, ArrayList<Activite>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -1117,24 +1131,25 @@ public class AsyncTaches {
         protected ArrayList<Activite> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetMesActiviteEnCo", "Tentative" + tentative.toString());
 
                     return new Wservice().getMesActiviteEncours(idpersonne);
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -1144,7 +1159,7 @@ public class AsyncTaches {
         protected void onPostExecute(ArrayList<Activite> result) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1174,7 +1189,7 @@ public class AsyncTaches {
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
-        Integer tentative=0;
+        Integer tentative = 0;
         final AsyncGetMesActiveArchiveListener ecouteur;
         final int idpersonne;
         final Context mcontext;
@@ -1194,24 +1209,25 @@ public class AsyncTaches {
         protected ArrayList<Activite> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetMesActiviteArch", "Tentative" + tentative.toString());
 
                     return new Wservice().getMesActiviteArchive(idpersonne);
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -1220,7 +1236,7 @@ public class AsyncTaches {
         protected void onPostExecute(ArrayList<Activite> result) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1245,12 +1261,12 @@ public class AsyncTaches {
 
     }
 
-  public static class AsyncGetAdresse extends AsyncTask<String, String, Address> {
+    public static class AsyncGetAdresse extends AsyncTask<String, String, Address> {
         final double latitude;
         final double longitude;
         final Context mcontext;
         final AsyncGetAdresseListener ecouteur;
-        Integer tentative=0;
+        Integer tentative = 0;
         String messageretour;
         boolean exeption = false;
 
@@ -1272,22 +1288,23 @@ public class AsyncTaches {
             List<Address> addresses;
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetAdresse", "Tentative" + tentative.toString());
 
-               // Geocoder geocoder = new Geocoder(mcontext);
-               // addresses = geocoder.getFromLocation(latitude, longitude, 1);
-                addresses=Outils.getFromLocation(latitude, longitude, 1);
-                if (addresses.size() == 0) return null;
-                return addresses.get(0);
-            }catch (Exception e){
+                    // Geocoder geocoder = new Geocoder(mcontext);
+                    // addresses = geocoder.getFromLocation(latitude, longitude, 1);
+                    addresses = Outils.getFromLocation(latitude, longitude, 1);
+                    if (addresses.size() == 0) return null;
+                    return addresses.get(0);
+                } catch (Exception e) {
                     e.printStackTrace();
                     messageretour = "Echec connexion serveur ";
                     exeption = true;
                 }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -1305,7 +1322,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetListActivitePref extends AsyncTask<String, String, ArrayList<Activite>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -1325,24 +1342,25 @@ public class AsyncTaches {
         protected ArrayList<Activite> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListActivitePr", "Tentative" + tentative.toString());
                     return new Wservice().getListActivitePref(idpersonne);
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -1357,7 +1375,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1384,7 +1402,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAddMessage extends AsyncTask<String, String, RetourMessage> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncAddMessageListener ecouteur;
@@ -1407,16 +1425,17 @@ public class AsyncTaches {
         protected RetourMessage doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAddMessage", "Tentative" + tentative.toString());
-                return new Wservice().addMessage(idemetteur, message, iddestinataire);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                    return new Wservice().addMessage(idemetteur, message, iddestinataire);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -1431,7 +1450,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1459,7 +1478,7 @@ public class AsyncTaches {
 
     public static class AsyncEffaceMessageRecu extends AsyncTask<String, String, MessageServeur> {
         ProgressDialog mProgressDialog;
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncEffaceMessageRecuListener ecouteur;
         final int idemetteur;
@@ -1480,16 +1499,17 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceMessageRecu", "Tentative" + tentative.toString());
-                return new Wservice().effaceMessageRecu(idemetteur, idmessageselection);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                    return new Wservice().effaceMessageRecu(idemetteur, idmessageselection);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -1502,7 +1522,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1529,7 +1549,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncEffaceMessageEmis extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncEffaceMessageEmisListener ecouteur;
@@ -1551,16 +1571,17 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceMessageEmis", "Tentative" + tentative.toString());
-                   return new Wservice().effaceMessageEmis(idemetteur, idmessageselection);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                    return new Wservice().effaceMessageEmis(idemetteur, idmessageselection);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -1575,7 +1596,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1602,7 +1623,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetListMessageNext extends AsyncTask<String, String, ArrayList<Message>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         private final boolean visibleProgress;
         ProgressDialog mProgressDialog;
         String messageretour;
@@ -1612,13 +1633,13 @@ public class AsyncTaches {
         final int idxmessage;
         final Context mcontext;
 
-        public AsyncGetListMessageNext(AsyncGetListMessageNextListener ecouteur, int emetteur, int idxmessage,boolean visibleProgress, Context mcontext) {
+        public AsyncGetListMessageNext(AsyncGetListMessageNextListener ecouteur, int emetteur, int idxmessage, boolean visibleProgress, Context mcontext) {
             super();
             this.ecouteur = ecouteur;
             this.emetteur = emetteur;
             this.idxmessage = idxmessage;
             this.mcontext = mcontext;
-            this.visibleProgress=visibleProgress;
+            this.visibleProgress = visibleProgress;
         }
 
         @Override
@@ -1626,23 +1647,24 @@ public class AsyncTaches {
         protected ArrayList<Message> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListMessageNext", "Tentative" + tentative.toString());
 
                     return (new Wservice().getListMessageAfter(emetteur, idxmessage));
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -1655,14 +1677,14 @@ public class AsyncTaches {
         protected void onPostExecute(ArrayList<Message> listeMessage) {
 
             if (exeption) {
-                if (mProgressDialog!=null)    mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                if (mProgressDialog != null) mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
             }
             ecouteur.loopBack_GetListMessageNext(listeMessage);
-            if (mProgressDialog!=null)   mProgressDialog.dismiss();
+            if (mProgressDialog != null) mProgressDialog.dismiss();
 
         }
 
@@ -1671,10 +1693,10 @@ public class AsyncTaches {
          */
         @Override
         protected void onPreExecute() {
-             if (visibleProgress) {
-                 mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Chargement des messages...", true);
-                 mProgressDialog.setCancelable(false);
-             }
+            if (visibleProgress) {
+                mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Chargement des messages...", true);
+                mProgressDialog.setCancelable(false);
+            }
         }
 
 
@@ -1684,7 +1706,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAcquitMessage extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncAcquitMessageListener ecouteur;
@@ -1704,17 +1726,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAcquitMessage", "Tentative" + tentative.toString());
 
                     return new Wservice().acquitMessage(idemetteur, idmessage);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -1729,7 +1752,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1756,7 +1779,7 @@ public class AsyncTaches {
 
     public static class AsyncAcquitDiscussion extends AsyncTask<String, String, MessageServeur> {
         //  ProgressDialog mProgressDialog;
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncAcquitDiscussionListener ecouteur;
         final int idpersonne;
@@ -1777,17 +1800,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAcquitDiscu", "Tentative" + tentative.toString());
 
                     return new Wservice().acquitMessageDiscussion(idpersonne, iddestinataire, jeton);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -1801,7 +1825,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 //     mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1827,7 +1851,7 @@ public class AsyncTaches {
 
 
     public static class AsyncAddMessageByAct extends AsyncTask<String, String, RetourMessage> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncAddMessageByActListener ecouteur;
@@ -1850,17 +1874,18 @@ public class AsyncTaches {
         protected RetourMessage doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAddMessageB", "Tentative" + tentative.toString());
 
                     return new Wservice().addMessageByAct(idemetteur, message, idactivite);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -1875,7 +1900,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1902,7 +1927,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncEffaceMessageRecuByAct extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncEffaceMessageRecuListenerByAct ecouteur;
@@ -1922,16 +1947,17 @@ public class AsyncTaches {
         @Override
         protected MessageServeur doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceMessageRecuB", "Tentative" + tentative.toString());
                     return new Wservice().effaceMessageRecuByAct(idemetteur, idmessageselection);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -1946,7 +1972,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -1973,7 +1999,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncEffaceMessageEmisByAct extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncEffaceMessageEmisListenerByAct ecouteur;
@@ -1995,17 +2021,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceMessageEmisB", "Tentative" + tentative.toString());
 
                     return new Wservice().effaceMessageEmisByAct(idemetteur, idmessageselection);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -2020,7 +2047,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2047,7 +2074,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetListMessageByAct extends AsyncTask<String, String, ArrayList<Message>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -2069,23 +2096,24 @@ public class AsyncTaches {
         protected ArrayList<Message> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListMessageB", "Tentative" + tentative.toString());
 
                     return (new Wservice().getDiscussionByAct(emetteur, idactivite));
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
         }
 
@@ -2097,7 +2125,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2106,6 +2134,7 @@ public class AsyncTaches {
             mProgressDialog.dismiss();
 
         }
+
         /**
          * @see AsyncTask#onPreExecute()
          */
@@ -2122,7 +2151,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetListMessageFullByAct extends AsyncTask<String, String, ArrayList<Message>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -2145,29 +2174,30 @@ public class AsyncTaches {
 
         protected ArrayList<Message> doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListMessaFullBy", "Tentative" + tentative.toString());
 
-                // *****************  Recuepre les photos
-                ArrayList<Integer> listId = new ArrayList<>();
-                listPhotoWaydeur = new ArrayList<>(new Wservice().getListPhotoWaydeurByAct(idactivite));
-                // renvoi les messages
+                    // *****************  Recuepre les photos
+                    ArrayList<Integer> listId = new ArrayList<>();
+                    listPhotoWaydeur = new ArrayList<>(new Wservice().getListPhotoWaydeurByAct(idactivite));
+                    // renvoi les messages
 
-                return (new Wservice().getDiscussionByAct(emetteur, idactivite));
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                    return (new Wservice().getDiscussionByAct(emetteur, idactivite));
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
         }
 
@@ -2179,15 +2209,16 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
             }
-            ecouteur.loopBack_GetListeMessageFullByAct(listeMessage,listPhotoWaydeur);
+            ecouteur.loopBack_GetListeMessageFullByAct(listeMessage, listPhotoWaydeur);
             mProgressDialog.dismiss();
 
         }
+
         /**
          * @see AsyncTask#onPreExecute()
          */
@@ -2204,11 +2235,8 @@ public class AsyncTaches {
     }
 
 
-
-
-
     public static class AsyncGetListMessageNextByAct extends AsyncTask<String, String, ArrayList<Message>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -2219,36 +2247,37 @@ public class AsyncTaches {
         final Context mcontext;
         private boolean visibleProgress;
 
-        public AsyncGetListMessageNextByAct(AsyncGetListMessageNextListenerByAct ecouteur, int emetteur, int idxmessage, int idactivite,boolean visibleProgress, Context mcontext) {
+        public AsyncGetListMessageNextByAct(AsyncGetListMessageNextListenerByAct ecouteur, int emetteur, int idxmessage, int idactivite, boolean visibleProgress, Context mcontext) {
             super();
             this.ecouteur = ecouteur;
             this.emetteur = emetteur;
             this.idxmessage = idxmessage;
             this.idactivite = idactivite;
             this.mcontext = mcontext;
-            this.visibleProgress=visibleProgress;
+            this.visibleProgress = visibleProgress;
         }
 
         @Override
 
         protected ArrayList<Message> doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListMessageNex", "Tentative" + tentative.toString());
                     return (new Wservice().getListMessageAfterByAct(emetteur, idxmessage, idactivite));
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
         }
@@ -2261,16 +2290,16 @@ public class AsyncTaches {
 
             if (exeption) {
 
-             if (mProgressDialog!=null)
-                mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                if (mProgressDialog != null)
+                    mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
             }
 
             ecouteur.loopBack_GetListMessageNextByAct(listeMessage);
-            if (mProgressDialog!=null)
+            if (mProgressDialog != null)
                 mProgressDialog.dismiss();
         }
 
@@ -2279,11 +2308,11 @@ public class AsyncTaches {
          */
         @Override
         protected void onPreExecute() {
-          // Affiche le barre de progression si demandé
-           if (visibleProgress) {
-               mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Chargement des messages...", true);
-               mProgressDialog.setCancelable(false);
-           }
+            // Affiche le barre de progression si demandé
+            if (visibleProgress) {
+                mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Chargement des messages...", true);
+                mProgressDialog.setCancelable(false);
+            }
 
         }
 
@@ -2294,7 +2323,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAcquitMessageByAct extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncAcquitMessageListenerByAct ecouteur;
@@ -2314,16 +2343,17 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAcquitMessageByAct", "Tentative" + tentative.toString());
                     return new Wservice().acquitMessageByAct(idemetteur, idmessage);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -2337,7 +2367,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2363,7 +2393,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAcquitDiscussionByAct extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncAcquitDiscussionListenerByAct ecouteur;
         final int idemetteur;
@@ -2381,16 +2411,17 @@ public class AsyncTaches {
         @Override
         protected MessageServeur doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAcquitDiscussionB", "Tentative" + tentative.toString());
                     return new Wservice().acquitMessageDiscussionByAct(idemetteur, idactivite);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -2405,7 +2436,7 @@ public class AsyncTaches {
 
             if (exeption) {
 //                mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2431,7 +2462,7 @@ public class AsyncTaches {
 
 
     public static class AsyncUpdateProfil extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final AsyncUpdateProfilListener ecouteur;
@@ -2469,17 +2500,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncUpdateProfil", "Tentative" + tentative.toString());
                     return new Wservice().updateProfilWayd(photo, nom, pseudo, datenaissance,
-                        sexe, commentaire, idpersonne, afficheage, affichesexe);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                            sexe, commentaire, idpersonne, afficheage, affichesexe);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -2493,7 +2525,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2521,7 +2553,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetListPreference extends AsyncTask<String, String, ArrayList<Preference>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -2543,20 +2575,21 @@ public class AsyncTaches {
         @Override
         protected ArrayList<Preference> doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListPreference", "Tentative" + tentative.toString());
                     return new Wservice().getListPreferences(idpersonne);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -2567,7 +2600,7 @@ public class AsyncTaches {
         protected void onPostExecute(ArrayList<Preference> result) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2593,7 +2626,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAcquitAllNotification extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncAcquitTouteNotificationListener ecouteur;
         final int idpersonne;
@@ -2613,16 +2646,17 @@ public class AsyncTaches {
         @Override
         protected MessageServeur doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAcquitAllNotificat", "Tentative" + tentative.toString());
                     return new Wservice().acquitAllNotification(idpersonne, Outils.jeton);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -2635,7 +2669,7 @@ public class AsyncTaches {
 
             if (exeption) {
 
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2658,7 +2692,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAcquitNotification extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncAcquitNotificationListener ecouteur;
         final int idpersonne;
@@ -2677,16 +2711,17 @@ public class AsyncTaches {
         @Override
         protected MessageServeur doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAcquitNotification", "Tentative" + tentative.toString());
-          return new Wservice().acquitNotification(idpersonne, idnotification);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                    return new Wservice().acquitNotification(idpersonne, idnotification);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
 
             return null;
@@ -2700,7 +2735,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur result) {
 
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2723,7 +2758,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncEffaceNotification extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncEffaceNotificationListener ecouteur;
         final int idpersonne;
@@ -2743,16 +2778,17 @@ public class AsyncTaches {
         @Override
         protected MessageServeur doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceNotification", "Tentative" + tentative.toString());
                     return new Wservice().effaceNotificationRecu(idpersonne, idnotificationselection);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -2765,7 +2801,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur result) {
 
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2788,7 +2824,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetListNotification extends AsyncTask<String, String, ArrayList<Notification>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -2811,20 +2847,21 @@ public class AsyncTaches {
         protected ArrayList<Notification> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListNotificat", "Tentative" + tentative.toString());
                     return new Wservice().getListNotification(idpersonne);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Problème connexion";
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Problème connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -2834,7 +2871,7 @@ public class AsyncTaches {
         protected void onPostExecute(ArrayList<Notification> result) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2860,7 +2897,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetNextListNotification extends AsyncTask<String, String, ArrayList<Notification>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         private final boolean visibleProgressBar;
         ProgressDialog mProgressDialog;
         String messageretour;
@@ -2870,13 +2907,13 @@ public class AsyncTaches {
         final AsyncGetNextListNotificationListener ecouteur;
         final Context mcontext;
 
-        public AsyncGetNextListNotification(AsyncGetNextListNotificationListener ecouteur, int idpersonne, int idxnotification,boolean   visibleProgressBar, Context mcontext) {
+        public AsyncGetNextListNotification(AsyncGetNextListNotificationListener ecouteur, int idpersonne, int idxnotification, boolean visibleProgressBar, Context mcontext) {
             super();
             this.ecouteur = ecouteur;
             this.idpersonne = idpersonne;
             this.idxnotification = idxnotification;
             this.mcontext = mcontext;
-            this.visibleProgressBar=visibleProgressBar;
+            this.visibleProgressBar = visibleProgressBar;
         }
 
         interface AsyncGetNextListNotificationListener {
@@ -2887,22 +2924,23 @@ public class AsyncTaches {
         protected ArrayList<Notification> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetNextListNo", "Tentative" + tentative.toString());
 
                     return new Wservice().getListNotificationAfter(idpersonne, idxnotification);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Problème connexion";
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Problème connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -2911,8 +2949,8 @@ public class AsyncTaches {
         @Override
         protected void onPostExecute(ArrayList<Notification> result) {
             if (exeption) {
-              if (mProgressDialog!=null)  mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                if (mProgressDialog != null) mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -2920,7 +2958,7 @@ public class AsyncTaches {
 
             ecouteur.loopBack_GetNextListNotification(result);
 
-            if (mProgressDialog!=null)    mProgressDialog.dismiss();
+            if (mProgressDialog != null) mProgressDialog.dismiss();
         }
 
 
@@ -2938,7 +2976,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncUpdatePseudo extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncUpdatePseudoListener ecouteur;
         final int idpersonne;
@@ -2963,17 +3001,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncUpdatePseudo", "Tentative" + tentative.toString());
 
                     return new Wservice().updatePseudo(pseudo, datenaissance, sexe, idpersonne);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -2986,7 +3025,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur result) {
 
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3009,8 +3048,8 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetAvis extends AsyncTask<String, String, Avis> {
-        Integer tentative=0;
-        private  int idDemandeur;
+        Integer tentative = 0;
+        private int idDemandeur;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -3021,7 +3060,7 @@ public class AsyncTaches {
         final AsyncGetAvisListener ecouteur;
         final Context mcontext;
 
-        public AsyncGetAvis(AsyncGetAvisListener ecouteur, int idnoter, int idactivite, int idnotateur, int idpersonnenotee,int idDemandeur, Context mcontext) {
+        public AsyncGetAvis(AsyncGetAvisListener ecouteur, int idnoter, int idactivite, int idnotateur, int idpersonnenotee, int idDemandeur, Context mcontext) {
             super();
             this.ecouteur = ecouteur;
             this.idactivite = idactivite;
@@ -3030,7 +3069,7 @@ public class AsyncTaches {
             this.idactivite = idactivite;
             this.idnotateur = idnotateur;
             this.idpersonnenotee = idpersonnenotee;
-            this.idDemandeur=idDemandeur;
+            this.idDemandeur = idDemandeur;
         }
 
         interface AsyncGetAvisListener {
@@ -3041,25 +3080,26 @@ public class AsyncTaches {
         protected Avis doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetAvis", "Tentative" + tentative.toString());
-                    return new Wservice().getAvis(idnoter, idactivite, idnotateur, idpersonnenotee,idDemandeur);
+                    return new Wservice().getAvis(idnoter, idactivite, idnotateur, idpersonnenotee, idDemandeur);
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Problème connexion serveur";
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Problème connexion serveur";
+                    exeption = true;
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -3073,7 +3113,7 @@ public class AsyncTaches {
             //  activite=result;
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3095,7 +3135,7 @@ public class AsyncTaches {
 
 
     public static class AsyncConnexionWayd extends AsyncTask<String, String, Personne> {
-        Integer tentative=0;
+        Integer tentative = 0;
         String messageretour;
         boolean exeption = false;
         final AsyncConnexionWaydListener ecouteur;
@@ -3115,71 +3155,71 @@ public class AsyncTaches {
         @Override
         protected Personne doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncConnexionWayd", "Tentative" + tentative.toString());
 
-                //    Outils.listeTutoriels.clear();
-                Outils.listtypeactivitecomplete.clear();
-                FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                String photostr = "";
-                int nbtentative = 0;
-                Personne personneWs = null;
+                    //    Outils.listeTutoriels.clear();
+                    Outils.listtypeactivitecomplete.clear();
+                    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                    String photostr = "";
+                    int nbtentative = 0;
+                    Personne personneWs = null;
 
-                if ((mAuth.getCurrentUser().getPhotoUrl() != null) && !Outils.isConnectFromPwd()) {
-                    Bitmap tmpphoto = Outils.getBitmapFromURL(mAuth.getCurrentUser().getPhotoUrl().toString());
-                    Bitmap photo = Outils.redimendiensionnePhoto(tmpphoto);
-                    //   recupere la photo pour profil FB ou GOOGLE
-                    photostr = Outils.encodeTobase64(photo);
-                }
-
-                if (Outils.isConnectFromPwd())
-
-                {
-                    String gcmToken= FirebaseInstanceId.getInstance().getToken();
-                    new Wservice().testJeton(Outils.jeton, "", mAuth.getCurrentUser().getDisplayName(),gcmToken);
-                    // Si je ne suis pas connecte FB ou GOOGLE je ne mets pas à jour la photo issu de Firebase
-                    // on met la variable noupdatephoto pour n
-                    //
-                } else {
-
-                    String gcmToken= FirebaseInstanceId.getInstance().getToken();
-                    new Wservice().testJeton(Outils.jeton, photostr, mAuth.getCurrentUser().getDisplayName(),gcmToken);
-
-                }
-
-                while (nbtentative < 5 && personneWs == null) {
-                    //    Thread.sleep(1000);// Pause 1 seconde pour laisser le temps de creer le compte la premiere fois à optimiser avec gcm
-                    personneWs = new Wservice().getPersonnebyToken(Outils.jeton);//
-                    if (personneWs != null) {
-                        Outils.listtypeactivitecomplete.addAll(new Wservice().getListTypeActivite());
-                        Outils.DERNIERE_VERSION_WAYD=new Wservice().getVersion();
-                        Log.d("Version version","***************************************************"+Outils.DERNIERE_VERSION_WAYD.getVersion());
-                        Log.d("Version version",""+Outils.DERNIERE_VERSION_WAYD.getMajeur());
-                        Log.d("Version version",""+Outils.DERNIERE_VERSION_WAYD.getMineur());
-
-                        return new Personne(personneWs);
+                    if ((mAuth.getCurrentUser().getPhotoUrl() != null) && !Outils.isConnectFromPwd()) {
+                        Bitmap tmpphoto = Outils.getBitmapFromURL(mAuth.getCurrentUser().getPhotoUrl().toString());
+                        Bitmap photo = Outils.redimendiensionnePhoto(tmpphoto);
+                        //   recupere la photo pour profil FB ou GOOGLE
+                        photostr = Outils.encodeTobase64(photo);
                     }
-                    nbtentative++;
-                    Thread.sleep(30);
+
+                    if (Outils.isConnectFromPwd())
+
+                    {
+                        String gcmToken = FirebaseInstanceId.getInstance().getToken();
+                        new Wservice().testJeton(Outils.jeton, "", mAuth.getCurrentUser().getDisplayName(), gcmToken);
+                        // Si je ne suis pas connecte FB ou GOOGLE je ne mets pas à jour la photo issu de Firebase
+                        // on met la variable noupdatephoto pour n
+                        //
+                    } else {
+
+                        String gcmToken = FirebaseInstanceId.getInstance().getToken();
+                        new Wservice().testJeton(Outils.jeton, photostr, mAuth.getCurrentUser().getDisplayName(), gcmToken);
+
+                    }
+
+                    while (nbtentative < 5 && personneWs == null) {
+                        //    Thread.sleep(1000);// Pause 1 seconde pour laisser le temps de creer le compte la premiere fois à optimiser avec gcm
+                        personneWs = new Wservice().getPersonnebyToken(Outils.jeton);//
+                        if (personneWs != null) {
+                            Outils.listtypeactivitecomplete.addAll(new Wservice().getListTypeActivite());
+                            Outils.DERNIERE_VERSION_WAYD = new Wservice().getVersion();
+                            Log.d("Version version", "***************************************************" + Outils.DERNIERE_VERSION_WAYD.getVersion());
+                            Log.d("Version version", "" + Outils.DERNIERE_VERSION_WAYD.getMajeur());
+                            Log.d("Version version", "" + Outils.DERNIERE_VERSION_WAYD.getMineur());
+
+                            return new Personne(personneWs);
+                        }
+                        nbtentative++;
+                        Thread.sleep(30);
+
+                    }
+
+
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Problème connexion serveur";
+                    exeption = true;
+
+                } catch (XmlPullParserException | InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
                 }
-
-
-
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Problème connexion serveur";
-                exeption = true;
-
-            } catch (XmlPullParserException | InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -3191,7 +3231,7 @@ public class AsyncTaches {
         protected void onPostExecute(Personne personne) {
             //  activite=result;
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 ecouteur.loopBack_ConnexionWayd(null);
@@ -3216,7 +3256,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetIndicateursWayd extends AsyncTask<String, String, IndicateurWayd> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -3238,25 +3278,26 @@ public class AsyncTaches {
         protected IndicateurWayd doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetIndicateursWayd", "Tentative" + tentative.toString());
                     return new Wservice().getIndicateurs();
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Problème connexion serveur";
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Problème connexion serveur";
+                    exeption = true;
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
+                }
             }
-            }
-            while (tentative<nbMaxTentative && exeption==true);
+            while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -3269,7 +3310,7 @@ public class AsyncTaches {
             //  activite=result;
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3290,7 +3331,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncAddSuggestion extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -3317,21 +3358,22 @@ public class AsyncTaches {
 
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAddSuggestion", "Tentative" + tentative.toString());
 
                     return new Wservice().addSuggestion(suggestion, idpersonne);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -3341,7 +3383,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur messageserveur) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3434,7 +3476,7 @@ public class AsyncTaches {
 
 
     public static class AsyncEffaceDiscussion extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         boolean exeption = false;
         final Async_EffaceDiscussionListener ecouteur;
@@ -3454,16 +3496,17 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncEffaceDiscussion", "Tentative" + tentative.toString());
-                return new Wservice().effaceDiscussion(idpersonne, idEmetteurDiscution);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                    return new Wservice().effaceDiscussion(idpersonne, idEmetteurDiscution);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -3476,7 +3519,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3504,7 +3547,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetListPhotoWaydeur extends AsyncTask<String, String, ArrayList<PhotoWaydeur>> {
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final Async_GetListPhotoWaydeurListener ecouteur;
         final List<Integer> listpersonne;
@@ -3520,16 +3563,17 @@ public class AsyncTaches {
         @Override
         protected ArrayList<PhotoWaydeur> doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListPhotoWa", "Tentative" + tentative.toString());
-                 return new Wservice().getListPhotoWaydeur(listpersonne);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                    return new Wservice().getListPhotoWaydeur(listpersonne);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -3542,7 +3586,7 @@ public class AsyncTaches {
         protected void onPostExecute(ArrayList<PhotoWaydeur> result) {
 
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3564,7 +3608,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetPhotoWaydeur extends AsyncTask<String, String, PhotoWaydeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         String messageretour;
         boolean exeption = false;
         final int idpersonne;
@@ -3586,24 +3630,25 @@ public class AsyncTaches {
         protected PhotoWaydeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetPhotoWaydeur", "Tentative" + tentative.toString());
-                return new Wservice().getPhotoWaydeur(idpersonne);
+                    return new Wservice().getPhotoWaydeur(idpersonne);
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Problème connexion serveur";
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Problème connexion serveur";
+                    exeption = true;
 
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -3616,7 +3661,7 @@ public class AsyncTaches {
         protected void onPostExecute(PhotoWaydeur photoWaydeur) {
             //  activite=result;
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3637,7 +3682,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetProfilFull extends AsyncTask<String, String, Profil> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -3663,21 +3708,22 @@ public class AsyncTaches {
         protected Profil doInBackground(String... params) {
 
             do {
-                try { exeption=false;
-                 tentative++;
-                 Log.d("AsyncGetProfilFull", "Tentative" + tentative.toString());
-                retourProfil = new Wservice().getFullProfil(idpersonne);
-                retourListAvis = new ArrayList<>(new Wservice().getListAvis(idpersonne));
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                try {
+                    exeption = false;
+                    tentative++;
+                    Log.d("AsyncGetProfilFull", "Tentative" + tentative.toString());
+                    retourProfil = new Wservice().getFullProfil(idpersonne);
+                    retourListAvis = new ArrayList<>(new Wservice().getListAvis(idpersonne));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return retourProfil;
 
@@ -3687,7 +3733,7 @@ public class AsyncTaches {
         protected void onPostExecute(Profil result) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3720,7 +3766,7 @@ public class AsyncTaches {
     }
 
     public static class AsyncGetDonneAvisFull extends AsyncTask<String, String, ProfilNotation> {
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -3750,21 +3796,22 @@ public class AsyncTaches {
         @Override
         protected ProfilNotation doInBackground(String... params) {
             do {
-                try { exeption=false;
-                tentative++;
-                 Log.d("AsyncGetDonneAvisFull", "Tentative" + tentative.toString());
-                profilNotation = new Wservice().getProfilNotation(idpersonne, idPersonneNotee, idActivite);
-                activite = new Wservice().getActivite(idActivite);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                try {
+                    exeption = false;
+                    tentative++;
+                    Log.d("AsyncGetDonneAvisFull", "Tentative" + tentative.toString());
+                    profilNotation = new Wservice().getProfilNotation(idpersonne, idPersonneNotee, idActivite);
+                    activite = new Wservice().getActivite(idActivite);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return profilNotation;
 
@@ -3774,7 +3821,7 @@ public class AsyncTaches {
         protected void onPostExecute(ProfilNotation result) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3791,6 +3838,7 @@ public class AsyncTaches {
             }
             mProgressDialog.dismiss();
         }
+
         /**
          * @see AsyncTask#onPreExecute()
          */
@@ -3805,7 +3853,7 @@ public class AsyncTaches {
 
     public static class AsyncGetListMessageFull extends AsyncTask<String, String, ArrayList<Message>> {
         //Renvoi les message et les photos.
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -3829,31 +3877,32 @@ public class AsyncTaches {
         protected ArrayList<Message> doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncGetListMessageFull", "Tentative" + tentative.toString());
-            // *****************  Recuepre les photos
-                ArrayList<Integer> listId = new ArrayList<>();
-                listId.add(emetteur);
-                listId.add(destinataire);
-                listPhotoWaydeur = new ArrayList<>(new Wservice().getListPhotoWaydeur(listId));
+                    // *****************  Recuepre les photos
+                    ArrayList<Integer> listId = new ArrayList<>();
+                    listId.add(emetteur);
+                    listId.add(destinataire);
+                    listPhotoWaydeur = new ArrayList<>(new Wservice().getListPhotoWaydeur(listId));
 
-                //**********************
+                    //**********************
 
-                return (new Wservice().getDiscussion(emetteur, destinataire));
+                    return (new Wservice().getDiscussion(emetteur, destinataire));
 
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                messageretour = "Echec connexion serveur ";
-                exeption = true;
-            } catch (XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
 
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -3868,7 +3917,7 @@ public class AsyncTaches {
 
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -3896,7 +3945,7 @@ public class AsyncTaches {
 
     public static class AsyncGetActiviteFull extends AsyncTask<String, String, Activite> {
         // Renvoi le detail de l'activite ainsi que tous les participants
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -3908,12 +3957,12 @@ public class AsyncTaches {
         ArrayList<Participant> listParticipant;
 
 
-        public AsyncGetActiviteFull(Async_GetActiviteFullListener ecouteur, int idactivite,boolean afficheProgress, Context mcontext) {
+        public AsyncGetActiviteFull(Async_GetActiviteFullListener ecouteur, int idactivite, boolean afficheProgress, Context mcontext) {
             super();
             this.ecouteur = ecouteur;
             this.idactivite = idactivite;
             this.mcontext = mcontext;
-            this.afficheProgress=afficheProgress;
+            this.afficheProgress = afficheProgress;
         }
 
         interface Async_GetActiviteFullListener {
@@ -3923,7 +3972,8 @@ public class AsyncTaches {
         @Override
         protected Activite doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     activite = new Wservice().getActivite(idactivite);
                     listParticipant = new ArrayList<>(new Wservice().getListParticipants(idactivite));
@@ -3942,10 +3992,11 @@ public class AsyncTaches {
                 }
 
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return activite;// Retour
         }
+
         /**
          * @see AsyncTask#onPostExecute(Object)
          */
@@ -3954,30 +4005,31 @@ public class AsyncTaches {
 
             if (exeption) {
 
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
 
-               if (afficheProgress)
-                if (mProgressDialog != null)
-                    mProgressDialog.dismiss();
+                if (afficheProgress)
+                    if (mProgressDialog != null)
+                        mProgressDialog.dismiss();
                 return;
             }
 
             ecouteur.loopBack_GetActiviteFull(activite, listParticipant);// Envoi la list des participant et l'activite
             if (afficheProgress)
-                      mProgressDialog.dismiss();
+                mProgressDialog.dismiss();
 
         }
+
         /**
          * @see AsyncTask#onPreExecute()
          */
         @Override
         protected void onPreExecute() {
-          if (afficheProgress) {
-              mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Récuperation de l'activite ...", true);
-              mProgressDialog.setCancelable(true);
-          }
+            if (afficheProgress) {
+                mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Récuperation de l'activite ...", true);
+                mProgressDialog.setCancelable(true);
+            }
         }
     }
 
@@ -3985,7 +4037,7 @@ public class AsyncTaches {
     public static class AsyncSignalActivite extends AsyncTask<String, String, MessageServeur> {
 
 
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         final String titre;
@@ -4024,21 +4076,22 @@ public class AsyncTaches {
         @Override
         protected MessageServeur doInBackground(String... params) {
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncSignalActivite", "Tentative" + tentative.toString());
-                     return new Wservice().signalActivite(idpersonne, idactivite, idmotif,
-                        motif, titre, libelle);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Problème connexion";
+                    return new Wservice().signalActivite(idpersonne, idactivite, idmotif,
+                            motif, titre, libelle);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Problème connexion";
 
-            } catch (XmlPullParserException e) {
-                exeption = true;
-                e.printStackTrace();
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    exeption = true;
+                    e.printStackTrace();
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -4048,7 +4101,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur messageserveur) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -4075,7 +4128,7 @@ public class AsyncTaches {
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
-        Integer tentative=0;
+        Integer tentative = 0;
         int idpersonne = 0;
         int idsignalement = 0;
         final Async_SignalProfilListener ecouteur;
@@ -4107,21 +4160,22 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncSignalProfil", "Tentative" + tentative.toString());
                     return new Wservice().signalProfil(idpersonne, idsignalement, idmotif,
-                        motif);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                            motif);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                exeption = true;
-                e.printStackTrace();
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    exeption = true;
+                    e.printStackTrace();
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -4131,7 +4185,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur messageserveur) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -4155,7 +4209,7 @@ public class AsyncTaches {
 
     public static class AsyncAddPrbConnexion extends AsyncTask<String, String, MessageServeur> {
 
-        Integer tentative=0;
+        Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
         boolean exeption = false;
@@ -4181,20 +4235,21 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncAddPrbConnexion", "Tentative" + tentative.toString());
                     return new Wservice().addPrbConnexion(probleme, email);
-            } catch (IOException e) {
-                e.printStackTrace();
-                exeption = true;
-                messageretour = "Probleme connexion";
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
 
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (XmlPullParserException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
         }
@@ -4203,7 +4258,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur messageserveur) {
             if (exeption) {
                 mProgressDialog.dismiss();
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -4228,7 +4283,7 @@ public class AsyncTaches {
 
     public static class AsyncUpdateActivite extends AsyncTask<String, String, MessageServeur> {
 
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncUpdateActiviteListener ecouteur;
         int idpersonne, idactivite, nbmaxWaydeurs;
@@ -4253,17 +4308,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncUpdateActivite", "Tentative" + tentative.toString());
 
                     return new Wservice().updateActivite(idpersonne, idactivite, titre, libelle, nbmaxWaydeurs);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -4276,7 +4332,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur result) {
 
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 ecouteur.loopBack_UpdateActivite(null, null, null, 0);//
@@ -4302,7 +4358,7 @@ public class AsyncTaches {
 
     public static class AsyncUpdateGCM extends AsyncTask<String, String, MessageServeur> {
 
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncUpdateGCMListener ecouteur;
         final int idPersonne;
@@ -4323,17 +4379,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncUpdateGCM", "Tentative" + tentative.toString());
 
                     return new Wservice().updateGCM(idPersonne, gcmToken);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
-            }while (tentative<nbMaxTentative && exeption==true);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
 
             return null;
 
@@ -4346,7 +4403,7 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur result) {
 
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 return;
@@ -4367,9 +4424,8 @@ public class AsyncTaches {
     }
 
 
-
     public static class AsyncUpdateNotificationPref extends AsyncTask<String, String, MessageServeur> {
-        Integer tentative=0;
+        Integer tentative = 0;
         boolean exeption = false;
         final AsyncUpdateNotificationPrefListener ecouteur;
         final int idPersonne;
@@ -4390,17 +4446,18 @@ public class AsyncTaches {
         protected MessageServeur doInBackground(String... params) {
 
             do {
-                try { exeption=false;
+                try {
+                    exeption = false;
                     tentative++;
                     Log.d("AsyncUpdateNotifica", "Tentative" + tentative.toString());
                     return new Wservice().updateNotificationPref(idPersonne, notification);
-            } catch (IOException | XmlPullParserException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-                exeption = true;
-            }
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
 
-            }while (tentative<nbMaxTentative && exeption==true);
+            } while (tentative < nbMaxTentative && exeption == true);
             return null;
 
         }
@@ -4412,12 +4469,13 @@ public class AsyncTaches {
         protected void onPostExecute(MessageServeur result) {
 
             if (exeption) {
-                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO+tentative, Toast.LENGTH_SHORT);     toast.setGravity(Gravity.CENTER, 0, 0);
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
-                ecouteur.loopBack_UpdateNotificationPref(null,notification);
+                ecouteur.loopBack_UpdateNotificationPref(null, notification);
                 return;
             }
-            ecouteur.loopBack_UpdateNotificationPref(result,notification);
+            ecouteur.loopBack_UpdateNotificationPref(result, notification);
         }
 
         /**
@@ -4433,8 +4491,191 @@ public class AsyncTaches {
     }
 
 
+    public static class AsyncAddActivitePro extends AsyncTask<String, String, MessageServeur> {
+        Integer tentative = 0;
+        ProgressDialog mProgressDialog;
+        String messageretour;
+        boolean exeption = false;
+        final Async_AddActiviteProListener ecouteur;
+        final String titre;
+        final String libelle;
+        final String adresse;
+        final String jeton;
+        final int idorganisateur;
+        final int idtypeactivite;
+        final double latitude;
+        final double longitude;
+        final Long datedebut, datefin;
+        final Context mcontext;
 
 
+        public AsyncAddActivitePro(Async_AddActiviteProListener ecouteur, String titre, String libelle,
+                                   int idorganisateur, int idtypeactivite, double latitude, double longitude, String adresse
+                , Long datedebut, Long datefin, String jeton, Context mcontext) {
+            super();
+            this.ecouteur = ecouteur;
+            this.titre = titre;
+            this.libelle = libelle;
+            this.idorganisateur = idorganisateur;
+            this.idtypeactivite = idtypeactivite;
+            this.latitude = latitude;
+            this.longitude = longitude;
+            this.adresse = adresse;
+            this.datedebut = datedebut;
+            this.datefin = datefin;
+            this.mcontext = mcontext;
+            this.jeton = jeton;
+
+        }
+
+        interface Async_AddActiviteProListener {
+            void loopBack_AddActivitePro(MessageServeur messageserveur);
+        }
+
+        @Override
+        protected MessageServeur doInBackground(String... params) {
+
+
+            do {
+                try {
+                    exeption = false;
+                    tentative++;
+                    Log.d("AsyncAddActivite", "Tentative" + tentative.toString());
+
+                    return new Wservice().addActivitePro(titre, libelle,
+                            idorganisateur, idtypeactivite, latitude, longitude, adresse, datedebut, datefin
+                            , jeton);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Probleme connexion";
+
+                } catch (XmlPullParserException e) {
+                    exeption = true;
+                    e.printStackTrace();
+                }
+
+            } while (tentative < nbMaxTentative && exeption == true);
+            return null;
+
+        }
+
+        @Override
+        protected void onPostExecute(MessageServeur messageserveur) {
+            if (exeption) {
+                mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+
+
+            ecouteur.loopBack_AddActivitePro(messageserveur);
+
+            mProgressDialog.dismiss();
+        }
+
+        /**
+         * @see AsyncTask#onPreExecute()
+         */
+        @Override
+        protected void onPreExecute() {
+
+            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Propose l'activité ...", true);
+            mProgressDialog.setCancelable(true);
+        }
+
+    }
+
+
+    public static class AsyncUpdateProfilPro extends AsyncTask<String, String, MessageServeur> {
+        Integer tentative = 0;
+        ProgressDialog mProgressDialog;
+        boolean exeption = false;
+        final AsyncUpdateProfilProListener ecouteur;
+        final int idpersonne;
+        final Bitmap photo;
+        String siteweb;
+        String siret;
+        String telephone;
+        final String pseudo;
+        final String commentaire;
+
+
+        final Context mcontext;
+
+        public AsyncUpdateProfilPro(AsyncUpdateProfilProListener ecouteur, Bitmap photo,
+                                    String pseudo, String telephone, String siret, String siteweb,
+                                    String commentaire, int idpersonne, Context mcontext) {
+            super();
+            this.ecouteur = ecouteur;
+            this.idpersonne = idpersonne;
+            this.photo = photo;
+            this.pseudo = pseudo;
+            this.commentaire = commentaire;
+            this.siret = siret;
+            this.telephone = telephone;
+            this.siteweb = siteweb;
+            this.mcontext = mcontext;
+
+        }
+
+        @Override
+        protected MessageServeur doInBackground(String... params) {
+
+            do {
+                try {
+                    exeption = false;
+                    tentative++;
+                    Log.d("AsyncUpdateProfilPro", "Tentative" + tentative.toString());
+                    return new Wservice().updateProfilPro(photo,
+                            pseudo, telephone, siret, siteweb,
+                            commentaire, idpersonne);
+                } catch (IOException | XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
+
+            return null;
+
+        }
+
+        /**
+         * @see AsyncTask#onPostExecute(Object)
+         */
+        @Override
+        protected void onPostExecute(MessageServeur result) {
+
+            if (exeption) {
+                mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+
+            ecouteur.loopBack_UpdateProfilPro(result);
+
+            mProgressDialog.dismiss();
+
+        }
+
+        /**
+         * @see AsyncTask#onPreExecute()
+         */
+        @Override
+        protected void onPreExecute() {
+            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Mise à jour du profil ...", true);
+            mProgressDialog.setCancelable(true);
+        }
+
+        interface AsyncUpdateProfilProListener {
+            void loopBack_UpdateProfilPro(MessageServeur messageserveur);
+        }
+    }
 
 
 }

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.application.wayd.R;
 import com.wayd.bean.Activite;
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 import com.wayd.bean.PushAndroidMessage;
 import com.wayd.bean.ReceiverGCM;
 import com.wayd.comparator.ComparateurFinActivite;
@@ -135,10 +136,30 @@ public class MesSuggestions extends MenuDrawerNew implements AdapterView.OnItemC
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Activite activite = (Activite) view.getTag();
-        Intent appel = new Intent(MesSuggestions.this, DetailActivite.class);
-        appel.putExtra("idactivite", activite.getId());
-        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivityForResult(appel, 1020);
+
+        Intent appel;
+        switch (activite.getTypeUser()) {
+
+            case Profil.WAYDEUR:
+                appel = new Intent(MesSuggestions.this, DetailActivite.class);
+                appel.putExtra("idactivite", activite.getId());
+                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                break;
+
+            case Profil.PRO:
+                appel = new Intent(MesSuggestions.this, DetailActivitePro.class);
+                appel.putExtra("idactivite", activite.getId());
+                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                break;
+
+        }
+
+    //    Intent appel = new Intent(MesSuggestions.this, DetailActivite.class);
+     //   appel.putExtra("idactivite", activite.getId());
+     //   appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+     //   startActivityForResult(appel, 1020);
 
     }
 

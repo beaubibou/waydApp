@@ -16,6 +16,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.wayd.bean.Activite;
+import com.wayd.bean.Profil;
 import com.wayd.webservice.Wservice;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -119,7 +120,7 @@ public class Map_ListeActivity extends MenuNoDrawer implements OnMapReadyCallbac
             }
             for (Activite activite : listeActivite) {
                 LatLng sydney = new LatLng(activite.getLatitude(), activite.getLongitude());
-                mMap.addMarker(new MarkerOptions().position(sydney).snippet(activite.getPseudoOrganisateur()).title(activite.getTitre())).setTag(activite.getId());
+                mMap.addMarker(new MarkerOptions().position(sydney).snippet(activite.getPseudoOrganisateur()).title(activite.getTitre())).setTag(activite);
 
             }
             // AFFICHE MA POSITION
@@ -139,11 +140,35 @@ public class Map_ListeActivity extends MenuNoDrawer implements OnMapReadyCallbac
                 @Override
                 public void onInfoWindowClick(Marker marker) {
                     // TODO Auto-generated method stub
-                    if ((int) marker.getTag() == 0) return ;
-                       Intent appel = new Intent(Map_ListeActivity.this, DetailActivite.class);
-                       appel.putExtra("idactivite", (int) marker.getTag());
-                    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                    startActivity(appel);
+
+                   Activite activite=(Activite) marker.getTag();
+
+                    if (activite == null) return ;
+
+                    Intent appel;
+                    switch (activite.getTypeUser()) {
+
+                        case Profil.WAYDEUR:
+                            appel = new Intent(Map_ListeActivity.this, DetailActivite.class);
+                            appel.putExtra("idactivite", activite.getId());
+                            appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                            startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                            break;
+
+                        case Profil.PRO:
+                            appel = new Intent(Map_ListeActivity.this, DetailActivitePro.class);
+                            appel.putExtra("idactivite", activite.getId());
+                            appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                            startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                            break;
+
+                    }
+
+
+            //        Intent appel = new Intent(Map_ListeActivity.this, DetailActivite.class);
+                   // appel.putExtra("idactivite", (int) marker.getTag());
+                  //  appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                  //  startActivity(appel);
 
                 }
             });

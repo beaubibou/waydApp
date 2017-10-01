@@ -39,15 +39,15 @@ import com.wayd.bean.TypeActivite;
 import com.wayd.bean.Version;
 
 public class Wservice {
- //private final static String URL = "http://192.168.1.79:8080//wayd/services/WBservices?wsdl";
-    private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
+ private final static String URL = "http://192.168.1.79:8080//wayd/services/WBservices?wsdl";
+   // private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
     private final static int timeoutws = 10000;
     private static final String NAMESPACE = "http://ws.wayd";
     private static final String SOAP_ACTION_PREFIX = "/";
     private static final String HOST = "wayd.fr";
     private static final int PORT = 8443;
     private static final String FILE = "/wayd/services/WBservices?wsdl";
-    private static final boolean SECURE = true;
+    private static final boolean SECURE = false;
 
     public Avis getAvis(int idnoter_, int idactivite, int idnotateur, int idpersonnenotee,int idDemandeur) throws IOException,
             XmlPullParserException {
@@ -776,7 +776,11 @@ public class Wservice {
         for (int f = 0; f < resultSOAP.getPropertyCount(); f++) {
 
 
+           // String nom = ((SoapObject) resultSOAP.getProperty(f))
+              //      .getProperty("nom").toString();
+
             String nom = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("nom") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("nom").toString();
 
             String pseudo = ((SoapObject) resultSOAP.getProperty(f))
@@ -977,10 +981,17 @@ public class Wservice {
                     .getProperty("age") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("age").toString();
 
+            int typeUser=Integer.parseInt(((SoapObject) resultSOAP
+                    .getProperty(f)).getProperty("typeUser").toString());
+
+            int typeAcces=Integer.parseInt(((SoapObject) resultSOAP
+                    .getProperty(f)).getProperty("typeAcces").toString());
+
+
             Activite activite = new Activite(id, titre, libelle, idorganisateur, datedebut, datefin,
                     latitude, longitude, adresse, nomorganisateur, pseudoorganisateur,
                     photostr, note, dejainscrit, organisateur, archive, totalavis,
-                    sexe, nbrparticipant, tpsrestant, agestr, nbmaxwaydeur, finidans,typeactivite);
+                    sexe, nbrparticipant, tpsrestant, agestr, nbmaxwaydeur, finidans,typeactivite,typeUser,typeAcces);
 
             Log.d("idtype ativite","********************"+typeactivite);
             retour.add(activite);
@@ -1527,7 +1538,9 @@ public class Wservice {
                 String nom = ((SoapObject) resultSOAP.getProperty(f))
                         .getProperty("nom").toString();
 
-                TypeActivite tmp = new TypeActivite(id, idcategorie, nom, false);
+                int typeUser = Integer.parseInt(((SoapObject) resultSOAP
+                        .getProperty(f)).getProperty("typeUser").toString());
+                TypeActivite tmp = new TypeActivite(id, idcategorie, nom, false, typeUser);
 
                 retour.add(tmp);
 
@@ -1686,9 +1699,14 @@ public class Wservice {
             boolean notification=Boolean.parseBoolean((resultSOAP
                     .getProperty("notification").toString()));
 
+            int typeUser = Integer.parseInt((resultSOAP.getProperty("typeUser").toString()));
+            String siteWeb = (resultSOAP.getProperty("siteWeb") == null ? "" : (resultSOAP.getProperty("siteWeb").toString()));
+            String telephone= (resultSOAP.getProperty("telephone") == null ? "" : (resultSOAP.getProperty("telephone").toString()));
+            String siret = (resultSOAP.getProperty("siret") == null ? "" : (resultSOAP.getProperty("siret").toString()));
+
             return new Personne(id, login, mdp, nom, pseudo, ville, actif,
                     verrouille, nbrecheccnx, datecreation, message, photo, datenaissance, sexe, commentaire,
-                    afficheage, affichesexe, premiereconnexion, rayon, admin,notification);
+                    afficheage, affichesexe, premiereconnexion, rayon, admin,notification,typeUser,siteWeb,telephone,siret);
 
         }
         return null;
@@ -2614,4 +2632,83 @@ public class Wservice {
         }
         return null;
     }
+
+    public MessageServeur addActivitePro(String titre, String libelle, int idorganisateur, int idtypeactivite,
+                                         double latitude, double longitude, String adresse, Long datedebut, Long datefin, String jeton)
+            throws IOException, XmlPullParserException {
+
+        String METHOD = "addActivitePro";
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        request.addProperty("titre", titre);
+        request.addProperty("libelle", libelle);
+        request.addProperty("idorganisateur", idorganisateur);
+        request.addProperty("idtypeactivite", idtypeactivite);
+        String latitudeStr = Double.toString(latitude);
+        request.addProperty("latitudestr", latitudeStr);
+        String longitudeStr = Double.toString(longitude);
+        request.addProperty("longitudestr", longitudeStr);
+        request.addProperty("adresse", adresse);
+        request.addProperty("dateDebut", datedebut);
+         request.addProperty("dateFin", datefin);
+         request.addProperty("jeton", jeton);
+
+        envelope.bodyOut = request;
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //     SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+        if (envelope.bodyIn != null) {
+            SoapObject resultSOAP = (SoapObject) envelope.getResponse();
+            return getMessageServeurFromSoap(resultSOAP);
+        }
+
+        return null;
+
+
+    }
+
+    public  MessageServeur updateProfilPro(Bitmap photo,
+                                           String pseudo, String telephone, String siret, String siteweb,
+                                           String commentaire, int idpersonne)
+            throws IOException, XmlPullParserException {
+        String METHOD = "updateProfilPro";
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        String photostr = Outils.encodeTobase64(photo);
+        request.addProperty("photostr", photostr);
+        request.addProperty("pseudo", pseudo);
+        request.addProperty("commentaire", commentaire);
+        request.addProperty("idpersonne", idpersonne);
+        request.addProperty("tel", telephone);
+        request.addProperty("siret", siret);
+        request.addProperty("siteweb", siteweb);
+        request.addProperty("jeton", Outils.jeton);
+        envelope.bodyOut = request;
+
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //    SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+        if (envelope.bodyIn != null) {
+            SoapObject resultSOAP = (SoapObject) envelope.getResponse();
+            return getMessageServeurFromSoap(resultSOAP);
+        }
+        return null;
+    }
+
 }

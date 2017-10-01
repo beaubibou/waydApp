@@ -21,6 +21,7 @@ import com.wayd.bean.Activite;
 import com.wayd.bean.MessageServeur;
 import com.wayd.bean.Outils;
 import com.wayd.bean.Participant;
+import com.wayd.bean.Profil;
 import com.wayd.bean.PushAndroidMessage;
 import com.wayd.bean.ReceiverGCM;
 import com.wayd.listadapter.MesActiviteAdapter;
@@ -130,21 +131,48 @@ public class F_MesActivitesEnCours extends Fragment implements MesActiviteAdapte
     public void onClickInformation(Activite activite, int position) {
         // Activite activite = (Activite) view.getTag();
         aEffacer = activite;
-        Intent appel = new Intent(getActivity(), DetailActivite.class);
-        appel.putExtra("idactivite", activite.getId());
-        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+        Intent appel;
+        switch (activite.getTypeUser()) {
+
+            case Profil.WAYDEUR:
+                appel = new Intent(getActivity(), DetailActivite.class);
+                appel.putExtra("idactivite", activite.getId());
+                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                break;
+
+            case Profil.PRO:
+                appel = new Intent(getActivity(), DetailActivitePro.class);
+                appel.putExtra("idactivite", activite.getId());
+                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                break;
+
+        }
 
     }
+        @Override
+        public void onClickAtivite (Activite activite,int position){
+            aEffacer = activite;
+            Intent appel;
+            switch (activite.getTypeUser()) {
 
-    @Override
-    public void onClickAtivite(Activite activite, int position) {
-        aEffacer = activite;
-        Intent appel = new Intent(getActivity(), DetailActivite.class);
-        appel.putExtra("idactivite", activite.getId());
-        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
-    }
+                case Profil.WAYDEUR:
+                    appel = new Intent(getActivity(), DetailActivite.class);
+                    appel.putExtra("idactivite", activite.getId());
+                    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                    break;
+
+                case Profil.PRO:
+                    appel = new Intent(getActivity(), DetailActivitePro.class);
+                    appel.putExtra("idactivite", activite.getId());
+                    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                    break;
+
+            }
+        }
 
     private void dialogEffaceActivite(final Activite activite) {
         aEffacer = activite;
@@ -191,7 +219,7 @@ public class F_MesActivitesEnCours extends Fragment implements MesActiviteAdapte
             new AsyncTaches.AsyncEffaceActivite(this, Outils.personneConnectee.getId(), activite.getId(), getActivity()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
         } else {
-            new AsyncTaches.AsyncEffaceParticipation(this, Outils.personneConnectee.getId(),  Outils.personneConnectee.getId(), activite.getId(), getActivity())
+            new AsyncTaches.AsyncEffaceParticipation(this, Outils.personneConnectee.getId(), Outils.personneConnectee.getId(), activite.getId(), getActivity())
                     .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
         gestionDefaultLMessage();
@@ -284,11 +312,10 @@ public class F_MesActivitesEnCours extends Fragment implements MesActiviteAdapte
             case PushAndroidMessage.UPDATE_ACTIVITE://// Si l'organisteur annule un GCM du coup du supprime l'activité
                 // On envoie dans le mgc l'id de la personne en plus de son numero GSM.
                 idactivite = Integer.parseInt(bundle.getString("idactivite"));
-                new AsyncTaches.AsyncGetActiviteFull(this, idactivite, false,getActivity()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                new AsyncTaches.AsyncGetActiviteFull(this, idactivite, false, getActivity()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
 
                 break;
-
 
 
         }
@@ -305,16 +332,16 @@ public class F_MesActivitesEnCours extends Fragment implements MesActiviteAdapte
     @Override
     public void loopBack_GetActiviteFull(Activite activite_, ArrayList<Participant> listParticipant) {
 
-        if (activite_!=null){
-           for (Activite activite:listeActivite ) {
+        if (activite_ != null) {
+            for (Activite activite : listeActivite) {
 
-               if (activite.getId()==activite_.getId()){
+                if (activite.getId() == activite_.getId()) {
 
-                   activite.updateActivite(activite_);
-               }
-           }
+                    activite.updateActivite(activite_);
+                }
+            }
 
-           adapter.notifyDataSetChanged();
+            adapter.notifyDataSetChanged();
         }
 
     }

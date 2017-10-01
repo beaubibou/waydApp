@@ -1,7 +1,5 @@
 package com.wayd.bean;
 
-
-
 import android.graphics.Bitmap;
 
 import org.apache.commons.lang3.StringEscapeUtils;
@@ -11,6 +9,8 @@ import java.util.Date;
 
 public class Activite
 {
+    private final int typeUser;
+    private final int typeAcces;
     private int id;
 
     private String titre;
@@ -56,12 +56,9 @@ public class Activite
         return finidans;
     }
 
-
-
     private int nbmaxwaydeur;
 
     private  String tpsrestant;
-
 
     private Date dateDebut;
     private String datedebutStr;
@@ -78,7 +75,7 @@ public class Activite
     public Activite(int id, String titre, String libelle, int idorganisateur, Date datedebut, Date datefin,
                     double latitude, double longitude, String adresse, String nomorganisateur, String pseudoorganisateur,
                     String photostr, double note, boolean dejainscrit, boolean organisateur, boolean archive, int totalavis,
-                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans, int idTypeActite)
+                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans, int idTypeActite,int typeUser,int typeAcces)
     {
         super();
 
@@ -110,6 +107,8 @@ public class Activite
         this. nbmaxwaydeur= nbmaxwaydeur;
         this.finidans=finidans;
         this.idTypeActite=idTypeActite;
+        this.typeUser=typeUser;
+        this.typeAcces=typeAcces;
     }
 
     public int getNbmaxwaydeur() {
@@ -255,8 +254,14 @@ public class Activite
         this.finidans=activite.getFinidans();
         this.idTypeActite=activite.getIdTypeActite();
 
+    }
 
+    public int getTypeUser() {
+        return typeUser;
+    }
 
+    public int getTypeAcces() {
+        return typeAcces;
     }
 
     public double getNote() {

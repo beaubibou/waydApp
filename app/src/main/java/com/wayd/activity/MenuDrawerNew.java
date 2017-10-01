@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import com.wayd.bean.Outils;
 import com.wayd.bean.Personne;
+import com.wayd.bean.Profil;
 import com.wayd.bean.TableauBord;
 
 
@@ -49,9 +50,7 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
     private final static int AMELIORER = 10;
     private final static int APROPOS = 11;
     private final static int SHARE = 12;
-
     private Activity currentActivity;
-
     private MenuItem menu_mesactivite, menu_masphere;
 
     @Override
@@ -284,22 +283,58 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
                         selectionslide = -1;
                         if (getLocalClassName().equals("com.wayd.activity.ProposeActivites"))
                             return;
+                        if (getLocalClassName().equals("com.wayd.activity.ProposeActivitesPro"))
+                            return;
+
                         Outils.fermeActiviteEnCours(currentActivity);
-                        appel = new Intent(MenuDrawerNew.this,
-                                ProposeActivites.class);
-                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                        startActivity(appel);
+
+                        switch (Outils.personneConnectee.getTypeUser()) {
+
+                            case Profil.WAYDEUR:
+                                appel = new Intent(MenuDrawerNew.this, ProposeActivites.class);
+                                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                                break;
+
+                            case Profil.PRO:
+                                appel = new Intent(MenuDrawerNew.this, ProposeActivitesPro.class);
+                                  appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                                break;
+
+                        }
+
+                      //  appel = new Intent(MenuDrawerNew.this,
+                       //         ProposeActivites.class);
+                    //    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                     //   startActivity(appel);
                         if (Outils.principal != currentActivity) currentActivity.finish();
                         break;
 
                     case MES_PREFERENCES:
                         selectionslide = -1;
                         if (getLocalClassName().equals("com.wayd.activity.MesPreferences")) return;
+                        if (getLocalClassName().equals("com.wayd.activity.MonProfilPro")) return;
                         Outils.fermeActiviteEnCours(currentActivity);
-                        appel = new Intent(MenuDrawerNew.this,
-                                MesPreferences.class);
-                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                        startActivity(appel);
+
+                       switch (Outils.personneConnectee.getTypeUser()){
+
+                           case (Profil.WAYDEUR):
+                               appel = new Intent(MenuDrawerNew.this,
+                                       MesPreferences.class);
+                               appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                               startActivity(appel);
+                               break;
+
+                           case (Profil.PRO):
+                               appel = new Intent(MenuDrawerNew.this,
+                                       MonProfilPro.class);
+                               appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                               startActivity(appel);
+                               break;
+                       }
+
+
                         if (Outils.principal != currentActivity) currentActivity.finish();
                         break;
 

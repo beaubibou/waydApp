@@ -55,7 +55,6 @@ public class F_Preferences extends Fragment implements AsyncTaches.AsyncUpdatePr
         View rootView = inflater.inflate(R.layout.f_preferences, container, false);
         adapter = new PreferencesAdapter(getContext(), listepreference);
         ListView listViewPreference = (ListView) rootView.findViewById(R.id.LV_listepreferences);
-        listViewPreference = (ListView) rootView.findViewById(R.id.LV_listepreferences);
         SK_rayon = (SeekBar) rootView.findViewById(R.id.rayonpref);
         TV_rayonMin = (TextView) rootView.findViewById(R.id.minrayon);
         TV_rayonMin.setText(RAYON_MIN_RECHERCHE+ "M");

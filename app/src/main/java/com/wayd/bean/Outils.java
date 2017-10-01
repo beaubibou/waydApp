@@ -68,15 +68,40 @@ public class Outils {
     public static GPSTracker gps;
     public static final ReceiverGCM LOOP_BACK_RECEIVER_GCM = new ReceiverGCM();
     public static final ArrayList<TypeActivite> listtypeactivitecomplete = new ArrayList<>();
+    public static final ArrayList<TypeActivite> listtypeactiviteWaydeur = new ArrayList<>();
+    public static final ArrayList<TypeActivite> listtypeactivitePro = new ArrayList<>();
+
     public static Version  DERNIERE_VERSION_WAYD=null;
     public static final BusMessaging busMessaging = new BusMessaging();
 
+    public static  ArrayList<TypeActivite> getListTypeActiviteWaydeur(){
+
+        if (listtypeactiviteWaydeur.size()!=0)
+    return listtypeactiviteWaydeur;
+        for (TypeActivite typeActivite:listtypeactivitecomplete  ) {
+            if (typeActivite.getTypeUser() == Profil.WAYDEUR)
+                listtypeactiviteWaydeur.add(typeActivite);
+
+        }
+        return listtypeactiviteWaydeur;
+    }
+
+    public static  ArrayList<TypeActivite> getListTypeActivitePro(){
+
+        if (listtypeactivitePro.size()!=0)
+            return listtypeactivitePro;
+        for (TypeActivite typeActivite:listtypeactivitecomplete  ) {
+            if (typeActivite.getTypeUser() == Profil.PRO)
+                listtypeactivitePro.add(typeActivite);
+
+        }
+        return listtypeactivitePro;
+    }
     public static int getIndiceTypeActivite(int idTypeActivite){// renvoi l'indice en fontion de l'id du typeactivite
 
         for (int f=0;f<listtypeactivitecomplete.size();f++)
         if (listtypeactivitecomplete.get(f).getId()==idTypeActivite)
             return f;
-
         return 0;
 
     }

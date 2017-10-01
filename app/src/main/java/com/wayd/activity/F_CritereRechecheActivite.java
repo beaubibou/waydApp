@@ -38,6 +38,7 @@ import com.wayd.bean.Activite;
 import com.wayd.bean.CritereRechercheActivite;
 import com.wayd.bean.GPSTracker;
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 import com.wayd.bean.TypeActivite;
 import com.wayd.listadapter.PlaceArrayAdapter;
 import com.wayd.listadapter.TypeActivityAdapter;
@@ -202,7 +203,7 @@ public class F_CritereRechecheActivite extends Fragment implements GoogleApiClie
 
     private void InitSpinnerActivite() {
         listtypeactivitecomplete.addAll(Outils.listtypeactivitecomplete);
-        listtypeactivitecomplete.add(0, new TypeActivite(TOUTES, TOUTES, "Toutes", true));
+        listtypeactivitecomplete.add(0, new TypeActivite(TOUTES, TOUTES, "Toutes", true, Profil.WAYDEUR));
         spinnerFiltreactivite = (Spinner) rootView.findViewById(R.id.id_typeactivite);
         TypeActivityAdapter typeActivieAdapter = new TypeActivityAdapter(getActivity(), listtypeactivitecomplete);
         spinnerFiltreactivite.setAdapter(typeActivieAdapter);

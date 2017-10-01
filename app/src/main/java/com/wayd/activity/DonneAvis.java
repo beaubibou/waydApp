@@ -93,7 +93,7 @@ public class DonneAvis extends MenuNoDrawer implements AsyncTaches.AsyncAddNotat
             @Override
             public void afterTextChanged(Editable s) {
                 if (s.length() > 0)
-                    TV_NbrCarac.setText("" + s.length() + "/"+getString(R.string.maxLengtAvis));
+                    TV_NbrCarac.setText("" + s.length() + "/" + getString(R.string.maxLengtAvis));
                 else
                     TV_NbrCarac.setText("");
 
@@ -127,11 +127,11 @@ public class DonneAvis extends MenuNoDrawer implements AsyncTaches.AsyncAddNotat
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
         Button buttonNon = alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-        buttonNon.setBackgroundColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Fondbutton));
-        buttonNon.setTextColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Textbutton));
+        buttonNon.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.altertDialog_Fondbutton));
+        buttonNon.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.altertDialog_Textbutton));
         Button buttonOui = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
-        buttonOui.setBackgroundColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Fondbutton));
-        buttonOui.setTextColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Textbutton));
+        buttonOui.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.altertDialog_Fondbutton));
+        buttonOui.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.altertDialog_Textbutton));
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
@@ -147,7 +147,7 @@ public class DonneAvis extends MenuNoDrawer implements AsyncTaches.AsyncAddNotat
     }
 
     private boolean validator() {
-        commentaires =(StringEscapeUtils.escapeJava(ET_Commentaires.getText().toString())).trim();
+        commentaires = (StringEscapeUtils.escapeJava(ET_Commentaires.getText().toString())).trim();
         note = RT_Note.getRating();
         return true;
 
@@ -156,7 +156,7 @@ public class DonneAvis extends MenuNoDrawer implements AsyncTaches.AsyncAddNotat
     @Override
     public void loopBack_AddNotation(MessageServeur messageserveur) {
 
-        Toast toast =Toast.makeText(getBaseContext(), messageserveur.getMessage(), Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getBaseContext(), messageserveur.getMessage(), Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
         // Renvoi à l'activité le fait que la note à été donnée pour la suppression

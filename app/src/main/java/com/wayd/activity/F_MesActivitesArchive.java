@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.application.wayd.R;
+import com.google.android.gms.internal.ac;
 import com.wayd.bean.Activite;
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 import com.wayd.listadapter.ActiviteAdapter;
 
 import java.util.ArrayList;
@@ -35,14 +38,37 @@ public class F_MesActivitesArchive extends Fragment implements AsyncTaches.Async
         adapter = new ActiviteAdapter(getActivity(), listeActivite);
         ListView listViewActivite = (ListView) rootView.findViewById(R.id.LV_listeActivite);
         listViewActivite.setAdapter(adapter);
+
+
         listViewActivite.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Activite activite = (Activite) view.getTag();
-                Intent appel = new Intent(getActivity(), DetailActivite.class);
-                appel.putExtra("idactivite", activite.getId());
-                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(appel);
+
+                System.out.println("******afiche user"+ activite.getTypeUser());
+
+                Intent appel;
+                switch (activite.getTypeUser()) {
+
+                    case Profil.WAYDEUR:
+                        appel = new Intent(getActivity(), DetailActivite.class);
+                        appel.putExtra("idactivite", activite.getId());
+                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                        break;
+
+                    case Profil.PRO:
+                        appel = new Intent(getActivity(), DetailActivitePro.class);
+                        appel.putExtra("idactivite", activite.getId());
+                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                        break;
+
+                }
+
+
+
+
             }
         });
 

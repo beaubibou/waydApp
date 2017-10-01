@@ -30,6 +30,7 @@ import com.wayd.bean.Activite;
 import com.wayd.bean.CritereRechercheActivite;
 
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 
 import java.util.ArrayList;
 
@@ -119,7 +120,9 @@ public class F_Map_ListActivite extends SupportMapFragment implements
         for (Activite activite : listeActivite) {
             LatLng activitePosition = new LatLng(activite.getLatitude(), activite.getLongitude());
            Bitmap icon = BitmapFactory.decodeResource(getResources(),Outils.getActiviteMipMap(activite.getIdTypeActite()));
-            googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromBitmap(getResizedBitmap(icon,(int)taillePixel,(int)taillePixel))).position(activitePosition).snippet(activite.getPseudoOrganisateur()).title(activite.getTitre())).setTag(activite.getId());
+            googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.
+                    fromBitmap(getResizedBitmap(icon,(int)taillePixel,(int)taillePixel))).position(activitePosition).snippet(activite.getPseudoOrganisateur())
+                    .title(activite.getTitre())).setTag(activite);
 
         }
         // AFFICHE MA POSITION
@@ -136,11 +139,38 @@ public class F_Map_ListActivite extends SupportMapFragment implements
             @Override
             public void onInfoWindowClick(Marker marker) {
                 // TODO Auto-generated method stub
-                if ((int) marker.getTag() == 0) return;
-                Intent appel = new Intent(getActivity(), DetailActivite.class);
-                appel.putExtra("idactivite", (int) marker.getTag());
-                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(appel);
+
+                Activite activite=(Activite) marker.getTag();
+
+                if (activite == null) return ;
+
+                Intent appel;
+                switch (activite.getTypeUser()) {
+
+                    case Profil.WAYDEUR:
+                        appel = new Intent(getActivity(), DetailActivite.class);
+                        appel.putExtra("idactivite", activite.getId());
+                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                        break;
+
+                    case Profil.PRO:
+                        appel = new Intent(getActivity(), DetailActivitePro.class);
+                        appel.putExtra("idactivite", activite.getId());
+                        appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                        break;
+
+                }
+
+
+
+                //if ((int) marker.getTag() == 0) return;
+
+                //Intent appel = new Intent(getActivity(), DetailActivite.class);
+               // appel.putExtra("idactivite", (int) marker.getTag());
+               // appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                //startActivity(appel);
 
             }
         });

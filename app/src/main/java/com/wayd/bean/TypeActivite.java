@@ -6,6 +6,7 @@ package com.wayd.bean;
 
 @SuppressWarnings("DefaultFileTemplate")
 public class TypeActivite {
+    private final int typeUser;
     private boolean ischecked;
     private final String nom;
     private final int idcategorie;
@@ -19,13 +20,17 @@ public class TypeActivite {
     public  final static int SPORT=2;
     public final static int BAR_RESTO=1;
 
-    public TypeActivite(int id, int idcategorie, String nom, boolean ischecked) {
+    public TypeActivite(int id, int idcategorie, String nom, boolean ischecked,int typeUser) {
         this.id = id;
         this.idcategorie = idcategorie;
         this.nom = nom;
         this.ischecked = ischecked;
+        this.typeUser=typeUser;
     }
 
+    public int getTypeUser() {
+        return typeUser;
+    }
 
     public int getId() {
         return id;

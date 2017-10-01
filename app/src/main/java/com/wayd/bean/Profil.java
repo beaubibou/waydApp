@@ -5,7 +5,9 @@ import android.graphics.Bitmap;
 
 
 public class Profil {
-	private  String commentaire;
+    public static final int WAYDEUR =3;
+	public static final int PRO =1;
+    private  String commentaire;
 	private  int nbrami;
 	private  int nbrparticipation;
 	private int nbractivite;
