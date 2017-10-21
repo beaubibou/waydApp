@@ -31,16 +31,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
-            <RatingBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:progressTint="@android:color/holo_blue_dark"
-                android:progressBackgroundTint="@android:color/holo_blue_dark"
-                android:secondaryProgressTint="@android:color/holo_blue_dark"
-                android:id="@+id/noteprofil"
-                style="?android:attr/ratingBarStyleSmall"
-                android:layout_below="@+id/iconactivite"
-                android:layout_centerHorizontal="true" />
+
 
 
         </RelativeLayout>
@@ -76,6 +67,8 @@
 
 
         </RelativeLayout>
+
+
 
 
     </RelativeLayout>
@@ -121,7 +114,7 @@
                     android:layout_height="40dp">
 
                     <LinearLayout
-                        android:background="#FFD440"
+                        android:background="#FFFFFF"
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -279,23 +272,7 @@
                         android:background="@drawable/borduretextfondblanc">
 
 
-                        <RelativeLayout
-                            android:layout_margin="10dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:id="@+id/rl_participants">
 
-                            <org.lucasr.twowayview.TwoWayView
-                                style="@style/TwoWayView"
-                                android:id="@+id/listeparticipant"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentLeft="true"
-                                android:layout_alignParentTop="true"
-                                />
-
-                        </RelativeLayout>
                     </LinearLayout>
 
                 </RelativeLayout>

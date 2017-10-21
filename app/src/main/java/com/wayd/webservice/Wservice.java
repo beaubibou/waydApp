@@ -33,6 +33,7 @@ import com.wayd.bean.Preference;
 import com.wayd.bean.Profil;
 import com.wayd.bean.PhotoWaydeur;
 import com.wayd.bean.ProfilNotation;
+import com.wayd.bean.ProfilPro;
 import com.wayd.bean.RetourMessage;
 import com.wayd.bean.TableauBord;
 import com.wayd.bean.TypeActivite;
@@ -520,6 +521,34 @@ public class Wservice {
         return null;
 
     }
+    public ProfilPro getFullProfilPro(int idpersonne)
+            throws IOException, XmlPullParserException {
+        String METHOD = "getFullProfilPro";
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        envelope.bodyOut = request;
+        request.addProperty("iddemandeur", Outils.personneConnectee.getId());
+        request.addProperty("idpersonne", idpersonne);
+        request.addProperty("jeton", Outils.jeton);
+        // HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //   SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+        if (envelope.bodyIn != null) {
+            SoapObject resultSOAP = (SoapObject) envelope.bodyIn;
+            return getProfilProFromSOAP(resultSOAP).get(0);
+        }
+        return null;
+
+    }
 
     public  ProfilNotation getProfilNotation(int notateur, int idpersonne, int idactivite)
             throws IOException, XmlPullParserException {
@@ -830,6 +859,61 @@ public class Wservice {
         return retour;
 
     }
+
+    private  ArrayList<ProfilPro> getProfilProFromSOAP(SoapObject resultSOAP) {
+        ArrayList<ProfilPro> retour = new ArrayList<>();
+        for (int f = 0; f < resultSOAP.getPropertyCount(); f++) {
+
+
+            // String nom = ((SoapObject) resultSOAP.getProperty(f))
+            //      .getProperty("nom").toString();
+            int idpersonne = Integer.parseInt(((SoapObject) resultSOAP
+                    .getProperty(f)).getProperty("id").toString());
+
+            String pseudo = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("prenom") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("prenom").toString();
+
+            String adresse = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("adresse") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("adresse").toString();
+
+            String siret = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("siret") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("siret").toString();
+
+            String telephone = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("telephone") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("telephone").toString();
+
+            long datecreation =Long.parseLong(((SoapObject) resultSOAP
+                    .getProperty(f)).getProperty("datecreation").toString());
+
+            int nbractivite = Integer.parseInt(((SoapObject) resultSOAP
+                    .getProperty(f)).getProperty("nbractivite").toString());
+
+            String photostr = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("photostr") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("photostr").toString();
+
+
+            String commentaire = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("commentaire") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("commentaire").toString();
+
+            String siteWeb = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("siteweb") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("siteweb").toString();
+
+            ProfilPro profil = new ProfilPro( idpersonne,  pseudo,  adresse,  siret,
+                     telephone,  datecreation,  nbractivite,
+             photostr,  commentaire, siteWeb);
+            retour.add(profil);
+        }
+        return retour;
+
+    }
+
 
     private  ArrayList<ProfilNotation> getProfilNotationFromSOAP(SoapObject resultSOAP) {
         ArrayList<ProfilNotation> retour = new ArrayList<>();

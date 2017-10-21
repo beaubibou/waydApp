@@ -253,9 +253,7 @@
                  >
 
                     <TextView
-
                         android:padding="10dp"
-
                         tools:text="Description "
                         android:layout_width="match_parent"
                         android:id="@+id/description"

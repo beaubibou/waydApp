@@ -51,7 +51,7 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
     private final static int APROPOS = 11;
     private final static int SHARE = 12;
     private Activity currentActivity;
-    private MenuItem menu_mesactivite, menu_masphere;
+    private MenuItem menu_mesactivite, menu_masphere, menu_rechercher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +71,10 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
     private void udpateDrawer() {
 
 
-
-        menu_mesactivite.setTitle(getString(R.string.menu_drawer_mesactivite)+ " (" + Outils.tableaudebord.getNbractiviteencours() + ")");
+        menu_mesactivite.setTitle(getString(R.string.menu_drawer_mesactivite) + " (" + Outils.tableaudebord.getNbractiviteencours() + ")");
 //        menu_mesmessages.setTitle("Messages(" + Outils.tableaudebord.getNbrmessagenonlu() + ")");
         //  menu_messuggestions.setTitle("Suggestions(" + Outils.tableaudebord.getNbrsuggestion() + ")");
-        menu_masphere.setTitle(getString(R.string.menu_drawer_masphere)+ " (" + Outils.tableaudebord.getNbrami() + ")");
+        menu_masphere.setTitle(getString(R.string.menu_drawer_masphere) + " (" + Outils.tableaudebord.getNbrami() + ")");
 
     }
 
@@ -95,7 +94,7 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
         }
 
         if (tableauDeBord.getNbrnotification() > 0) {
-            nbrnotification.setText(String.valueOf( tableauDeBord.getNbrnotification()));
+            nbrnotification.setText(String.valueOf(tableauDeBord.getNbrnotification()));
             //   nbrnotification.setBackground(getResources().getDrawable(R.drawable.badge_item_count));
             nbrnotification.setBackground(ContextCompat.getDrawable(this, R.drawable.badge_item_count));
 
@@ -203,7 +202,6 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
     public boolean onOptionsItemSelected(MenuItem item) {
 
 
-
         if (mDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
@@ -298,16 +296,16 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
 
                             case Profil.PRO:
                                 appel = new Intent(MenuDrawerNew.this, ProposeActivitesPro.class);
-                                  appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                 startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
                                 break;
 
                         }
 
-                      //  appel = new Intent(MenuDrawerNew.this,
-                       //         ProposeActivites.class);
-                    //    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                     //   startActivity(appel);
+                        //  appel = new Intent(MenuDrawerNew.this,
+                        //         ProposeActivites.class);
+                        //    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        //   startActivity(appel);
                         if (Outils.principal != currentActivity) currentActivity.finish();
                         break;
 
@@ -317,22 +315,22 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
                         if (getLocalClassName().equals("com.wayd.activity.MonProfilPro")) return;
                         Outils.fermeActiviteEnCours(currentActivity);
 
-                       switch (Outils.personneConnectee.getTypeUser()){
+                        switch (Outils.personneConnectee.getTypeUser()) {
 
-                           case (Profil.WAYDEUR):
-                               appel = new Intent(MenuDrawerNew.this,
-                                       MesPreferences.class);
-                               appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                               startActivity(appel);
-                               break;
+                            case (Profil.WAYDEUR):
+                                appel = new Intent(MenuDrawerNew.this,
+                                        MesPreferences.class);
+                                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                startActivity(appel);
+                                break;
 
-                           case (Profil.PRO):
-                               appel = new Intent(MenuDrawerNew.this,
-                                       MonProfilPro.class);
-                               appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                               startActivity(appel);
-                               break;
-                       }
+                            case (Profil.PRO):
+                                appel = new Intent(MenuDrawerNew.this,
+                                        MonProfilPro.class);
+                                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                startActivity(appel);
+                                break;
+                        }
 
 
                         if (Outils.principal != currentActivity) currentActivity.finish();
@@ -415,7 +413,12 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
         //  menu_mesmessages= menudrawer.findItem(R.id.id_mesmessage);
         // menu_messuggestions= menudrawer.findItem(R.id.id_messuggestion);
         menu_masphere = menudrawer.findItem(R.id.id_masphere);
+        menu_rechercher = menudrawer.findItem(R.id.id_rechercher);
 
+        if (Outils.personneConnectee.getTypeUser() == Profil.PRO) {
+            menu_masphere.setVisible(false);
+            menu_rechercher.setVisible(false);
+        }
         View hView = navigationView.getHeaderView(0);
         hView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -482,8 +485,6 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
     }
 
 
-
-
     protected void onDestroy() {
 
         Outils.activiteEnCours.remove(this);
@@ -501,7 +502,7 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
 
         selectionslide = -1;
-                switch (id) {
+        switch (id) {
 
             case R.id.id_rechercher:
                 selectionslide = RECHERCHE_ACTIVITE;
@@ -541,11 +542,11 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
                 break;
 
 
-                    case R.id.id_partager:
+            case R.id.id_partager:
 
-                        selectionslide = SHARE;
+                selectionslide = SHARE;
 
-                        break;
+                break;
 
         }
 
@@ -596,11 +597,11 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
         }
     }
 
-    private void share(){
+    private void share() {
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         String shareBodyText = "http://play.google.com/store/apps/details?id=com.application.wayd";
-        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Wayd lien");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Wayd lien");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
         startActivity(Intent.createChooser(sharingIntent, "Shearing Option"));
 

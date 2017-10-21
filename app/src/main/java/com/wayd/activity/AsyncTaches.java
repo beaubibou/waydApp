@@ -29,6 +29,7 @@ import com.wayd.bean.Preference;
 import com.wayd.bean.Profil;
 import com.wayd.bean.PhotoWaydeur;
 import com.wayd.bean.ProfilNotation;
+import com.wayd.bean.ProfilPro;
 import com.wayd.bean.RetourMessage;
 import com.wayd.bean.TableauBord;
 import com.wayd.webservice.Wservice;
@@ -4677,6 +4678,84 @@ public class AsyncTaches {
         }
     }
 
+    public static class AsyncGetProfilPro extends AsyncTask<String, String, ProfilPro> {
+        //    ProgressDialog mProgressDialog;
+        Integer tentative = 0;
+        String messageretour;
+        boolean exeption = false;
+        final int idpersonne;
+        final Async_GetProfilProListener ecouteur;
+        final Context mcontext;
+
+        public AsyncGetProfilPro(Async_GetProfilProListener ecouteur, int idpersonne, Context mcontext) {
+            super();
+            this.ecouteur = ecouteur;
+            this.idpersonne = idpersonne;
+            this.mcontext = mcontext;
+        }
+
+        interface Async_GetProfilProListener {
+            void loopBack_GetProfilPro(ProfilPro profil);
+        }
+
+        @Override
+        protected ProfilPro doInBackground(String... params) {
+
+            do {
+                try {
+                    exeption = false;
+                    tentative++;
+                    Log.d("AsyncGetProfilPro", "Tentative" + tentative.toString());
+                    return new Wservice().getFullProfilPro(idpersonne);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    exeption = true;
+                    messageretour = "Problème connexion";
+
+                } catch (XmlPullParserException e) {
+                    exeption = true;
+                    e.printStackTrace();
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
+
+
+            return null;
+
+        }
+
+        @Override
+        protected void onPostExecute(ProfilPro result) {
+            if (exeption) {
+                //          mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+
+            if (result != null) {
+                ecouteur.loopBack_GetProfilPro(result);
+            } else {
+                Toast toast = Toast.makeText(mcontext, "Erreur inconnue", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
+            //    mProgressDialog.dismiss();
+        }
+
+
+        /**
+         * @see AsyncTask#onPreExecute()
+         */
+        @Override
+        protected void onPreExecute() {
+            // mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Chargement du profil ...", true);
+            //     mProgressDialog.setCancelable(true);
+
+
+        }
+
+    }
 
 }
 

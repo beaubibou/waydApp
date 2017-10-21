@@ -23,6 +23,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
+import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,7 +72,7 @@ public class ProposeActivitesPro extends MenuDrawerNew implements GoogleApiClien
     private TextView ET_titre;
     private TextView TV_Commentaires;
     private Spinner spinnertypeactivite;
-
+        private TextClock Tv_heureDebut,Tv_heureFin;
     private boolean adressValide=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +84,14 @@ public class ProposeActivitesPro extends MenuDrawerNew implements GoogleApiClien
         TV_Commentaires = (TextView) findViewById(R.id.commentaire);
         TV_dateDebut=(TextView) findViewById(R.id.datedebut);
         TV_dateFin=(TextView) findViewById(R.id.datefin);
+        Tv_heureDebut=(TextClock) findViewById(R.id.heuredebut);
+        Tv_heureFin=(TextClock) findViewById(R.id.heurefin);
+        Tv_heureDebut.setFormat24Hour("hh:mm");
+        Tv_heureFin.setFormat24Hour("hh:mm");
+
         ET_titre = (EditText) findViewById(R.id.dateactivite);
+
+
         CK_GPS = (CheckBox) findViewById(R.id.id_gps);
         Button BUT_ProposeActivite = (Button) findViewById(R.id.id_buttonPropose);
         BUT_ProposeActivite.setOnClickListener(new View.OnClickListener() {

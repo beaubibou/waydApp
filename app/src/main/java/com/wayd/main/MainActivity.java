@@ -29,17 +29,16 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        getApplication(). registerActivityLifecycleCallbacks(new MyLifecycleHandler());
+        getApplication().registerActivityLifecycleCallbacks(new MyLifecycleHandler());
         Outils.principal = this;// Declare l'activité principal. Pour la pointer pour pouvoir la fermer lors de la deconnexion
         setContentView(R.layout.menu_principal);
 
-        if (Outils.gps==null)
-        Outils.gps = new GPSTracker(getBaseContext(), MainActivity.this);
-        else
-        {
+        if (Outils.gps == null)
+            Outils.gps = new GPSTracker(getBaseContext(), MainActivity.this);
+        else {
 
 
-            Outils.gps.setActivite( MainActivity.this);
+            Outils.gps.setActivite(MainActivity.this);
 
         }
 
@@ -66,25 +65,33 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
         b_rechercherActivite.setOnClickListener(this);
         b_ennuie.setOnClickListener(this);
 
-       //************** Gestion du mode administrateur***********************
+        //************** Gestion du mode administrateur***********************
 
-       // Outils.personneConnectee.setAdmin(true);
-        if (Outils.personneConnectee.isAdmin()){
-           b_administrateur.setVisibility(View.VISIBLE);
-           b_administrateur.setOnClickListener(this);
+        // Outils.personneConnectee.setAdmin(true);
+        if (Outils.personneConnectee.isAdmin()) {
+            b_administrateur.setVisibility(View.VISIBLE);
+            b_administrateur.setOnClickListener(this);
 
         }
         //**************************************************************
 
+        if (Outils.personneConnectee.getTypeUser() == Profil.PRO) {
+            b_rechercherActivite.setVisibility(View.GONE);
+            b_ennuie.setVisibility(View.GONE);
+
+
+        }
+
+
     }
 
     protected void onPause() {
-     //   Outils.gps.stopUsingGPS();
+        //   Outils.gps.stopUsingGPS();
         super.onPause();
     }
 
     protected void onResume() {
-    //    Outils.gps.getLocation();
+        //    Outils.gps.getLocation();
         super.onResume();
 
     }
@@ -105,7 +112,7 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
 
             case R.id.propose:
 
-                switch (Outils.personneConnectee.getTypeUser()){
+                switch (Outils.personneConnectee.getTypeUser()) {
 
                     case Profil.WAYDEUR:
                         appel = new Intent(MainActivity.this,
@@ -122,9 +129,7 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
                         break;
 
 
-
                 }
-
 
 
                 break;
@@ -144,15 +149,15 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
                 appel.putExtra("ennuie", true);
                 appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(appel);
-             //   Outils.afficheTuto(MainActivity.this, TutorielBean.ENNUIE);
+                //   Outils.afficheTuto(MainActivity.this, TutorielBean.ENNUIE);
                 break;
 
-           case R.id.admin:
+            case R.id.admin:
                 appel = new Intent(MainActivity.this,
                         Statistique.class);
-               appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(appel);
-                 break;
+                break;
 
         }
 

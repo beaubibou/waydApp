@@ -90,6 +90,9 @@ public class ActiviteAdapter extends BaseAdapter {
         photo.setImageDrawable(Outils.getAvatarDrawable(mContext, activite.getPhoto()));
         iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite()));
 
+
+        if (activite.isFromWaydeur()){
+
         if (activite.iscomplete()) {
             layoutItem.setBackgroundColor(Color.parseColor("#FFFFFF"));
             TV_nbrwaydeur.setTextColor(Color.parseColor("#FFAB00"));
@@ -99,6 +102,9 @@ public class ActiviteAdapter extends BaseAdapter {
             TV_nbrwaydeur.setText(activite.getNbrparticipantStr());
             TV_nbrwaydeur.setTextColor(Color.parseColor("#000000"));
         }
+
+        }
+
 
 
         return layoutItem;

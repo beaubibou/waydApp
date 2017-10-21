@@ -58,6 +58,7 @@ import com.wayd.bean.GPSTracker;
 import com.wayd.bean.Gcm;
 import com.wayd.bean.Outils;
 import com.wayd.bean.Personne;
+import com.wayd.bean.Profil;
 import com.wayd.bean.TableauBord;
 import com.wayd.main.MainActivity;
 import com.wayd.webservice.Wservice;
@@ -552,6 +553,19 @@ public class LoginWayde extends AppCompatActivity implements
                 personne.setEmail(mAuth.getCurrentUser().getEmail());
                 Outils.personneConnectee = new Personne(personne);
 
+              // Gere le cas d'un utilisateur professionnel
+
+                if (personne.getTypeUser()== Profil.PRO){
+                    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                    mAuth.signOut();
+                    Outils.connected = false;
+                    Outils.personneConnectee.Raz();
+                    Outils.tableaudebord.Raz();
+                    infoDialogPro();
+                    return;
+                }
+
+
 
                 if (personne.isPremiereconnexion()) {
                     ouvreTutoriel();
@@ -580,6 +594,34 @@ public class LoginWayde extends AppCompatActivity implements
 
 
     }
+
+    private void infoDialogPro() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(LoginWayde.this);
+        builder.setTitle("Information");
+        builder.setMessage("La version pour les professionnel, n'est pas encore finalisée." +
+                " Nous t'invitons à aller sur wayd.fr pour poster tes activités");
+        builder.setPositiveButton(R.string.ConfirmeParticipation_OK, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        Button buttonOui = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+        buttonOui.setBackgroundColor(ContextCompat.getColor(getBaseContext(), R.color.altertDialog_Fondbutton));
+        buttonOui.setTextColor(ContextCompat.getColor(getBaseContext(), R.color.altertDialog_Textbutton));
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.setMargins(15, 0, 15, 0);
+        buttonOui.setLayoutParams(params);
+    }
+
+
+
 
     private void ouvreMainWayd() {
 

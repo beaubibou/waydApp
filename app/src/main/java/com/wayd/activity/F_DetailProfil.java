@@ -20,12 +20,10 @@ public class F_DetailProfil extends Fragment {
     }
 
     public static Fragment newInstance(Profil profil) {
-
         F_DetailProfil fragment = new F_DetailProfil();
         Bundle args = new Bundle();
         args.putString(ARG_SECTION_COMMENTAIRE, profil.getCommentaire());
         args.putInt(ARG_SECTION_SEXE, profil.getSexe());
-
         fragment.setArguments(args);
         return fragment;
     }

@@ -161,6 +161,12 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
 
+        <activity
+            android:name="com.wayd.activity.UnProfilPro"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
         <service android:name="com.wayd.activity.FCMInitializationService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />

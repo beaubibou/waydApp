@@ -299,6 +299,7 @@
     <!-- par le code -->
     <string name="UnProfil_noDescriptionHomme">"Ce waydeur n'a pas encore renseigné sa description"</string>
     <string name="UnProfil_noDescriptionFemme">"Cette waydeuse n'a pas encore renseigné sa description"</string>
+    <string name="UnProfil_noDescriptionPro">"Cette société n'a pas encore renseigné sa description"</string>
     <string name="UnProfil_noDescriptionMasque">"Ce waydeur ou cette Waydeuse n'a pas encore renseigné sa description"</string>
 
 

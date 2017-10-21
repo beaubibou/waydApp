@@ -11,6 +11,7 @@ public class Activite
 {
     private final int typeUser;
     private final int typeAcces;
+
     private int id;
 
     private String titre;
@@ -26,6 +27,8 @@ public class Activite
     private  double note;
 
     private  Bitmap photo;
+
+    private Date dateFin;
 
     private boolean archive;
     private int idTypeActite;
@@ -84,7 +87,7 @@ public class Activite
         this.libelle = libelle;
         this.idorganisateur = idorganisateur;
        // this.datecreation = datecreation;
-      //  this.datefinr=datefin;
+        this.dateFin=datefin;
         this.dateDebut = datedebut;
         this.note=note;
         this.latitude = latitude;
@@ -163,9 +166,7 @@ public class Activite
 
     }
 
-    public void setNbmaxwaydeur(int nbmaxwaydeur) {
-        this.nbmaxwaydeur = nbmaxwaydeur;
-    }
+
 
     public  String getSexeOrganisateur()
     {
@@ -272,5 +273,28 @@ public class Activite
 
     public boolean iscomplete() {
         return nbmaxwaydeur == nbrparticipant;
+    }
+
+    public boolean isFromWaydeur() {
+        return typeUser == Profil.WAYDEUR;
+    }
+    public boolean isFromPRO() {
+        return typeUser == Profil.PRO;
+    }
+
+    public String getHoraire() {
+
+        SimpleDateFormat jour = new SimpleDateFormat("dd-MM-yyyy");
+        String datestrdebut = jour.format(dateDebut);
+        SimpleDateFormat formatHeure = new SimpleDateFormat("HH:mm");
+        String heuredebutstr = formatHeure.format(dateDebut);
+        String heurefinstr = formatHeure.format(dateFin);
+
+        return "Le " + datestrdebut + " de " + heuredebutstr + " à "
+                + heurefinstr;
+    }
+
+    public void setNbmaxwaydeur(int nbmaxwaydeur) {
+        this.nbmaxwaydeur = nbmaxwaydeur;
     }
 }
