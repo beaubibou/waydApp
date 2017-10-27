@@ -2,11 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:background="#fff"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="10dp"
     android:padding="5dp"
 
     >
@@ -18,7 +15,10 @@
             android:layout_height="@dimen/photo2"
             android:src="@drawable/com_facebook_profile_picture_blank_square"
             app:civ_border_color="@color/primary"
-            app:civ_border_width="2dp" />
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            />
 
         <TextView
             android:id="@+id/id_corps"
@@ -28,10 +28,7 @@
             android:layout_alignLeft="@+id/pseudo"
             android:layout_alignStart="@+id/pseudo"
             android:lines="1"
-            android:layout_marginRight="15dp"
-            android:textColor="@android:color/black"
-            android:textStyle="normal"
-            tools:text="%Dernier message"
+           tools:text="%Dernier message"
             android:ellipsize="end"
             android:textSize="@dimen/texte2"
             android:layout_toStartOf="@+id/id_datecreation" />
@@ -40,15 +37,13 @@
             android:id="@+id/pseudo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:maxLines="1"
-            android:layout_marginLeft="10dp"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             tools:text="%Pseudo"
             android:ellipsize="end"
             android:textStyle="bold"
             android:textSize="@dimen/texte2"
-            android:layout_toStartOf="@+id/nbrnonlus"
+            android:layout_alignTop="@+id/iconactivite"
             android:layout_toEndOf="@+id/iconactivite" />
 
         <TextView
@@ -64,7 +59,7 @@
 
         <TextView
             android:id="@+id/nbrnonlus"
-            android:layout_width="30dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/id_datecreation"
             android:layout_alignEnd="@+id/id_datecreation"

@@ -74,7 +74,7 @@ public class F_CritereRechecheActivite extends Fragment implements GoogleApiClie
 
     public F_CritereRechecheActivite() {
 
-        critereRechercheActivite=new CritereRechercheActivite(false, RechercheActiviteNew.motCle,RechercheActiviteNew.TOUTE_ACTIVITE, RechercheActiviteNew.RAYON_RECHERCHE_DEFAUT);
+        critereRechercheActivite=new CritereRechercheActivite( RechercheActiviteNew.motCle,RechercheActiviteNew.TOUTE_ACTIVITE, RechercheActiviteNew.RAYON_RECHERCHE_DEFAUT,0,0,0);
 
        }
 
@@ -96,7 +96,6 @@ public class F_CritereRechecheActivite extends Fragment implements GoogleApiClie
         InitMotCle();
         Outils.gps.addListenerGPS(this);
         InitCkGPS();
-
         spinnerFiltreactivite.setSelection(0);// Met la valeur par defaut de la catégorie (toutes)
         seekRayon.setProgress(RechercheActiviteNew.RAYON_RECHERCHE_DEFAUT);// Met la vaelur par defaut de recherche
         return rootView;
@@ -123,7 +122,6 @@ public class F_CritereRechecheActivite extends Fragment implements GoogleApiClie
 
             }
         });
-
 
     }
 
@@ -190,14 +188,12 @@ public class F_CritereRechecheActivite extends Fragment implements GoogleApiClie
     }
 
     private CritereRechercheActivite getFiltre() {
-        boolean isfiltre;
         double finalLatitide, finalLongitude;
         int idtypeactivite = ((TypeActivite) spinnerFiltreactivite.getSelectedItem()).getId();
-        isfiltre = idtypeactivite != TOUTES;
         finalLatitide = Outils.personneConnectee.getPosition().latitude;// En fonction du gps la personne renvoi l'adresse saise ou le gps
         finalLongitude = Outils.personneConnectee.getPosition().longitude;
-        return new CritereRechercheActivite(isfiltre, motcle.getText().toString(), idtypeactivite, seekRayon.getProgress()
-                , finalLongitude, finalLatitide);
+        return new CritereRechercheActivite(motcle.getText().toString(), idtypeactivite, seekRayon.getProgress()
+                , finalLongitude, finalLatitide,0);
     }
 
 

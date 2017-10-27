@@ -160,15 +160,19 @@ public class LoginWayde extends AppCompatActivity implements
     private void connexion(FirebaseUser currentUser) {
 
         if (currentUser==null)return;
-
+        if (Outils.isConnect())
+        Log.i("LoginWayd","methode connexion");
         currentUser.getToken(true)
 
                 .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
                     public void onComplete(@NonNull Task<GetTokenResult> task) {
                         if (task.isSuccessful()) {
+
                             Outils.jeton = task.getResult().getToken();
                             Outils.connected = true;
+                            Log.i("LoginWayd","methode connexion isSuccessful");
                             connexionWayd();
+                            return;
 
                         } else {
 
@@ -285,7 +289,7 @@ public class LoginWayde extends AppCompatActivity implements
     }
 
     private void initBouttonConnexGoogle() {
-        ImageView BTN_GOOGLE = (ImageView) findViewById(R.id.btn_google);
+        Button BTN_GOOGLE = (Button) findViewById(R.id.btn_google);
         BTN_GOOGLE.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -620,9 +624,6 @@ public class LoginWayde extends AppCompatActivity implements
         buttonOui.setLayoutParams(params);
     }
 
-
-
-
     private void ouvreMainWayd() {
 
         Toast toast = Toast.makeText(getBaseContext(), getString(R.string.messageBienvenue)+ Outils.personneConnectee.getPseudo(), Toast.LENGTH_SHORT);
@@ -645,11 +646,8 @@ public class LoginWayde extends AppCompatActivity implements
     // Compare la version dispobile sur le serveur et la version de application
     public boolean isVersionUpdate(){
 
-
         if (Outils.getVersionApk(getBaseContext()).isAjour( Outils.DERNIERE_VERSION_WAYD))
             return true;
-
-
 
         AlertDialog.Builder builder;
 
@@ -673,16 +671,13 @@ public class LoginWayde extends AppCompatActivity implements
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
 
-
-
         return false;
-
 
     }
 
 
     private void connexionWayd() {
-
+        Log.i("LoginWayd","methode connexionWayd");
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Connexion Wayd ", "Connexion...", true);
         new AsyncTaches.AsyncConnexionWayd(this, Outils.jeton, LoginWayde.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
@@ -709,12 +704,14 @@ public class LoginWayde extends AppCompatActivity implements
             return;
         }
 
+
         firebaseAuthWithPwd(email,password);
 
     }
 
     private void firebaseAuthWithPwd(String email,String password) {
 
+        Log.i("LoginWayd","methode firebaseAuthWithPwd");
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification", "Connexion...", true);
 
         mAuth.signInWithEmailAndPassword(email, password)
@@ -747,10 +744,12 @@ public class LoginWayde extends AppCompatActivity implements
                         if (task.isSuccessful()){
 
                             mProgressDialogFb.dismiss();
-                            Log.d("LoginWayde","Firebase  user PWD récupéreré");
+                            Log.i("LoginWayd","methode firebaseAuthWithPwd isSuccessful");
                             FirebaseUser user = mAuth.getCurrentUser();
+
                             if (user.isEmailVerified())
                             connexion(user);
+
                             else
                             {   Toast toast = Toast.makeText(LoginWayde.this, R.string.comptePasActive, Toast.LENGTH_LONG);
                                 toast.setGravity(Gravity.CENTER, 0, 0);

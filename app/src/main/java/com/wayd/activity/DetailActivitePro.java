@@ -64,15 +64,12 @@ public class DetailActivitePro extends MenuDrawerNew implements
         setContentView(R.layout.detailactivitepro);
         InitDrawarToolBar();
         initTableauDeBord();
-
-
         idactivite = getIntent().getIntExtra("idactivite", 0);
         // verifie que la donéne ne vient pas de la notification
         if (getIntent().getStringExtra("idactiviteFromNotification") != null) {
             idactivite = Integer.valueOf(getIntent().getStringExtra("idactiviteFromNotification"));
 
         }
-
         photop = (ImageView) findViewById(R.id.iconactivite);
         TV_pseudo = (TextView) findViewById(R.id.pseudo);
         TV_description = (TextView) findViewById(R.id.description);
@@ -131,7 +128,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
             TV_description.setText(activite.getLibelleUnicode());
             TV_Titre.setText(activite.getTitreUnicode());
             TV_Horaire.setText(activite.getHoraire());
-            iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite()));
+            iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
             Log.d("DetailActivitePro.this","clik incon");
             TV_pseudo.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -141,7 +138,6 @@ public class DetailActivitePro extends MenuDrawerNew implements
                     appel.putExtra("idpersonne", activiteSelectionne.getIdorganisateur());
                     appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(appel);
-
 
                 }
             });

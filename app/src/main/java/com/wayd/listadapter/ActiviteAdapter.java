@@ -88,7 +88,7 @@ public class ActiviteAdapter extends BaseAdapter {
         TV_tempsrestant.setText(activite.getTpsrestant());
         TV_Distance.setText(Outils.personneConnectee.getDistanceActiviteStr(activite));
         photo.setImageDrawable(Outils.getAvatarDrawable(mContext, activite.getPhoto()));
-        iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite()));
+        iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
 
 
         if (activite.isFromWaydeur()){

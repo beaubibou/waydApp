@@ -57,12 +57,9 @@ public class Inscription extends AppCompatActivity {
 
                 }
 
-
             }
         });
         CK_AfficheMdp.setChecked(false);
-
-
         Button BUT_creercompte = (Button) findViewById(R.id.id_creercompte);
         BUT_creercompte.setOnClickListener(new View.OnClickListener() {
             @Override

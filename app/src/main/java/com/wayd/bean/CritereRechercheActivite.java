@@ -11,36 +11,61 @@ public class CritereRechercheActivite {
     private double longitude;
     private int rayon;
     private int idtypeactivite;
+    private int typeUser;
     private String motcle;
-    private boolean isfiltre;
-    private final int TOUTES_ACTIVITE=-1;
 
-    public CritereRechercheActivite(boolean isfiltre, String motcle, int idtypeactivite, int rayon, double longitude, double latitude) {
-        this.isfiltre = isfiltre;
+    public void setIdtypeactivite(int idtypeactivite) {
+        this.idtypeactivite = idtypeactivite;
+    }
+
+    private final int TOUTES_ACTIVITE=-1;
+    private int commenceDans;
+
+    public int getCommenceDans() {
+        return commenceDans;
+    }
+
+
+    public String getCommencantDans(){
+
+        if (commenceDans==0)
+            return "Activités en cours";
+        else
+            return "Actitivités dans "+commenceDans/60+ " heures";
+
+
+
+    }
+    public void setCommenceDans(int commenceDans) {
+        this.commenceDans = commenceDans;
+    }
+
+    public CritereRechercheActivite(String motcle, int idtypeactivite, int rayon, int commenceDans) {
+
+        this.motcle = motcle;
+        this.idtypeactivite = idtypeactivite;
+        this.rayon = rayon;
+        this.commenceDans=commenceDans;
+
+    }
+
+
+    public int getTypeUser() {
+        return typeUser;
+    }
+
+    public void setTypeUser(int typeUser) {
+        this.typeUser = typeUser;
+    }
+
+    public CritereRechercheActivite( String motcle, int idtypeactivite, int rayon, double longitude, double latitude,int commenceDans) {
         this.motcle = motcle;
         this.idtypeactivite = idtypeactivite;
         this.rayon = rayon;
         this.longitude = longitude;
         this.latitude = latitude;
+        this.commenceDans=commenceDans;
     }
-
-    public CritereRechercheActivite(boolean isfiltre, String motcle, int idtypeactivite, int rayon) {
-        this.isfiltre = isfiltre;
-        this.motcle = motcle;
-        this.idtypeactivite = idtypeactivite;
-        this.rayon = rayon;
-
-    }
-
-    public CritereRechercheActivite(CritereRechercheActivite filtre) {
-        this.isfiltre = filtre.isfiltre;
-       this.motcle = filtre.getMotcle();
-        this.idtypeactivite = filtre.getIdtypeactivite();
-        this.rayon = filtre.getRayon();
-        this.longitude = filtre.getLongitude();
-        this.latitude = filtre.getLatitude();
-    }
-
 
     public double getLatitude() {
         return latitude;
@@ -62,10 +87,6 @@ public class CritereRechercheActivite {
         return motcle;
     }
 
-
-    public boolean isfiltre() {
-        return isfiltre;
-    }
 
     public void setPosition(double latitude, double longitude) {
         this.latitude=latitude;
@@ -90,18 +111,11 @@ public class CritereRechercheActivite {
         this.rayon = rayon;
     }
 
-    public void setIdtypeactivite(int idtypeactivite) {
-        this.idtypeactivite = idtypeactivite;
-        if (idtypeactivite==TOUTES_ACTIVITE)
-            this.isfiltre=false;
 
-    }
 
     public void setMotcle(String motcle) {
         this.motcle = motcle;
     }
 
-    public void setIsfiltre(boolean isfiltre) {
-        this.isfiltre = isfiltre;
-    }
+
 }

@@ -1,5 +1,6 @@
 package com.wayd.activity;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.location.Address;
@@ -14,6 +15,7 @@ import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -206,11 +208,15 @@ public class ProposeActivites extends MenuDrawerNew implements GoogleApiClient.O
 
     private void init_SP_NbmaxWaydeur() {
         List<String> duree = new ArrayList<>();
-        duree.add("2");
-        duree.add("3");
-        duree.add("4");
-        duree.add("5");
-        duree.add("6");
+        duree.add("+1 Waydeur");
+        duree.add("+2 Waydeur");
+        duree.add("+3 Waydeur");
+        duree.add("+4 Waydeur");
+        duree.add("+5 Waydeur");
+        duree.add("+6 Waydeur");
+        duree.add("+7 Waydeur");
+
+
         ArrayAdapter<String> dureeAdapter = new ArrayAdapter<>(this, R.layout.defautspinneritem, duree);
         SP_NbxMaxWaydeurs.setAdapter(dureeAdapter);
 
@@ -450,7 +456,10 @@ public class ProposeActivites extends MenuDrawerNew implements GoogleApiClient.O
         adb.setPositiveButton(R.string.DecritActivite_OK, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 TV_Commentaires.setText(ET_Commentaires.getText().toString());
-
+                InputMethodManager imm = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(
+                        ET_Commentaires.getWindowToken(), 0);
             }
         });
 

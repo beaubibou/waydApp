@@ -524,7 +524,7 @@ public class DetailActivite extends MenuDrawerNew implements
             TV_sexe.setText(activite.getSexeOrganisateur());
             TV_description.setText(activite.getLibelleUnicode());
             TV_Titre.setText(activite.getTitreUnicode());
-            iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite()));
+            iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
 
             if (activite.getNbrparticipant() == activite.getNbmaxwaydeur()) {// Si l'acitivet complete
                 TV_NbrInscrit.setText(R.string.s_detailactivite_complet);

@@ -142,6 +142,7 @@ public class AsyncTaches {
 
 
     public static class AsyncGetListActivite extends AsyncTask<String, String, ArrayList<Activite>> {
+        private final int typeUser;
         Integer tentative = 0;
         ProgressDialog mProgressDialog;
         String messageretour;
@@ -151,8 +152,7 @@ public class AsyncTaches {
         final double longitude;
         final int rayon;
         final int idtypeactivite;
-        final int commencedans = 0;
-        final boolean isfiltre;
+        final int commencedans;
         final String motcle;
         final Context mcontext;
 
@@ -160,12 +160,13 @@ public class AsyncTaches {
             super();
             this.ecouteur = ecouteur;
             this.mcontext = mcontext;
-            this.isfiltre = critereRechercheActivite.isfiltre();
             this.motcle = critereRechercheActivite.getMotcle();
             this.idtypeactivite = critereRechercheActivite.getIdtypeactivite();
             this.rayon = critereRechercheActivite.getRayon();
             this.longitude = critereRechercheActivite.getLongitude();
             this.latitude = critereRechercheActivite.getLatitude();
+            this.typeUser=critereRechercheActivite.getTypeUser();
+            this.commencedans=critereRechercheActivite.getCommenceDans();
 
         }
 
@@ -179,10 +180,16 @@ public class AsyncTaches {
                     tentative++;
 
                     Log.d("AsyncGetListActivite", "Tentative" + tentative.toString());
-                    if (isfiltre)
-                        return new Wservice().getListActiviteAvenir(latitude, longitude, rayon, idtypeactivite, motcle, commencedans);
-                    else
-                        return new Wservice().getListActiviteAvenirNocritere(latitude, longitude, rayon, motcle, commencedans);
+                 //   if (isfiltre)
+              //         return new Wservice().getListActiviteAvenir(latitude, longitude, rayon, idtypeactivite, motcle, commencedans);
+               //    else
+                  //      return new Wservice().getListActiviteAvenirNocritere(latitude, longitude, rayon, motcle, commencedans);
+//
+
+
+                    return new Wservice().getActivites(latitude,
+                           longitude,  rayon,  idtypeactivite,
+                     motcle,  typeUser, commencedans);
 
                 } catch (IOException e) {
                     // TODO Auto-generated catch block

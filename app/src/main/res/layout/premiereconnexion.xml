@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_margin="15dp"
+
         android:layout_alignParentStart="true">
 
         <LinearLayout
@@ -48,6 +48,7 @@
 
             <TextView
 
+                android:padding="@dimen/paddingTextview1"
                 android:text="@string/premiereconnexion_infos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,7 +58,7 @@
                 android:textAllCaps="false" />
 
             <TextView
-                android:layout_marginTop="10dp"
+               android:padding="@dimen/paddingTextview1"
                 android:text="@string/premiereconnexion_infopseudo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,13 +76,13 @@
                 android:maxLength="@string/maxLengtPseudo"
                 android:imeOptions="actionNext"
                 android:inputType="textEmailAddress"
-                android:textSize="@dimen/texte3"
-                android:padding="@dimen/texte2"
+                android:textSize="@dimen/texte2"
+                android:padding="@dimen/paddingTextview1"
                 android:textStyle="normal"
                 android:maxLines="1" />
 
             <TextView
-                android:layout_marginTop="10dp"
+                android:padding="@dimen/paddingTextview1"
                 android:text="@string/premiereconnexion_datenaissance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,14 +94,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/datedenaissance"
+                android:padding="@dimen/paddingTextview1"
                 style="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textSize="14sp" />
 
             <TextView
-                android:layout_marginTop="10dp"
+
                 android:text="@string/premiereconnexion_sexe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/paddingTextview1"
                 android:id="@+id/version"
                 style="@style/Base.TextAppearance.AppCompat.Large"
                 android:textSize="@dimen/texte2" />
@@ -111,21 +114,6 @@
                 android:foregroundGravity="left"
                 android:gravity="left|start"
                 />
-            <Button
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:id="@+id/validepseudo"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:background="#ffa440"
-                style="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="#000000"
-                android:text="@string/premiereconnexion_buttonconfirme"
-
-                android:textSize="@dimen/texte2"/>
 
 
         </LinearLayout>
@@ -145,5 +133,23 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/validepseudo"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:padding="@dimen/paddingButton"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/marge4"
+        android:layout_marginRight="@dimen/marge4"
+        android:background="#ffa440"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/marge4"
+        android:text="@string/premiereconnexion_buttonconfirme"
+        android:textColor="#000000"
+        android:textSize="@dimen/texte2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

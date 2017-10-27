@@ -221,7 +221,7 @@
     <string name="signalerbug_prbconnexion">"Problème de connexion"</string>
     <string name="signalerbug_texteinfo">"Vous rencontrer un problème de connexion ? Indiquez votre adresse de connexion et précisez votre problème."</string>
     <string name="signalerbug_hintmail">"Adresse email"</string>
-    <string name="signalerbug_hintchamplibre">"Champ libre"</string>
+    <string name="signalerbug_hintchamplibre">"Décrivez votr problème (250 caractères max)"</string>
     <string name="signalerbug_buttonvalider">"Valider"</string>
 
     <!-- *********************s_proposeactivite.xml *****************************-->

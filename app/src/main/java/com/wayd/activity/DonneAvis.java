@@ -58,10 +58,8 @@ public class DonneAvis extends MenuNoDrawer implements AsyncTaches.AsyncAddNotat
         TV_age = (TextView) findViewById(R.id.ck_activesexe);
         TV_Titre = (TextView) findViewById(R.id.titreactivite);
         TV_NbrCarac = (TextView) findViewById(R.id.nbrcaractere);
-
         Button BTN_noter = (Button) findViewById(R.id.id_noterprofil);
         BTN_noter.setOnClickListener(new View.OnClickListener() {
-
 
             @Override
 

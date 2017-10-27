@@ -46,7 +46,7 @@ public class F_Map_ListActivite extends SupportMapFragment implements
 
     public F_Map_ListActivite() {
 
-        critereRechercheActivite=new CritereRechercheActivite(false, RechercheActiviteNew.motCle,RechercheActiviteNew.TOUTE_ACTIVITE, RechercheActiviteNew.RAYON_RECHERCHE_DEFAUT);
+        critereRechercheActivite=new CritereRechercheActivite( RechercheActiviteNew.motCle,RechercheActiviteNew.TOUTE_ACTIVITE, RechercheActiviteNew.RAYON_RECHERCHE_DEFAUT,0);
 
     }
 
@@ -119,7 +119,7 @@ public class F_Map_ListActivite extends SupportMapFragment implements
         float taillePixel=convertDpToPixel(25f,getActivity().getBaseContext());
         for (Activite activite : listeActivite) {
             LatLng activitePosition = new LatLng(activite.getLatitude(), activite.getLongitude());
-           Bitmap icon = BitmapFactory.decodeResource(getResources(),Outils.getActiviteMipMap(activite.getIdTypeActite()));
+           Bitmap icon = BitmapFactory.decodeResource(getResources(),Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
             googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.
                     fromBitmap(getResizedBitmap(icon,(int)taillePixel,(int)taillePixel))).position(activitePosition).snippet(activite.getPseudoOrganisateur())
                     .title(activite.getTitre())).setTag(activite);

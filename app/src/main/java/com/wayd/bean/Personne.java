@@ -248,6 +248,7 @@ public class Personne implements GPSTracker.positionGpsListener {
     }
 
     public String getPseudo() {
+
         return pseudo.replaceFirst(".", (pseudo.charAt(0) + "").toUpperCase());
     }
 
@@ -348,10 +349,8 @@ public class Personne implements GPSTracker.positionGpsListener {
 
     }
 
-
     public synchronized void addPersonneChangeListener(PersonneChangeListener listener) {
         listenerChangePersonne.add(listener);
-
 
     }
 

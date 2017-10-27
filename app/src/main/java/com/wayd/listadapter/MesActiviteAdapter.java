@@ -100,7 +100,7 @@ public class MesActiviteAdapter extends BaseAdapter
         TV_tempsrestant.setText(activite.getTpsrestant());
         TV_Distance.setText(Outils.personneConnectee.getDistanceActiviteStr(activite));
         photo.setImageDrawable(Outils.getAvatarDrawable(mContext,activite.getPhoto()));
-        iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite()));
+        iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
 
         Img_message.setTag(position);
         Img_message.setOnClickListener(new View.OnClickListener() {

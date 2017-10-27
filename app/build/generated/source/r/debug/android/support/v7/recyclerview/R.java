@@ -23,11 +23,11 @@ public final class R {
     }
     public static final class styleable {
         public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f010185, 0x7f010186, 0x7f010187, 0x7f010188 };
-        public static final int RecyclerView_android_descendantFocusability = 1;
         public static final int RecyclerView_android_orientation = 0;
+        public static final int RecyclerView_android_descendantFocusability = 1;
         public static final int RecyclerView_layoutManager = 2;
-        public static final int RecyclerView_reverseLayout = 4;
         public static final int RecyclerView_spanCount = 3;
+        public static final int RecyclerView_reverseLayout = 4;
         public static final int RecyclerView_stackFromEnd = 5;
     }
 }

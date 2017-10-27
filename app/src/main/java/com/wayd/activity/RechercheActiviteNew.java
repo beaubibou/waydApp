@@ -70,8 +70,9 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
     public static boolean balise;
     private Menu menuToolsBar;
     private boolean swipeRefresh = false;// Permet de savoir si la demande de rafraichissement vient du bouton ou du swipreRefres(pull to refresh)
-    public static final int FROM_RECHERCHE = 1, FROM_SWIPE = 2, FROM_MAP = 3;
+    public static final int FROM_RECHERCHE = 1, FROM_SWIPE = 2, FROM_MAP = 3,FROM_PLUS=4;
     public int refreshSource;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +101,9 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
         this.refreshSource = refreshSource;
         new AsyncTaches.AsyncGetListActivite(this, critereRechercheActivite, RechercheActiviteNew.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
+
+
+
 
     private void initPage() {
         /*
@@ -169,8 +173,8 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
     }
 
     private void getListeActivitesEnnuie() {
-        CritereRechercheActivite filtre = new CritereRechercheActivite(false, NO_MOTCLE, TOUTE_ACTIVITE, RAYON_RECHERCHE_DEFAUT
-                , Outils.personneConnectee.getLongitude(), Outils.personneConnectee.getLatitude());
+        CritereRechercheActivite filtre = new CritereRechercheActivite( NO_MOTCLE, TOUTE_ACTIVITE, RAYON_RECHERCHE_DEFAUT
+                , Outils.personneConnectee.getLongitude(), Outils.personneConnectee.getLatitude(),0);
         setCritereRechercheActivite(filtre);
         updateListeActivite(FROM_RECHERCHE, F_Map_ListActivite.CENTRER_PERSONNE);// demande le rafraichissmeent de la part du boutton
 
@@ -206,12 +210,15 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
 
         if (vlistactivite != null) {
 
+
+
             this.listeActivite.clear();
             this.listeActivite.addAll(vlistactivite);
-
             Collections.sort(listeActivite, new ComparatorDistanceActivite());
-
             afficheNbrResultats();
+
+
+
 
             switch (refreshSource) {
 
@@ -240,18 +247,17 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
                     }
 
                     balise = false;// Pour ne plus affiche le snack
-
                     break;
 
                 case FROM_SWIPE:
                     ((F_ListActivite) f_listActivite).updateListe(); // demande juste le rafraichissement
                     CENTRER_SUR = F_Map_ListActivite.CENTRER_PERSONNE;
                     f_mapListActivite.updateListe(CENTRER_SUR);
+                    break;
 
-
-                case FROM_MAP:
-                    CENTRER_SUR = F_Map_ListActivite.CENTRER_CARTE;
-                    ((F_ListActivite) f_listActivite).updateListe();
+                case FROM_PLUS:
+                    ((F_ListActivite) f_listActivite).updateListe(); // demande juste le rafraichissement
+                    CENTRER_SUR = F_Map_ListActivite.CENTRER_PERSONNE;
                     f_mapListActivite.updateListe(CENTRER_SUR);
 
             }

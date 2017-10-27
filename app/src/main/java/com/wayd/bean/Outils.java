@@ -21,7 +21,6 @@ import android.text.format.DateFormat;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -57,9 +56,6 @@ import cz.msebera.android.httpclient.client.ClientProtocolException;
 import cz.msebera.android.httpclient.client.HttpClient;
 import cz.msebera.android.httpclient.client.methods.HttpGet;
 import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
-import cz.msebera.android.httpclient.Header;
-import cz.msebera.android.httpclient.HttpHost;
-import cz.msebera.android.httpclient.HttpResponse;
 
 
 public class Outils {
@@ -82,9 +78,10 @@ public class Outils {
         if (listtypeactiviteWaydeur.size()!=0)
     return listtypeactiviteWaydeur;
         for (TypeActivite typeActivite:listtypeactivitecomplete  ) {
-            if (typeActivite.getTypeUser() == Profil.WAYDEUR)
-                listtypeactiviteWaydeur.add(typeActivite);
+            if (typeActivite.getTypeUser() == Profil.WAYDEUR || typeActivite.getTypeUser() == 2)
+                //==2 correpond à ceux en commun
 
+                listtypeactiviteWaydeur.add(typeActivite);
         }
         return listtypeactiviteWaydeur;
     }
@@ -147,6 +144,63 @@ public class Outils {
         }
     }
 
+
+    public static int getActiviteMipMap(int type,int typeActivite) {
+        // Le typeActivite correspond wadyeur ou pro. c'est porté par l'activité
+
+       switch (typeActivite) {
+
+           case Profil.WAYDEUR:
+
+           switch (type) {
+
+               case TypeActivite.BAR_RESTO:
+
+                   return R.mipmap.ic_barrestorond;
+
+               case TypeActivite.SPORT:
+                   return R.mipmap.ic_sportrnd;
+
+               case TypeActivite.CULTURE:
+                   return R.mipmap.ic_expositionrnd;
+               case TypeActivite.JOUER:
+                   return R.mipmap.ic_jeurnd;
+               case TypeActivite.DISCUTER:
+                   return R.mipmap.ic_friendsrnd;
+               case TypeActivite.WAYDEURS_DISPO:
+                   return R.mipmap.ic_suggestionwayd;
+               case TypeActivite.AUTRE:
+                   return R.mipmap.ic_autre;
+               case TypeActivite.ENTRAIDE:
+                   return R.mipmap.ic_entraide;
+
+           }
+
+           case Profil.PRO:
+
+               switch (type) {
+
+                   case TypeActivite.BAR_RESTO:
+                       return R.mipmap.ic_barrestopro;
+
+                   case TypeActivite.SPORT:
+                       return R.mipmap.ic_sportpro;
+                   case TypeActivite.CULTURE:
+                       return R.mipmap.ic_expopro;
+                   case TypeActivite.JOUER:
+                       return R.mipmap.ic_jeupro;
+                   case TypeActivite.DISCUTER:
+                       return R.mipmap.ic_discuterpro;
+                   case TypeActivite.AUTRE:
+                       return R.mipmap.ic_autrepro;
+
+
+               }
+
+       }
+
+        return R.mipmap.ic_expositionrnd;
+    }
 
 
     public static int getActiviteMipMap(int type) {

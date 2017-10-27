@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -43,18 +44,14 @@ import java.util.HashSet;
 public class F_ListActivite extends Fragment implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener, AsyncTaches.AsyncEffaceActivite.Async_EffaceActiviteListener{
     private ActiviteAdapter adapter;
     private Activite aEffacer;
-    private TextView TV_MessageDefaut;
+    private TextView TV_MessageDefaut,messageActivite;
     private ImageView IM_flechebas;
     private boolean longClick = false;
     private ListView listViewActivite;
     private SwipeRefreshLayout swipeContainer;
-    private CritereRechercheActivite critereRechercheActivite;
-
-
 
     public F_ListActivite() {
-        critereRechercheActivite=new CritereRechercheActivite(false, RechercheActiviteNew.motCle,RechercheActiviteNew.TOUTE_ACTIVITE, RechercheActiviteNew.RAYON_RECHERCHE_DEFAUT);
-        critereRechercheActivite.setLatLng(new LatLng(Outils.gps.getLatitude(),Outils.gps.getLongitude()));
+
     }
 
     public static Fragment newInstance() {
@@ -70,13 +67,13 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         View rootView = inflater.inflate(R.layout.f_listeactivite, container, false);
         adapter = new ActiviteAdapter(getContext(), ((RechercheActiviteNew) getActivity()).getListeActivite());
         listViewActivite = (ListView) rootView.findViewById(R.id.listeActivite);
+        messageActivite = (TextView) rootView.findViewById(R.id.messageactivite);
         listViewActivite.setAdapter(adapter);
         TV_MessageDefaut = (TextView) rootView.findViewById(R.id.id_messagebalise);
         IM_flechebas = (ImageView) rootView.findViewById(R.id.id_flechebas);
         listViewActivite.setOnItemClickListener(this);
         listViewActivite.setOnItemLongClickListener(this);
         adapter.notifyDataSetChanged();
-
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -90,6 +87,19 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
+        FloatingActionButton Float_Plus = (FloatingActionButton) rootView.findViewById(R.id.plus);
+        Float_Plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().setCommenceDans(180);
+                ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_PLUS,F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
+                  messageActivite.setText(  ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans() );
+            }
+        });
+
+
+
         return rootView;
     }
 
@@ -101,8 +111,10 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         gestionDefaultLMessage();
         swipeContainer.setRefreshing(false);
         Log.d("F_listActivie", " updatelie réussie");
-
+        messageActivite.setText(  ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans() );
     }
+
+
 
     private void gestionDefaultLMessage() {// Permet d'afficher un message si il n'y a pas de suggestion
 

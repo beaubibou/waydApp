@@ -17,10 +17,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.application.wayd.R;
 import com.google.firebase.auth.FirebaseAuth;
-
 import com.wayd.bean.Outils;
 import com.wayd.bean.Personne;
 import com.wayd.bean.Profil;
@@ -38,7 +36,6 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
     private TextView nbrnotification, nbrsuggestion;
     private boolean inittdb = false;
     private NavigationView navigationView;
-
     private final static int RECHERCHE_ACTIVITE = 1;
     private final static int PROPOSE_ACTIVITE = 2;
     private final static int MES_MESSAGES = 4;
@@ -377,6 +374,7 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
                         Outils.connected = false;
                         Outils.personneConnectee.Raz();
                         Outils.tableaudebord.Raz();
+
 
                         //  updateIhm();
                         Outils.fermeActiviteEnCours(currentActivity);

@@ -41,7 +41,7 @@ import com.wayd.bean.Version;
 
 public class Wservice {
  private final static String URL = "http://192.168.1.79:8080//wayd/services/WBservices?wsdl";
-   // private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
+  // private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
     private final static int timeoutws = 10000;
     private static final String NAMESPACE = "http://ws.wayd";
     private static final String SOAP_ACTION_PREFIX = "/";
@@ -1348,7 +1348,7 @@ public class Wservice {
                 SoapEnvelope.VER11);
         SoapObject request = new SoapObject(NAMESPACE, METHOD);
         envelope.bodyOut = request;
-        request.addProperty("ipdersonne", Outils.personneConnectee.getId());
+        request.addProperty("idpersonne", Outils.personneConnectee.getId());
         request.addProperty("latitudestr", String.valueOf(latitude));
         request.addProperty("longitudestr", String.valueOf(longitude));
         request.addProperty("rayon", rayon);
@@ -1360,6 +1360,45 @@ public class Wservice {
         if (SECURE) {
             HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
          //   SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+        if (envelope.bodyIn != null) {
+            SoapObject resultSOAP = (SoapObject) envelope.bodyIn;
+            return getActiviteFromSOAP(resultSOAP);
+        }
+        return retour;
+    }
+
+    public  ArrayList<Activite> getActivites(Double malatitude,
+                                            Double malongitude, int rayonmetre, int idtypeactivite,
+                                            String motcle, int typeUser, int commenceDans)
+
+            throws IOException, XmlPullParserException {
+        ArrayList<Activite> retour = new ArrayList<>();
+        String METHOD = "getActivites";
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        envelope.bodyOut = request;
+        request.addProperty("idPersonne", Outils.personneConnectee.getId());
+        request.addProperty("latitudestr", String.valueOf(malatitude));
+        request.addProperty("longitudestr", String.valueOf(malongitude));
+        request.addProperty("rayonmetre", rayonmetre);
+        request.addProperty("typeactivite", idtypeactivite);
+        request.addProperty("motcle", motcle);
+        request.addProperty("typeUser", typeUser);
+        request.addProperty("commenceDans", commenceDans);
+        request.addProperty("jeton", Outils.jeton);
+
+
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //   SslRequest.allowAllSSL();
             transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
 
         } else {

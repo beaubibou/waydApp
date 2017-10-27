@@ -41,15 +41,18 @@
                         android:scaleType="centerCrop"
                         android:visibility="gone"/>
 
-                    <ImageView
+                    <Button
                         android:id="@+id/btn_google"
-                        android:layout_width="50dp"
-                        android:layout_height="35dp"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="false"
-                        android:cropToPadding="true"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@mipmap/icon_google" />
+                        style="@style/AppBaseTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:padding="10dp"
+                        android:text="Connexion avec Google+"
+                        android:background="#DD4B39"
+                        android:textSize="@dimen/texte1"
+                        android:textColor="#FFFFFF"
+                         />
                 </LinearLayout>
             </RelativeLayout>
 

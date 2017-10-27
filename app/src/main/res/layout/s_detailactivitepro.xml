@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:id="@+id/siteweb"
+                android:visibility="invisible"
                 android:layout_centerVertical="true"
                 android:layout_alignLeft="@+id/pseudo"
                 android:layout_alignStart="@+id/pseudo"
@@ -146,13 +147,13 @@
                     </LinearLayout>
                 </RelativeLayout>
 
-                <RelativeLayout
+                <LinearLayout
                     android:background="#FFF"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_margin="@dimen/marge1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/rl_titre"
+                    android:orientation="vertical"
                    >
 
                     <TextView
@@ -164,60 +165,22 @@
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                         android:layout_alignParentTop="true"
                         android:layout_centerHorizontal="true"
-
                         android:textStyle="normal|bold"
-                        android:textSize="@dimen/texte2"
+                        android:textSize="@dimen/texte3"
                         />
 
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:weightSum="2"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <RelativeLayout
-                        android:layout_weight="1"
-                        android:background="#FFF"
-
-                        android:layout_width="0dp"
+                    <TextView
+                        android:layout_margin="@dimen/marge2"
+                        android:text="De 8h00 à 9h00 à impltentem"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/rl_participantsettemps"
-                     >
+                        android:id="@+id/horaire"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/texte1" />
 
-                        <TextView
-                            android:text="Nbr vus à implementer"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/nbvu"
-                            android:textAlignment="viewStart"
-                            android:textSize="@dimen/texte1"
-                            android:layout_alignParentTop="true"
-                            android:layout_centerHorizontal="true" />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:background="#FFF"
-                        android:layout_weight="1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/rl_temps"
-                        >
-
-                        <TextView
-                           android:text="De 8h00 à 9h00 à impltentem"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/horaire"
-                            android:layout_centerHorizontal="true"
-                            android:layout_alignParentTop="true"
-                            android:textSize="@dimen/texte1" />
-                    </RelativeLayout>
                 </LinearLayout>
+
+
 
                 <RelativeLayout
 
