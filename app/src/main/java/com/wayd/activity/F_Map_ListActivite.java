@@ -119,6 +119,7 @@ public class F_Map_ListActivite extends SupportMapFragment implements
         float taillePixel=convertDpToPixel(25f,getActivity().getBaseContext());
         for (Activite activite : listeActivite) {
             LatLng activitePosition = new LatLng(activite.getLatitude(), activite.getLongitude());
+
            Bitmap icon = BitmapFactory.decodeResource(getResources(),Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
             googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.
                     fromBitmap(getResizedBitmap(icon,(int)taillePixel,(int)taillePixel))).position(activitePosition).snippet(activite.getPseudoOrganisateur())

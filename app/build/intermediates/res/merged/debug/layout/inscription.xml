@@ -6,6 +6,7 @@
     >
 
 
+    
     <TextView
         android:id="@+id/suggestion"
         android:layout_width="match_parent"
@@ -25,45 +26,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:layout_margin="10dp"
+        android:layout_marginTop="@dimen/marge1"
         android:orientation="vertical"
         android:id="@+id/linearLayout"
+        android:padding="@dimen/paddingEditTextSingle"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
 
         <EditText
-
             android:padding="@dimen/paddingEditTextSingle"
             android:id="@+id/id_mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Base.TextAppearance.AppCompat.Large"
             android:hint="@string/inscription_hint_mail"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
-            android:textSize="@dimen/texte3" />
+            android:textSize="@dimen/texte2" />
 
         <EditText
-            android:padding="@dimen/paddingEditTextSingle"
             android:id="@+id/id_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/inscription_hint_mdp"
-            android:inputType="textPassword"
             android:imeOptions="actionNext"
-            android:textSize="@dimen/texte3" />
+            android:inputType="textPassword"
+            android:padding="@dimen/paddingEditTextSingle"
+            android:textSize="@dimen/texte1" />
 
         <EditText
             android:padding="@dimen/paddingEditTextSingle"
             android:id="@+id/id_pwdconfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Base.TextAppearance.AppCompat.Large"
             android:hint="@string/inscription_hint_confirmmdp"
             android:inputType="textPassword"
             android:imeOptions="actionNext"
-            android:textSize="@dimen/texte3" />
+            android:textSize="@dimen/texte1" />
 
         <CheckBox
             android:layout_marginTop="@dimen/marge2"
@@ -71,27 +70,26 @@
             android:layout_height="wrap_content"
             android:text="@string/inscription_ck_mdp"
             android:id="@+id/id_affmdp"
-            style="@style/Base.TextAppearance.AppCompat.Large"
             android:textSize="@dimen/texte2" />
 
         <Button
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:id="@+id/id_creercompte"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/marge4"
+            android:layout_marginRight="@dimen/marge4"
+            android:layout_marginTop="@dimen/marge4"
             android:background="#ffa440"
-            style="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="@dimen/paddingButton"
             android:text="@string/inscription_button_inscription"
-
+            android:textColor="#000000"
             android:textSize="@dimen/texte2" />
 
 
     </LinearLayout>
+
 
 
 

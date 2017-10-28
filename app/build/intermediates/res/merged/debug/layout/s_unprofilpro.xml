@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#ffd440"
+    android:layout_marginBottom="@dimen/marge1"
 
     >
 
@@ -40,6 +41,7 @@
                     app:civ_border_width="2dp"
                     app:civ_border_color="#FFFFFF"
                     android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/marge1"
                     />
 
 

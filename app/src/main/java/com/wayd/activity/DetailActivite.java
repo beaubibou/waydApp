@@ -561,6 +561,8 @@ public class DetailActivite extends MenuDrawerNew implements
                     appel = new Intent(DetailActivite.this, Map_MontreActivite.class);
                     appel.putExtra("latitude", activite.getLatitude());
                     appel.putExtra("longitude", activite.getLongitude());
+                    appel.putExtra("typeActivite",activite.getIdTypeActite());
+                    appel.putExtra("typeUser",activite.getTypeUser());
                     appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(appel);
                 }
