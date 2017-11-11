@@ -142,8 +142,6 @@ public class DetailActivitePro extends MenuDrawerNew implements
                 }
             });
 
-
-
             IB_Map.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

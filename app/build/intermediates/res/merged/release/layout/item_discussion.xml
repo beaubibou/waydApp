@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="#fff"
+    android:padding="5dp"
+
+    >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iconactivite"
+            android:layout_width="@dimen/photo2"
+            android:layout_height="@dimen/photo2"
+            android:src="@drawable/com_facebook_profile_picture_blank_square"
+            app:civ_border_color="@color/primary"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/id_corps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iconactivite"
+            android:layout_alignLeft="@+id/pseudo"
+            android:layout_alignStart="@+id/pseudo"
+            android:lines="1"
+           tools:text="%Dernier message"
+            android:ellipsize="end"
+            android:textSize="@dimen/texte2"
+            android:layout_toStartOf="@+id/id_datecreation" />
+
+        <TextView
+            android:id="@+id/pseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            tools:text="%Pseudo"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textSize="@dimen/texte2"
+            android:layout_alignTop="@+id/iconactivite"
+            android:layout_toEndOf="@+id/iconactivite" />
+
+        <TextView
+            android:id="@+id/id_datecreation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/pseudo"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="10dp"
+            tools:text="Date" />
+
+        <TextView
+            android:id="@+id/nbrnonlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/id_datecreation"
+            android:layout_alignEnd="@+id/id_datecreation"
+            android:text="TextView"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold|italic" />
+
+
+</RelativeLayout>
