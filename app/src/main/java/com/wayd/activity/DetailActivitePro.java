@@ -151,7 +151,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
                     appel.putExtra("longitude", activite.getLongitude());
                     appel.putExtra("typeActivite",activite.getIdTypeActite());
                     appel.putExtra("typeUser",activite.getTypeUser());
-//
+
                     appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(appel);
                 }
