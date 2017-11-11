@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/side_nav_bar"
+    android:paddingLeft="@dimen/marge2"
+    android:paddingRight="@dimen/marge2"
+    android:paddingTop="@dimen/marge1"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marge2"
+        android:layout_marginTop="@dimen/marge2"
+        android:orientation="vertical">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iconactivite"
+            android:layout_width="@dimen/photo3"
+            android:layout_height="@dimen/photo3"
+            android:src="@drawable/com_facebook_profile_picture_blank_square"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp" />
+
+        <ImageView
+
+            android:id="@+id/modifprofil"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
+            app:srcCompat="@mipmap/ic_crayon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+
+            android:id="@+id/pseudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="pseudo"
+            android:layout_below="@+id/iconactivite"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/texte2"/>
+
+        <TextView
+            tools:text="sexe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_sexe"
+            android:layout_below="@+id/pseudo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/texte2"/>
+
+        <TextView
+            android:id="@+id/id_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="age"
+            android:layout_below="@+id/id_sexe"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/texte2"/>
+
+
+    </RelativeLayout>
+</LinearLayout>

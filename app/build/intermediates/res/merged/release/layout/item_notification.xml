@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:id="@+id/id_env_message"
+   android:padding="5dp"
+
+    >
+
+            <TextView
+                android:id="@+id/id_corps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                tools:text="corps"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/texte2"/>
+
+            <TextView
+                android:layout_marginLeft="15dp"
+                android:id="@+id/id_datecreation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                tools:text="datecreation"
+                android:textSize="@dimen/texte2"/>
+
+
+
+
+
+
+</LinearLayout>

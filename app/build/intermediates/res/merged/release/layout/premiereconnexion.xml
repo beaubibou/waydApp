@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="15dp"
+    >
+
+    <RelativeLayout
+        android:background="#ffd440"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/suggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:padding="@dimen/paddingTextview2"
+            android:text="@string/premiereconnexion_bienvenue"
+            android:textStyle="normal|bold"
+            android:textSize="@dimen/texte3"
+            android:background="#FFD440"
+            android:textColor="#fff"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout">
+
+            <TextView
+
+                android:padding="@dimen/paddingTextview1"
+                android:text="@string/premiereconnexion_infos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/texte2"
+                android:textAllCaps="false" />
+
+            <TextView
+               android:padding="@dimen/paddingTextview1"
+                android:text="@string/premiereconnexion_infopseudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_info"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/texte2" />
+
+            <EditText
+
+                android:id="@+id/pseudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:hint="@string/premiereconnexion_hintpseudo"
+                android:maxLength="@string/maxLengtPseudo"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/texte2"
+                android:padding="@dimen/paddingTextview1"
+                android:textStyle="normal"
+                android:maxLines="1" />
+
+            <TextView
+                android:padding="@dimen/paddingTextview1"
+                android:text="@string/premiereconnexion_datenaissance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/texte2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/datedenaissance"
+                android:padding="@dimen/paddingTextview1"
+                style="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textSize="14sp" />
+
+            <TextView
+
+                android:text="@string/premiereconnexion_sexe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingTextview1"
+                android:id="@+id/version"
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/texte2" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sexe"
+                android:foregroundGravity="left"
+                android:gravity="left|start"
+                />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="5dp"
+        android:id="@+id/expliquesexe"
+        style="@style/Base.TextAppearance.AppCompat.Small"
+        android:text="@string/premiereconnexion_infoscomplementaire"
+        android:textStyle="normal|italic"
+        android:textSize="14sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/validepseudo"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="match_parent"
+        android:padding="@dimen/paddingButton"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/marge4"
+        android:layout_marginRight="@dimen/marge4"
+        android:background="#ffa440"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/marge4"
+        android:text="@string/premiereconnexion_buttonconfirme"
+        android:textColor="#000000"
+        android:textSize="@dimen/texte2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

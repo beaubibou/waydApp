@@ -105,8 +105,6 @@ public class ActiviteAdapter extends BaseAdapter {
 
         }
 
-
-
         return layoutItem;
 
     }

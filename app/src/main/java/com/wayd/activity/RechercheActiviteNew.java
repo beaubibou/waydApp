@@ -13,6 +13,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -208,15 +209,12 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
     @Override
     public void loopBack_getListActivite(ArrayList<Activite> vlistactivite) {
 
-        if (vlistactivite != null) {
-
-
+         if (vlistactivite != null) {
 
             this.listeActivite.clear();
             this.listeActivite.addAll(vlistactivite);
             Collections.sort(listeActivite, new ComparatorDistanceActivite());
             afficheNbrResultats();
-
 
 
 

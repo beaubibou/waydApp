@@ -49,7 +49,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
     private boolean longClick = false;
     private ListView listViewActivite;
     private SwipeRefreshLayout swipeContainer;
-
+    FloatingActionButton Float_Plus;
     public F_ListActivite() {
 
     }
@@ -63,7 +63,6 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View rootView = inflater.inflate(R.layout.f_listeactivite, container, false);
         adapter = new ActiviteAdapter(getContext(), ((RechercheActiviteNew) getActivity()).getListeActivite());
         listViewActivite = (ListView) rootView.findViewById(R.id.listeActivite);
@@ -78,7 +77,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_SWIPE,F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
+               ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_SWIPE,F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
             }
         });
         // Configure the refreshing colors
@@ -87,7 +86,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
-        FloatingActionButton Float_Plus = (FloatingActionButton) rootView.findViewById(R.id.plus);
+         Float_Plus = (FloatingActionButton) rootView.findViewById(R.id.plus);
         Float_Plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,10 +98,8 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         });
 
 
-
         return rootView;
     }
-
 
     public void updateListe() {
 
@@ -115,7 +112,6 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
     }
 
 
-
     private void gestionDefaultLMessage() {// Permet d'afficher un message si il n'y a pas de suggestion
 
         if (((RechercheActiviteNew) getActivity()).getListeActivite() != null) {
@@ -125,6 +121,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 TV_MessageDefaut.setVisibility(View.GONE);
                 IM_flechebas.setVisibility(View.GONE);
                 listViewActivite.setVisibility(View.GONE);
+                Float_Plus.setVisibility(View.VISIBLE);
             }
 
             else if (((RechercheActiviteNew) getActivity()).getListeActivite().isEmpty() && RechercheActiviteNew.balise) {// Si il n'y a pas d'activité et que l'on activte la fonction ennuie/balise
@@ -133,6 +130,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 TV_MessageDefaut.setVisibility(View.VISIBLE);
                 listViewActivite.setVisibility(View.GONE);
                 IM_flechebas.setVisibility(View.VISIBLE);
+                Float_Plus.setVisibility(View.GONE);
             }
             else{
                   if (!((RechercheActiviteNew) getActivity()).getListeActivite().isEmpty() && RechercheActiviteNew.balise) {// Si il y a au moins une activité et que l'on activte la fonction ennuie/balise
@@ -141,13 +139,15 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 TV_MessageDefaut.setVisibility(View.GONE);
                 listViewActivite.setVisibility(View.VISIBLE);
                 IM_flechebas.setVisibility(View.GONE);
+                 Float_Plus.setVisibility(View.GONE);
+
             }
 
             else if (!((RechercheActiviteNew) getActivity()).getListeActivite().isEmpty() && !RechercheActiviteNew.balise) {// Recherche classique avec resultat
                 IM_flechebas.setVisibility(View.GONE);
                 TV_MessageDefaut.setVisibility(View.GONE);
                 listViewActivite.setVisibility(View.VISIBLE);
-
+                Float_Plus.setVisibility(View.VISIBLE);
             }
             }
         }
@@ -168,6 +168,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
         if (!longClick) {
             Activite activite = (Activite) view.getTag();
 
@@ -197,6 +198,8 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
 
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+       System.out.println("************************ "+position);
         Activite activite = (Activite) view.getTag();
         longClick = true;
         if (Outils.personneConnectee.isAdmin()) dialogEffaceActivite(activite);

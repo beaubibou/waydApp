@@ -1,0 +1,1097 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:21:1-50:12
+MERGED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:17:1-31:12
+MERGED from [org.lucasr.twowayview:twowayview:0.1.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\twowayview-0.1.4.aar\6a4a0305ccaf9a9b7b69db30256683ed\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-11.0.4.aar\560988cd4ce42e2f725405b83aa43cc1\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-awareness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-awareness-11.0.4.aar\b955a30078247a55db3ae6f4cb819ba1\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-fitness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-fitness-11.0.4.aar\4a5eecba725167b7ffeaf4c3ed5ddf97\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-location-11.0.4.aar\915d1c06ac9b3c4757e7ad26b919b841\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-ads:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-11.0.4.aar\9bf00a5c929e8b5c8e5885bb9a690cbb\AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-tagmanager:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.0.4.aar\400cf2f3f6020826a4cfc5bb8d32134f\AndroidManifest.xml:16:1-18:12
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.0.4.aar\e77b47adbf13a1e7871b8ecd9ac3b4ff\AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:16:1-27:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.0.4.aar\b2f1b4f811bdb737dfdd9efaf96fb246\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:16:1-26:12
+MERGED from [com.google.android.gms:play-services-auth-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.0.4.aar\817d4d92304237f3eea1db4dfe05a6b8\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-cast:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-11.0.4.aar\39d0b896657c1dcaea4695116b8788d9\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-11.0.4.aar\43aabfdfed5f79565b034bc7d386aacd\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-config:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-config-11.0.4.aar\524da77609bb278530a287601aceffbb\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-games:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-games-11.0.4.aar\4f59307591314c23b1c3a31391e56f4f\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.0.4.aar\60a81c8ee1359186b3056253e81b47cf\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-dynamic-links:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-dynamic-links-11.0.4.aar\8463a0f508aa8ac77d7c10d095f91525\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-appindexing:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.0.4.aar\beda20b0903a3e5c086e6595196335c1\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-wallet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wallet-11.0.4.aar\5d2d0764fd7921e36879e173b78e42e5\AndroidManifest.xml:16:1-20:12
+MERGED from [com.google.android.gms:play-services-identity:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-identity-11.0.4.aar\9395ae012f3859d8c27edf7808f9c56c\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.gms:play-services-instantapps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-instantapps-11.0.4.aar\5c765ca9c9f391a69958995e246510a5\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-places-11.0.4.aar\20b045506c2dd8dacecdc7598bff7019\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.0.4.aar\c68dd6cfe553c56c9863faa4f9c95405\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-panorama:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-panorama-11.0.4.aar\d16ff837cdf76c3766c2a046f0ebe34f\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-plus:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-plus-11.0.4.aar\9b2e69a8d392841a89f503809f17c5da\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-safetynet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-safetynet-11.0.4.aar\6e3feaade3c45c0718fa266274315cab\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.android.gms:play-services-vision:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-11.0.4.aar\828d1ffd193c58c15f34e1bf0ed7f0d7\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-11.0.4.aar\77970b3788ce949d9831658f14ee6ebb\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-wearable:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wearable-11.0.4.aar\8d3eb3ee71efe0f575a4f66930d7a247\AndroidManifest.xml:16:1-19:12
+MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\1b5c88a4271e4ffd753ec6bb57460913\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.firebase:firebase-crash:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.4.aar\8a13bbea6b7f1f7001546de25c2a950b\AndroidManifest.xml:16:1-25:12
+MERGED from [com.google.firebase:firebase-database:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-database-11.0.4.aar\a7b44df0d015774ee99b77dba4e00a4f\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-database-connection:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.0.4.aar\8a497f6b5721ec158868e2181e6046cf\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:16:1-34:12
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\767727ed005e3a379635c9329ac2c898\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:16:1-35:12
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:16:1-29:12
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:16:1-30:12
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:16:1-50:12
+MERGED from [com.google.firebase:firebase-storage:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-storage-11.0.4.aar\ffcba3a4e1d0faac61254a657d0fb4cb\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-storage-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-storage-common-11.0.4.aar\61241b0734df5ca8a53978002eddab74\AndroidManifest.xml:2:1-4:12
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:2:1-8:12
+MERGED from [com.google.android.gms:play-services-gass:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.0.4.aar\0e11b37542c2419c367e119766de4c0c\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\1ff218c44d767f9e6c5b5443135a7b7a\AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4110c653e0b65158c9264ef0038bd84c\AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:transition:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\5e0854b4b53eff098fdd999308ed2eaa\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:mediarouter-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\mediarouter-v7-25.3.1.aar\dc702783b6c734e6bfa12a2ac2ede9f8\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\5e010cbf53a2871ac086c88d1e305734\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\ac4758bda3a0a8fbd86e046834591f36\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\8d45499ae294c0a890d21eee49b4c846\AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\31c76e6ca8c10c65d695350135e7ea13\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:customtabs:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\customtabs-25.3.1.aar\838664c03825aba623b5230e5182d01c\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\6774d9d3124818321d85d9bac6c9760c\AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\cebb1cabb292335320b3ae0cc1539780\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\27160710e08e14e4bf7d0198e26c88d7\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\cc55964183974c5e99cc8646666fb298\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\e0be98df5d4734b5a8a2bc338f6f002b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\7999c35e3fa9c0f3ed6f725a76e4a376\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:palette-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\palette-v7-25.3.1.aar\fdf6bc496970d0377d1961aeff48009f\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\74a8a43538b4f88ecd6a33c950a53127\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\11bec6eb45240e82e57430f9f541a596\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\9b262f2c0ab1aefb8f32f0b763259fa0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0d697dd375260963cb3e4f2f2024ff7d\AndroidManifest.xml:17:1-31:12
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+	package
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:1-236:12
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#com.vogella.android.locationapi.maps.permission.MAPS_RECEIVE
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:5:5-100
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:5:22-97
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:6:5-79
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:6:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:19:5-66
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-crash:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.4.aar\8a13bbea6b7f1f7001546de25c2a950b\AndroidManifest.xml:18:5-66
+MERGED from [com.google.firebase:firebase-crash:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.4.aar\8a13bbea6b7f1f7001546de25c2a950b\AndroidManifest.xml:18:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:20:5-66
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:9:5-76
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:9:22-73
+uses-feature#android.hardware.camera
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:11:5-13:35
+	android:required
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:13:9-32
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:12:9-47
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:16:5-82
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:20:5-81
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:22:5-81
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:22:5-81
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:16:22-79
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:17:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:20:5-78
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:19:5-78
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.0.4.aar\c68dd6cfe553c56c9863faa4f9c95405\AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.0.4.aar\c68dd6cfe553c56c9863faa4f9c95405\AndroidManifest.xml:4:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:21:5-78
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:19:5-78
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:18:5-80
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:18:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:19:22-78
+application
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:21:5-234:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:28:5-48:19
+MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:28:5-48:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:29:5-20
+MERGED from [org.lucasr.twowayview:twowayview:0.1.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\twowayview-0.1.4.aar\6a4a0305ccaf9a9b7b69db30256683ed\AndroidManifest.xml:26:5-20
+MERGED from [org.lucasr.twowayview:twowayview:0.1.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\twowayview-0.1.4.aar\6a4a0305ccaf9a9b7b69db30256683ed\AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-11.0.4.aar\560988cd4ce42e2f725405b83aa43cc1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-11.0.4.aar\560988cd4ce42e2f725405b83aa43cc1\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-awareness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-awareness-11.0.4.aar\b955a30078247a55db3ae6f4cb819ba1\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-awareness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-awareness-11.0.4.aar\b955a30078247a55db3ae6f4cb819ba1\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-fitness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-fitness-11.0.4.aar\4a5eecba725167b7ffeaf4c3ed5ddf97\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-fitness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-fitness-11.0.4.aar\4a5eecba725167b7ffeaf4c3ed5ddf97\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-location-11.0.4.aar\915d1c06ac9b3c4757e7ad26b919b841\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-location-11.0.4.aar\915d1c06ac9b3c4757e7ad26b919b841\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:23:5-26:19
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:23:5-26:19
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.0.4.aar\e77b47adbf13a1e7871b8ecd9ac3b4ff\AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.0.4.aar\e77b47adbf13a1e7871b8ecd9ac3b4ff\AndroidManifest.xml:19:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:26:5-19
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:19:5-26:19
+MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:19:5-25:19
+MERGED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:4:5-8:19
+MERGED from [com.google.android.gms:play-services-cast:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-11.0.4.aar\39d0b896657c1dcaea4695116b8788d9\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-cast:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-11.0.4.aar\39d0b896657c1dcaea4695116b8788d9\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-11.0.4.aar\43aabfdfed5f79565b034bc7d386aacd\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-11.0.4.aar\43aabfdfed5f79565b034bc7d386aacd\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-config-11.0.4.aar\524da77609bb278530a287601aceffbb\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-config:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-config-11.0.4.aar\524da77609bb278530a287601aceffbb\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-games-11.0.4.aar\4f59307591314c23b1c3a31391e56f4f\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-games:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-games-11.0.4.aar\4f59307591314c23b1c3a31391e56f4f\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.0.4.aar\60a81c8ee1359186b3056253e81b47cf\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.0.4.aar\60a81c8ee1359186b3056253e81b47cf\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-dynamic-links:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-dynamic-links-11.0.4.aar\8463a0f508aa8ac77d7c10d095f91525\AndroidManifest.xml:5:3-17
+MERGED from [com.google.firebase:firebase-dynamic-links:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-dynamic-links-11.0.4.aar\8463a0f508aa8ac77d7c10d095f91525\AndroidManifest.xml:5:3-17
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:23:5-19
+MERGED from [com.google.firebase:firebase-appindexing:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.0.4.aar\beda20b0903a3e5c086e6595196335c1\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-appindexing:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.0.4.aar\beda20b0903a3e5c086e6595196335c1\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-identity:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-identity-11.0.4.aar\9395ae012f3859d8c27edf7808f9c56c\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-identity:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-identity-11.0.4.aar\9395ae012f3859d8c27edf7808f9c56c\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-places-11.0.4.aar\20b045506c2dd8dacecdc7598bff7019\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-places-11.0.4.aar\20b045506c2dd8dacecdc7598bff7019\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.0.4.aar\c68dd6cfe553c56c9863faa4f9c95405\AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.0.4.aar\c68dd6cfe553c56c9863faa4f9c95405\AndroidManifest.xml:5:5-19
+MERGED from [com.google.android.gms:play-services-panorama:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-panorama-11.0.4.aar\d16ff837cdf76c3766c2a046f0ebe34f\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-panorama:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-panorama-11.0.4.aar\d16ff837cdf76c3766c2a046f0ebe34f\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-plus-11.0.4.aar\9b2e69a8d392841a89f503809f17c5da\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-plus:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-plus-11.0.4.aar\9b2e69a8d392841a89f503809f17c5da\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-safetynet-11.0.4.aar\6e3feaade3c45c0718fa266274315cab\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-safetynet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-safetynet-11.0.4.aar\6e3feaade3c45c0718fa266274315cab\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-vision:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-11.0.4.aar\828d1ffd193c58c15f34e1bf0ed7f0d7\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-vision:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-11.0.4.aar\828d1ffd193c58c15f34e1bf0ed7f0d7\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-11.0.4.aar\77970b3788ce949d9831658f14ee6ebb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-11.0.4.aar\77970b3788ce949d9831658f14ee6ebb\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-wearable:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wearable-11.0.4.aar\8d3eb3ee71efe0f575a4f66930d7a247\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-wearable:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wearable-11.0.4.aar\8d3eb3ee71efe0f575a4f66930d7a247\AndroidManifest.xml:18:5-19
+MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\1b5c88a4271e4ffd753ec6bb57460913\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\1b5c88a4271e4ffd753ec6bb57460913\AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.firebase:firebase-crash:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.4.aar\8a13bbea6b7f1f7001546de25c2a950b\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-crash:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.4.aar\8a13bbea6b7f1f7001546de25c2a950b\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\767727ed005e3a379635c9329ac2c898\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\767727ed005e3a379635c9329ac2c898\AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:24:5-34:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:19:5-29:19
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:28:5-49:19
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-gass:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.0.4.aar\0e11b37542c2419c367e119766de4c0c\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-gass:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.0.4.aar\0e11b37542c2419c367e119766de4c0c\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\1ff218c44d767f9e6c5b5443135a7b7a\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\1ff218c44d767f9e6c5b5443135a7b7a\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4110c653e0b65158c9264ef0038bd84c\AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4110c653e0b65158c9264ef0038bd84c\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:transition:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\5e0854b4b53eff098fdd999308ed2eaa\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\5e0854b4b53eff098fdd999308ed2eaa\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:mediarouter-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\mediarouter-v7-25.3.1.aar\dc702783b6c734e6bfa12a2ac2ede9f8\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:mediarouter-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\mediarouter-v7-25.3.1.aar\dc702783b6c734e6bfa12a2ac2ede9f8\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\5e010cbf53a2871ac086c88d1e305734\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\5e010cbf53a2871ac086c88d1e305734\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\ac4758bda3a0a8fbd86e046834591f36\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\ac4758bda3a0a8fbd86e046834591f36\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\31c76e6ca8c10c65d695350135e7ea13\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\31c76e6ca8c10c65d695350135e7ea13\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:customtabs:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\customtabs-25.3.1.aar\838664c03825aba623b5230e5182d01c\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:customtabs:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\customtabs-25.3.1.aar\838664c03825aba623b5230e5182d01c\AndroidManifest.xml:26:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\cebb1cabb292335320b3ae0cc1539780\AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\cebb1cabb292335320b3ae0cc1539780\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\27160710e08e14e4bf7d0198e26c88d7\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\27160710e08e14e4bf7d0198e26c88d7\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\cc55964183974c5e99cc8646666fb298\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\cc55964183974c5e99cc8646666fb298\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\e0be98df5d4734b5a8a2bc338f6f002b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\e0be98df5d4734b5a8a2bc338f6f002b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\7999c35e3fa9c0f3ed6f725a76e4a376\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\7999c35e3fa9c0f3ed6f725a76e4a376\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:palette-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\palette-v7-25.3.1.aar\fdf6bc496970d0377d1961aeff48009f\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:palette-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\palette-v7-25.3.1.aar\fdf6bc496970d0377d1961aeff48009f\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\74a8a43538b4f88ecd6a33c950a53127\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\74a8a43538b4f88ecd6a33c950a53127\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\11bec6eb45240e82e57430f9f541a596\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\11bec6eb45240e82e57430f9f541a596\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\9b262f2c0ab1aefb8f32f0b763259fa0\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\9b262f2c0ab1aefb8f32f0b763259fa0\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0d697dd375260963cb3e4f2f2024ff7d\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0d697dd375260963cb3e4f2f2024ff7d\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:25:9-41
+	android:icon
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:24:9-44
+	android:allowBackup
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:23:9-35
+	android:theme
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:26:9-44
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:22:9-68
+activity#com.wayd.activity.LoginWayde
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:27:9-37:20
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:31:13-49
+	android:label
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:30:13-45
+	android:alwaysRetainTaskState
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:29:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:28:13-56
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:32:13-36:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:33:17-69
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:33:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:35:27-74
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:49:9-51:55
+	android:value
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:51:13-52
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:50:13-58
+meta-data#com.facebook.sdk.ApplicationId
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:53:9-55:55
+	android:value
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:55:13-52
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:54:13-58
+activity#com.wayd.activity.Map_ListeActivity
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:57:9-59:59
+	android:label
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:59:13-56
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:58:13-63
+activity#com.wayd.activity.ProposeActivites
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:60:9-63:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:62:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:63:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:61:13-62
+activity#com.wayd.activity.ProposeActivitesPro
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:64:9-67:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:66:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:67:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:65:13-65
+activity#com.wayd.activity.MesDiscussions
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:68:9-70:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:70:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:69:13-60
+activity#com.wayd.activity.MesActivites
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:71:9-73:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:73:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:72:13-58
+activity#com.wayd.activity.AmeliorerWayd
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:74:9-77:56
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:76:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:77:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:75:13-59
+activity#com.wayd.activity.RechercheActiviteNew
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:78:9-81:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:80:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:81:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:79:13-66
+activity#com.wayd.activity.DonneAvis
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:82:9-84:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:84:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:83:13-55
+activity#com.wayd.activity.SignalerActivite
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:85:9-87:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:87:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:86:13-62
+activity#com.wayd.activity.SignalerProfil
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:88:9-90:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:90:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:89:13-60
+activity#com.wayd.activity.Detail_Avis
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:91:9-93:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:93:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:92:13-57
+activity#com.wayd.activity.MesSuggestions
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:94:9-96:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:96:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:95:13-60
+activity#com.wayd.activity.DetailActivite
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:97:9-105:20
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:99:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:98:13-60
+intent-filter#android.intent.category.DEFAULT+notificationSuggestion
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:100:13-104:29
+action#notificationSuggestion
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:101:17-65
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:101:25-62
+category#android.intent.category.DEFAULT
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:103:17-76
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:103:27-73
+activity#com.wayd.activity.MesMessages
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:106:9-109:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:108:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:109:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:107:13-57
+activity#com.wayd.activity.DetailActivitePro
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:111:9-119:20
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:113:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:114:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:112:13-63
+intent-filter#android.intent.category.DEFAULT+notificationSuggestionPro
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:115:13-118:29
+action#notificationSuggestionPro
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:116:17-68
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:116:25-65
+activity#com.wayd.activity.MesNotifications
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:122:9-124:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:124:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:123:13-62
+activity#com.wayd.activity.Liste_Amis
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:125:9-128:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:127:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:128:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:126:13-56
+activity#com.wayd.main.MainActivity
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:129:9-131:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:131:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:130:13-54
+activity#com.wayd.activity.MesMessagesActvite
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:132:9-135:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:134:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:135:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:133:13-64
+activity#com.wayd.activity.Inscription
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:136:9-138:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:138:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:137:13-57
+activity#com.wayd.activity.MenuDrawerNew
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:139:9-141:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:141:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:140:13-59
+activity#com.wayd.activity.Map_MontreActivite
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:142:9-144:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:144:13-49
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:143:13-64
+activity#com.wayd.activity.MesPreferences
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:145:9-148:67
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:147:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:148:13-64
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:146:13-60
+activity#com.wayd.activity.PremiereConnexion
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:149:9-152:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:151:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:152:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:150:13-63
+activity#com.wayd.activity.MenuNoDrawer
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:153:9-156:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:155:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:156:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:154:13-58
+activity#com.wayd.activity.PrbConnexion
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:157:9-160:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:159:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:160:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:158:13-58
+activity#com.wayd.activity.UnProfil
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:161:9-164:52
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:164:13-49
+	android:label
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:163:13-62
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:162:13-54
+activity#com.wayd.activity.MonProfilPro
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:166:9-169:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:168:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:169:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:167:13-58
+activity#com.wayd.activity.UnProfilPro
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:171:9-174:57
+	android:screenOrientation
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:173:13-49
+	android:windowSoftInputMode
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:174:13-54
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:172:13-57
+service#com.wayd.activity.FCMInitializationService
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:177:9-181:19
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:177:18-75
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:178:13-180:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:179:17-80
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:179:25-77
+service#com.wayd.activity.FCMCallbackService
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:182:9-186:19
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:182:18-69
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:183:13-185:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:184:17-78
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:184:25-75
+receiver#com.wayd.bean.GcmBroadcastReceiver
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:188:9-195:20
+	android:permission
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:190:13-73
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:189:13-62
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:191:13-194:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:192:17-81
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:192:25-78
+action#com.google.android.c2dm.intent.REGISTRATION
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:193:17-86
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:193:25-83
+meta-data#com.google.android.gms.version
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:201:9-203:69
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4110c653e0b65158c9264ef0038bd84c\AndroidManifest.xml:20:9-121
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4110c653e0b65158c9264ef0038bd84c\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:203:13-66
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:202:13-58
+meta-data#com.google.firebase.messaging.default_notification_icon
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:209:9-211:65
+	android:resource
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:211:13-62
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:210:13-83
+meta-data#com.google.firebase.messaging.default_notification_color
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:216:9-218:53
+	android:resource
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:218:13-50
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:217:13-84
+activity#com.wayd.activity.Statistique
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:220:9-66
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:220:19-63
+activity#com.wayd.activity.Apropos
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:221:9-223:62
+	android:label
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:223:13-59
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:222:13-53
+activity#com.wayd.activity.Cgu
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:224:9-226:58
+	android:label
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:226:13-55
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:225:13-49
+activity#com.wayd.activity.TestLayout
+ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:227:9-230:60
+	android:label
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:229:13-63
+	android:theme
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:230:13-48
+	android:name
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml:228:13-56
+uses-sdk
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:24:5-26:41
+MERGED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:24:5-26:41
+MERGED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:21:5-23:62
+MERGED from [org.lucasr.twowayview:twowayview:0.1.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\twowayview-0.1.4.aar\6a4a0305ccaf9a9b7b69db30256683ed\AndroidManifest.xml:22:5-24:41
+MERGED from [org.lucasr.twowayview:twowayview:0.1.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\twowayview-0.1.4.aar\6a4a0305ccaf9a9b7b69db30256683ed\AndroidManifest.xml:22:5-24:41
+MERGED from [com.google.android.gms:play-services:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-11.0.4.aar\560988cd4ce42e2f725405b83aa43cc1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-11.0.4.aar\560988cd4ce42e2f725405b83aa43cc1\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-awareness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-awareness-11.0.4.aar\b955a30078247a55db3ae6f4cb819ba1\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-awareness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-awareness-11.0.4.aar\b955a30078247a55db3ae6f4cb819ba1\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-fitness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-fitness-11.0.4.aar\4a5eecba725167b7ffeaf4c3ed5ddf97\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-fitness:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-fitness-11.0.4.aar\4a5eecba725167b7ffeaf4c3ed5ddf97\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-location-11.0.4.aar\915d1c06ac9b3c4757e7ad26b919b841\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-location-11.0.4.aar\915d1c06ac9b3c4757e7ad26b919b841\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-ads:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-11.0.4.aar\9bf00a5c929e8b5c8e5885bb9a690cbb\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-11.0.4.aar\9bf00a5c929e8b5c8e5885bb9a690cbb\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:22:5-43
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.0.4.aar\400cf2f3f6020826a4cfc5bb8d32134f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-11.0.4.aar\400cf2f3f6020826a4cfc5bb8d32134f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.0.4.aar\e77b47adbf13a1e7871b8ecd9ac3b4ff\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-v4-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-v4-impl-11.0.4.aar\e77b47adbf13a1e7871b8ecd9ac3b4ff\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.0.4.aar\b2f1b4f811bdb737dfdd9efaf96fb246\AndroidManifest.xml:3:3-41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-api-phone-11.0.4.aar\b2f1b4f811bdb737dfdd9efaf96fb246\AndroidManifest.xml:3:3-41
+MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.0.4.aar\817d4d92304237f3eea1db4dfe05a6b8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-auth-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-base-11.0.4.aar\817d4d92304237f3eea1db4dfe05a6b8\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-cast:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-11.0.4.aar\39d0b896657c1dcaea4695116b8788d9\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-cast:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-11.0.4.aar\39d0b896657c1dcaea4695116b8788d9\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-11.0.4.aar\43aabfdfed5f79565b034bc7d386aacd\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-clearcut:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-clearcut-11.0.4.aar\43aabfdfed5f79565b034bc7d386aacd\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-config-11.0.4.aar\524da77609bb278530a287601aceffbb\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-config:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-config-11.0.4.aar\524da77609bb278530a287601aceffbb\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-games:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-games-11.0.4.aar\4f59307591314c23b1c3a31391e56f4f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-games:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-games-11.0.4.aar\4f59307591314c23b1c3a31391e56f4f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.0.4.aar\60a81c8ee1359186b3056253e81b47cf\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-drive:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.0.4.aar\60a81c8ee1359186b3056253e81b47cf\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-dynamic-links:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-dynamic-links-11.0.4.aar\8463a0f508aa8ac77d7c10d095f91525\AndroidManifest.xml:3:3-41
+MERGED from [com.google.firebase:firebase-dynamic-links:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-dynamic-links-11.0.4.aar\8463a0f508aa8ac77d7c10d095f91525\AndroidManifest.xml:3:3-41
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-gcm:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gcm-11.0.4.aar\50025477143ab510bde2c9d609cacca6\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-appindexing:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.0.4.aar\beda20b0903a3e5c086e6595196335c1\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-appindexing:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-appindexing-11.0.4.aar\beda20b0903a3e5c086e6595196335c1\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-wallet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wallet-11.0.4.aar\5d2d0764fd7921e36879e173b78e42e5\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-wallet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wallet-11.0.4.aar\5d2d0764fd7921e36879e173b78e42e5\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-identity:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-identity-11.0.4.aar\9395ae012f3859d8c27edf7808f9c56c\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-identity:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-identity-11.0.4.aar\9395ae012f3859d8c27edf7808f9c56c\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-iid-11.0.4.aar\1365244b0efc1677230a7a47b7b51310\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-instantapps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-instantapps-11.0.4.aar\5c765ca9c9f391a69958995e246510a5\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-instantapps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-instantapps-11.0.4.aar\5c765ca9c9f391a69958995e246510a5\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-places-11.0.4.aar\20b045506c2dd8dacecdc7598bff7019\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-places-11.0.4.aar\20b045506c2dd8dacecdc7598bff7019\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.0.4.aar\c68dd6cfe553c56c9863faa4f9c95405\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-nearby:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-nearby-11.0.4.aar\c68dd6cfe553c56c9863faa4f9c95405\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-panorama:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-panorama-11.0.4.aar\d16ff837cdf76c3766c2a046f0ebe34f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-panorama:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-panorama-11.0.4.aar\d16ff837cdf76c3766c2a046f0ebe34f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-plus:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-plus-11.0.4.aar\9b2e69a8d392841a89f503809f17c5da\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-plus:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-plus-11.0.4.aar\9b2e69a8d392841a89f503809f17c5da\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-safetynet-11.0.4.aar\6e3feaade3c45c0718fa266274315cab\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-safetynet:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-safetynet-11.0.4.aar\6e3feaade3c45c0718fa266274315cab\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-vision:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-11.0.4.aar\828d1ffd193c58c15f34e1bf0ed7f0d7\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-vision:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-11.0.4.aar\828d1ffd193c58c15f34e1bf0ed7f0d7\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-11.0.4.aar\77970b3788ce949d9831658f14ee6ebb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-vision-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-vision-common-11.0.4.aar\77970b3788ce949d9831658f14ee6ebb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-wearable:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wearable-11.0.4.aar\8d3eb3ee71efe0f575a4f66930d7a247\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-wearable:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-wearable-11.0.4.aar\8d3eb3ee71efe0f575a4f66930d7a247\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\1b5c88a4271e4ffd753ec6bb57460913\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.0.4.aar\1b5c88a4271e4ffd753ec6bb57460913\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-crash:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.4.aar\8a13bbea6b7f1f7001546de25c2a950b\AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-crash:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-crash-11.0.4.aar\8a13bbea6b7f1f7001546de25c2a950b\AndroidManifest.xml:20:5-43
+MERGED from [com.google.firebase:firebase-database:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-database-11.0.4.aar\a7b44df0d015774ee99b77dba4e00a4f\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-database-11.0.4.aar\a7b44df0d015774ee99b77dba4e00a4f\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.0.4.aar\8a497f6b5721ec158868e2181e6046cf\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-database-connection:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-database-connection-11.0.4.aar\8a497f6b5721ec158868e2181e6046cf\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\767727ed005e3a379635c9329ac2c898\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-core:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-core-11.0.4.aar\767727ed005e3a379635c9329ac2c898\AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:17:5-43
+MERGED from [com.google.firebase:firebase-storage:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-storage-11.0.4.aar\ffcba3a4e1d0faac61254a657d0fb4cb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-storage-11.0.4.aar\ffcba3a4e1d0faac61254a657d0fb4cb\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-storage-common-11.0.4.aar\61241b0734df5ca8a53978002eddab74\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-storage-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-storage-common-11.0.4.aar\61241b0734df5ca8a53978002eddab74\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:3:5-43
+MERGED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gass:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.0.4.aar\0e11b37542c2419c367e119766de4c0c\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-gass:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.0.4.aar\0e11b37542c2419c367e119766de4c0c\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\1ff218c44d767f9e6c5b5443135a7b7a\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.0.4.aar\1ff218c44d767f9e6c5b5443135a7b7a\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4110c653e0b65158c9264ef0038bd84c\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.0.4.aar\4110c653e0b65158c9264ef0038bd84c\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\5e0854b4b53eff098fdd999308ed2eaa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\5e0854b4b53eff098fdd999308ed2eaa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:mediarouter-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\mediarouter-v7-25.3.1.aar\dc702783b6c734e6bfa12a2ac2ede9f8\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:mediarouter-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\mediarouter-v7-25.3.1.aar\dc702783b6c734e6bfa12a2ac2ede9f8\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\5e010cbf53a2871ac086c88d1e305734\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\5e010cbf53a2871ac086c88d1e305734\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\ac4758bda3a0a8fbd86e046834591f36\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\ac4758bda3a0a8fbd86e046834591f36\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\8d45499ae294c0a890d21eee49b4c846\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\8d45499ae294c0a890d21eee49b4c846\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\31c76e6ca8c10c65d695350135e7ea13\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\31c76e6ca8c10c65d695350135e7ea13\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:customtabs:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\customtabs-25.3.1.aar\838664c03825aba623b5230e5182d01c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customtabs:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\customtabs-25.3.1.aar\838664c03825aba623b5230e5182d01c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\6774d9d3124818321d85d9bac6c9760c\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\6774d9d3124818321d85d9bac6c9760c\AndroidManifest.xml:20:5-43
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\cebb1cabb292335320b3ae0cc1539780\AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:2.1.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\circleimageview-2.1.0.aar\cebb1cabb292335320b3ae0cc1539780\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\27160710e08e14e4bf7d0198e26c88d7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\27160710e08e14e4bf7d0198e26c88d7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\cc55964183974c5e99cc8646666fb298\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\cc55964183974c5e99cc8646666fb298\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\e0be98df5d4734b5a8a2bc338f6f002b\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\e0be98df5d4734b5a8a2bc338f6f002b\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\7999c35e3fa9c0f3ed6f725a76e4a376\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\7999c35e3fa9c0f3ed6f725a76e4a376\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:palette-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\palette-v7-25.3.1.aar\fdf6bc496970d0377d1961aeff48009f\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:palette-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\palette-v7-25.3.1.aar\fdf6bc496970d0377d1961aeff48009f\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\74a8a43538b4f88ecd6a33c950a53127\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\74a8a43538b4f88ecd6a33c950a53127\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\11bec6eb45240e82e57430f9f541a596\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\11bec6eb45240e82e57430f9f541a596\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\9b262f2c0ab1aefb8f32f0b763259fa0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\9b262f2c0ab1aefb8f32f0b763259fa0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0d697dd375260963cb3e4f2f2024ff7d\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0d697dd375260963cb3e4f2f2024ff7d\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\bibou\AndroidStudioProjects\wayd\app\src\main\AndroidManifest.xml
+activity#com.facebook.FacebookActivity
+ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:29:9-32:66
+	android:configChanges
+		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:31:13-96
+	android:theme
+		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:32:13-63
+	android:name
+		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:30:13-57
+activity#com.facebook.CustomTabMainActivity
+ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:33:9-71
+	android:name
+		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:33:19-68
+provider#com.facebook.internal.FacebookInitProvider
+ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:44:9-47:40
+	android:authorities
+		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:46:13-72
+	android:exported
+		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.facebook.android:facebook-android-sdk:4.22.0] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\e9307844a3c5508c68049ccf6f185151\AndroidManifest.xml:45:13-70
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\5e0854b4b53eff098fdd999308ed2eaa\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\transition-25.3.1.aar\5e0854b4b53eff098fdd999308ed2eaa\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:mediarouter-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\mediarouter-v7-25.3.1.aar\dc702783b6c734e6bfa12a2ac2ede9f8\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:mediarouter-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\mediarouter-v7-25.3.1.aar\dc702783b6c734e6bfa12a2ac2ede9f8\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\5e010cbf53a2871ac086c88d1e305734\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\5e010cbf53a2871ac086c88d1e305734\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\ac4758bda3a0a8fbd86e046834591f36\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\ac4758bda3a0a8fbd86e046834591f36\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\8d45499ae294c0a890d21eee49b4c846\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\8d45499ae294c0a890d21eee49b4c846\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\31c76e6ca8c10c65d695350135e7ea13\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:cardview-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\cardview-v7-25.3.1.aar\31c76e6ca8c10c65d695350135e7ea13\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:customtabs:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\customtabs-25.3.1.aar\838664c03825aba623b5230e5182d01c\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:customtabs:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\customtabs-25.3.1.aar\838664c03825aba623b5230e5182d01c\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\cc55964183974c5e99cc8646666fb298\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\cc55964183974c5e99cc8646666fb298\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\e0be98df5d4734b5a8a2bc338f6f002b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\e0be98df5d4734b5a8a2bc338f6f002b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\7999c35e3fa9c0f3ed6f725a76e4a376\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\7999c35e3fa9c0f3ed6f725a76e4a376\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:palette-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\palette-v7-25.3.1.aar\fdf6bc496970d0377d1961aeff48009f\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:palette-v7:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\palette-v7-25.3.1.aar\fdf6bc496970d0377d1961aeff48009f\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\74a8a43538b4f88ecd6a33c950a53127\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\74a8a43538b4f88ecd6a33c950a53127\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\11bec6eb45240e82e57430f9f541a596\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\11bec6eb45240e82e57430f9f541a596\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\9b262f2c0ab1aefb8f32f0b763259fa0\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\9b262f2c0ab1aefb8f32f0b763259fa0\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0d697dd375260963cb3e4f2f2024ff7d\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\0d697dd375260963cb3e4f2f2024ff7d\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\e7476d53a11ec98e80a42eca69edc4a4\AndroidManifest.xml:26:9-47
+activity#com.google.android.gms.ads.AdActivity
+ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:25:9-232
+	android:configChanges
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:25:72-181
+	android:theme
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:25:182-230
+	android:name
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.0.4.aar\0f660489ff6ff1a66740d596773b9a40\AndroidManifest.xml:25:19-71
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-impl-11.0.4.aar\0a67e0018d60603d064cfef3d646158c\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:21:5-67
+MERGED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from [com.google.android.gms:play-services-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-analytics-11.0.4.aar\299436d9020080a4c69dfd9281231cb7\AndroidManifest.xml:24:22-65
+activity#com.google.android.gms.appinvite.PreviewActivity
+ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:20:9-25:20
+	android:exported
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:20:51-74
+	android:theme
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:20:75-121
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:20:19-50
+intent-filter#android.intent.category.DEFAULT+com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:21:13-24:29
+action#com.google.android.gms.appinvite.ACTION_PREVIEW
+ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:22:17-89
+	android:name
+		ADDED from [com.google.android.gms:play-services-appinvite:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-appinvite-11.0.4.aar\a75ce324f31c4b00d0ee5a9c47654807\AndroidManifest.xml:22:25-87
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:20:9-189
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:20:129-162
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:20:163-187
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:20:69-128
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:20:19-68
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:24:9-184
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:24:64-87
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:24:88-182
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-auth-11.0.4.aar\c88db0622f74a4844b5a65c4fce61b4b\AndroidManifest.xml:24:18-63
+receiver#com.google.android.gms.cast.framework.media.MediaIntentReceiver
+ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:5:9-99
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:5:19-97
+service#com.google.android.gms.cast.framework.media.MediaNotificationService
+ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:6:9-103
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:6:18-101
+service#com.google.android.gms.cast.framework.ReconnectionService
+ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:7:9-92
+	android:name
+		ADDED from [com.google.android.gms:play-services-cast-framework:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-cast-framework-11.0.4.aar\11c335e23ad31c0177c54b9ef152c38c\AndroidManifest.xml:7:18-90
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:21:19-51
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-maps-11.0.4.aar\408d2f3840e41debcfcae44f5952acf4\AndroidManifest.xml:21:52-75
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-base-11.0.4.aar\a46064ac41f1ca873f7f3764f66ea112\AndroidManifest.xml:19:19-85
+service#com.google.android.gms.tagmanager.TagManagerService
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:24:9-134
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:24:110-132
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:24:85-109
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:24:18-84
+activity#com.google.android.gms.tagmanager.TagManagerPreviewActivity
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:25:9-32:20
+	android:noHistory
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:25:118-142
+	android:exported
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:25:94-117
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:25:19-93
+intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:26:13-31:29
+data
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:27:17-71
+	android:scheme
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:27:23-69
+action#android.intent.action.VIEW
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:28:25-66
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from [com.google.android.gms:play-services-tagmanager-api:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\play-services-tagmanager-api-11.0.4.aar\a4a69bbe4b3f2b5b691e917aeda48546\AndroidManifest.xml:30:27-75
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:25:7-26:18
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:25:7-26:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:25:90-112
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:25:113-137
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:25:17-89
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:27:7-31:18
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:27:162-184
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:27:185-208
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:27:105-161
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:27:17-104
+intent-filter#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:28:11-30:27
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:29:15-76
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:29:23-74
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:32:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:27:7-137
+MERGED from [com.google.firebase:firebase-analytics-impl:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-11.0.4.aar\ad324ab538db544f0fbd9a23527ab70f\AndroidManifest.xml:27:7-137
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:32:88-110
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:32:111-135
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:32:16-87
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:33:7-197
+	android:enabled
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:33:148-170
+	android:exported
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:33:171-195
+	android:permission
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:33:91-147
+	android:name
+		ADDED from [com.google.firebase:firebase-analytics:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-analytics-11.0.4.aar\c61032078ec1a8e7f644d73b77629c43\AndroidManifest.xml:33:16-90
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:23:9-27:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:23:88-111
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-messaging-11.0.4.aar\fa061346568f1067e32d283daec9d0c1\AndroidManifest.xml:23:18-87
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:24:17-71
+permission#com.application.wayd.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:24:5-109
+	android:protectionLevel
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:24:72-107
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:24:17-71
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:26:22-76
+uses-permission#com.application.wayd.permission.C2D_MESSAGE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:26:5-78
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:26:22-76
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:30:9-35:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:30:85-108
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:30:109-169
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:30:19-84
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:31:13-34:29
+intent-filter#com.application.wayd+com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:31:13-34:29
+category#${applicationId}
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:33:27-58
+category#com.application.wayd
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:33:17-60
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:33:27-58
+receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:39:9-119
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:39:93-117
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:39:19-92
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:43:9-47:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:43:83-106
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-iid-11.0.4.aar\b89089e228e5d9387fd0aebf2e18785c\AndroidManifest.xml:43:18-82
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:6:9-194
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:6:19-78
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:6:144-168
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:6:169-192
+	android:name
+		ADDED from [com.google.firebase:firebase-common:11.0.4] C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\firebase-common-11.0.4.aar\919847dfda4674910489baa75b9c61ed\AndroidManifest.xml:6:79-143
