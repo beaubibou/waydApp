@@ -101,6 +101,7 @@ public class LoginWayde extends AppCompatActivity implements
         setContentView(R.layout.login);
         intSignGoogle();
         mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
         gestionAutorisation();// Demande l'autorisation du GPS
 
         // Si l'utilisateur change de status d authehtification
@@ -157,11 +158,13 @@ public class LoginWayde extends AppCompatActivity implements
     }
 
     // Une fois l'utilisateur récupere on récupere le jeton
-    private void connexion(FirebaseUser currentUser) {
+    private void connexion(final FirebaseUser currentUser) {
 
         if (currentUser==null)return;
         if (Outils.isConnect())
         Log.i("LoginWayd","methode connexion");
+
+
         currentUser.getToken(true)
 
                 .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
@@ -170,7 +173,8 @@ public class LoginWayde extends AppCompatActivity implements
 
                             Outils.jeton = task.getResult().getToken();
                             Outils.connected = true;
-                            Log.i("LoginWayd","methode connexion isSuccessful");
+                            Log.i("LoginWayd","********************methode connexion isSuccessful"+currentUser.getEmail());
+
                             connexionWayd();
                             return;
 
@@ -489,8 +493,8 @@ public class LoginWayde extends AppCompatActivity implements
                             FirebaseUser user = mAuth.getCurrentUser();
                             connexion(user);
 
-                        }
 
+                        }
 
 
                     }
@@ -555,8 +559,8 @@ public class LoginWayde extends AppCompatActivity implements
                 if (mAuth.getCurrentUser().getDisplayName() != null)
                 personne.setNom(mAuth.getCurrentUser().getDisplayName());
                 personne.setEmail(mAuth.getCurrentUser().getEmail());
-                Outils.personneConnectee = new Personne(personne);
-
+                              Outils.personneConnectee = new Personne(personne);
+                Log.d("***debug","************personne connetecé");
               // Gere le cas d'un utilisateur professionnel
 
                 if (personne.getTypeUser()== Profil.PRO){

@@ -23,7 +23,6 @@ public class Notification {
     public static final int DONNE_AVIS =1;
     public static final int RECOIT_AVIS=2;
 
-
     public Notification(Date datecreation, String message, int idactivite, int iddestinataire, int idpersonne,boolean lu,int idtypenotification,int idnotification) {
         this.datecreation = datecreation;
         this.message = message;

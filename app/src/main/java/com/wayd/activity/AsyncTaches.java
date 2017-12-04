@@ -3200,6 +3200,7 @@ public class AsyncTaches {
                     while (nbtentative < 5 && personneWs == null) {
                         //    Thread.sleep(1000);// Pause 1 seconde pour laisser le temps de creer le compte la premiere fois à optimiser avec gcm
                         personneWs = new Wservice().getPersonnebyToken(Outils.jeton);//
+                       Log.d("couc","coucou*******************  "+personneWs.getPseudo());
                         if (personneWs != null) {
                             Outils.listtypeactivitecomplete.addAll(new Wservice().getListTypeActivite());
                             Outils.DERNIERE_VERSION_WAYD = new Wservice().getVersion();
