@@ -1,4 +1,4 @@
-#Sun Dec 03 08:02:46 CET 2017
+#Sun Dec 10 19:30:48 CET 2017
 base.0=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
 renamed.0=classes.dex
 file.0=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5\\classes.dex

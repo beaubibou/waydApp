@@ -40,22 +40,23 @@ import com.wayd.bean.TypeActivite;
 import com.wayd.bean.Version;
 
 public class Wservice {
- private final static String URL = "http://192.168.1.75:8080//wayd/services/WBservices?wsdl";
+// private final static String URL = "http://192.168.1.75:8080//wayd/services/WBservices?wsdl";
 
-  //  private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
+   private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
     private final static int timeoutws = 10000;
     private static final String NAMESPACE = "http://ws.wayd";
     private static final String SOAP_ACTION_PREFIX = "/";
     private static final String HOST = "wayd.fr";
     private static final int PORT = 8443;
     private static final String FILE = "/wayd/services/WBservices?wsdl";
-    private static final boolean SECURE = false;
+    private static final boolean SECURE = true;
 
     public Avis getAvis(int idnoter_, int idactivite, int idnotateur, int idpersonnenotee,int idDemandeur) throws IOException,
             XmlPullParserException {
         Avis retour = null;
         String METHOD = "getAvis";
         SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+
                 SoapEnvelope.VER11);
         SoapObject request = new SoapObject(NAMESPACE, METHOD);
         envelope.bodyOut = request;
@@ -485,8 +486,12 @@ public class Wservice {
             transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
 
         }
+
         if (envelope.bodyIn != null) {
             SoapObject resultSOAP = (SoapObject) envelope.bodyIn;
+
+            if (getActiviteFromSOAP(resultSOAP)==null)return null;
+
             return getActiviteFromSOAP(resultSOAP).get(0);
         }
 
@@ -932,7 +937,6 @@ public class Wservice {
                     .getProperty("photostr") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("photostr").toString();
 
-
             String ville = ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("ville") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("ville").toString();
@@ -983,8 +987,9 @@ public class Wservice {
 
             // Gere le cas ou l'activite n'a pas été trouvé
             if (resultSOAP.getProperty(f) == null) {
-                retour.add(null);
-                return retour;
+              //  retour.add(null);
+              //  return retour;
+                return null;
             }
 
             int id = Integer.parseInt(((SoapObject) resultSOAP
@@ -993,7 +998,9 @@ public class Wservice {
             String titre = ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("titre").toString();
 
+
             String libelle = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("libelle") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("libelle").toString();
 
             int idorganisateur = Integer.parseInt(((SoapObject) resultSOAP
@@ -1246,6 +1253,14 @@ public class Wservice {
         return retour;
     }
 
+    public static String getStringFormSOAP(SoapObject resultSOAP,String property,int index){
+
+        String retour = ((SoapObject) resultSOAP.getProperty(index))
+                .getProperty(property) == null ? "" : ((SoapObject) resultSOAP.getProperty(index))
+                .getProperty(property).toString();
+        return retour;
+
+    }
     public ArrayList<Activite> getMesActiviteArchive(int idpersonne)
             throws IOException, XmlPullParserException {
         ArrayList<Activite> retour = new ArrayList<>();
@@ -1437,9 +1452,18 @@ public class Wservice {
             transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
 
         }
+
+
         if (envelope.bodyIn != null) {
             SoapObject resultSOAP = (SoapObject) envelope.bodyIn;
             for (int f = 0; f < resultSOAP.getPropertyCount(); f++) {
+
+                if (resultSOAP.getProperty(f) == null) {
+                    //  retour.add(null);
+                    //  return retour;
+                    return null;
+                }
+
 
                 int idpersonne = Integer.parseInt(((SoapObject) resultSOAP
                         .getProperty(f)).getProperty("id").toString());
@@ -1761,6 +1785,83 @@ public class Wservice {
 
         }
         return null;
+    }
+
+    public  Personne getPersonne(String idtoken, String photostr, String vnom,String gcmToken)
+            throws IOException, XmlPullParserException {
+        String METHOD = "getPersonne";
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        envelope.bodyOut = request;
+        request.addProperty("idtoken", idtoken);
+        request.addProperty("photostr", photostr);
+        request.addProperty("nom", vnom);
+        request.addProperty("gcmToken", gcmToken);
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //    SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+        if (envelope.bodyIn != null) {
+
+            SoapObject resultSOAP = (SoapObject) envelope.getResponse();
+            if (resultSOAP == null) return null;
+            int id = Integer.parseInt((resultSOAP.getProperty("id").toString()));
+            String login = (resultSOAP.getProperty("login").toString());
+            String mdp = (resultSOAP.getProperty("mdp") == null ? "" : (resultSOAP.getProperty("mdp").toString()));
+
+            String nom = (resultSOAP.getProperty("nom") == null ? "" : (resultSOAP.getProperty("nom").toString()));
+            String pseudo = (resultSOAP.getProperty("prenom") == null ? "" : (resultSOAP.getProperty("prenom").toString()));
+            String message = (resultSOAP.getProperty("message") == null ? "" : (resultSOAP.getProperty("message").toString()));
+
+
+            String photo = (resultSOAP.getProperty("photo") == null ? "" : (resultSOAP.getProperty("photo").toString()));
+            String ville = (resultSOAP.getProperty("ville") == null ? "" : (resultSOAP.getProperty("ville").toString()));
+
+            boolean actif = Boolean.parseBoolean((resultSOAP
+                    .getProperty("actif").toString()));
+            boolean verrouille = Boolean.parseBoolean((resultSOAP
+                    .getProperty("verrouille").toString()));
+            int nbrecheccnx = Integer.parseInt((resultSOAP
+                    .getProperty("nbrecheccnx").toString()));
+            Date datecreation = Outils.getDateFromSoapObject((resultSOAP
+                    .getProperty("datecreationstr")));
+            Date datenaissance = Outils.getDateFromSoapObject((resultSOAP
+                    .getProperty("datenaissancestr")));
+            int sexe = Integer.parseInt((resultSOAP.getProperty("sexe").toString()));
+            int rayon = Integer.parseInt((resultSOAP.getProperty("rayon").toString()));
+
+            boolean affichesexe = Boolean.parseBoolean((resultSOAP
+                    .getProperty("affichesexe").toString()));
+            boolean afficheage = Boolean.parseBoolean((resultSOAP
+                    .getProperty("afficheage").toString()));
+            String commentaire = (resultSOAP.getProperty("commentaire") == null ? "" : (resultSOAP.getProperty("commentaire").toString()));
+            boolean premiereconnexion = Boolean.parseBoolean((resultSOAP
+                    .getProperty("premiereconnexion").toString()));
+
+            boolean admin = Boolean.parseBoolean((resultSOAP
+                    .getProperty("admin").toString()));
+            boolean notification=Boolean.parseBoolean((resultSOAP
+                    .getProperty("notification").toString()));
+
+            int typeUser = Integer.parseInt((resultSOAP.getProperty("typeUser").toString()));
+            String siteWeb = (resultSOAP.getProperty("siteWeb") == null ? "" : (resultSOAP.getProperty("siteWeb").toString()));
+            String telephone= (resultSOAP.getProperty("telephone") == null ? "" : (resultSOAP.getProperty("telephone").toString()));
+            String siret = (resultSOAP.getProperty("siret") == null ? "" : (resultSOAP.getProperty("siret").toString()));
+
+            return new Personne(id, login, mdp, nom, pseudo, ville, actif,
+                    verrouille, nbrecheccnx, datecreation, message, photo, datenaissance, sexe, commentaire,
+                    afficheage, affichesexe, premiereconnexion, rayon, admin,notification,typeUser,siteWeb,telephone,siret);
+
+        }
+        return null;
+
     }
 
     public  Personne getPersonnebyToken(String idtoken)

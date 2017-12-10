@@ -109,13 +109,10 @@ public class AsyncTaches {
                 return;
             }
 
-            if (result != null) {
-                ecouteur.loopBack_getListAmis(result);
-            }
 
-            if (result == null) {
-                ecouteur.loopBack_getListAmis(null);
-            }
+                ecouteur.loopBack_getListAmis(result);
+
+
 
             mProgressDialog.dismiss();
 
@@ -1173,7 +1170,7 @@ public class AsyncTaches {
                 return;
             }
 
-            if (result != null)
+           // if (result != null)
                 ecouteur.loopBack_GetMesActiviteEnCours(result);
 
             mProgressDialog.dismiss();
@@ -1250,7 +1247,7 @@ public class AsyncTaches {
                 return;
             }
 
-            if (result != null)
+
                 ecouteur.loopBack_GetMesActiviteArchive(result);
 
             mProgressDialog.dismiss();
@@ -3182,24 +3179,27 @@ public class AsyncTaches {
                         photostr = Outils.encodeTobase64(photo);
                     }
 
-                    if (Outils.isConnectFromPwd())
+                //    if (Outils.isConnectFromPwd())
 
-                    {
+                 //   {
                         String gcmToken = FirebaseInstanceId.getInstance().getToken();
-                        new Wservice().testJeton(Outils.jeton, "", mAuth.getCurrentUser().getDisplayName(), gcmToken);
+                    //    new Wservice().testJeton(Outils.jeton, photostr, mAuth.getCurrentUser().getDisplayName(), gcmToken);
+
                         // Si je ne suis pas connecte FB ou GOOGLE je ne mets pas à jour la photo issu de Firebase
                         // on met la variable noupdatephoto pour n
                         //
-                    } else {
+                //    } else {
 
-                        String gcmToken = FirebaseInstanceId.getInstance().getToken();
-                        new Wservice().testJeton(Outils.jeton, photostr, mAuth.getCurrentUser().getDisplayName(), gcmToken);
+                //        String gcmToken = FirebaseInstanceId.getInstance().getToken();
+                //        new Wservice().testJeton(Outils.jeton, photostr, mAuth.getCurrentUser().getDisplayName(), gcmToken);
 
-                    }
+               //     }
+
 
                     while (nbtentative < 5 && personneWs == null) {
                         //    Thread.sleep(1000);// Pause 1 seconde pour laisser le temps de creer le compte la premiere fois à optimiser avec gcm
-                        personneWs = new Wservice().getPersonnebyToken(Outils.jeton);//
+                    //   personneWs = new Wservice().getPersonnebyToken(Outils.jeton);//
+                        personneWs = new Wservice().getPersonne(Outils.jeton, photostr, mAuth.getCurrentUser().getDisplayName(), gcmToken);//
                        Log.d("couc","coucou*******************  "+personneWs.getPseudo());
                         if (personneWs != null) {
                             Outils.listtypeactivitecomplete.addAll(new Wservice().getListTypeActivite());

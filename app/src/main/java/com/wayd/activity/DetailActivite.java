@@ -87,7 +87,6 @@ public class DetailActivite extends MenuDrawerNew implements
             idactivite = Integer.valueOf(getIntent().getStringExtra("idactiviteFromNotification"));
 
         }
-        System.out.println("activite à envoyer " + idactivite);
         photop = (ImageView) findViewById(R.id.iconactivite);
         TV_pseudo = (TextView) findViewById(R.id.pseudo);
         TV_age = (TextView) findViewById(R.id.age);
@@ -522,7 +521,7 @@ public class DetailActivite extends MenuDrawerNew implements
             TV_pseudo.setText(activite.getPseudoOrganisateur());
             TV_age.setText(activite.getAgeStr());
             TV_sexe.setText(activite.getSexeOrganisateur());
-            TV_description.setText(activite.getLibelleUnicode());
+            TV_description.setText(convertLibelleActivite(activite.getLibelleUnicode()));
             TV_Titre.setText(activite.getTitreUnicode());
             iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
 
@@ -665,11 +664,13 @@ public class DetailActivite extends MenuDrawerNew implements
     @Override
     public void loopBack_UpdateActivite(MessageServeur messageserveur, String titre, String libelle, int nbMaxWaydeurs) {
         //Si la mise à jour de l'activite est réussie
+
+
         if (messageserveur != null) {
             if (messageserveur.isReponse()) {
 
                 TV_Titre.setText(titre);
-                TV_description.setText(libelle);
+                TV_description.setText(convertLibelleActivite(libelle));
                 this.activiteSelectionne.setNbmaxwaydeur(nbMaxWaydeurs);
                 TV_NbrInscrit.setText(getString(R.string.s_detailactivite_nbrinscrit) + activiteSelectionne.getNbrparticipant() + "/" + nbMaxWaydeurs);
                 Toast toast = Toast.makeText(DetailActivite.this, messageserveur.getMessage(), Toast.LENGTH_LONG);
@@ -689,6 +690,14 @@ public class DetailActivite extends MenuDrawerNew implements
     }
 
 
+    public String convertLibelleActivite (String libelle){
+
+        if (libelle==null ||libelle.length()==0)
+
+            return (getString(R.string.s_detail_pas_detail_activite));
+
+        return libelle;
+    }
     @Override
     public void loopBackReceiveGCM(Bundle bundle) {
         if (bundle == null) return;

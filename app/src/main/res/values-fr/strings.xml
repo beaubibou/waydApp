@@ -64,7 +64,7 @@
     <string name="donneavis_commentpassee">Comment ça s\'est passée ?</string>
     <string name="donneavis_hint_consigne">Avis (120 caractères maximum) </string>
     <string name="donneavis_button_valider">Valider</string>
-    <string name="donneavis_switchAmi">Ajoutez à vos amis</string>
+    <string name="donneavis_switchAmi">Ajoutez à votre sphère</string>
 
     <!-- ********************* apropos.xml *****************************-->
 
@@ -184,6 +184,7 @@
     <!-- Par le code -->
     <string name="s_detailactivite_complet">"Complète"</string>
     <string name="s_detailactivite_nbrinscrit">"Nombre d'inscrits : "</string>
+    <string name="s_detail_pas_detail_activite">"Pas de détail sur l'activité"</string>
 
     <!-- *********************s_listeamis.xml *****************************-->
 
@@ -514,7 +515,7 @@
 
     <string name="activiteSupprimee">"L'activité a été supprimée"</string>
     <string name="compteCree">"Le compte a été crée, un e-mail de confirmation vous a été envoyé"</string>
-    <string name="consigenMdp">"Le mot de passe doit contenir 6 caractéres"</string>
+    <string name="consigenMdp">"Le mot de passe doit contenir 6 caractères"</string>
     <string name="mailExistDeja">"L'adresse e-mail existe déjà"</string>
     <string name="mailObligatoire">"E-mail obligatoire"</string>
     <string name="mdpObligatoire">"Mot de passe obligatoire"</string>

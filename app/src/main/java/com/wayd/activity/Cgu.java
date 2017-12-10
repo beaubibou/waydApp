@@ -22,7 +22,7 @@ public class Cgu extends MenuNoDrawer {
         WebView webView;
         webView = (WebView)findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://wayd.fr/apropos/cgu/cgu.html");
+        webView.loadUrl("cgu.wayd.fr");
         Button B_validerCgu=(Button)findViewById(R.id.valider_cgu);
         RelativeLayout layoutCgu=(RelativeLayout) findViewById(R.id.layout_validecgu);
 

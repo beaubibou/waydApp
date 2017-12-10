@@ -5,11 +5,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.application.wayd.R;
 import com.google.android.gms.internal.ac;
@@ -77,6 +79,19 @@ public class F_MesActivitesArchive extends Fragment implements AsyncTaches.Async
 
     @Override
     public void loopBack_GetMesActiviteArchive(ArrayList<Activite> listeactivite) {
+
+        if (listeactivite==null){
+
+            Toast toast = Toast.makeText(getActivity().getBaseContext(),"Vous avez été désactivé"
+                    , Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+
+            return;
+        }
+
+
+
         listeActivite.clear();
         listeActivite.addAll(listeactivite);
         adapter.notifyDataSetChanged();

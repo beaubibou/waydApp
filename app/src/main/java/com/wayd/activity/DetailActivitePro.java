@@ -125,7 +125,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
             activiteSelectionne = activite;
             photop.setImageDrawable(Outils.getAvatarDrawable(getBaseContext(), activite.getPhoto()));
             TV_pseudo.setText(activite.getPseudoOrganisateur());
-            TV_description.setText(activite.getLibelleUnicode());
+            TV_description.setText(convertLibelleActivite(activite.getLibelleUnicode()));
             TV_Titre.setText(activite.getTitreUnicode());
             TV_Horaire.setText(activite.getHoraire());
             iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
@@ -174,6 +174,15 @@ public class DetailActivitePro extends MenuDrawerNew implements
 
     }
 
+    public String convertLibelleActivite (String libelle){
+
+        if (libelle==null ||libelle.length()==0)
+
+            return (getString(R.string.s_detail_pas_detail_activite));
+
+        return libelle;
+    }
+
     private void signaleActivite() {
         Intent appel = new Intent(DetailActivitePro.this, SignalerActivite.class);
         appel.putExtra("idactivite", activiteSelectionne.getId());
@@ -192,7 +201,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
             if (messageserveur.isReponse()) {
 
                 TV_Titre.setText(titre);
-                TV_description.setText(libelle);
+                TV_description.setText(convertLibelleActivite(libelle));
                 Toast toast = Toast.makeText(DetailActivitePro.this, messageserveur.getMessage(), Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();

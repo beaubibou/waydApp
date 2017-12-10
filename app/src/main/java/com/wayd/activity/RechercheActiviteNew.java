@@ -258,6 +258,11 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
                     CENTRER_SUR = F_Map_ListActivite.CENTRER_PERSONNE;
                     f_mapListActivite.updateListe(CENTRER_SUR);
 
+                    break;
+                case FROM_MAP:
+                    CENTRER_SUR = F_Map_ListActivite.CENTRER_CARTE;
+                    ((F_ListActivite) f_listActivite).updateListe();
+                    f_mapListActivite.updateListe(CENTRER_SUR);
             }
 
         }

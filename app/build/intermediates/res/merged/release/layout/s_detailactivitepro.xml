@@ -55,7 +55,8 @@
                 android:layout_centerVertical="true"
                 android:layout_alignLeft="@+id/pseudo"
                 android:layout_alignStart="@+id/pseudo"
-                android:textSize="@dimen/texte2"/>
+                android:textSize="@dimen/texte2"
+                tools:text="Site web"/>
 
             <TextView
                 tools:text="Pseudo"
@@ -63,7 +64,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/pseudo"
                 android:textSize="@dimen/texte2"
+                android:textStyle="bold|italic"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
+                android:textColor="#0000FF"
                 />
 
 
@@ -205,6 +208,7 @@
                         android:layout_height="150dp"
                         android:scrollbars = "vertical"
                         android:textSize="@dimen/texte2"
+
                         android:background="@drawable/borduretextfondblanc"
                         />
                 </RelativeLayout>

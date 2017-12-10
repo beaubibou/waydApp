@@ -2,6 +2,8 @@ package com.wayd.bean;
 
 import android.graphics.Bitmap;
 
+import com.application.wayd.R;
+
 import org.apache.commons.lang3.StringEscapeUtils;
 
 import java.text.SimpleDateFormat;
@@ -293,6 +295,8 @@ public class Activite
         return "Le " + datestrdebut + " de " + heuredebutstr + " à "
                 + heurefinstr;
     }
+
+
 
     public void setNbmaxwaydeur(int nbmaxwaydeur) {
         this.nbmaxwaydeur = nbmaxwaydeur;

@@ -7,22 +7,22 @@
     format="10"
     ir-eligibility="FIELD_TYPE_CHANGE"
     plugin-version="3.0.0"
-    timestamp="1512284550982"
+    timestamp="1512930634465"
     token="9022034702471868994"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="7543" />
+        duration="6526" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="18" />
+        duration="65" />
     <task
         name="verifier"
-        duration="13" />
+        duration="40" />
 
     <artifact
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -64,7 +64,7 @@
     <build
         build-mode="FULL"
         ir-eligibility="FIELD_TYPE_CHANGE"
-        timestamp="1512284550982"
+        timestamp="1512930634465"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\dep\dependencies.apk"

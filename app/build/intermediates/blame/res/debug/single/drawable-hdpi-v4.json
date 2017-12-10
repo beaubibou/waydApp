@@ -32,12 +32,12 @@
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\5e010cbf53a2871ac086c88d1e305734\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png",
-        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-android-sdk-4.22.0.aar\\e9307844a3c5508c68049ccf6f185151\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_close.png",
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-android-sdk-4.22.0.aar\\e9307844a3c5508c68049ccf6f185151\\res\\drawable-hdpi-v4\\com_facebook_close.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png",
+        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-android-sdk-4.22.0.aar\\e9307844a3c5508c68049ccf6f185151\\res\\drawable-hdpi-v4\\com_facebook_tooltip_black_topnub.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\quantum_ic_forward_30_white_24.png",

@@ -44,15 +44,14 @@
                     <Button
                         android:id="@+id/btn_google"
                         style="@style/AppBaseTheme"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="181dp"
+                        android:layout_height="40dp"
                         android:layout_margin="4dp"
+                        android:background="#DD4B39"
                         android:padding="10dp"
                         android:text="Connexion avec Google+"
-                        android:background="#DD4B39"
-                        android:textSize="@dimen/texte1"
                         android:textColor="#FFFFFF"
-                         />
+                        android:textSize="@dimen/texte1" />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -122,22 +121,21 @@
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
                         android:backgroundTint="#FFFFFF"
-                         android:inputType="textEmailAddress"
-                        android:text="pmestivier@club.fr"
+                        android:inputType="textEmailAddress"
+                        android:hint="Adresse mail"
                         android:textSize="@dimen/texte2"
                         />
 
                     <EditText
                         android:id="@+id/ET_pwd"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="5dp"
                         android:backgroundTint="#FFFFFF"
                         android:ems="10"
+                        android:hint="Mot de passe"
                         android:inputType="textPassword"
-                        android:text="azerty"
-                        android:textSize="@dimen/texte2"
-                        />
+                        android:textSize="@dimen/texte2" />
 
                     <Button
 

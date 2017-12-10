@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.application.wayd.R;
 import com.wayd.bean.Ami;
@@ -167,6 +169,18 @@ public class Liste_Amis extends MenuDrawerNew implements AmiAdapter.AmiAdapterLi
 
     @Override
     public void loopBack_getListAmis(ArrayList<Ami> listami) {// Sur reception de la liste Asynctache
+
+
+
+        if (listami==null){
+            Toast toast = Toast.makeText(getBaseContext(),"Vous avez été désactivé"
+                    , Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+            return;
+        }
+
+
 
         if (listami != null) {
             this.listeAmis.clear();

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.application.wayd.R;
 import com.wayd.bean.Activite;
@@ -84,6 +86,17 @@ public class F_MesActivitesEnCours extends Fragment implements MesActiviteAdapte
 
     @Override
     public void loopBack_GetMesActiviteEnCours(ArrayList<Activite> listeactivite) {
+
+        if (listeactivite==null){
+
+            Toast toast = Toast.makeText(getActivity().getBaseContext(),"Vous avez été désactivé"
+                    , Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+
+         return;
+        }
+
         listeActivite.clear();
         listeActivite.addAll(listeactivite);
         adapter.notifyDataSetChanged();

@@ -226,14 +226,14 @@
     <string name="commun_hintsaisiradresse">"Saisir l'adresse"</string>
     <string name="compteCree">"Le compte a été crée, un e-mail de confirmation vous a été envoyé"</string>
     <string name="comptePasActive">"Votre compte n'est pas activé"</string>
-    <string name="consigenMdp">"Le mot de passe doit contenir 6 caractéres"</string>
+    <string name="consigenMdp">"Le mot de passe doit contenir 6 caractères"</string>
     <string name="creationActivite">"Création de votre activité"</string>
     <string name="dateNaissanceObligatoire">"Date de naissance obligatoire"</string>
     <string name="descriptionNotification">"Permet de recevoir les notifications..."</string>
     <string name="donneavis_button_valider">Valider</string>
     <string name="donneavis_commentpassee">Comment ça s\'est passée ?</string>
     <string name="donneavis_hint_consigne">Avis (120 caractères maximum) </string>
-    <string name="donneavis_switchAmi">Ajoutez à vos amis</string>
+    <string name="donneavis_switchAmi">Ajoutez à votre sphère</string>
     <string name="echecAuth"> "L'authentification a échoué"</string>
     <string name="err_adresse"> "Adresse non valide"</string>
     <string name="erreurInconnue">"Une erreur est survenue "</string>
@@ -369,6 +369,7 @@
     <string msgid="9167523597401839819" name="s4">"Refuser"</string>
     <string msgid="1566682516266724847" name="s5">"Créer un événement d\'agenda"</string>
     <string msgid="5996672174517137271" name="s6">"Autoriser l\'annonce à créer un événement d\'agenda ?"</string>
+    <string name="s_detail_pas_detail_activite">"Pas de détail sur l'activité"</string>
     <string name="s_detailactivite_complet">"Complète"</string>
     <string name="s_detailactivite_nbrinscrit">"Nombre d'inscrits : "</string>
     <string name="s_detailactivite_signaler">"Signaler l'activité"</string>

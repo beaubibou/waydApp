@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.wayd"
-    android:versionCode="2670"
+    android:versionCode="2756"
     android:versionName="Wayd.1.1." >
 
     <uses-sdk
