@@ -87,7 +87,9 @@ public class Discussion {
 
 
     public String getTitre() {
-        return titre.replaceFirst(".", (titre.charAt(0) + "").toUpperCase());
+        return StringEscapeUtils.unescapeJava(titre.replaceFirst(".", (titre.charAt(0) + "").toUpperCase()));
+    //    return titre.replaceFirst(".", (titre.charAt(0) + "").toUpperCase());
+
     }
 
     public Date getDatecreation() {

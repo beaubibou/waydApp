@@ -40,17 +40,37 @@ import com.wayd.bean.TypeActivite;
 import com.wayd.bean.Version;
 
 public class Wservice {
-// private final static String URL = "http://192.168.1.75:8080//wayd/services/WBservices?wsdl";
+//private  static String URL = "http://192.168.1.75:8080//wayd/services/WBservices?wsdl";
 
-   private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
+ //  private final static String URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
+
+    private  static String URL;
     private final static int timeoutws = 10000;
     private static final String NAMESPACE = "http://ws.wayd";
     private static final String SOAP_ACTION_PREFIX = "/";
     private static final String HOST = "wayd.fr";
     private static final int PORT = 8443;
     private static final String FILE = "/wayd/services/WBservices?wsdl";
-    private static final boolean SECURE = true;
+    private static  boolean SECURE ;
 
+
+    static {
+
+        boolean test=false;
+
+        if (test){
+           URL = "http://192.168.1.75:8080//wayd/services/WBservices?wsdl";
+           SECURE = false;
+
+        }
+        else
+        {
+
+            URL = "http://wayd.fr:8080//wayd/services/WBservices?wsdl";
+            SECURE = true;
+
+        }
+    }
     public Avis getAvis(int idnoter_, int idactivite, int idnotateur, int idpersonnenotee,int idDemandeur) throws IOException,
             XmlPullParserException {
         Avis retour = null;
@@ -564,6 +584,8 @@ public class Wservice {
                 SoapEnvelope.VER11);
         SoapObject request = new SoapObject(NAMESPACE, METHOD);
         envelope.bodyOut = request;
+        request.addProperty("iddemandeur", Outils.personneConnectee.getId());
+        request.addProperty("jeton", Outils.jeton);
         request.addProperty("notateur", notateur);
         request.addProperty("idpersonne", idpersonne);
         request.addProperty("idactivite", idactivite);
@@ -858,7 +880,7 @@ public class Wservice {
                     .getProperty("age").toString();
 
 
-            Log.d("Asyntache","l"+commentaire+"l");
+
             Profil profil = new Profil(note, nbravis, photostr, ville, pseudo, nom, sexe, idpersonne, nbrami, nbrparticipation, nbractivite, agestr, commentaire);
             retour.add(profil);
         }
@@ -1029,8 +1051,14 @@ public class Wservice {
             double longitude = Double.parseDouble(((SoapObject) resultSOAP
                     .getProperty(f)).getProperty("longitude").toString());
 
+          //  String adresse = ((SoapObject) resultSOAP.getProperty(f))
+          //          .getProperty("adresse").toString();
+
             String adresse = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("adresse") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("adresse").toString();
+
+
 
             String photostr = ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("photo") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
@@ -1864,79 +1892,7 @@ public class Wservice {
 
     }
 
-    public  Personne getPersonnebyToken(String idtoken)
-            throws IOException, XmlPullParserException {
-        String METHOD = "getPersonnebyToken";
-        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
-                SoapEnvelope.VER11);
-        SoapObject request = new SoapObject(NAMESPACE, METHOD);
-        envelope.bodyOut = request;
-        request.addProperty("idtoken", idtoken);
-        if (SECURE) {
-            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
-        //    SslRequest.allowAllSSL();
-            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
 
-        } else {
-            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
-            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
-
-        }
-        if (envelope.bodyIn != null) {
-
-            SoapObject resultSOAP = (SoapObject) envelope.getResponse();
-            if (resultSOAP == null) return null;
-            int id = Integer.parseInt((resultSOAP.getProperty("id").toString()));
-            String login = (resultSOAP.getProperty("login").toString());
-            String mdp = (resultSOAP.getProperty("mdp") == null ? "" : (resultSOAP.getProperty("mdp").toString()));
-
-            String nom = (resultSOAP.getProperty("nom") == null ? "" : (resultSOAP.getProperty("nom").toString()));
-            String pseudo = (resultSOAP.getProperty("prenom") == null ? "" : (resultSOAP.getProperty("prenom").toString()));
-            String message = (resultSOAP.getProperty("message") == null ? "" : (resultSOAP.getProperty("message").toString()));
-
-
-            String photo = (resultSOAP.getProperty("photo") == null ? "" : (resultSOAP.getProperty("photo").toString()));
-            String ville = (resultSOAP.getProperty("ville") == null ? "" : (resultSOAP.getProperty("ville").toString()));
-
-            boolean actif = Boolean.parseBoolean((resultSOAP
-                    .getProperty("actif").toString()));
-            boolean verrouille = Boolean.parseBoolean((resultSOAP
-                    .getProperty("verrouille").toString()));
-            int nbrecheccnx = Integer.parseInt((resultSOAP
-                    .getProperty("nbrecheccnx").toString()));
-            Date datecreation = Outils.getDateFromSoapObject((resultSOAP
-                    .getProperty("datecreationstr")));
-            Date datenaissance = Outils.getDateFromSoapObject((resultSOAP
-                    .getProperty("datenaissancestr")));
-            int sexe = Integer.parseInt((resultSOAP.getProperty("sexe").toString()));
-            int rayon = Integer.parseInt((resultSOAP.getProperty("rayon").toString()));
-
-            boolean affichesexe = Boolean.parseBoolean((resultSOAP
-                    .getProperty("affichesexe").toString()));
-            boolean afficheage = Boolean.parseBoolean((resultSOAP
-                    .getProperty("afficheage").toString()));
-            String commentaire = (resultSOAP.getProperty("commentaire") == null ? "" : (resultSOAP.getProperty("commentaire").toString()));
-            boolean premiereconnexion = Boolean.parseBoolean((resultSOAP
-                    .getProperty("premiereconnexion").toString()));
-
-            boolean admin = Boolean.parseBoolean((resultSOAP
-                    .getProperty("admin").toString()));
-            boolean notification=Boolean.parseBoolean((resultSOAP
-                    .getProperty("notification").toString()));
-
-            int typeUser = Integer.parseInt((resultSOAP.getProperty("typeUser").toString()));
-            String siteWeb = (resultSOAP.getProperty("siteWeb") == null ? "" : (resultSOAP.getProperty("siteWeb").toString()));
-            String telephone= (resultSOAP.getProperty("telephone") == null ? "" : (resultSOAP.getProperty("telephone").toString()));
-            String siret = (resultSOAP.getProperty("siret") == null ? "" : (resultSOAP.getProperty("siret").toString()));
-
-            return new Personne(id, login, mdp, nom, pseudo, ville, actif,
-                    verrouille, nbrecheccnx, datecreation, message, photo, datenaissance, sexe, commentaire,
-                    afficheage, affichesexe, premiereconnexion, rayon, admin,notification,typeUser,siteWeb,telephone,siret);
-
-        }
-        return null;
-
-    }
 
 
     public  MessageServeur updatePseudo(String pseudo, Long datenaissance, int sexe, int idpersonne)
@@ -2633,6 +2589,11 @@ public class Wservice {
         SoapObject request = new SoapObject(NAMESPACE, METHOD);
         envelope.bodyOut = request;
 
+       request.addProperty("iddemandeur", Outils.personneConnectee.getId());
+       request.addProperty("jeton", Outils.jeton);
+
+
+
         for (Integer entier: listId) {
             request.addProperty("idpersonne", entier);
         }
@@ -2724,6 +2685,8 @@ public class Wservice {
                 SoapEnvelope.VER11);
         SoapObject request = new SoapObject(NAMESPACE, METHOD);
         envelope.bodyOut = request;
+        request.addProperty("iddemandeur", Outils.personneConnectee.getId());
+        request.addProperty("jeton", Outils.jeton);
         request.addProperty("idpersonne", idpersonne);
 
         if (SECURE) {
@@ -2936,4 +2899,36 @@ public class Wservice {
         return null;
     }
 
+    public MessageServeur addInteret( int idpersonne,int idactivite, int typeInteret) throws IOException, XmlPullParserException {
+        String METHOD = "addInteretActivite";
+
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        request.addProperty("idpersonne", idpersonne);
+        request.addProperty("idactivite", idactivite);
+        request.addProperty("typeinteret", typeInteret);
+        request.addProperty("jeton", Outils.jeton);
+
+        envelope.bodyOut = request;
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //     SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+
+        if (envelope.bodyIn != null) {
+            SoapObject resultSOAP = (SoapObject) envelope.getResponse();
+            return getMessageServeurFromSoap(resultSOAP);
+
+        }
+        return null;
+
+
+    }
 }

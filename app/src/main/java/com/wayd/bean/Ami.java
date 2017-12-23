@@ -2,6 +2,8 @@ package com.wayd.bean;
 
 import android.graphics.Bitmap;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 import java.util.Date;
 
 
@@ -32,7 +34,8 @@ public class Ami {
     }
 
     public String getPseudo() {
-        return pseudo.replaceFirst(".",(pseudo.charAt(0)+"").toUpperCase());
+
+        return StringEscapeUtils.unescapeJava(pseudo.replaceFirst(".",(pseudo.charAt(0)+"").toUpperCase()));
     }
 
     public int getId() {

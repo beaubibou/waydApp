@@ -122,7 +122,7 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:weightSum="3">
+                        >
 
                         <ImageButton
                             android:id="@+id/map"
@@ -135,14 +135,14 @@
                             app:srcCompat="@mipmap/ic_gpsok"
                             android:textSize="@dimen/texte2"/>
 
-                        <ImageButton
-                            android:id="@+id/inscription"
+                        <Button
+                            android:id="@+id/interet"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:background="#FFFFFF"
-                            android:scaleType="centerInside"
-                            tools:srcCompat="@mipmap/ic_checked"
+                            android:text="ça m'interesse"
+
                             />
 
 

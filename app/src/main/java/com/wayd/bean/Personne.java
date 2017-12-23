@@ -7,6 +7,8 @@ import android.net.Uri;
 import com.google.android.gms.internal.ty;
 import com.google.android.gms.maps.model.LatLng;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -249,7 +251,7 @@ public class Personne implements GPSTracker.positionGpsListener {
 
     public String getPseudo() {
 
-        return pseudo.replaceFirst(".", (pseudo.charAt(0) + "").toUpperCase());
+        return StringEscapeUtils.unescapeJava(pseudo.replaceFirst(".", (pseudo.charAt(0) + "").toUpperCase()));
     }
 
     public void setPseudo(String pseudo) {

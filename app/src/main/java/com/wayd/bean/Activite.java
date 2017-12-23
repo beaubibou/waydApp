@@ -159,7 +159,9 @@ public class Activite
     }
 
     public String getTitreUnicode(){
-        return  StringEscapeUtils.unescapeJava(titre);
+
+        return StringEscapeUtils.unescapeJava(titre.replaceFirst(".", (titre.charAt(0) + "").toUpperCase()));
+   //  return     StringEscapeUtils.unescapeJava(titre);
 
     }
 
@@ -222,7 +224,7 @@ public class Activite
 
 
     public String getPseudoOrganisateur() {
-        return pseudoOrganisateur.replaceFirst(".",(pseudoOrganisateur.charAt(0)+"").toUpperCase());
+        return  StringEscapeUtils.unescapeJava(pseudoOrganisateur.replaceFirst(".",(pseudoOrganisateur.charAt(0)+"").toUpperCase()));
 
 
     }
