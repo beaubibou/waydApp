@@ -60,11 +60,11 @@ public class Avis implements Serializable{
 	}
 
     public String getPseudonotateur() {
-		return pseudonotateur.replaceFirst(".",(pseudonotateur.charAt(0)+"").toUpperCase());
+		return StringEscapeUtils.unescapeJava(pseudonotateur.replaceFirst(".",(pseudonotateur.charAt(0)+"").toUpperCase()));
 
 	}
 	public String getTitreactivite() {
-		return titreactivite.replaceFirst(".",(titreactivite.charAt(0)+"").toUpperCase());
+		return StringEscapeUtils.unescapeJava(titreactivite.replaceFirst(".",(titreactivite.charAt(0)+"").toUpperCase()));
 		}
 
     public double getNote() {

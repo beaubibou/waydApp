@@ -150,9 +150,9 @@ public class Inscription extends AppCompatActivity {
 
 
 
-        if (email.equals("")) {
+        if (email.isEmpty()) {
             //    Toast.makeText(getBaseContext(), "Mail obligatoire", Toast.LENGTH_SHORT).show();
-            ET_pwd.setError(getString(R.string.mailObligatoire));
+            ET_mail.setError(getString(R.string.mailObligatoire));
             return false;
         }
 
@@ -165,20 +165,20 @@ public class Inscription extends AppCompatActivity {
         if (!ET_pwd.getText().toString().equals(confirmPassword)) {
 
             // Toast.makeText(getBaseContext(), "Mot de passe non confirmé", Toast.LENGTH_SHORT).show();
-            ET_pwd.setError("Mot de passe non confirmé");
+            ET_pwd.setError(getString(R.string.mdpDifferent));
             return false;
         }
 
         if (password.length()<6)
         {
             // Toast.makeText(getBaseContext(), "Mot de passe non confirmé", Toast.LENGTH_SHORT).show();
-            ET_pwd.setError("Mot de passe 6 caractétres");
+            ET_pwd.setError(getString(R.string.consigenMdp));
             return false;
         }
         if (confirmPassword.length()<6)
         {
             // Toast.makeText(getBaseContext(), "Mot de passe non confirmé", Toast.LENGTH_SHORT).show();
-            ET_pwdconfirm.setError("Mot de passe 6 caractétres");
+            ET_pwdconfirm.setError(getString(R.string.consigenMdp));
             return false;
         }
 

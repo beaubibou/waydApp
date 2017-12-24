@@ -21,9 +21,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/s_signaleractivite_signaler"
+            android:textSize="@dimen/texte3"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
         <TextView
+            android:textSize="@dimen/texte2"
             android:id="@+id/titreactivite"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,12 +34,13 @@
             tools:text='Vous souhaitez signaler "NomActivite"' />
 
         <TextView
+            android:textSize="@dimen/texte2"
             android:id="@+id/txt3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="@string/s_signaleractivite_pourquoi"
-            android:textSize="18sp" />
+            />
 
 
             <LinearLayout

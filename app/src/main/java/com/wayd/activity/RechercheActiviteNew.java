@@ -216,12 +216,11 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
             Collections.sort(listeActivite, new ComparatorDistanceActivite());
             afficheNbrResultats();
 
-
-
             switch (refreshSource) {
 
                 case FROM_RECHERCHE:
 
+                    ((F_ListActivite) f_listActivite).setRecherche3heures(true);
                     if (vlistactivite.size() > 0) {
                         activeOngletResultat(true);
                         activeOngletCarte(true);

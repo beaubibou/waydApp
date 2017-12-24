@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.wayd"
-    android:versionCode="2758"
+    android:versionCode="2836"
     android:versionName="Wayd.1.1." >
 
     <uses-sdk
@@ -108,7 +108,13 @@
             android:name="com.wayd.activity.SignalerActivite"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.wayd.activity.SignalerActivitePro"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.wayd.activity.SignalerProfil"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wayd.activity.SignalerProfilPro"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.wayd.activity.Detail_Avis"

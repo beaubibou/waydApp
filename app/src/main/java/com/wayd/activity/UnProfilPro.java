@@ -84,7 +84,7 @@ public class UnProfilPro extends MenuDrawerNew implements AsyncTaches.AsyncGetPr
 
 
     private void signalerProfil() {
-        Intent appel = new Intent(UnProfilPro.this, SignalerProfil.class);
+        Intent appel = new Intent(UnProfilPro.this, SignalerProfilPro.class);
         appel.putExtra("idpersonne", profilSelectionne.getId());
         appel.putExtra("pseudo", profilSelectionne.getPseudo());
         appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);

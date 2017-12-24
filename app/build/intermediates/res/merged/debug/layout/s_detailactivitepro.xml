@@ -64,9 +64,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/pseudo"
                 android:textSize="@dimen/texte2"
-                android:textStyle="bold|italic"
+                android:textStyle="bold"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
-                android:textColor="#0000FF"
+
                 />
 
 
@@ -174,7 +174,7 @@
 
                     <TextView
                         android:layout_margin="@dimen/marge2"
-                        android:text="De 8h00 à 9h00 à impltentem"
+                        tools:text="De 8h00 à 9h00 "
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/horaire"

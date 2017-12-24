@@ -111,7 +111,7 @@
     <!-- ********************* inscription.xml *****************************-->
 
     <string name="inscription_rejoignez">Rejoignez la communauté Wayd aujourd\'hui</string>
-    <string name="inscription_hint_mail">Adresse e-mail (valide)</string>
+    <string name="inscription_hint_mail">Adresse email (valide)</string>
     <string name="inscription_hint_mdp">Mot de passe (6 caractères minimum)</string>
     <string name="inscription_hint_confirmmdp">Confirmer le mot de passe </string>
     <string name="inscription_ck_mdp">Afficher le mot de passe</string>
@@ -222,9 +222,9 @@
     <!-- *********************signalerbug.xml *****************************-->
 
     <string name="signalerbug_prbconnexion">"Problème de connexion"</string>
-    <string name="signalerbug_texteinfo">"Vous rencontrer un problème de connexion ? Indiquez votre adresse de connexion et précisez votre problème."</string>
+    <string name="signalerbug_texteinfo">"Vous rencontrez un problème de connexion ? Indiquez votre adresse email et décrivez votre problème."</string>
     <string name="signalerbug_hintmail">"Adresse email"</string>
-    <string name="signalerbug_hintchamplibre">"Décrivez votr problème (250 caractères max)"</string>
+    <string name="signalerbug_hintchamplibre">"Décrivez votre problème (250 caractères max)"</string>
     <string name="signalerbug_buttonvalider">"Valider"</string>
 
     <!-- *********************s_proposeactivite.xml *****************************-->
@@ -392,8 +392,8 @@
     <string name="SupprimeNotification_No">"Annuler"</string>
 
     <!-- DemandeMail -->
-    <string name="DemandeMail_Titre">"Saisir l'e-mail"</string>
-    <string name="DemandeMail_Message">"Saisissez votre e-mail"</string>
+    <string name="DemandeMail_Titre">"Saisir l'email"</string>
+    <string name="DemandeMail_Message">"Saisissez votre email"</string>
     <string name="DemandeMail_OK">"Réinitialiser"</string>
     <string name="DemandeMail_No">"Annuler"</string>
 
@@ -507,19 +507,20 @@
     <!--Toast dialog-->
 
     <string name="activiteSupprimee">"L'activité a été supprimée"</string>
-    <string name="compteCree">"Le compte a été crée, un e-mail de confirmation vous a été envoyé"</string>
+    <string name="compteCree">"Le compte a été crée, un email de confirmation vous a été envoyé"</string>
     <string name="consigenMdp">"Le mot de passe doit contenir 6 caractères"</string>
-    <string name="mailExistDeja">"L'adresse e-mail existe déjà"</string>
-    <string name="mailObligatoire">"E-mail obligatoire"</string>
+    <string name="mdpDifferent">"Les mots de passe ne sont pas identiques"</string>
+    <string name="mailExistDeja">"L'adresse email existe déjà"</string>
+    <string name="mailObligatoire">"Email obligatoire"</string>
     <string name="mdpObligatoire">"Mot de passe obligatoire"</string>
-    <string name="mailNonConforme">"Adresse e-mail non conforme"</string>
+    <string name="mailNonConforme">"Adresse email non conforme"</string>
     <string name="prefrenceMisAjour">"Préférences sauvegardées"</string>
-    <string name="mailNonConfirme">"E-mail non confirmé"</string>
+    <string name="mailNonConfirme">"Email non confirmé"</string>
     <string name="prbSignale">"Votre demande sera traitée rapidement"</string>
     <string name="messageTropLong">"Votre message est trop long"</string>
     <string name="comptePasActive">"Votre compte n'est pas activé"</string>
-    <string name="renseignerMail">"Veuillez renseigner votre e-mail"</string>
-    <string name="validerLienMail">"Merci de valider le lien dans envoyé à votre adresse e-mail"</string>
+    <string name="renseignerMail">"Veuillez renseigner votre email"</string>
+    <string name="validerLienMail">"Merci de valider le lien dans envoyé à votre adresse email"</string>
     <string name="noCompteExist">"L'authentification a échouée. Mauvais mot de passe ou compte inexistant"</string>
     <string name="mdpIncorrect">"L'authentification a échouée. Mauvais mot de passe ou compte inexistant"</string>
 

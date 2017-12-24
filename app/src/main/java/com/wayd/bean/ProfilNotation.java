@@ -3,6 +3,8 @@ package com.wayd.bean;
 
 import android.graphics.Bitmap;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 
 public class ProfilNotation {
 
@@ -39,7 +41,7 @@ public class ProfilNotation {
     }
 
     public String getPseudo() {
-        return pseudo.replaceFirst(".", (pseudo.charAt(0) + "").toUpperCase());
+        return StringEscapeUtils.unescapeJava(pseudo.replaceFirst(".", (pseudo.charAt(0) + "").toUpperCase()));
     }
 
     public String getAgeStr() {

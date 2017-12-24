@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.application.wayd.R;
+import com.google.android.gms.internal.add;
 import com.wayd.bean.Activite;
 import com.wayd.bean.MessageServeur;
 import com.wayd.bean.Outils;
@@ -41,7 +42,7 @@ import java.util.List;
 
 public class DetailActivitePro extends MenuDrawerNew implements
         AsyncTaches.AsyncGetActiviteFull.Async_GetActiviteFullListener,
-         AsyncTaches.AsyncUpdateActivite.AsyncUpdateActiviteListener, ReceiverGCM.GCMMessageListener {
+         AsyncTaches.AsyncUpdateActivite.AsyncUpdateActiviteListener, ReceiverGCM.GCMMessageListener,AsyncTaches.AsyncAddInteret.Async_AddInteretListener {
 
     private int idactivite;
     private ImageView photop;
@@ -52,6 +53,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
     private Activite activiteSelectionne;
     private ImageView iconActivite;
     private ImageButton  IB_Map;
+    private Button B_Interet;
     public static final int ACTION_DETAIL_ACTIVITE = 1021;
     public final static int ACTION_MODIFIEE_ACTIVITE = 2;
     public final static String ACTION = "action";
@@ -75,7 +77,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
         TV_description = (TextView) findViewById(R.id.description);
         TV_Titre = (TextView) findViewById(R.id.titre);
         TV_Horaire = (TextView) findViewById(R.id.horaire);
-
+        B_Interet=(Button) findViewById(R.id.interet);
         TV_SignalerActivite = (TextView) findViewById(R.id.signaleractivite);
         IB_Map = (ImageButton) findViewById(R.id.map);
 
@@ -94,15 +96,31 @@ public class DetailActivitePro extends MenuDrawerNew implements
                 android.R.color.holo_green_light,
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
+
         new AsyncTaches.AsyncGetActiviteFull(this, idactivite, true, DetailActivitePro.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         Outils.LOOP_BACK_RECEIVER_GCM.addGCMMessageListener(this);
         TV_description.setMovementMethod(new ScrollingMovementMethod());
         getIntent().putExtra("refresh", false);
         setResult(1020, getIntent());
 
+        B_Interet.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View v) {
+
+                                             addInteret();
+
+                                         }
+                                     }
+        );
+
     }
 
+private void addInteret(){
 
+    new AsyncTaches.AsyncAddInteret
+            (this, Outils.personneConnectee.getId(),idactivite, 0,DetailActivitePro.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+}
 
     private void getActivite(boolean afficheProgress) {
         new AsyncTaches.AsyncGetActiviteFull(this, idactivite, afficheProgress, DetailActivitePro.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -130,10 +148,10 @@ public class DetailActivitePro extends MenuDrawerNew implements
             TV_Horaire.setText(activite.getHoraire());
             iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
             Log.d("DetailActivitePro.this","clik incon");
-            TV_pseudo.setOnClickListener(new View.OnClickListener() {
+            photop.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.d("DetailActivitePro.this","clik incon");
+                    Log.d("DetailActivitePro.this","click icon");
                     Intent appel = new Intent(DetailActivitePro.this, UnProfilPro.class);
                     appel.putExtra("idpersonne", activiteSelectionne.getIdorganisateur());
                     appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -252,5 +270,17 @@ public class DetailActivitePro extends MenuDrawerNew implements
 
         Outils.LOOP_BACK_RECEIVER_GCM.removeGCMMessageListener(this);
         super.onDestroy();
+    }
+
+    @Override
+    public void loopBack_AddInteret(MessageServeur messageserveur) {
+
+        if (messageserveur!=null){
+
+            Toast toast = Toast.makeText(DetailActivitePro.this,messageserveur.getMessage(), Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+
+        }
     }
 }

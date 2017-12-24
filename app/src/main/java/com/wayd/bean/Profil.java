@@ -3,6 +3,8 @@ package com.wayd.bean;
 
 import android.graphics.Bitmap;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 
 public class Profil {
     public static final int WAYDEUR =3;
@@ -77,7 +79,7 @@ public class Profil {
 	}
 
 	public String getPseudo() {
-		return pseudo.replaceFirst(".",(pseudo.charAt(0)+"").toUpperCase());
+		return StringEscapeUtils.unescapeJava(pseudo.replaceFirst(".",(pseudo.charAt(0)+"").toUpperCase()));
 	}
 
 	public  String getSexeStr()

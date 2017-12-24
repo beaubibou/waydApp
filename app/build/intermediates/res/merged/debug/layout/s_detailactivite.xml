@@ -42,7 +42,6 @@
                 android:layout_below="@+id/iconactivite"
                 android:layout_centerHorizontal="true" />
 
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -72,7 +71,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/pseudo"
                 android:textSize="@dimen/texte2"
+                android:textStyle="bold"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.SearchResult.Title"
+
                 />
 
             <TextView
@@ -180,7 +181,7 @@
                    >
 
                     <TextView
-                        tools:text="Titre"
+                        tools:text="titre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -280,6 +281,7 @@
 
                 <RelativeLayout
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
                     android:background="#FFF"
                     android:layout_width="match_parent"
                     android:id="@+id/rl_inscrits"

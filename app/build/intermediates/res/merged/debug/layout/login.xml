@@ -45,13 +45,13 @@
                         android:id="@+id/btn_google"
                         style="@style/AppBaseTheme"
                         android:layout_width="181dp"
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_margin="4dp"
                         android:background="#DD4B39"
-                        android:padding="10dp"
                         android:text="Connexion avec Google+"
                         android:textColor="#FFFFFF"
                         android:textSize="@dimen/texte1" />
+
                 </LinearLayout>
             </RelativeLayout>
 

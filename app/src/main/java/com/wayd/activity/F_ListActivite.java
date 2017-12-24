@@ -2,6 +2,8 @@ package com.wayd.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -50,15 +52,19 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
     private ListView listViewActivite;
     private SwipeRefreshLayout swipeContainer;
     FloatingActionButton Float_Plus;
+    boolean RECHERCHE3HEURES=true;
+
     public F_ListActivite() {
 
     }
-
     public static Fragment newInstance() {
 
         return new F_ListActivite();
     }
 
+    public void setRecherche3heures(boolean recherche3heures){
+        this.RECHERCHE3HEURES=recherche3heures;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,6 +73,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         adapter = new ActiviteAdapter(getContext(), ((RechercheActiviteNew) getActivity()).getListeActivite());
         listViewActivite = (ListView) rootView.findViewById(R.id.listeActivite);
         messageActivite = (TextView) rootView.findViewById(R.id.messageactivite);
+        messageActivite.setText("Click pour voir les activités dans les 3 Heures");
         listViewActivite.setAdapter(adapter);
         TV_MessageDefaut = (TextView) rootView.findViewById(R.id.id_messagebalise);
         IM_flechebas = (ImageView) rootView.findViewById(R.id.id_flechebas);
@@ -87,19 +94,38 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 android.R.color.holo_red_light);
 
          Float_Plus = (FloatingActionButton) rootView.findViewById(R.id.plus);
+
+
         Float_Plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().setCommenceDans(180);
-                ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_PLUS,F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
-                  messageActivite.setText(  ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans() );
+                if (RECHERCHE3HEURES) {
+                    ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().setCommenceDans(180);
+                    ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_PLUS, F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
+                 //   messageActivite.setText(((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans());
+                //    messageActivite.setText("Click pour voir les activités en cours");
+                    RECHERCHE3HEURES=!RECHERCHE3HEURES;
+                }
+
+                else
+                 {
+                     ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().setCommenceDans(0);
+                     ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_PLUS, F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
+                    // messageActivite.setText(((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans());
+               //      messageActivite.setText("Click pour voir les activités en cours");
+                     RECHERCHE3HEURES=!RECHERCHE3HEURES;
+
+                }
             }
         });
 
 
         return rootView;
     }
+
+
+
 
     public void updateListe() {
 
@@ -108,9 +134,25 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         gestionDefaultLMessage();
         swipeContainer.setRefreshing(false);
         Log.d("F_listActivie", " updatelie réussie");
-        messageActivite.setText(  ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans() );
-    }
 
+
+        if (RECHERCHE3HEURES) {
+              messageActivite.setText("Click pour voir les activités dans 3 heures");
+
+
+            Float_Plus.setImageResource(android.R.drawable.ic_media_ff);
+       }
+
+        else
+        {
+
+             messageActivite.setText("Click pour voir les activités en cours");
+            Float_Plus.setImageResource(android.R.drawable.ic_media_rew);
+        }
+
+
+      //  messageActivite.setText(  ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans() );
+    }
 
     private void gestionDefaultLMessage() {// Permet d'afficher un message si il n'y a pas de suggestion
 
@@ -256,7 +298,6 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         adapter.notifyDataSetChanged();
 
     }
-
     public void updateActivite(Activite resultActivite) {
 
         for (int f = 0; f < ((RechercheActiviteNew) getActivity()).getListeActivite().size(); f++) {
@@ -265,8 +306,6 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         }
         adapter.notifyDataSetChanged();
     }
-
-
 
 
 

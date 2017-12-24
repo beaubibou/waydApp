@@ -97,11 +97,10 @@ public class LoginWayde extends AppCompatActivity implements
             return;
         }
 
-
         setContentView(R.layout.login);
         intSignGoogle();
         mAuth = FirebaseAuth.getInstance();
-        mAuth.signOut();
+      //  mAuth.signOut();
         gestionAutorisation();// Demande l'autorisation du GPS
 
         // Si l'utilisateur change de status d authehtification

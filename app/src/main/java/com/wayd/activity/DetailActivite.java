@@ -126,6 +126,7 @@ public class DetailActivite extends MenuDrawerNew implements
         getIntent().putExtra("refresh", false);
         setResult(1020, getIntent());
 
+
     }
 
     private void ouvrePopUpModifier() {// Ouvre le popup pour la saisie du profil
@@ -519,6 +520,18 @@ public class DetailActivite extends MenuDrawerNew implements
             activiteSelectionne = activite;
             photop.setImageDrawable(Outils.getAvatarDrawable(getBaseContext(), activite.getPhoto()));
             TV_pseudo.setText(activite.getPseudoOrganisateur());
+
+            photop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d("DetailActivitePro.this","click icon");
+                    Intent appel = new Intent(DetailActivite.this, UnProfil.class);
+                    appel.putExtra("idpersonne", activiteSelectionne.getIdorganisateur());
+                    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(appel);
+
+                }
+            });
             TV_age.setText(activite.getAgeStr());
             TV_sexe.setText(activite.getSexeOrganisateur());
             TV_description.setText(convertLibelleActivite(activite.getLibelleUnicode()));

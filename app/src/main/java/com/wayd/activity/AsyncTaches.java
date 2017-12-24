@@ -177,12 +177,6 @@ public class AsyncTaches {
                     tentative++;
 
                     Log.d("AsyncGetListActivite", "Tentative" + tentative.toString());
-                 //   if (isfiltre)
-              //         return new Wservice().getListActiviteAvenir(latitude, longitude, rayon, idtypeactivite, motcle, commencedans);
-               //    else
-                  //      return new Wservice().getListActiviteAvenirNocritere(latitude, longitude, rayon, motcle, commencedans);
-//
-
 
                     return new Wservice().getActivites(latitude,
                            longitude,  rayon,  idtypeactivite,
@@ -4765,5 +4759,95 @@ public class AsyncTaches {
 
     }
 
+
+    public static class AsyncAddInteret extends AsyncTask<String, String, MessageServeur> {
+        private final int idpersonne;
+        private final int typeInteret;
+        Integer tentative = 0;
+        ProgressDialog mProgressDialog;
+        boolean exeption = false;
+        final Async_AddInteretListener ecouteur;
+        final int idactivite;
+
+        final Context mcontext;
+
+        public AsyncAddInteret(Async_AddInteretListener ecouteur, int idpersonne,int idactivite,int typeInteret, Context mcontext) {
+            super();
+            this.ecouteur = ecouteur;
+            this.idactivite=idactivite;
+            this.idpersonne=idpersonne;
+            this.typeInteret=typeInteret;
+            this.mcontext = mcontext;
+        }
+
+        interface Async_AddInteretListener {
+            void loopBack_AddInteret(MessageServeur messageserveur);
+        }
+
+
+        @Override
+        protected MessageServeur doInBackground(String... params) {
+
+            do {
+                try {
+                    exeption = false;
+                    tentative++;
+                     return (new Wservice().addInteret(idpersonne,idactivite,typeInteret));
+
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+
+                    exeption = true;
+
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
+
+            return null;
+
+        }
+
+        /**
+         * @see AsyncTask#onPostExecute(Object)
+         */
+        @Override
+        protected void onPostExecute(MessageServeur result) {
+
+            if (exeption) {
+                mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+
+            if (result != null)
+                ecouteur.loopBack_AddInteret(result);
+
+            else {
+
+                Toast toast = Toast.makeText(mcontext, "Pas de retour serveur", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
+            mProgressDialog.dismiss();
+
+        }
+
+        /**
+         * @see AsyncTask#onPreExecute()
+         */
+        @Override
+        protected void onPreExecute() {
+            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Ajoute ta participation...", true);
+            mProgressDialog.setCancelable(true);
+
+        }
+    }
 }
 
