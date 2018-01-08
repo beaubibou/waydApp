@@ -1,19 +1,19 @@
 [
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\suggestionpro.png",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxxhdpi\\suggestionpro.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_checked.png",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_checked.png"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_discuterpro.png",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_discuterpro.png"
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\suggestionpro.png",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxxhdpi\\suggestionpro.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_close.png",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_close.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_discuterpro.png",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_discuterpro.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_commentact.png",

@@ -237,10 +237,14 @@ public class Outils {
         float newheigh = photo.getHeight();
         float newwith = photo.getWidth();
         float ratio = (newwith / newheigh);
-        double finalwith = 120 * ratio;
-        double finalheigt = 120;
-        return Bitmap.createScaledBitmap(photo, (int) finalwith, (int) finalheigt, true);
+        if (newheigh>300) {
 
+            double finalwith = 200 * ratio;
+            double finalheigt = 200;
+            return Bitmap.createScaledBitmap(photo, (int) finalwith, (int) finalheigt, true);
+        }
+        else
+            return photo;
     }
 
     public static class TimePickerFragment extends DialogFragment
@@ -336,7 +340,7 @@ public class Outils {
     public static String encodeTobase64(Bitmap image) {
         if (image == null) return "";
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        image.compress(Bitmap.CompressFormat.JPEG, 90, baos);
+        image.compress(Bitmap.CompressFormat.JPEG, 100, baos);
         byte[] b = baos.toByteArray();
         return Base64.encodeToString(b, Base64.DEFAULT);
     }

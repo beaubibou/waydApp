@@ -6,68 +6,72 @@
     android:background="#FFFFFF"
     android:padding="10dp">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Professionel"
-            android:textSize="@dimen/texte3"
-            android:padding="@dimen/paddingTextview1"
+        android:layout_height="match_parent">
 
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Tel:"
-            android:id="@+id/telephone"
-            android:textSize="@dimen/texte3"
-            android:padding="@dimen/paddingTextview1"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Siret"
-            android:id="@+id/siret"
-            android:textSize="@dimen/texte3"
-            android:padding="@dimen/paddingTextview1"
-
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Adresse"
-            android:id="@+id/adresse"
-            android:textSize="@dimen/texte3"
-            android:padding="@dimen/paddingTextview1"
-            />
-
-        <TextView
-                android:layout_margin="15dp"
-                tools:text="Description profil"
+            <TextView
                 android:layout_width="match_parent"
-                android:id="@+id/descriptionprofil"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:layout_below="@+id/boutonaction"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:padding="@dimen/paddingTextview2"
-                android:textSize="@dimen/texte2"
-            android:layout_height="150dp"
-            android:background="@drawable/borduretextfondblanc"
-            android:scrollbars = "vertical"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/paddingTextview1"
+                android:text="Professionel"
+                android:textStyle="normal|bold"
+                android:textSize="@dimen/texte3"
+
                 />
 
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingTextview1"
+                android:textSize="@dimen/texte3"
+                tools:text="Tél:"
+
+                />
+
+            <TextView
+                android:id="@+id/siret"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingTextview1"
+                android:textSize="@dimen/texte3"
+                android:visibility="gone"
+                tools:text="Siret"
+
+                />
+
+            <TextView
+                android:id="@+id/adresse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/paddingTextview1"
+                android:textSize="@dimen/texte3"
+                tools:text="Adresse:" />
+
+            <TextView
+                android:id="@+id/descriptionprofil"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/boutonaction"
+                android:layout_margin="15dp"
+                android:background="@drawable/borduretextfondblanc"
+                android:padding="@dimen/paddingTextview2"
+                android:scrollbars="vertical"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textSize="@dimen/texte2"
+                tools:text="Description profil" />
+
+        </LinearLayout>
+    </ScrollView>
 
 
-    </LinearLayout>
+</LinearLayout>

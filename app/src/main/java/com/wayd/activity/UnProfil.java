@@ -30,8 +30,10 @@ public class UnProfil extends MenuDrawerNew implements AsyncTaches.AsyncGetProfi
     private TextView TV_sexe;
     private Profil profilSelectionne;
     private RatingBar ratingBar;
-    private final static int ONGLET_DETAIL = 0, ONGLET_AVIS = 1, ONGLET_STAT = 2;
+    public final static int ONGLET_DETAIL = 0, ONGLET_AVIS = 1, ONGLET_STAT = 2;
+    TabLayout tabLayout;
 
+    int ongletOuverture=ONGLET_DETAIL;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,12 +41,15 @@ public class UnProfil extends MenuDrawerNew implements AsyncTaches.AsyncGetProfi
         InitDrawarToolBar();
         initTableauDeBord();
         int idpersonne = getIntent().getIntExtra("idpersonne", 0);
+        ongletOuverture=  getIntent().getIntExtra("page", 0);
         photop = (ImageView) findViewById(R.id.iconactivite);
         TV_pseudo = (TextView) findViewById(R.id.pseudo);
         TV_age = (TextView) findViewById(R.id.age);
         TV_sexe = (TextView) findViewById(R.id.sexe);
         ratingBar = (RatingBar) findViewById(R.id.noteprofil);
         new AsyncTaches.AsyncGetProfilFull(this, idpersonne, UnProfil.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+
     }
 
     private void initPage(Profil profil, ArrayList<Avis> listAvis) {
@@ -62,7 +67,7 @@ public class UnProfil extends MenuDrawerNew implements AsyncTaches.AsyncGetProfi
      */
         ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         //      tabLayout.getTabAt(ONGLET_DETAIL).setIcon(getBaseContext().getResources().getDrawable(R.mipmap.ic_useract));
         //     tabLayout.getTabAt(ONGLET_AVIS).setIcon(getBaseContext().getResources().getDrawable(R.mipmap.ic_commentact));
@@ -71,7 +76,7 @@ public class UnProfil extends MenuDrawerNew implements AsyncTaches.AsyncGetProfi
         tabLayout.getTabAt(ONGLET_DETAIL).setIcon(ContextCompat.getDrawable(this, R.mipmap.ic_useract));
         tabLayout.getTabAt(ONGLET_AVIS).setIcon(ContextCompat.getDrawable(this, R.mipmap.ic_commentact));
         tabLayout.getTabAt(ONGLET_STAT).setIcon(ContextCompat.getDrawable(this, R.mipmap.ic_statact));
-
+        tabLayout.getTabAt(ongletOuverture).select();
 
     }
 

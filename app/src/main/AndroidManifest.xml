@@ -50,9 +50,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
         />
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
 
         <activity
             android:name="com.wayd.activity.Map_ListeActivity"
@@ -212,9 +209,11 @@
      Set custom default icon. This is used when no icon is set for incoming notification messages.
      See README(https://goo.gl/l4GJaQ) for more.
         -->
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/ic_notification_wayd" />
+            android:resource="@drawable/ic_notifcation2" />
+
         <!--
              Set color used with incoming notification messages. This is used when no color is set for the incoming
              notification message. See README(https://goo.gl/6BKBk7) for more.
@@ -234,6 +233,10 @@
             android:name="com.wayd.activity.TestLayout"
             android:label="@string/title_activity_test_layout"
             android:theme="@style/AppBaseTheme"></activity>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
 
 
 

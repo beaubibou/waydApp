@@ -20,9 +20,8 @@ import com.wayd.bean.Outils;
 
 public class SignalerProfilPro extends MenuNoDrawer implements AsyncTaches.AsyncSignalProfil.Async_SignalProfilListener {
 
-    private int idpersonne, idmotif;
-    private String motif;
-
+    private int idpersonne, idmotif=SignalerProfil.COMMENTAIRE;
+    private EditText ET_Motif;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +31,33 @@ public class SignalerProfilPro extends MenuNoDrawer implements AsyncTaches.Async
         initTableauDeBord();
         idpersonne = getIntent().getIntExtra("idpersonne", 0);
         String pseudo = getIntent().getStringExtra("pseudo");
-
-
+        final Button B_Valider = (Button) findViewById(R.id.validersuggestion);
+        ET_Motif = (EditText) findViewById(R.id.motif);
+        B_Valider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              if  (validator())
+                 dialogConfirmation();
+            }
+        });
 
     }
+
+    private boolean validator() {
+
+
+        if (ET_Motif==null || ET_Motif.getText().toString().trim().isEmpty()) {
+
+            Toast toast = Toast.makeText(getBaseContext(), R.string.SignalerActivite_ErreurRaisonVide, Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+            return false;
+
+        }
+
+    return true;
+    }
+
     private void dialogConfirmation() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(SignalerProfilPro.this);
@@ -76,62 +98,11 @@ public class SignalerProfilPro extends MenuNoDrawer implements AsyncTaches.Async
 
     }
 
-    private void dialogRaison() {// Ouvre le popup pour la saisie du profil
-
-        // Récupere le layour et le champ profil dans le layout modifie profil
-        LayoutInflater factory = LayoutInflater.from(SignalerProfilPro.this);
-        View alertDialogView = factory.inflate(R.layout.pop_signaleractivite, null);
-        final EditText ET_Commentaires = (EditText) alertDialogView.findViewById(R.id.commentaire);
-        //**************************************
-        AlertDialog.Builder adb = new AlertDialog.Builder(this);
-        adb.setView(alertDialogView);
-        adb.setTitle(R.string.SignalProfilMotif_Titre);
-        adb.setIcon(android.R.drawable.ic_dialog_alert);
-        adb.setPositiveButton(R.string.SignalProfilMotif_OK, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-
-                motif=ET_Commentaires.getText().toString().trim();
-                if (motif.isEmpty()) {
-                    Toast toast = Toast.makeText(getBaseContext(), R.string.SignalerActivite_ErreurRaisonVide, Toast.LENGTH_LONG);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
-                    toast.show();
-                    return;
-                }
-               else{
-                    dialogConfirmation();
-                }
-
-            }
-        });
-
-        //On crée un bouton "Annuler" à notre AlertDialog et on lui affecte un évènement
-        adb.setNegativeButton(R.string.SignalProfilMotif_No, new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                //Lorsque;*jhfjhgflgkjkghlkjhkjh l'onchfgh cliquera sur annujhgjhgler on quittera l'application
-
-            }
-        });
-        AlertDialog alertDialog = adb.create();
-        alertDialog.show();
-        Button buttonNon = alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
-        buttonNon.setBackgroundColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Fondbutton));
-        buttonNon.setTextColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Textbutton));
-        Button buttonOui = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
-        buttonOui.setBackgroundColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Fondbutton));
-        buttonOui.setTextColor(ContextCompat.getColor(getBaseContext(),R.color.altertDialog_Textbutton));
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-        );
-        params.setMargins(15, 0, 15, 0);
-        buttonOui.setLayoutParams(params);
-
-
-    }
 
     private void signalerProfil() {
 
-        new AsyncTaches.AsyncSignalProfil(this, Outils.personneConnectee.getId(), idpersonne, idmotif, motif, SignalerProfilPro.this)
+        new AsyncTaches.AsyncSignalProfil(this, Outils.personneConnectee.getId(), idpersonne,
+                idmotif, ET_Motif.getText().toString().trim(), SignalerProfilPro.this)
                 .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
     }

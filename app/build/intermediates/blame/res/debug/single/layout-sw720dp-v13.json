@@ -10,5 +10,9 @@
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw720dp-v13\\item_mesactivite.xml",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout-sw720dp\\item_mesactivite.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw720dp-v13\\login.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout-sw720dp\\login.xml"
     }
 ]

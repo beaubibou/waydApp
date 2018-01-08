@@ -6,8 +6,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_activity_liste_avis_activity">ListeAvis_activity</string>
     <string name="title_activity_maps">Map</string>
-    <string name="facebook_app_id">123403101550569</string>
-
+    <string name="facebook_app_id">493837340997322</string>
+    <string name="fb_login_protocol_scheme">fb493837340997322</string>
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
@@ -61,7 +61,7 @@
 
     <!-- ********************* donneavis.xml *****************************-->
 
-    <string name="donneavis_commentpassee">Comment ça s\'est passée ?</string>
+    <string name="donneavis_commentpassee">Comment ça s\'est passé ?</string>
     <string name="donneavis_hint_consigne">Avis (120 caractères maximum) </string>
     <string name="donneavis_button_valider">Valider</string>
     <string name="donneavis_switchAmi">Ajoutez à votre sphère</string>
@@ -279,7 +279,7 @@
     <!-- F_listActivite -->
 
     <!-- par le code -->
-    <string name="F_listActivite_noResutat">"Aucune activité n'est disponible. Modifie tes critères ou propose une activité."</string>
+    <string name="F_listActivite_noResutat">"Aucune activité n'est disponible. Modifiez vos critères ou proposez une activité."</string>
     <string name="F_listActivite_noResutatBalise">"Aucune activité n'est disponible. Vous pouvez activer la balise pour proposer une activité."</string>
 
     <!-- F_MesActivitesEnCours -->
@@ -483,6 +483,12 @@
     <string name="ConfirmeParticipation_OK">"Oui"</string>
     <string name="ConfirmeParticipation_No">"Annuler"</string>
 
+    <!-- SupprimeSonCompte -->
+    <string name="supprimeCompte_Titre">"Suppression de votre compte"</string>
+    <string name="supprimeCompte_Message">"Cette action est irréversible ?"</string>
+    <string name="supprimeCompte_OK">"Supprimer"</string>
+    <string name="supprimeCompte__No">"Annuler"</string>
+
     <!-- AnnuleSonActivite -->
     <string name="AnnuleSonActivite_Titre">"Annulation"</string>
     <string name="AnnuleSonActivite_Message">"Voulez vous annuler votre activité ?"</string>
@@ -497,8 +503,8 @@
 
     <!--F_notification-->
 
-    <string name="descriptionNotification">"Permet de recevoir les notifications..."</string>
-    <string name="messageSwintchNotification">"Recevoir les notifications"</string>
+    <string name="descriptionNotification">"Permet de recevoir les notifications. "</string>
+    <string name="messageSwintchNotification">"Recevoir les suggestions"</string>
 
     <!-- InfoPremiereConnexion -->
     <string name="InfoPremiereConnexion_Titre">"Information"</string>
@@ -581,6 +587,8 @@
     <string name="title_activity_apropos">Apropos</string>
     <string name="title_activity_cgu">Cgu</string>
     <string name="updateNotificationPref">"La diffusion des notifications est mis à jour"</string>
+    <string name="messageCompteSupprime">"Votre compte a été supprimé"</string>
+
     <string name="title_activity_test">test</string>
     <string name="title_activity_test_layout">TestLayout</string>
 

@@ -8,6 +8,10 @@
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout-sw720dp\\item_amis.xml"
     },
     {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout-sw720dp-v13\\login.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout-sw720dp\\login.xml"
+    },
+    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\layout-sw720dp-v13\\item_activite.xml",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout-sw720dp\\item_activite.xml"
     }

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.application.wayd.R;
@@ -36,7 +37,6 @@ public class F_DetailProfil extends Fragment {
         int sexe = getArguments().getInt(ARG_SECTION_SEXE);
 
         TextView TV_description = (TextView) rootView.findViewById(R.id.descriptionprofil);
-        Log.d("unprofil",descriptionProfil);
 
 
 

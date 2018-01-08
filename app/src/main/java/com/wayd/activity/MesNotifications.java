@@ -209,6 +209,7 @@ public class MesNotifications extends MenuDrawerNew implements AsyncTaches.Async
         appel = new Intent(MesNotifications.this,
                 UnProfil.class);
         appel.putExtra("idpersonne", Outils.personneConnectee.getId());
+        appel.putExtra("page",UnProfil.ONGLET_AVIS);
         appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(appel);
 

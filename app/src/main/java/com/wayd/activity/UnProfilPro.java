@@ -26,11 +26,8 @@ import java.util.ArrayList;
 public class UnProfilPro extends MenuDrawerNew implements AsyncTaches.AsyncGetProfilPro.Async_GetProfilProListener {
 
     private ImageView photop;
-    private TextView TV_age;
-    private TextView TV_pseudo;
-    private TextView TV_sexe;
+     private TextView TV_pseudo;
     private ProfilPro profilSelectionne;
-    private RatingBar ratingBar;
     private final static int ONGLET_DETAIL = 0, ONGLET_AVIS = 1, ONGLET_STAT = 2;
 
     @Override
@@ -112,6 +109,7 @@ public class UnProfilPro extends MenuDrawerNew implements AsyncTaches.AsyncGetPr
 
 
         });
+
         //*********************
         initPage(profil);
     }

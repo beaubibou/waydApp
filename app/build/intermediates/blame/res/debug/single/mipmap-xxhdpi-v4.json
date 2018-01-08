@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\information.png",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxhdpi\\information.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_envelloppenok.png",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_envelloppenok.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\information.png",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-xxhdpi\\information.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_expositionrnd.png",

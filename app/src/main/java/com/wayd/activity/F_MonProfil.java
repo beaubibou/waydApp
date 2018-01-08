@@ -47,6 +47,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.wayd.bean.MessageServeur;
 import com.wayd.bean.Outils;
 
+
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -71,7 +73,6 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
     private boolean afficheage;
     private View alertDialogView;
     private View rootView = null;
-
     public F_MonProfil() {
     }
 
@@ -364,6 +365,7 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
                 image_stream = getActivity().getContentResolver().openInputStream(selectedImageUri);
                 Bitmap tmpphoto = BitmapFactory.decodeStream(image_stream);
                 photo = Outils.redimendiensionnePhoto(tmpphoto);
+                photo=compressImage(photo);
                 IM_photo.setImageBitmap(photo);
 
             } catch (FileNotFoundException e) {
@@ -375,8 +377,19 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             photo = Outils.redimendiensionnePhoto(imageBitmap);
+            photo=compressImage(photo);
             IM_photo.setImageBitmap(photo);
+
         }
+
+    }
+
+    public Bitmap compressImage(Bitmap image){
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        image.compress(Bitmap.CompressFormat.JPEG,80,stream);
+        byte[] byteArray = stream.toByteArray();
+        Bitmap compressedBitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
+        return compressedBitmap;
 
     }
 

@@ -53,7 +53,7 @@
 
                 android:layout_marginRight="@dimen/marge2"
                 android:layout_marginLeft="@dimen/marge2"
-                android:id="@+id/listesouci"
+                android:id="@+id/motif"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/marge1"

@@ -1,7 +1,7 @@
-#Sun Dec 24 06:46:03 CET 2017
-base.0=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+#Sun Jan 07 14:57:35 CET 2018
+base.0=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\29
+path.1=classes2.dex
 renamed.1=classes2.dex
+path.0=classes.dex
 renamed.0=classes.dex
-file.1=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10\\classes2.dex
-base.1=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
-file.0=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10\\classes.dex
+base.1=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\29

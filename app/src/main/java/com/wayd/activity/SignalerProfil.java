@@ -22,7 +22,7 @@ public class SignalerProfil extends MenuNoDrawer implements AsyncTaches.AsyncSig
 
     private int idpersonne, idmotif;
     private String motif;
-
+    public  final static int HARCELEMENT=0,INSULTANT=1,ENTREPRISE=2,COMMENTAIRE=3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class SignalerProfil extends MenuNoDrawer implements AsyncTaches.AsyncSig
         TV_Harcele.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 idmotif = 0;
+                 idmotif = HARCELEMENT;
                 dialogConfirmation();
             }
         });
@@ -51,7 +51,7 @@ public class SignalerProfil extends MenuNoDrawer implements AsyncTaches.AsyncSig
         TV_Insultant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 idmotif = 1;
+                 idmotif = INSULTANT;
                 dialogConfirmation();
             }
         });
@@ -60,7 +60,7 @@ public class SignalerProfil extends MenuNoDrawer implements AsyncTaches.AsyncSig
         TV_Entreprise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 idmotif = 2;
+                 idmotif = ENTREPRISE;
                 dialogConfirmation();
             }
         });
@@ -69,7 +69,7 @@ public class SignalerProfil extends MenuNoDrawer implements AsyncTaches.AsyncSig
         TV_Autre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 idmotif = 3;
+                 idmotif = COMMENTAIRE;
                 dialogRaison();
             }
         });

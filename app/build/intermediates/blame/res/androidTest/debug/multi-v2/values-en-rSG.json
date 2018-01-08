@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-en-rSG\\values-en-rSG.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\5d2d0764fd7921e36879e173b78e42e5\\res\\values-en-rSG\\values.xml",
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\58fec8dda8edfc51e6e7de8c9cfa3801\\res\\values-en-rSG\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -26,7 +26,7 @@
             "outputFile": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en-rSG\\values-en-rSG.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\5d2d0764fd7921e36879e173b78e42e5\\res\\values-en-rSG\\values.xml",
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\58fec8dda8edfc51e6e7de8c9cfa3801\\res\\values-en-rSG\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

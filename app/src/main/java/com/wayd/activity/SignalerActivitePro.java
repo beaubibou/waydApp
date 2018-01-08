@@ -39,59 +39,58 @@ public class SignalerActivitePro extends MenuNoDrawer implements AsyncTaches.Asy
         titreActivite = getIntent().getStringExtra("titreActivite");
         libelleActivite = getIntent().getStringExtra("libelleActivite");
 
-     //   TextView TV_Suspecte = (TextView) findViewById(R.id.suspecte);
-      //  TextView TV_Dangereuse = (TextView) findViewById(R.id.dangereuse);
-      //  TextView TV_Illicite = (TextView) findViewById(R.id.illicite);
-      //  TextView TV_Gratuite_Payante = (TextView) findViewById(R.id.gratuite_payante);
-      //  TextView TV_Autres = (TextView) findViewById(R.id.autres);
-       // TextView TV_Titre = (TextView) findViewById(R.id.titreactivite);
-     //   TV_Titre.setText(getString(R.string.SignalerActivite_description) + titreActivite);
+        TextView TV_Suspecte = (TextView) findViewById(R.id.suspecte);
+       TextView TV_Dangereuse = (TextView) findViewById(R.id.dangereuse);
+        TextView TV_Illicite = (TextView) findViewById(R.id.illicite);
+        TextView TV_Gratuite_Payante = (TextView) findViewById(R.id.gratuite_payante);
+        TextView TV_Autres = (TextView) findViewById(R.id.autres);
+       TextView TV_Titre = (TextView) findViewById(R.id.titreactivite);
+       TV_Titre.setText(getString(R.string.SignalerActivite_description) + titreActivite);
+           TV_Suspecte.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+                idmotif = SUSPECTE;
 
-    //    TV_Suspecte.setOnClickListener(new View.OnClickListener() {
-     //       @Override
-     //       public void onClick(View v) {
-      //          idmotif = SUSPECTE;
-
-      //          dialogConfirmation();
-     //       }
-    //    });
-
-
-    //    TV_Dangereuse.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View v) {
-     //           idmotif = DANGEREUSE;
-    //            dialogConfirmation();
-    //        }
-      //  });
+                dialogConfirmation();
+            }
+       });
 
 
-    //    TV_Illicite.setOnClickListener(new View.OnClickListener() {
-      //      @Override
-     //       public void onClick(View v) {
-    //            idmotif = ILLICITE;
-    //            dialogConfirmation();
-    //        }
-    //    });
+       TV_Dangereuse.setOnClickListener(new View.OnClickListener() {
+          @Override
+            public void onClick(View v) {
+               idmotif = DANGEREUSE;
+              dialogConfirmation();
+           }
+        });
 
 
-    //    TV_Gratuite_Payante.setOnClickListener(new View.OnClickListener() {
-    //        @Override
-    //        public void onClick(View v) {
-    //            idmotif = GRATUITE_PAYANTE;
-    //            dialogConfirmation();
-    //        }
-    //    });
+       TV_Illicite.setOnClickListener(new View.OnClickListener() {
+            @Override
+           public void onClick(View v) {
+                idmotif = ILLICITE;
+                dialogConfirmation();
+            }
+        });
 
 
-    //    TV_Autres.setOnClickListener(new View.OnClickListener() {
-     //       @Override
-      //      public void onClick(View v) {
-      //          idmotif = AUTRES;
-     //           dialogRaison();
+        TV_Gratuite_Payante.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idmotif = GRATUITE_PAYANTE;
+                dialogConfirmation();
+           }
+       });
 
-    //        }
-      //  });
+
+        TV_Autres.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idmotif = AUTRES;
+                dialogRaison();
+
+            }
+        });
 
 //
     }

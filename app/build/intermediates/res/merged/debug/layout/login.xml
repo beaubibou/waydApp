@@ -30,22 +30,22 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="10dp"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     >
                     <com.facebook.login.widget.LoginButton
-                        android:id="@+id/login_button"
-                        android:layout_width="30dp"
+                        android:id="@+id/fb_button"
+                        android:layout_width="181dp"
                         android:layout_height="30dp"
-                          android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:scaleType="centerCrop"
-                        android:visibility="gone"/>
+                         android:scaleType="centerCrop"
+                        android:layout_margin="4dp"
+                        android:visibility="visible"
+                        android:textSize="@dimen/texte1"/>
 
                     <Button
                         android:id="@+id/btn_google"
                         style="@style/AppBaseTheme"
                         android:layout_width="181dp"
-                        android:layout_height="30dp"
+                        android:layout_height="25dp"
                         android:layout_margin="4dp"
                         android:background="#DD4B39"
                         android:text="Connexion avec Google+"

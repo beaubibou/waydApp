@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_sportpro.png",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_sportpro.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_sportrnd.png",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_sportrnd.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_sportpro.png",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_sportpro.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_entraide.png",
@@ -20,16 +20,16 @@
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_checkcouleur.png"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_envelloppenok.png",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_envelloppenok.png"
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_notificati.png",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_notificati.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_statact.png",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_statact.png"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_notificati.png",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_notificati.png"
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_envelloppenok.png",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\mipmap-mdpi\\ic_envelloppenok.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\mipmap-mdpi-v4\\ic_expopro.png",

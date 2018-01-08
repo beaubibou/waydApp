@@ -31,9 +31,11 @@ import com.wayd.bean.Activite;
 import com.wayd.bean.MessageServeur;
 import com.wayd.bean.Outils;
 import com.wayd.bean.Participant;
+import com.wayd.bean.PhotoActivite;
 import com.wayd.bean.PushAndroidMessage;
 import com.wayd.bean.ReceiverGCM;
 import com.wayd.listadapter.ParticipantAdapter;
+import com.wayd.listadapter.PhotoActiviteAdapter;
 
 import org.lucasr.twowayview.TwoWayView;
 
@@ -42,7 +44,7 @@ import java.util.List;
 
 public class DetailActivitePro extends MenuDrawerNew implements
         AsyncTaches.AsyncGetActiviteFull.Async_GetActiviteFullListener,
-         AsyncTaches.AsyncUpdateActivite.AsyncUpdateActiviteListener, ReceiverGCM.GCMMessageListener,AsyncTaches.AsyncAddInteret.Async_AddInteretListener {
+        AsyncTaches.AsyncUpdateActivite.AsyncUpdateActiviteListener, ReceiverGCM.GCMMessageListener, AsyncTaches.AsyncAddInteret.Async_AddInteretListener, AsyncTaches.AsyncGetListPhotoActivite.Async_GetListPhotoActiviteListener {
 
     private int idactivite;
     private ImageView photop;
@@ -52,12 +54,14 @@ public class DetailActivitePro extends MenuDrawerNew implements
     private TextView TV_Horaire, TV_SignalerActivite;
     private Activite activiteSelectionne;
     private ImageView iconActivite;
-    private ImageButton  IB_Map;
+    private ImageButton IB_Map;
     private Button B_Interet;
     public static final int ACTION_DETAIL_ACTIVITE = 1021;
     public final static int ACTION_MODIFIEE_ACTIVITE = 2;
     public final static String ACTION = "action";
     private SwipeRefreshLayout swipeContainer;
+    TwoWayView LV_PhotoActivite ;
+    private PhotoActiviteAdapter photoActiviteAdapter;
 
 
     @Override
@@ -77,7 +81,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
         TV_description = (TextView) findViewById(R.id.description);
         TV_Titre = (TextView) findViewById(R.id.titre);
         TV_Horaire = (TextView) findViewById(R.id.horaire);
-        B_Interet=(Button) findViewById(R.id.interet);
+        B_Interet = (Button) findViewById(R.id.interet);
         TV_SignalerActivite = (TextView) findViewById(R.id.signaleractivite);
         IB_Map = (ImageButton) findViewById(R.id.map);
 
@@ -103,6 +107,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
         getIntent().putExtra("refresh", false);
         setResult(1020, getIntent());
 
+
         B_Interet.setOnClickListener(new View.OnClickListener() {
                                          @Override
                                          public void onClick(View v) {
@@ -113,14 +118,16 @@ public class DetailActivitePro extends MenuDrawerNew implements
                                      }
         );
 
+        LV_PhotoActivite = (TwoWayView) findViewById(R.id.photoactivite);
+
     }
 
-private void addInteret(){
+    private void addInteret() {
 
-    new AsyncTaches.AsyncAddInteret
-            (this, Outils.personneConnectee.getId(),idactivite, 0,DetailActivitePro.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        new AsyncTaches.AsyncAddInteret
+                (this, Outils.personneConnectee.getId(), idactivite, 0, DetailActivitePro.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
-}
+    }
 
     private void getActivite(boolean afficheProgress) {
         new AsyncTaches.AsyncGetActiviteFull(this, idactivite, afficheProgress, DetailActivitePro.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -140,18 +147,19 @@ private void addInteret(){
         } else
 
         {
+            B_Interet.setEnabled(!activite.isInteret());
             activiteSelectionne = activite;
             photop.setImageDrawable(Outils.getAvatarDrawable(getBaseContext(), activite.getPhoto()));
             TV_pseudo.setText(activite.getPseudoOrganisateur());
             TV_description.setText(convertLibelleActivite(activite.getLibelleUnicode()));
             TV_Titre.setText(activite.getTitreUnicode());
             TV_Horaire.setText(activite.getHoraire());
-            iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
-            Log.d("DetailActivitePro.this","clik incon");
+            iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(), activite.getTypeUser()));
+            Log.d("DetailActivitePro.this", "clik incon");
             photop.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.d("DetailActivitePro.this","click icon");
+                    Log.d("DetailActivitePro.this", "click icon");
                     Intent appel = new Intent(DetailActivitePro.this, UnProfilPro.class);
                     appel.putExtra("idpersonne", activiteSelectionne.getIdorganisateur());
                     appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -160,6 +168,19 @@ private void addInteret(){
                 }
             });
 
+
+            TV_pseudo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("DetailActivitePro.this", "click icon");
+                Intent appel = new Intent(DetailActivitePro.this, UnProfilPro.class);
+                appel.putExtra("idpersonne", activiteSelectionne.getIdorganisateur());
+                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivity(appel);
+
+            }
+        });
+
             IB_Map.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -167,13 +188,15 @@ private void addInteret(){
                     appel = new Intent(DetailActivitePro.this, Map_MontreActivite.class);
                     appel.putExtra("latitude", activite.getLatitude());
                     appel.putExtra("longitude", activite.getLongitude());
-                    appel.putExtra("typeActivite",activite.getIdTypeActite());
-                    appel.putExtra("typeUser",activite.getTypeUser());
+                    appel.putExtra("typeActivite", activite.getIdTypeActite());
+                    appel.putExtra("typeUser", activite.getTypeUser());
 
                     appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                     startActivity(appel);
                 }
             });
+
+
 
             if (Outils.personneConnectee.getId() == activite.getIdorganisateur())
                 TV_SignalerActivite.setVisibility(View.INVISIBLE);
@@ -187,14 +210,15 @@ private void addInteret(){
                 }
             });
 
+            new AsyncTaches.AsyncGetListPhotoActivite(this, idactivite,DetailActivitePro.this, false).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
         }
 
     }
 
-    public String convertLibelleActivite (String libelle){
+    public String convertLibelleActivite(String libelle) {
 
-        if (libelle==null ||libelle.length()==0)
+        if (libelle == null || libelle.length() == 0)
 
             return (getString(R.string.s_detail_pas_detail_activite));
 
@@ -202,14 +226,13 @@ private void addInteret(){
     }
 
     private void signaleActivite() {
-        Intent appel = new Intent(DetailActivitePro.this, SignalerActivite.class);
+        Intent appel = new Intent(DetailActivitePro.this, SignalerActivitePro.class);
         appel.putExtra("idactivite", activiteSelectionne.getId());
         appel.putExtra("titreActivite", activiteSelectionne.getTitre());
         appel.putExtra("libelleActivite", activiteSelectionne.getLibelle());
         appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(appel);
     }
-
 
 
     @Override
@@ -220,6 +243,7 @@ private void addInteret(){
 
                 TV_Titre.setText(titre);
                 TV_description.setText(convertLibelleActivite(libelle));
+
                 Toast toast = Toast.makeText(DetailActivitePro.this, messageserveur.getMessage(), Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
@@ -232,7 +256,6 @@ private void addInteret(){
 
 
         }
-
 
     }
 
@@ -275,12 +298,21 @@ private void addInteret(){
     @Override
     public void loopBack_AddInteret(MessageServeur messageserveur) {
 
-        if (messageserveur!=null){
-
-            Toast toast = Toast.makeText(DetailActivitePro.this,messageserveur.getMessage(), Toast.LENGTH_LONG);
+        if (messageserveur != null) {
+            B_Interet.setEnabled(false);
+            Toast toast = Toast.makeText(DetailActivitePro.this, messageserveur.getMessage(), Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
 
         }
+    }
+
+    @Override
+    public void loopBack_GetListPhotoActivite(ArrayList<PhotoActivite> listPhoto) {
+        // Appellé aprés le chargement de l'activité pour ne pas figer l'ecran
+
+        photoActiviteAdapter=new PhotoActiviteAdapter(getBaseContext(),listPhoto);
+        LV_PhotoActivite.setAdapter(photoActiviteAdapter);
+        photoActiviteAdapter.notifyDataSetChanged();
     }
 }

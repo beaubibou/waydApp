@@ -4,42 +4,6 @@
             "outputFile": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.3.1.aar\\dc702783b6c734e6bfa12a2ac2ede9f8\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,124",
-                        "endColumns": "68,68",
-                        "endOffsets": "119,188"
-                    },
-                    "to": {
-                        "startLines": "26,27",
-                        "startColumns": "4,4",
-                        "startOffsets": "1527,1596",
-                        "endColumns": "68,68",
-                        "endOffsets": "1591,1660"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\e7476d53a11ec98e80a42eca69edc4a4\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,115,185,256,328,386,444,550,614,677",
-                        "endLines": "2,3,4,5,6,7,8,9,10,14",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "110,180,251,323,381,439,545,609,672,854"
-                    },
-                    "to": {
-                        "startLines": "13,14,15,16,17,18,19,20,40,92",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "774,834,904,975,1047,1105,1163,1269,2173,4134",
-                        "endLines": "13,14,15,16,17,18,19,20,40,95",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "829,899,970,1042,1100,1158,1264,1328,2231,4311"
-                    }
-                },
-                {
                     "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw600dp\\dimens.xml",
                     "from": {
                         "startLines": "7,8,10,9,24,23,22,21,27,29,19,31,30,17,16,15,14,13,12,11",
@@ -57,13 +21,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\5e010cbf53a2871ac086c88d1e305734\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ff610619be359be182212d1b97b3623e\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,550,614,677",
+                        "endLines": "2,3,4,5,6,7,8,9,10,14",
+                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
+                        "endOffsets": "110,180,251,323,381,439,545,609,672,854"
+                    },
+                    "to": {
+                        "startLines": "13,14,15,16,17,18,19,20,40,92",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "774,834,904,975,1047,1105,1163,1269,2173,4134",
+                        "endLines": "13,14,15,16,17,18,19,20,40,95",
+                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
+                        "endOffsets": "829,899,970,1042,1100,1158,1264,1328,2231,4311"
                     }
                 },
                 {
@@ -83,6 +56,33 @@
                         "endLines": "64,68,72,81,88,91",
                         "endColumns": "12,12,12,12,12,12",
                         "endOffsets": "3091,3206,3394,3757,4027,4129"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\c4352a01be69489c22b991627d605dbc\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.3.1.aar\\2338bfc5ce06858d349adf5893a7522c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,124",
+                        "endColumns": "68,68",
+                        "endOffsets": "119,188"
+                    },
+                    "to": {
+                        "startLines": "26,27",
+                        "startColumns": "4,4",
+                        "startOffsets": "1527,1596",
+                        "endColumns": "68,68",
+                        "endOffsets": "1591,1660"
                     }
                 }
             ]
@@ -91,42 +91,6 @@
             "outputFile": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw600dp-v13\\values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.3.1.aar\\dc702783b6c734e6bfa12a2ac2ede9f8\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,124",
-                        "endColumns": "68,68",
-                        "endOffsets": "119,188"
-                    },
-                    "to": {
-                        "startLines": "26,27",
-                        "startColumns": "4,4",
-                        "startOffsets": "1527,1596",
-                        "endColumns": "68,68",
-                        "endOffsets": "1591,1660"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\e7476d53a11ec98e80a42eca69edc4a4\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,115,185,256,328,386,444,550,614,677",
-                        "endLines": "2,3,4,5,6,7,8,9,10,14",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "110,180,251,323,381,439,545,609,672,854"
-                    },
-                    "to": {
-                        "startLines": "13,14,15,16,17,18,19,20,40,92",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "774,834,904,975,1047,1105,1163,1269,2173,4134",
-                        "endLines": "13,14,15,16,17,18,19,20,40,95",
-                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
-                        "endOffsets": "829,899,970,1042,1100,1158,1264,1328,2231,4311"
-                    }
-                },
-                {
                     "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\values-sw600dp\\dimens.xml",
                     "from": {
                         "startLines": "7,8,10,9,24,23,22,21,27,29,19,31,30,17,16,15,14,13,12,11",
@@ -144,13 +108,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\5e010cbf53a2871ac086c88d1e305734\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\design-25.3.1.aar\\ff610619be359be182212d1b97b3623e\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,124,193,263,337,413,472,543",
-                        "endColumns": "68,68,69,73,75,58,70,67",
-                        "endOffsets": "119,188,258,332,408,467,538,606"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,115,185,256,328,386,444,550,614,677",
+                        "endLines": "2,3,4,5,6,7,8,9,10,14",
+                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
+                        "endOffsets": "110,180,251,323,381,439,545,609,672,854"
+                    },
+                    "to": {
+                        "startLines": "13,14,15,16,17,18,19,20,40,92",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "774,834,904,975,1047,1105,1163,1269,2173,4134",
+                        "endLines": "13,14,15,16,17,18,19,20,40,95",
+                        "endColumns": "59,69,70,71,57,57,105,63,62,12",
+                        "endOffsets": "829,899,970,1042,1100,1158,1264,1328,2231,4311"
                     }
                 },
                 {
@@ -170,6 +143,33 @@
                         "endLines": "64,68,72,81,88,91",
                         "endColumns": "12,12,12,12,12,12",
                         "endOffsets": "3091,3206,3394,3757,4027,4129"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.1.aar\\c4352a01be69489c22b991627d605dbc\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,124,193,263,337,413,472,543",
+                        "endColumns": "68,68,69,73,75,58,70,67",
+                        "endOffsets": "119,188,258,332,408,467,538,606"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.3.1.aar\\2338bfc5ce06858d349adf5893a7522c\\res\\values-sw600dp-v13\\values-sw600dp-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,124",
+                        "endColumns": "68,68",
+                        "endOffsets": "119,188"
+                    },
+                    "to": {
+                        "startLines": "26,27",
+                        "startColumns": "4,4",
+                        "startOffsets": "1527,1596",
+                        "endColumns": "68,68",
+                        "endOffsets": "1591,1660"
                     }
                 }
             ]

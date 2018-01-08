@@ -23,19 +23,23 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.application.wayd.R;
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
 import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -46,6 +50,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
@@ -53,9 +58,6 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.wayd.bean.GPSTracker;
-import com.wayd.bean.Gcm;
 import com.wayd.bean.Outils;
 import com.wayd.bean.Personne;
 import com.wayd.bean.Profil;
@@ -71,6 +73,7 @@ public class LoginWayde extends AppCompatActivity implements
 
         GoogleApiClient.OnConnectionFailedListener, AsyncTaches.AsyncConnexionWayd.AsyncConnexionWaydListener {
 
+    private static final String TAG ="retour facebook" ;
     private EditText TV_login;
     private EditText TV_mdp;
     private String mail;
@@ -80,11 +83,13 @@ public class LoginWayde extends AppCompatActivity implements
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mProgressDialogFb;
     private static final int RC_SIGN_IN = 9001;
+    private static final int RETOUR_ACTIVITE_FB=64206;
     private GoogleApiClient mGoogleApiClient;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static final String[] PERMISSIONS_STORAGE = {
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    private CallbackManager mCallbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +105,7 @@ public class LoginWayde extends AppCompatActivity implements
         setContentView(R.layout.login);
         intSignGoogle();
         mAuth = FirebaseAuth.getInstance();
-      //  mAuth.signOut();
+        //  mAuth.signOut();
         gestionAutorisation();// Demande l'autorisation du GPS
 
         // Si l'utilisateur change de status d authehtification
@@ -109,62 +114,117 @@ public class LoginWayde extends AppCompatActivity implements
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                Log.d("LoginWayde","Changegment de l etat d'authentication de l'utilisateur") ;
+                Log.d("LoginWayde", "Changegment de l etat d'authentication de l'utilisateur");
 
                 if (user == null) {
-                  Log.d("LoginWayde","Deconnexion de l'user") ;
+                    Log.d("LoginWayde", "Deconnexion de l'user");
 
                     if (threadTdb != null) {
                         threadTdb.arret();
                         threadTdb.cancel(true);
                         Outils.connected = false;
-                     //   LoginManager.getInstance().logOut();
+                        //   LoginManager.getInstance().logOut();
 
                     }
                 }
                 // ...
             }
-        }   ;
+        };
 
+        TV_login = (EditText)findViewById(R.id.ET_login);
+        TV_mdp = (EditText)findViewById(R.id.ET_pwd);
 
         initBouttonConnexionWayd();
         initBouttonNouveCompte();
-
-        TV_login = (EditText)
-
-                findViewById(R.id.ET_login);
-
-        TV_mdp = (EditText)
-
-                findViewById(R.id.ET_pwd);
-
-     initBouttonConnexGoogle();
-
-
-      initCk_Mdp();
-
-      initMdpOublie();
-
-     testResau();
-    initTextView_Apropos();
-    initTextView_ProblemeConnexion();
-
+        initBouttonConnexGoogle();
+        initCk_Mdp();
+        initMdpOublie();
+        testResau();
+        initTextView_Apropos();
+        initTextView_ProblemeConnexion();
+        initFaceBookLogin();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        connexion( currentUser);
+        connexion(currentUser);
 
         //   ConnexionByUser();
 
     }
 
+    private void initFaceBookLogin() {
+        mCallbackManager = CallbackManager.Factory.create();
+        LoginButton loginButton = (LoginButton) findViewById(R.id.fb_button);
+        loginButton.setReadPermissions("email", "public_profile");
+        loginButton.registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+                Log.d(TAG, "facebook:onSuccess:" + loginResult);
+                firebaseAuthWithFaceBook(loginResult.getAccessToken());
+            }
+
+            @Override
+            public void onCancel() {
+                Log.d(TAG, "facebook:onCancel");
+                // ...
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+                Log.d(TAG, "facebook:onError", error);
+                // ...
+            }
+        });
+
+
+    }
+    private void firebaseAuthWithFaceBook(AccessToken token) {
+
+        mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification facebook", "Connexion...", true);
+
+        AuthCredential credential = FacebookAuthProvider.getCredential(token.getToken());
+        mAuth.signInWithCredential(credential)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            connexion(user);
+                        }
+                        if (!task.isSuccessful()) {
+
+                            if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+                            mAuth.signOut();
+                            System.out.println(task.getException());
+                            try {
+                                throw task.getException();
+                            } catch (Exception e) {
+
+                                if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
+                                Toast toast = Toast.makeText(getBaseContext(), e.getMessage(), Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.CENTER, 0, 0);
+                                toast.show();
+
+                            }
+
+
+                        }
+
+                        // ...
+                    }
+                });
+    }
+
+
     // Une fois l'utilisateur récupere on récupere le jeton
     private void connexion(final FirebaseUser currentUser) {
 
-        if (currentUser==null)return;
+        if (currentUser == null) return;
         if (Outils.isConnect())
-        Log.i("LoginWayd","methode connexion");
+            Log.i("LoginWayd", "methode connexion");
 
 
-        currentUser.getToken(true)
+        currentUser.getIdToken(true)
 
                 .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
                     public void onComplete(@NonNull Task<GetTokenResult> task) {
@@ -172,7 +232,7 @@ public class LoginWayde extends AppCompatActivity implements
 
                             Outils.jeton = task.getResult().getToken();
                             Outils.connected = true;
-                            Log.i("LoginWayd","********************methode connexion isSuccessful"+currentUser.getEmail());
+                            Log.i("LoginWayd", "********************methode connexion isSuccessful" + currentUser.getEmail());
 
                             connexionWayd();
                             return;
@@ -182,7 +242,9 @@ public class LoginWayde extends AppCompatActivity implements
                             try {
                                 throw task.getException();
                             } catch (Exception e) {
-                                Toast toast = Toast.makeText(getBaseContext(),e.getMessage(), Toast.LENGTH_SHORT);
+
+
+                                Toast toast = Toast.makeText(getBaseContext(), e.getMessage(), Toast.LENGTH_SHORT);
                                 toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.show();
                             }
@@ -193,7 +255,6 @@ public class LoginWayde extends AppCompatActivity implements
                 });
 
     }
-
 
 
     private void initTextView_Apropos() {
@@ -412,8 +473,6 @@ public class LoginWayde extends AppCompatActivity implements
                 .build();
 
 
-
-
         mGoogleApiClient = new GoogleApiClient.Builder(this)
 
                 .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
@@ -448,16 +507,22 @@ public class LoginWayde extends AppCompatActivity implements
                 return;
             }
 
-        }
+
+    }
+
+        if (requestCode == RETOUR_ACTIVITE_FB)
+        mCallbackManager.onActivityResult(requestCode, resultCode, data);
+
 
         if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
-
 
 
     }
 
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
 
+        //dcx facebook
+        LoginManager.getInstance().logOut();
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
         mAuth.signInWithCredential(credential)
@@ -473,22 +538,22 @@ public class LoginWayde extends AppCompatActivity implements
                         if (!task.isSuccessful()) {
                             if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
                             mAuth.signOut();
-                            System.out.println( task.getException());
+                            System.out.println(task.getException());
                             try {
                                 throw task.getException();
                             } catch (Exception e) {
 
-                                Toast toast = Toast.makeText(getBaseContext(),e.getMessage(), Toast.LENGTH_SHORT);
+                                Toast toast = Toast.makeText(getBaseContext(), e.getMessage(), Toast.LENGTH_SHORT);
                                 toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.show();
                             }
 
 
                         }
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
 
                             if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
-                            Log.d("LoginWayde","Firebase  user google récupéreré");
+                            Log.d("LoginWayde", "Firebase  user google récupéreré");
                             FirebaseUser user = mAuth.getCurrentUser();
                             connexion(user);
 
@@ -521,7 +586,7 @@ public class LoginWayde extends AppCompatActivity implements
             ActivityCompat.requestPermissions(LoginWayde.this, PERMISSIONS_STORAGE, REQUEST_EXTERNAL_STORAGE);
         }
 
-         permission = ActivityCompat.checkSelfPermission(LoginWayde.this, Manifest.permission.ACCESS_NETWORK_STATE);
+        permission = ActivityCompat.checkSelfPermission(LoginWayde.this, Manifest.permission.ACCESS_NETWORK_STATE);
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
             // We don't have permission so prompt the user
@@ -542,7 +607,7 @@ public class LoginWayde extends AppCompatActivity implements
 
         if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
 
-        if (!isVersionUpdate())return;
+        if (!isVersionUpdate()) return;
 
         if (personne == null) {
 
@@ -556,13 +621,13 @@ public class LoginWayde extends AppCompatActivity implements
             if (personne.getId() != 0) {
 
                 if (mAuth.getCurrentUser().getDisplayName() != null)
-                personne.setNom(mAuth.getCurrentUser().getDisplayName());
+                    personne.setNom(mAuth.getCurrentUser().getDisplayName());
                 personne.setEmail(mAuth.getCurrentUser().getEmail());
-                              Outils.personneConnectee = new Personne(personne);
-                Log.d("***debug","************personne connetecé");
-              // Gere le cas d'un utilisateur professionnel
+                Outils.personneConnectee = new Personne(personne);
+                Log.d("***debug", "************personne connetecé");
+                // Gere le cas d'un utilisateur professionnel
 
-                if (personne.getTypeUser()== Profil.PRO){
+                if (personne.getTypeUser() == Profil.PRO) {
                     FirebaseAuth mAuth = FirebaseAuth.getInstance();
                     mAuth.signOut();
                     Outils.connected = false;
@@ -573,7 +638,6 @@ public class LoginWayde extends AppCompatActivity implements
                 }
 
 
-
                 if (personne.isPremiereconnexion()) {
                     ouvreTutoriel();
                 } else {
@@ -582,14 +646,14 @@ public class LoginWayde extends AppCompatActivity implements
                 }
 
 
-             //   new Gcm(personne.getId(), getBaseContext()).updatePersonneGcm();// à l'occasion refait l'identification
+                //   new Gcm(personne.getId(), getBaseContext()).updatePersonneGcm();// à l'occasion refait l'identification
                 threadTdb = (LoginWayde.WS_TableauBord) new WS_TableauBord().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
 
             } else // Si l'id de la personne =0;
             {
 
-                Toast toast = Toast.makeText(getBaseContext(), "Echec authentification  " , Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(getBaseContext(), "Echec authentification  ", Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
                 Outils.connected = false;
@@ -629,7 +693,7 @@ public class LoginWayde extends AppCompatActivity implements
 
     private void ouvreMainWayd() {
 
-        Toast toast = Toast.makeText(getBaseContext(), getString(R.string.messageBienvenue)+ Outils.personneConnectee.getPseudo(), Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getBaseContext(), getString(R.string.messageBienvenue) + Outils.personneConnectee.getPseudo(), Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
 
@@ -647,9 +711,9 @@ public class LoginWayde extends AppCompatActivity implements
     }
 
     // Compare la version dispobile sur le serveur et la version de application
-    public boolean isVersionUpdate(){
+    public boolean isVersionUpdate() {
 
-        if (Outils.getVersionApk(getBaseContext()).isAjour( Outils.DERNIERE_VERSION_WAYD))
+        if (Outils.getVersionApk(getBaseContext()).isAjour(Outils.DERNIERE_VERSION_WAYD))
             return true;
 
         AlertDialog.Builder builder;
@@ -680,7 +744,7 @@ public class LoginWayde extends AppCompatActivity implements
 
 
     private void connexionWayd() {
-        Log.i("LoginWayd","methode connexionWayd");
+        Log.i("LoginWayd", "methode connexionWayd");
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Connexion Wayd ", "Connexion...", true);
         new AsyncTaches.AsyncConnexionWayd(this, Outils.jeton, LoginWayde.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
@@ -708,13 +772,15 @@ public class LoginWayde extends AppCompatActivity implements
         }
 
 
-        firebaseAuthWithPwd(email,password);
+        firebaseAuthWithPwd(email, password);
 
     }
 
-    private void firebaseAuthWithPwd(String email,String password) {
+    private void firebaseAuthWithPwd(String email, String password) {
 
-        Log.i("LoginWayd","methode firebaseAuthWithPwd");
+        Log.i("LoginWayd", "methode firebaseAuthWithPwd");
+        //dcx facebook
+        LoginManager.getInstance().logOut();
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification", "Connexion...", true);
 
         mAuth.signInWithEmailAndPassword(email, password)
@@ -739,33 +805,32 @@ public class LoginWayde extends AppCompatActivity implements
                                 toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.show();
 
-                            } catch (Exception e) {
+                            }
+                            catch (Exception e) {
 
                             }
 
                         }
-                        if (task.isSuccessful()){
+                        if (task.isSuccessful()) {
 
                             mProgressDialogFb.dismiss();
-                            Log.i("LoginWayd","methode firebaseAuthWithPwd isSuccessful");
+                            Log.i("LoginWayd", "methode firebaseAuthWithPwd isSuccessful");
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             if (user.isEmailVerified())
-                            connexion(user);
+                                connexion(user);
 
-                            else
-                            {   Toast toast = Toast.makeText(LoginWayde.this, R.string.comptePasActive, Toast.LENGTH_LONG);
+                            else {
+                                Toast toast = Toast.makeText(LoginWayde.this, R.string.comptePasActive, Toast.LENGTH_LONG);
                                 toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.show();
                                 mAuth.signOut();
                             }
 
                         }
-
                         // ...
                     }
                 });
-
 
     }
 
@@ -775,8 +840,6 @@ public class LoginWayde extends AppCompatActivity implements
         mAuth.addAuthStateListener(mAuthListener);
 
     }
-
-
 
 
     @Override
@@ -799,15 +862,15 @@ public class LoginWayde extends AppCompatActivity implements
 
                     try {
                         tdb = new Wservice().getTableauBord(Outils.personneConnectee.getId());
-                        new Wservice().updateNotification(Outils.personneConnectee.getId(),Outils.jeton);
+                        new Wservice().updateNotification(Outils.personneConnectee.getId(), Outils.jeton);
                         publishProgress(50);
                         Thread.sleep(1000 * 30);
 
-                        Log.d("Loginwayde","Lance tdb automatique");
+                        Log.d("Loginwayde", "Lance tdb automatique");
                     } catch (IOException | InterruptedException | XmlPullParserException e) {
 
 
-            }
+                    }
 
             }        //     publishProgress(10);
             //     Thread.sleep(60000);
@@ -881,7 +944,7 @@ public class LoginWayde extends AppCompatActivity implements
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        return (networkInfo != null && networkInfo.isConnected() &&networkInfo.isAvailable());
+        return (networkInfo != null && networkInfo.isConnected() && networkInfo.isAvailable());
 
 
     }
@@ -891,8 +954,7 @@ public class LoginWayde extends AppCompatActivity implements
         super.onResume();
 
 
-        if (Outils.isConnect())
-        {
+        if (Outils.isConnect()) {
 
 
             Intent appel = new Intent(LoginWayde.this,

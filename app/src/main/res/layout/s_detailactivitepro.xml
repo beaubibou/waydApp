@@ -197,7 +197,6 @@
                     <TextView
 
                         android:padding="10dp"
-
                         tools:text="Description "
                         android:layout_width="match_parent"
                         android:id="@+id/description"
@@ -208,7 +207,6 @@
                         android:layout_height="150dp"
                         android:scrollbars = "vertical"
                         android:textSize="@dimen/texte2"
-
                         android:background="@drawable/borduretextfondblanc"
                         />
                 </RelativeLayout>
@@ -223,26 +221,16 @@
                     android:visibility="invisible"
                     android:textAlignment="textEnd" />
 
-                <RelativeLayout
-                    android:layout_marginTop="5dp"
-                    android:background="#FFF"
-                    android:layout_width="match_parent"
-                    android:id="@+id/rl_inscrits"
-
-                    android:layout_height="match_parent">
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
+                    <org.lucasr.twowayview.TwoWayView
+                        style="@style/TwoWayView"
+                        android:id="@+id/photoactivite"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:weightSum="2"
-                        android:id="@+id/LL_participants"
-                        android:background="@drawable/borduretextfondblanc">
+
+                        />
 
 
 
-                    </LinearLayout>
-
-                </RelativeLayout>
             </LinearLayout>
         </ScrollView>
         </android.support.v4.widget.SwipeRefreshLayout>

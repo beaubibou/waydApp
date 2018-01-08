@@ -52,7 +52,7 @@ public class Activite
     private  int sexe;
 
     private String ageStr;
-
+    private boolean interet;
     private  int nbrparticipant;
 
     private  long finidans;
@@ -80,7 +80,7 @@ public class Activite
     public Activite(int id, String titre, String libelle, int idorganisateur, Date datedebut, Date datefin,
                     double latitude, double longitude, String adresse, String nomorganisateur, String pseudoorganisateur,
                     String photostr, double note, boolean dejainscrit, boolean organisateur, boolean archive, int totalavis,
-                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans, int idTypeActite,int typeUser,int typeAcces)
+                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans, int idTypeActite,int typeUser,int typeAcces,boolean interet)
     {
         super();
 
@@ -114,6 +114,15 @@ public class Activite
         this.idTypeActite=idTypeActite;
         this.typeUser=typeUser;
         this.typeAcces=typeAcces;
+        this.interet=interet;
+    }
+
+    public boolean isInteret() {
+        return interet;
+    }
+
+    public void setInteret(boolean interet) {
+        this.interet = interet;
     }
 
     public int getNbmaxwaydeur() {

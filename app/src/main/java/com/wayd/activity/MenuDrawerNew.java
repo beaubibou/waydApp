@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.application.wayd.R;
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.wayd.bean.Outils;
 import com.wayd.bean.Personne;
@@ -374,6 +375,7 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
                         Outils.connected = false;
                         Outils.personneConnectee.Raz();
                         Outils.tableaudebord.Raz();
+                        LoginManager.getInstance().logOut();
 
 
                         //  updateIhm();

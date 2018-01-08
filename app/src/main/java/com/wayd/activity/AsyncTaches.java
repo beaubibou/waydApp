@@ -25,6 +25,7 @@ import com.wayd.bean.Notification;
 import com.wayd.bean.Outils;
 import com.wayd.bean.Participant;
 import com.wayd.bean.Personne;
+import com.wayd.bean.PhotoActivite;
 import com.wayd.bean.Preference;
 import com.wayd.bean.Profil;
 import com.wayd.bean.PhotoWaydeur;
@@ -110,11 +111,8 @@ public class AsyncTaches {
             }
 
 
-                ecouteur.loopBack_getListAmis(result);
-
-
-
-            mProgressDialog.dismiss();
+           ecouteur.loopBack_getListAmis(result);
+           mProgressDialog.dismiss();
 
 
         }
@@ -653,7 +651,7 @@ public class AsyncTaches {
          */
         @Override
         protected void onPreExecute() {
-            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Ajoute ta participation...", true);
+            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Ajoute votre participation...", true);
             mProgressDialog.setCancelable(true);
 
         }
@@ -3196,8 +3194,8 @@ public class AsyncTaches {
                         personneWs = new Wservice().getPersonne(Outils.jeton, photostr, mAuth.getCurrentUser().getDisplayName(), gcmToken);//
                        Log.d("couc","coucou*******************  "+personneWs.getPseudo());
                         if (personneWs != null) {
-                            Outils.listtypeactivitecomplete.addAll(new Wservice().getListTypeActivite());
-                            Outils.DERNIERE_VERSION_WAYD = new Wservice().getVersion();
+                            Outils.listtypeactivitecomplete.addAll(new Wservice().getListTypeActivite(personneWs.getId()));
+                            Outils.DERNIERE_VERSION_WAYD = new Wservice().getVersion(personneWs.getId());
                             Log.d("Version version", "***************************************************" + Outils.DERNIERE_VERSION_WAYD.getVersion());
                             Log.d("Version version", "" + Outils.DERNIERE_VERSION_WAYD.getMajeur());
                             Log.d("Version version", "" + Outils.DERNIERE_VERSION_WAYD.getMineur());
@@ -4844,10 +4842,193 @@ public class AsyncTaches {
          */
         @Override
         protected void onPreExecute() {
-            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Ajoute ta participation...", true);
+            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Ajoute votre participation...", true);
             mProgressDialog.setCancelable(true);
 
         }
     }
+
+    public static class AsyncGetListPhotoActivite extends AsyncTask<String, Integer, ArrayList<PhotoActivite>> {
+        Integer tentative = 0;
+        ProgressDialog mProgressDialog;
+        String messageretour;
+        boolean exeption = false;
+        final Async_GetListPhotoActiviteListener ecouteur;
+        final int idactivite;
+        final Context mcontext;
+        final boolean afficeProgress;
+
+        public AsyncGetListPhotoActivite(Async_GetListPhotoActiviteListener ecouteur, int idactivite, Context mcontext, boolean afficheProgress) {
+            super();
+            this.ecouteur = ecouteur;
+            this.idactivite = idactivite;
+            this.mcontext = mcontext;
+            this.afficeProgress = afficheProgress;
+
+        }
+
+        @Override
+
+        protected ArrayList<PhotoActivite> doInBackground(String... params) {
+
+            do {
+                try {
+                    exeption = false;
+                    tentative++;
+                    return (new Wservice().getListPhotoActivite(idactivite));
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    messageretour = "Echec connexion serveur ";
+                    exeption = true;
+                    publishProgress(tentative);
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
+
+            return null;
+
+
+        }
+
+        // Permet d'afficher dans la  progress bar pour voir le nbr de tentativte de connexion
+        // en mode debug seulement. n'est implémenté que sur cette tache pour le modéle
+        protected void onProgressUpdate(Integer... values) {
+            if (mProgressDialog != null) {
+
+                //  mProgressDialog.setTitle(values[0].toString());
+
+            }
+
+        }
+
+        /**
+         * @see AsyncTask#onPostExecute(Object)
+         */
+        @Override
+        protected void onPostExecute(ArrayList<PhotoActivite> result) {
+
+            if (exeption) {
+                if (afficeProgress) mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+            ecouteur.loopBack_GetListPhotoActivite(result);
+            if (afficeProgress) mProgressDialog.dismiss();
+        }
+
+        /**
+         * @see AsyncTask#onPreExecute()
+         */
+        @Override
+        protected void onPreExecute() {
+            //Affiche progress permet de mettre pas pas la barre d'attente
+            if (afficeProgress) {
+                mProgressDialog = ProgressDialog.
+                        show(mcontext, "Patientez ...", "Chargement des discussions...", true);
+                mProgressDialog.setCancelable(false);
+            }
+
+        }
+
+
+        interface Async_GetListPhotoActiviteListener {
+            void loopBack_GetListPhotoActivite(ArrayList<PhotoActivite> listPhoto);
+        }
+
+
+    }
+
+    public static class AsyncSupprimeCompte extends AsyncTask<String, String, MessageServeur> {
+        Integer tentative = 0;
+        ProgressDialog mProgressDialog;
+        boolean exeption = false;
+        final Async_SupprimeCompteListener ecouteur;
+
+
+        final Context mcontext;
+
+        public AsyncSupprimeCompte(Async_SupprimeCompteListener ecouteur,  Context mcontext) {
+            super();
+            this.ecouteur = ecouteur;
+            this.mcontext = mcontext;
+        }
+
+        interface Async_SupprimeCompteListener {
+            void loopBack_SupprimeCompte(MessageServeur messageserveur);
+        }
+
+
+        @Override
+        protected MessageServeur doInBackground(String... params) {
+
+            do {
+                try {
+                    exeption = false;
+                    tentative++;
+                    return (new Wservice().SupprimeCompte());
+
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+
+                    exeption = true;
+
+                } catch (XmlPullParserException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    exeption = true;
+
+                }
+            } while (tentative < nbMaxTentative && exeption == true);
+
+            return null;
+
+        }
+
+        /**
+         * @see AsyncTask#onPostExecute(Object)
+         */
+        @Override
+        protected void onPostExecute(MessageServeur result) {
+
+            if (exeption) {
+                mProgressDialog.dismiss();
+                Toast toast = Toast.makeText(mcontext, MESSAGE_ECHEC_IO + tentative, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                return;
+            }
+
+            if (result != null)
+                ecouteur.loopBack_SupprimeCompte(result);
+
+            else {
+
+                Toast toast = Toast.makeText(mcontext, "Pas de retour serveur", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
+            mProgressDialog.dismiss();
+
+        }
+
+        /**
+         * @see AsyncTask#onPreExecute()
+         */
+        @Override
+        protected void onPreExecute() {
+            mProgressDialog = ProgressDialog.show(mcontext, "Patientez ...", "Suppression du compte...", true);
+            mProgressDialog.setCancelable(true);
+
+        }
+    }
+
 }
 

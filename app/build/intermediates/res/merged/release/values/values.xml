@@ -1077,7 +1077,7 @@
     <string name="DescriptionProfil_OK">"Valider"</string>
     <string name="DescriptionProfil_Titre">"Renseignez votre profil"</string>
     <string name="F_MesActivitesEnCours_noResutat">"Vous n'avez pas d'activité en cours."</string>
-    <string name="F_listActivite_noResutat">"Aucune activité n'est disponible. Modifie tes critères ou propose une activité."</string>
+    <string name="F_listActivite_noResutat">"Aucune activité n'est disponible. Modifiez vos critères ou proposez une activité."</string>
     <string name="F_listActivite_noResutatBalise">"Aucune activité n'est disponible. Vous pouvez activer la balise pour proposer une activité."</string>
     <string name="GpsInfo_Message">"Votre GPS n'est pas actif. Voulez vous l'activer dans les paramètres ?"</string>
     <string name="GpsInfo_No">"Annuler"</string>
@@ -1281,9 +1281,9 @@
     <string name="creationActivite">"Création de votre activité"</string>
     <string name="dateNaissanceObligatoire">"Date de naissance obligatoire"</string>
     <string name="default_web_client_id" translatable="false">902442853604-9b05k6gnfjdum44fo21q2rpbfedn9n7a.apps.googleusercontent.com</string>
-    <string name="descriptionNotification">"Permet de recevoir les notifications..."</string>
+    <string name="descriptionNotification">"Permet de recevoir les notifications. "</string>
     <string name="donneavis_button_valider">Valider</string>
-    <string name="donneavis_commentpassee">Comment ça s\'est passée ?</string>
+    <string name="donneavis_commentpassee">Comment ça s\'est passé ?</string>
     <string name="donneavis_hint_consigne">Avis (120 caractères maximum) </string>
     <string name="donneavis_switchAmi">Ajoutez à votre sphère</string>
     <string name="echecAuth"> "L'authentification a échoué"</string>
@@ -1305,7 +1305,8 @@
     <string name="f_stats_commentaires">Commentaires</string>
     <string name="f_stats_participation">Participation</string>
     <string name="f_stats_participations">Participations</string>
-    <string name="facebook_app_id">123403101550569</string>
+    <string name="facebook_app_id">493837340997322</string>
+    <string name="fb_login_protocol_scheme">fb493837340997322</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="firebase_database_url" translatable="false">https://wayd-c0414.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">902442853604</string>
@@ -1357,7 +1358,8 @@
     <string name="menu_list_pardistance">Distance</string>
     <string name="menu_list_partemps">Temps restant</string>
     <string name="messageBienvenue">"Bienvenue "</string>
-    <string name="messageSwintchNotification">"Recevoir les notifications"</string>
+    <string name="messageCompteSupprime">"Votre compte a été supprimé"</string>
+    <string name="messageSwintchNotification">"Recevoir les suggestions"</string>
     <string name="messageTropLong">"Votre message est trop long"</string>
     <string name="messenger_send_button_text">Send</string>
     <string name="mr_button_content_description">Cast button</string>
@@ -1495,6 +1497,10 @@
     <string name="suppression_activiteadminNo">"Annuler"</string>
     <string name="suppression_activiteadminOK">"Oui"</string>
     <string name="suppression_activiteadminTitre">"Suppression de l'activite en mode ADMIN"</string>
+    <string name="supprimeCompte_Message">"Cette action est irréversible ?"</string>
+    <string name="supprimeCompte_OK">"Supprimer"</string>
+    <string name="supprimeCompte_Titre">"Suppression de votre compte"</string>
+    <string name="supprimeCompte__No">"Annuler"</string>
     <string name="tagmanager_preview_dialog_button">Continue</string>
     <string name="tagmanager_preview_dialog_message">Preview mode updated.</string>
     <string name="tagmanager_preview_dialog_title">Preview</string>

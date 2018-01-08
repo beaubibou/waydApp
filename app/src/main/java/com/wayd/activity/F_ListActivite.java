@@ -73,7 +73,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         adapter = new ActiviteAdapter(getContext(), ((RechercheActiviteNew) getActivity()).getListeActivite());
         listViewActivite = (ListView) rootView.findViewById(R.id.listeActivite);
         messageActivite = (TextView) rootView.findViewById(R.id.messageactivite);
-        messageActivite.setText("Click pour voir les activités dans les 3 Heures");
+        messageActivite.setText("Afficher les activités dans 3 heures");
         listViewActivite.setAdapter(adapter);
         TV_MessageDefaut = (TextView) rootView.findViewById(R.id.id_messagebalise);
         IM_flechebas = (ImageView) rootView.findViewById(R.id.id_flechebas);
@@ -137,7 +137,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
 
 
         if (RECHERCHE3HEURES) {
-              messageActivite.setText("Click pour voir les activités dans 3 heures");
+              messageActivite.setText("Afficher les activités dans 3 heures");
 
 
             Float_Plus.setImageResource(android.R.drawable.ic_media_ff);
@@ -146,7 +146,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         else
         {
 
-             messageActivite.setText("Click pour voir les activités en cours");
+             messageActivite.setText("Afficher les activités en cours");
             Float_Plus.setImageResource(android.R.drawable.ic_media_rew);
         }
 
