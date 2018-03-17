@@ -6,6 +6,7 @@ import java.util.List;
 import com.application.wayd.R;
 import com.wayd.bean.Activite;
 import com.wayd.bean.Outils;
+import com.wayd.bean.Profil;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -90,7 +91,11 @@ public class ActiviteAdapter extends BaseAdapter {
         photo.setImageDrawable(Outils.getAvatarDrawable(mContext, activite.getPhoto()));
         iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
 
+        if (activite.getTypeUser()== Profil.CARPEDIEM) {
+            ratingBar.setVisibility(View.INVISIBLE);
+titre.setText(activite.getLibelle());
 
+        }
         if (activite.isFromWaydeur()){
 
         if (activite.iscomplete()) {

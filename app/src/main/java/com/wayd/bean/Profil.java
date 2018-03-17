@@ -9,6 +9,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 public class Profil {
     public static final int WAYDEUR =3;
 	public static final int PRO =1;
+    public static final int CARPEDIEM =4;
     private  String commentaire;
 	private  int nbrami;
 	private  int nbrparticipation;

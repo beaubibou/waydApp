@@ -231,6 +231,13 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                     startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
                     break;
 
+                case Profil.CARPEDIEM:
+                    appel = new Intent(getActivity(), DetailActiviteCARPEDIEM.class);
+                    appel.putExtra("idactivite", activite.getId());
+                    appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                    break;
+
             }
 
 

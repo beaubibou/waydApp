@@ -123,6 +123,10 @@
 
 
         <activity
+            android:name="com.wayd.activity.DetailActiviteCARPEDIEM"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name="com.wayd.activity.MesNotifications"
             android:screenOrientation="portrait" />
         <activity

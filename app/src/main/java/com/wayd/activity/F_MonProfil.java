@@ -37,6 +37,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.application.wayd.R;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -57,7 +58,7 @@ import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 
-public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProfil.AsyncUpdateProfilListener {
+public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProfil.AsyncUpdateProfilListener, AsyncTaches.AsyncSupprimeCompte.Async_SupprimeCompteListener {
     private static final int SELECT_PICTURE = 1;
     private static final int REQUEST_IMAGE_CAPTURE = 2;
     private ImageView IM_photo;
@@ -110,6 +111,14 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
         ET_Pseudo = (TextView) rootView.findViewById(R.id.pseudo);
         ET_Pseudo.setText(Outils.personneConnectee.getPseudo());
         Button b_photo = (Button) rootView.findViewById(R.id.changephoto);
+        Button BT_SupprimerComtpe = (Button) rootView.findViewById(R.id.supprimercompte);
+
+        BT_SupprimerComtpe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogConfirmationSuppressionComte();
+            }
+        });
         b_photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,7 +172,43 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
+    private void dialogConfirmationSuppressionComte() {
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.supprimeCompte_Titre);
+        builder.setMessage(R.string.supprimeCompte_Message);
+        builder.setPositiveButton(R.string.supprimeCompte_OK, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+                supprimeCompte();
+            }
+        });
+        builder.setNegativeButton(R.string.supprimeCompte__No, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // do nothing
+            }
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+        Button buttonNon = alertDialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+        buttonNon.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.altertDialog_Fondbutton));
+        buttonNon.setTextColor(ContextCompat.getColor(getContext(), R.color.altertDialog_Textbutton));
+        Button buttonOui = alertDialog.getButton(DialogInterface.BUTTON_POSITIVE);
+        buttonOui.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.altertDialog_Fondbutton));
+        buttonOui.setTextColor(ContextCompat.getColor(getContext(), R.color.altertDialog_Textbutton));
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.setMargins(15, 0, 15, 0);
+        buttonOui.setLayoutParams(params);
+
+    }
+
+    private void supprimeCompte() {
+        new AsyncTaches.AsyncSupprimeCompte(this, getActivity()).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+    }
     private void initTvCommentaire() {
         TV_Commentaires = (TextView) rootView.findViewById(R.id.commentaires);
         TV_Commentaires.setText(Outils.personneConnectee.getCommentaire());
@@ -452,7 +497,6 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
             Toast toast = Toast.makeText(getActivity().getBaseContext(), R.string.mdpObigatoires, Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
-
             return;
         }
 
@@ -499,5 +543,27 @@ public class F_MonProfil extends Fragment implements AsyncTaches.AsyncUpdateProf
         });
     }
 
+    private void fermeApplication() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
+        Outils.connected = false;
+        Outils.personneConnectee.Raz();
+        Outils.tableaudebord.Raz();
+        LoginManager.getInstance().logOut();
+        getActivity().finish();
+        Outils.principal.finish();
+    }
 
+    @Override
+    public void loopBack_SupprimeCompte(MessageServeur messageserveur) {
+        if (messageserveur != null) {
+
+            if (messageserveur.isReponse()) {
+                Toast toast = Toast.makeText(getActivity().getBaseContext(), R.string.messageCompteSupprime, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                fermeApplication();
+            }
+        }
+    }
 }

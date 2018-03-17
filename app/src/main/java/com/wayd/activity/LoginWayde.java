@@ -73,7 +73,7 @@ public class LoginWayde extends AppCompatActivity implements
 
         GoogleApiClient.OnConnectionFailedListener, AsyncTaches.AsyncConnexionWayd.AsyncConnexionWaydListener {
 
-    private static final String TAG ="retour facebook" ;
+    private static final String TAG = "retour facebook";
     private EditText TV_login;
     private EditText TV_mdp;
     private String mail;
@@ -83,7 +83,7 @@ public class LoginWayde extends AppCompatActivity implements
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressDialog mProgressDialogFb;
     private static final int RC_SIGN_IN = 9001;
-    private static final int RETOUR_ACTIVITE_FB=64206;
+    private static final int RETOUR_ACTIVITE_FB = 64206;
     private GoogleApiClient mGoogleApiClient;
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static final String[] PERMISSIONS_STORAGE = {
@@ -131,8 +131,8 @@ public class LoginWayde extends AppCompatActivity implements
             }
         };
 
-        TV_login = (EditText)findViewById(R.id.ET_login);
-        TV_mdp = (EditText)findViewById(R.id.ET_pwd);
+        TV_login = (EditText) findViewById(R.id.ET_login);
+        TV_mdp = (EditText) findViewById(R.id.ET_pwd);
 
         initBouttonConnexionWayd();
         initBouttonNouveCompte();
@@ -144,6 +144,7 @@ public class LoginWayde extends AppCompatActivity implements
         initTextView_ProblemeConnexion();
         initFaceBookLogin();
         FirebaseUser currentUser = mAuth.getCurrentUser();
+
         connexion(currentUser);
 
         //   ConnexionByUser();
@@ -176,6 +177,7 @@ public class LoginWayde extends AppCompatActivity implements
 
 
     }
+
     private void firebaseAuthWithFaceBook(AccessToken token) {
 
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification facebook", "Connexion...", true);
@@ -220,9 +222,9 @@ public class LoginWayde extends AppCompatActivity implements
     private void connexion(final FirebaseUser currentUser) {
 
         if (currentUser == null) return;
-        if (Outils.isConnect())
-            Log.i("LoginWayd", "methode connexion");
 
+
+       // mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Connexion Wayd ", "Connexion avec le compte courant...", true);
 
         currentUser.getIdToken(true)
 
@@ -233,14 +235,17 @@ public class LoginWayde extends AppCompatActivity implements
                             Outils.jeton = task.getResult().getToken();
                             Outils.connected = true;
                             Log.i("LoginWayd", "********************methode connexion isSuccessful" + currentUser.getEmail());
-
+                     //      if (mProgressDialogFb!=null)mProgressDialogFb.dismiss();
                             connexionWayd();
                             return;
 
                         } else {
 
+                   //         if (mProgressDialogFb!=null)mProgressDialogFb.dismiss();
                             try {
+
                                 throw task.getException();
+
                             } catch (Exception e) {
 
 
@@ -508,10 +513,10 @@ public class LoginWayde extends AppCompatActivity implements
             }
 
 
-    }
+        }
 
         if (requestCode == RETOUR_ACTIVITE_FB)
-        mCallbackManager.onActivityResult(requestCode, resultCode, data);
+            mCallbackManager.onActivityResult(requestCode, resultCode, data);
 
 
         if (mProgressDialogFb != null) mProgressDialogFb.dismiss();
@@ -778,8 +783,7 @@ public class LoginWayde extends AppCompatActivity implements
 
     private void firebaseAuthWithPwd(String email, String password) {
 
-        Log.i("LoginWayd", "methode firebaseAuthWithPwd");
-        //dcx facebook
+       //dcx facebook
         LoginManager.getInstance().logOut();
         mProgressDialogFb = ProgressDialog.show(LoginWayde.this, "Authentification", "Connexion...", true);
 
@@ -805,8 +809,7 @@ public class LoginWayde extends AppCompatActivity implements
                                 toast.setGravity(Gravity.CENTER, 0, 0);
                                 toast.show();
 
-                            }
-                            catch (Exception e) {
+                            } catch (Exception e) {
 
                             }
 
@@ -814,7 +817,6 @@ public class LoginWayde extends AppCompatActivity implements
                         if (task.isSuccessful()) {
 
                             mProgressDialogFb.dismiss();
-                            Log.i("LoginWayd", "methode firebaseAuthWithPwd isSuccessful");
                             FirebaseUser user = mAuth.getCurrentUser();
 
                             if (user.isEmailVerified())
@@ -864,9 +866,9 @@ public class LoginWayde extends AppCompatActivity implements
                         tdb = new Wservice().getTableauBord(Outils.personneConnectee.getId());
                         new Wservice().updateNotification(Outils.personneConnectee.getId(), Outils.jeton);
                         publishProgress(50);
-                        Thread.sleep(1000 * 30);
+                        Thread.sleep(1000 * 350);
 
-                        Log.d("Loginwayde", "Lance tdb automatique");
+
                     } catch (IOException | InterruptedException | XmlPullParserException e) {
 
 

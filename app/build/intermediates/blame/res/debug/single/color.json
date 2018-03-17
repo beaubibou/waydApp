@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
-        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.0.4.aar\\5958a8a12a7cc93978afb050734fa1cf\\res\\color\\common_google_signin_btn_text_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\color\\wallet_secondary_text_holo_dark.xml",
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-wallet-11.0.4.aar\\58fec8dda8edfc51e6e7de8c9cfa3801\\res\\color\\wallet_secondary_text_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.0.4.aar\\5958a8a12a7cc93978afb050734fa1cf\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",

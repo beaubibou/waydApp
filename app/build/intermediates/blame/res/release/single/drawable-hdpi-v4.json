@@ -44,24 +44,24 @@
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.0.4.aar\\5958a8a12a7cc93978afb050734fa1cf\\res\\drawable-hdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ic_plusone_tall_off_client.png",
-        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-plus-11.0.4.aar\\85a14304d168de65685c0c2dd8349303\\res\\drawable-hdpi-v4\\ic_plusone_tall_off_client.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_000.png",
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-11.0.4.aar\\5fe3f78c85c126b1bb0cbf62d5e77e95\\res\\drawable-hdpi-v4\\cast_abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ic_plusone_tall_off_client.png",
+        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-plus-11.0.4.aar\\85a14304d168de65685c0c2dd8349303\\res\\drawable-hdpi-v4\\ic_plusone_tall_off_client.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\quantum_ic_cast_connected_white_24.png",
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-11.0.4.aar\\5fe3f78c85c126b1bb0cbf62d5e77e95\\res\\drawable-hdpi-v4\\quantum_ic_cast_connected_white_24.png"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\cast_ic_notification_1.png",
-        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-11.0.4.aar\\ee1a639c6be00880fb55b44ac5e1bc28\\res\\drawable-hdpi-v4\\cast_ic_notification_1.png"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ic_vol_type_speaker_group_dark.png",
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\mediarouter-v7-25.3.1.aar\\2338bfc5ce06858d349adf5893a7522c\\res\\drawable-hdpi-v4\\ic_vol_type_speaker_group_dark.png"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\cast_ic_notification_1.png",
+        "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-11.0.4.aar\\ee1a639c6be00880fb55b44ac5e1bc28\\res\\drawable-hdpi-v4\\cast_ic_notification_1.png"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\com_facebook_tooltip_black_background.9.png",

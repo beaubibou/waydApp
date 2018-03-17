@@ -153,6 +153,7 @@
     <orderEntry type="library" name="com.google.android.gms:play-services-tasks-11.0.4" level="project" />
     <orderEntry type="library" name="com.android.support:design-25.3.1" level="project" />
     <orderEntry type="library" name="com.google.firebase:firebase-core-11.0.4" level="project" />
+    <orderEntry type="library" name="__local_aars__:C.\Users\bibou\AndroidStudioProjects\wayd\app\libs\picasso-2.0.0.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-identity-11.0.4" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-vision-11.0.4" level="project" />
     <orderEntry type="library" name="com.google.android.gms:play-services-ads-11.0.4" level="project" />

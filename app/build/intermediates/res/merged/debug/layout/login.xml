@@ -45,7 +45,7 @@
                         android:id="@+id/btn_google"
                         style="@style/AppBaseTheme"
                         android:layout_width="181dp"
-                        android:layout_height="25dp"
+                        android:layout_height="23dp"
                         android:layout_margin="4dp"
                         android:background="#DD4B39"
                         android:text="Connexion avec Google+"

@@ -5,24 +5,23 @@
     build-mode="FULL"
     density="420dpi"
     format="10"
-    ir-eligibility="STATIC_INITIALIZER_CHANGE"
     plugin-version="3.0.1"
-    timestamp="1515333415891"
+    timestamp="1521307001157"
     token="9022034702471868994"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="20295" />
+        duration="31145" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="205" />
+        duration="174" />
     <task
         name="verifier"
-        duration="114" />
+        duration="25" />
 
     <artifact
         location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -63,9 +62,8 @@
 
     <build
         build-mode="FULL"
-        ir-eligibility="STATIC_INITIALIZER_CHANGE"
-        timestamp="1515333415891"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1521307001157"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\bibou\AndroidStudioProjects\wayd\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />

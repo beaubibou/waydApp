@@ -69,10 +69,8 @@ public class Outils {
     public static final ArrayList<TypeActivite> listtypeactivitecomplete = new ArrayList<>();
     public static final ArrayList<TypeActivite> listtypeactiviteWaydeur = new ArrayList<>();
     public static final ArrayList<TypeActivite> listtypeactivitePro = new ArrayList<>();
-
     public static Version  DERNIERE_VERSION_WAYD=null;
     public static final BusMessaging busMessaging = new BusMessaging();
-
     public static  ArrayList<TypeActivite> getListTypeActiviteWaydeur(){
 
         if (listtypeactiviteWaydeur.size()!=0)
@@ -237,7 +235,7 @@ public class Outils {
         float newheigh = photo.getHeight();
         float newwith = photo.getWidth();
         float ratio = (newwith / newheigh);
-        if (newheigh>300) {
+        if (newheigh>200) {
 
             double finalwith = 200 * ratio;
             double finalheigt = 200;

@@ -4,12 +4,12 @@
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-cast-framework-11.0.4.aar\\5fe3f78c85c126b1bb0cbf62d5e77e95\\res\\layout\\cast_mini_controller.xml"
     },
     {
-        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\f_stats.xml",
-        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\f_stats.xml"
-    },
-    {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\s_propose_activite.xml",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_propose_activite.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\f_stats.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\f_stats.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\s_detailactivite.xml",
@@ -178,6 +178,10 @@
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_descriptionprofil.xml",
         "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\popup_descriptionprofil.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\detailactivitecarpdiem.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\detailactivitecarpdiem.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\toolbarwayd.xml",
@@ -462,6 +466,10 @@
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\messenger_button_send_white_large.xml",
         "source": "C:\\Users\\bibou\\.gradle\\caches\\transforms-1\\files-1.1\\facebook-android-sdk-4.22.0.aar\\9ec34f7d011d3b241e70f961751af290\\res\\layout\\messenger_button_send_white_large.xml"
+    },
+    {
+        "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\s_detailactivitecarpediem.xml",
+        "source": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\src\\main\\res\\layout\\s_detailactivitecarpediem.xml"
     },
     {
         "merged": "C:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",

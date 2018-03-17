@@ -205,20 +205,28 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 >
+                <Button
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Supprimer compte"
+                    android:background="@color/colorAccent"
+                    android:textSize="@dimen/texte1"
+                    android:id="@+id/supprimercompte"
+                    android:layout_marginBottom="5dp"/>
 
                 <TextView
                     android:id="@+id/commentaires"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
+                    android:layout_below="@+id/supprimercompte"
                     android:background="@drawable/borduretextfondblanc"
-                    android:textSize="@dimen/texte1"
                     android:gravity="left"
                     android:hint="@string/f_profil_description"
                     android:padding="10dp"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/texte1" />
 
             </RelativeLayout>
         </LinearLayout>
