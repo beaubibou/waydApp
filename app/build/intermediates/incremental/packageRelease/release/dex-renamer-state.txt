@@ -1,4 +1,4 @@
-#Sat Mar 17 13:07:52 CET 2018
+#Mon Mar 19 19:09:30 CET 2018
 base.0=C\:\\Users\\bibou\\AndroidStudioProjects\\wayd\\app\\build\\intermediates\\transforms\\dex\\release\\0
 path.1=classes2.dex
 renamed.1=classes2.dex

@@ -1019,13 +1019,21 @@ public class Wservice {
             int id = Integer.parseInt(((SoapObject) resultSOAP
                     .getProperty(f)).getProperty("id").toString());
 
-            String titre = ((SoapObject) resultSOAP.getProperty(f))
-                    .getProperty("titre").toString();
+            int gratuit = Integer.parseInt(((SoapObject) resultSOAP
+                    .getProperty(f)).getProperty("gratuite").toString());
 
+
+            String titre = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("titre") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("titre").toString();
 
             String libelle = ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("libelle") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("libelle").toString();
+
+            String fulldescription = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("fulldescrition") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("fulldescrition").toString();
 
             int idorganisateur = Integer.parseInt(((SoapObject) resultSOAP
                     .getProperty(f)).getProperty("idorganisateur").toString());
@@ -1116,7 +1124,7 @@ public class Wservice {
             Activite activite = new Activite(id, titre, libelle, idorganisateur, datedebut, datefin,
                     latitude, longitude, adresse, nomorganisateur, pseudoorganisateur,
                     photostr, note, dejainscrit, organisateur, archive, totalavis,
-                    sexe, nbrparticipant, tpsrestant, agestr, nbmaxwaydeur, finidans,typeactivite,typeUser,typeAcces,interet);
+                    sexe, nbrparticipant, tpsrestant, agestr, nbmaxwaydeur, finidans,typeactivite,typeUser,typeAcces,interet,fulldescription,gratuit);
 
             Log.d("idtype ativite","********************"+typeactivite);
             retour.add(activite);

@@ -93,7 +93,8 @@ public class ActiviteAdapter extends BaseAdapter {
 
         if (activite.getTypeUser()== Profil.CARPEDIEM) {
             ratingBar.setVisibility(View.INVISIBLE);
-titre.setText(activite.getLibelle());
+            titre.setText(activite.getLibelle().replace("&#039;","'"));
+            nomorganisteur.setText(activite.getPseudoOrganisateur().replace("&#039;","'"));
 
         }
         if (activite.isFromWaydeur()){

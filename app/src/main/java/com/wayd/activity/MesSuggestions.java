@@ -154,6 +154,13 @@ public class MesSuggestions extends MenuDrawerNew implements AdapterView.OnItemC
                 startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
                 break;
 
+            case Profil.CARPEDIEM:
+                appel = new Intent(MesSuggestions.this, DetailActiviteCARPEDIEM.class);
+                appel.putExtra("idactivite", activite.getId());
+                appel.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivityForResult(appel, DetailActivite.ACTION_DETAIL_ACTIVITE);
+                break;
+
         }
 
     //    Intent appel = new Intent(MesSuggestions.this, DetailActivite.class);

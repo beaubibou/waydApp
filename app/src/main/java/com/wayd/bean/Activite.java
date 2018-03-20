@@ -13,7 +13,9 @@ public class Activite
 {
     private final int typeUser;
     private final int typeAcces;
-
+    public static int GRATUIT = 1;
+    public static int PAYANT = 2;
+    public static int GRATUITE_INCONNU = 0;
     private int id;
 
     private String titre;
@@ -64,10 +66,19 @@ public class Activite
     private int nbmaxwaydeur;
 
     private  String tpsrestant;
-
+    private  String fulldescription;
     private Date dateDebut;
     private String datedebutStr;
+    private String adresse;
+    private int gratuit;
 
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
 
     public int getIdTypeActite() {
         return idTypeActite;
@@ -80,7 +91,7 @@ public class Activite
     public Activite(int id, String titre, String libelle, int idorganisateur, Date datedebut, Date datefin,
                     double latitude, double longitude, String adresse, String nomorganisateur, String pseudoorganisateur,
                     String photostr, double note, boolean dejainscrit, boolean organisateur, boolean archive, int totalavis,
-                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans, int idTypeActite,int typeUser,int typeAcces,boolean interet)
+                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans, int idTypeActite,int typeUser,int typeAcces,boolean interet,String    fulldescription,int gratuit)
     {
         super();
 
@@ -94,7 +105,7 @@ public class Activite
         this.note=note;
         this.latitude = latitude;
         this.longitude=longitude;
-    //    this.adresse=adresse;
+       this.adresse=adresse;
         this.pseudoOrganisateur =pseudoorganisateur;
       //  String datecreationStr = Outils.getStringWsFromDate(datecreation);
         datedebutStr = Outils.getStringWsFromDate(datedebut);
@@ -115,6 +126,16 @@ public class Activite
         this.typeUser=typeUser;
         this.typeAcces=typeAcces;
         this.interet=interet;
+        this.fulldescription=fulldescription;
+        this.gratuit=gratuit;
+    }
+
+    public int getGratuit() {
+        return gratuit;
+    }
+
+    public String getFulldescription() {
+        return fulldescription;
     }
 
     public boolean isInteret() {
