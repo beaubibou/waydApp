@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:background="#FFFFFF"
+    android:padding="5dp">
+
+
+        <TextView
+            android:id="@+id/pseudo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/photoactivite"
+            android:layout_toStartOf="@+id/photoactivite"
+            android:text="TextView"
+            android:maxLines="2"
+            android:textSize="@dimen/texte3"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            tools:text="PSSDFDMQLSKJFQMSLKFJ"/>
+
+        <ImageView
+            android:id="@+id/photoactivite"
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="8dp"
+             />
+
+        <TextView
+            android:id="@+id/adresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pseudo"
+            android:layout_toStartOf="@+id/photoactivite"
+            android:text="TextView"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="@dimen/texte2"/>
+
+        <TextView
+            android:id="@+id/dateactivite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/adresse"
+            android:text="TextView"
+            android:layout_marginTop="@dimen/marge1"
+            android:layout_toStartOf="@+id/photoactivite"/>
+
+        <ImageView
+            android:id="@+id/iconactivite"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dateactivite"
+            android:layout_marginTop="@dimen/marge1"
+            app:srcCompat="@drawable/com_facebook_button_icon_blue" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/photo1"
+            android:layout_height="@dimen/photo1"
+            android:layout_below="@+id/photoactivite"
+            android:layout_toEndOf="@+id/dateactivite"
+            android:layout_marginTop="@dimen/marge1"
+            app:srcCompat="@mipmap/ic_gpsok" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView4"
+            android:layout_toEndOf="@+id/imageView4"
+            android:text="TextView"
+            android:textSize="@dimen/texte3" />
+
+        <TextView
+            android:id="@+id/tempsrestant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView4"
+            android:layout_toEndOf="@+id/dateactivite"
+            android:text="TextView" />
+
+
+</RelativeLayout>

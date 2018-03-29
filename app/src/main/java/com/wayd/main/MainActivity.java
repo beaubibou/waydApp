@@ -2,6 +2,11 @@ package com.wayd.main;
 
 import com.application.wayd.R;
 
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.login.LoginManager;
+import com.wayd.activity.LoginWayde;
 import com.wayd.activity.MenuDrawerNew;
 import com.wayd.activity.MyLifecycleHandler;
 import com.wayd.activity.ProposeActivites;
@@ -18,9 +23,14 @@ import com.wayd.bean.Profil;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class MainActivity extends MenuDrawerNew implements OnClickListener {
@@ -33,6 +43,11 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
         Outils.principal = this;// Declare l'activité principal. Pour la pointer pour pouvoir la fermer lors de la deconnexion
         setContentView(R.layout.menu_principal);
 
+        System.out.println("************************************************************************Token fb"+AccessToken.getCurrentAccessToken());
+       System.out.println("*********************************************************************toto"+AccessToken.ACCESS_TOKEN_KEY);
+
+
+     //   testFb();
         if (Outils.gps == null)
             Outils.gps = new GPSTracker(getBaseContext(), MainActivity.this);
         else {
@@ -82,6 +97,25 @@ public class MainActivity extends MenuDrawerNew implements OnClickListener {
 
         }
 
+
+    }
+
+    private void testFb() {
+     //   AccessToken xx = LoginWayde.tokenFB;
+
+        GraphRequest request = GraphRequest.newMeRequest(
+                AccessToken.getCurrentAccessToken(),
+                new GraphRequest.GraphJSONObjectCallback() {
+                    @Override
+                    public void onCompleted(JSONObject object, GraphResponse response) {
+
+                    }
+                });
+
+        Bundle parameters = new Bundle();
+        parameters.putString("fields", "id,name,link");
+        request.setParameters(parameters);
+        request.executeAsync();
 
     }
 

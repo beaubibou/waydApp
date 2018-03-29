@@ -69,7 +69,7 @@ public class PreferencesAdapter extends BaseAdapter
 
         Preference preference = mListP.get(position);
         TextView nom= (TextView) layoutItem.findViewById(R.id.nompref);
-        ImageView iconActivite=(ImageView) layoutItem.findViewById(R.id.iconcActivite);
+        ImageView iconActivite=(ImageView) layoutItem.findViewById(R.id.iconactivite);
         nom.setText(preference.getNom());
         iconActivite.setImageResource(Outils.getActiviteMipMap(preference.getIdTypeactivite()));
         Switch active= (Switch) layoutItem.findViewById(R.id.activepref);

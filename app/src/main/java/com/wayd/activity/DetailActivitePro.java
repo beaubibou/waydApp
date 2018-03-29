@@ -1,32 +1,20 @@
 package com.wayd.activity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RatingBar;
-import android.widget.ScrollView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.application.wayd.R;
-import com.google.android.gms.internal.add;
 import com.wayd.bean.Activite;
 import com.wayd.bean.MessageServeur;
 import com.wayd.bean.Outils;
@@ -34,13 +22,11 @@ import com.wayd.bean.Participant;
 import com.wayd.bean.PhotoActivite;
 import com.wayd.bean.PushAndroidMessage;
 import com.wayd.bean.ReceiverGCM;
-import com.wayd.listadapter.ParticipantAdapter;
 import com.wayd.listadapter.PhotoActiviteAdapter;
 
 import org.lucasr.twowayview.TwoWayView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class DetailActivitePro extends MenuDrawerNew implements
         AsyncTaches.AsyncGetActiviteFull.Async_GetActiviteFullListener,
@@ -50,7 +36,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
     private ImageView photop;
     private TextView TV_pseudo;
     private TextView TV_description;
-    private TextView TV_Titre;
+    private TextView TV_Titre,TV_Adresse;
     private TextView TV_Horaire, TV_SignalerActivite;
     private Activite activiteSelectionne;
     private ImageView iconActivite;
@@ -84,6 +70,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
         B_Interet = (Button) findViewById(R.id.interet);
         TV_SignalerActivite = (TextView) findViewById(R.id.signaleractivite);
         IB_Map = (ImageButton) findViewById(R.id.map);
+        TV_Adresse = (TextView) findViewById(R.id.adresse);
 
 
         iconActivite = (ImageView) findViewById(R.id.iconActivite);
@@ -154,6 +141,7 @@ public class DetailActivitePro extends MenuDrawerNew implements
             TV_description.setText(convertLibelleActivite(activite.getLibelleUnicode()));
             TV_Titre.setText(activite.getTitreUnicode());
             TV_Horaire.setText(activite.getHoraire());
+            TV_Adresse.setText(activite.getAdresse());
             iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(), activite.getTypeUser()));
             Log.d("DetailActivitePro.this", "clik incon");
             photop.setOnClickListener(new View.OnClickListener() {

@@ -58,7 +58,7 @@
                 android:textAllCaps="false" />
 
             <TextView
-               android:padding="@dimen/paddingTextview1"
+                android:padding="@dimen/paddingTextview1"
                 android:text="@string/premiereconnexion_infopseudo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

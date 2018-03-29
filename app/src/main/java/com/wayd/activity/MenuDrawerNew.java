@@ -63,7 +63,6 @@ public class MenuDrawerNew extends AppCompatActivity implements NavigationView.O
         Outils.personneConnectee.addPersonneChangeListener(this);
         Outils.tableaudebord.addTdbChangeListener(this);
 
-
     }
 
     private void udpateDrawer() {

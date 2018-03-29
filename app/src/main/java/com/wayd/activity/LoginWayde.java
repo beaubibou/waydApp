@@ -90,6 +90,7 @@ public class LoginWayde extends AppCompatActivity implements
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE};
     private CallbackManager mCallbackManager;
+    public static AccessToken tokenFB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -145,9 +146,9 @@ public class LoginWayde extends AppCompatActivity implements
         initFaceBookLogin();
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
-        connexion(currentUser);
+       // connexion(currentUser);
+        firebaseAuthWithPwd("contact@wayd.fr","azerty");
 
-        //   ConnexionByUser();
 
     }
 
@@ -159,7 +160,9 @@ public class LoginWayde extends AppCompatActivity implements
             @Override
             public void onSuccess(LoginResult loginResult) {
                 Log.d(TAG, "facebook:onSuccess:" + loginResult);
+
                 firebaseAuthWithFaceBook(loginResult.getAccessToken());
+
             }
 
             @Override

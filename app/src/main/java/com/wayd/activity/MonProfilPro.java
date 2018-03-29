@@ -33,7 +33,6 @@ import com.wayd.bean.Profil;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.Date;
 
 public class MonProfilPro extends MenuDrawerNew implements AsyncTaches.AsyncUpdateProfilPro.AsyncUpdateProfilProListener {
 

@@ -182,7 +182,8 @@ public class F_CritereRechecheActivite extends Fragment implements GoogleApiClie
     }
 
     private void getListeActivites() {
-        CritereRechercheActivite filtretmp = getFiltre();
+
+          CritereRechercheActivite filtretmp = getFiltre();
         ((RechercheActiviteNew) getActivity()).setCritereRechercheActivite(filtretmp);
         ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_RECHERCHE,F_Map_ListActivite.CENTRER_PERSONNE);//demande le rafraichissement de la part du bouton
     }

@@ -2,6 +2,7 @@ package com.wayd.activity;
 
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -17,14 +18,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.application.wayd.R;
-import com.google.android.gms.internal.ac;
-import com.google.android.gms.internal.act;
-import com.squareup.picasso.Picasso;
 import com.wayd.bean.Activite;
 import com.wayd.bean.MessageServeur;
 import com.wayd.bean.Outils;
 import com.wayd.bean.Participant;
-import com.wayd.bean.PhotoActivite;
 import com.wayd.bean.PushAndroidMessage;
 import com.wayd.bean.ReceiverGCM;
 import com.wayd.listadapter.PhotoActiviteAdapter;
@@ -45,6 +42,7 @@ public class DetailActiviteCARPEDIEM extends MenuDrawerNew implements
     private ImageView iconActivite;
     private ImageButton IB_Map;
     private Button B_Interet;
+    private TextView B_LienFaceBook;
     public static final int ACTION_DETAIL_ACTIVITE = 1021;
     public final static int ACTION_MODIFIEE_ACTIVITE = 2;
     public final static String ACTION = "action";
@@ -72,7 +70,8 @@ public class DetailActiviteCARPEDIEM extends MenuDrawerNew implements
         TV_Titre = (TextView) findViewById(R.id.titre);
         TV_Horaire = (TextView) findViewById(R.id.horaire);
         B_Interet = (Button) findViewById(R.id.interet);
-         TV_Adresse = (TextView) findViewById(R.id.adresse);
+        B_LienFaceBook = (TextView) findViewById(R.id.lienfacebook);
+        TV_Adresse = (TextView) findViewById(R.id.adresse);
         IB_Map = (ImageButton) findViewById(R.id.map);
         imageFond = (RelativeLayout) findViewById(R.id.rlbandeauhaut);
 
@@ -111,6 +110,8 @@ public class DetailActiviteCARPEDIEM extends MenuDrawerNew implements
                                      }
         );
 
+
+
         LV_PhotoActivite = (TwoWayView) findViewById(R.id.photoactivite);
 
     }
@@ -145,12 +146,12 @@ public class DetailActiviteCARPEDIEM extends MenuDrawerNew implements
           //  photop.setImageDrawable(Outils.getAvatarDrawable(getBaseContext(), activite.getPhoto()));
             TV_pseudo.setText(activite.getPseudoOrganisateur());
 
-            TV_description.setText(convertLibelleActivite(activite.getFulldescription()));
+            TV_description.setText(activite.getFulldescription().replace("&#039;","'").trim());
             TV_Titre.setText(activite.getTitre().replace("&#039;","'"));
             TV_Horaire.setText(activite.getHoraire());
             iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(), activite.getTypeUser()));
             imageFond.setBackground(new BitmapDrawable(getResources(), activite.getPhoto()));
-            TV_Adresse.setText(activite.getAdresse());
+            TV_Adresse.setText(activite.getAdresse().replace("&#039;","'"));
 
 
             TV_pseudo.setOnClickListener(new View.OnClickListener() {
@@ -180,7 +181,24 @@ public class DetailActiviteCARPEDIEM extends MenuDrawerNew implements
                 }
             });
 
+            final String lienFacebook=activite.getLienfacebook();
 
+            if (lienFacebook==null)
+                B_LienFaceBook.setVisibility(View.INVISIBLE);
+            else
+                B_LienFaceBook.setVisibility(View.VISIBLE);
+
+            B_LienFaceBook.setOnClickListener(new View.OnClickListener() {
+                                                  @Override
+                                                  public void onClick(View v) {
+
+                                                            String url = activite.getLienfacebook();
+                                                      Intent i = new Intent(Intent.ACTION_VIEW);
+                                                      i.setData(Uri.parse(url));
+                                                      startActivity(i);
+                                                  }
+                                              }
+            );
 
         }
 

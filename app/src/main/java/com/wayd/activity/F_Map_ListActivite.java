@@ -122,7 +122,7 @@ public class F_Map_ListActivite extends SupportMapFragment implements
 
            Bitmap icon = BitmapFactory.decodeResource(getResources(),Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
             googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.
-                    fromBitmap(getResizedBitmap(icon,(int)taillePixel,(int)taillePixel))).position(activitePosition).snippet(activite.getPseudoOrganisateur())
+                    fromBitmap(getResizedBitmap(icon,(int)taillePixel,(int)taillePixel))).position(activitePosition).snippet(activite.getDatedebutStr())
                     .title(activite.getTitre())).setTag(activite);
 
         }

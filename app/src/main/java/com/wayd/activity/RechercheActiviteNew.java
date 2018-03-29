@@ -53,6 +53,7 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
     private int CENTRER_SUR;
     private Snackbar mySnackbar;
 
+
     /**
      * The {@link ViewPager} that will host the section contents.
      */
@@ -73,7 +74,7 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
     private boolean swipeRefresh = false;// Permet de savoir si la demande de rafraichissement vient du bouton ou du swipreRefres(pull to refresh)
     public static final int FROM_RECHERCHE = 1, FROM_SWIPE = 2, FROM_MAP = 3,FROM_PLUS=4;
     public int refreshSource;
-
+    public boolean getMore=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,14 +97,26 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
 
     }
 
-
     public void updateListeActivite(int refreshSource, int centerSur) {
+        getMore=false;
+        listeActivite.removeAll(listeActivite);
+        int offset=0;
         if (centerSur != F_Map_ListActivite.CENTRER_NOCHANGE) CENTRER_SUR = centerSur;
         this.refreshSource = refreshSource;
-        new AsyncTaches.AsyncGetListActivite(this, critereRechercheActivite, RechercheActiviteNew.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        new AsyncTaches.AsyncGetListActivite(this, critereRechercheActivite, offset,RechercheActiviteNew.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
     }
 
+    public void getMoreListeActivite(int refreshSource, int centerSur) {
 
+        if (getMore)return;
+        getMore=true;
+        int offset=listeActivite.size();
+        if (centerSur != F_Map_ListActivite.CENTRER_NOCHANGE) CENTRER_SUR = centerSur;
+        this.refreshSource = refreshSource;
+        new AsyncTaches.AsyncGetListActivite(this, critereRechercheActivite, offset,RechercheActiviteNew.this).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+
+    }
 
 
     private void initPage() {
@@ -209,6 +222,16 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
     @Override
     public void loopBack_getListActivite(ArrayList<Activite> vlistactivite) {
 
+        if (getMore){
+
+
+            listeActivite.addAll(vlistactivite);
+            Collections.sort(listeActivite, new ComparatorDistanceActivite());
+            afficheNbrResultats();
+            getMore=false;
+            return;
+        }
+
          if (vlistactivite != null) {
 
             this.listeActivite.clear();
@@ -234,7 +257,9 @@ public class RechercheActiviteNew extends MenuDrawerNew implements AsyncTaches.A
                         activeOngletCarte(true);
                         mViewPager.setOnTouchListener(null);// Deveroille le scroll
                         if (!balise)
-                            afficheSnackNoResult();
+                            tabLayout.getTabAt(ONGLET_RESULTAT).select();
+                          //  afficheSnackNoResult();
+
                     }
 
                     if (vlistactivite.size() <= NBR_MINIMUM_ACTIVITE_BALISE && balise) {

@@ -12,16 +12,11 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.application.wayd.R;
-import com.wayd.bean.Avis;
 import com.wayd.bean.Outils;
-import com.wayd.bean.Profil;
 import com.wayd.bean.ProfilPro;
-
-import java.util.ArrayList;
 
 public class UnProfilPro extends MenuDrawerNew implements AsyncTaches.AsyncGetProfilPro.Async_GetProfilProListener {
 

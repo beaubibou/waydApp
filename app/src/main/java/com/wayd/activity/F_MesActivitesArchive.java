@@ -47,7 +47,6 @@ public class F_MesActivitesArchive extends Fragment implements AsyncTaches.Async
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Activite activite = (Activite) view.getTag();
 
-                System.out.println("******afiche user"+ activite.getTypeUser());
 
                 Intent appel;
                 switch (activite.getTypeUser()) {

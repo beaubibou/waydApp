@@ -3,6 +3,7 @@ package com.wayd.bean;
 import android.graphics.Bitmap;
 
 import com.application.wayd.R;
+import com.google.android.gms.internal.li;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
@@ -49,7 +50,6 @@ public class Activite
         return dateDebut;
     }
 
-    private boolean organisateur;
 
     private  int sexe;
 
@@ -71,7 +71,7 @@ public class Activite
     private String datedebutStr;
     private String adresse;
     private int gratuit;
-
+private String lienfacebook;
     public String getAdresse() {
         return adresse;
     }
@@ -90,8 +90,9 @@ public class Activite
 
     public Activite(int id, String titre, String libelle, int idorganisateur, Date datedebut, Date datefin,
                     double latitude, double longitude, String adresse, String nomorganisateur, String pseudoorganisateur,
-                    String photostr, double note, boolean dejainscrit, boolean organisateur, boolean archive, int totalavis,
-                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans, int idTypeActite,int typeUser,int typeAcces,boolean interet,String    fulldescription,int gratuit)
+                    String photostr, double note, boolean dejainscrit,  boolean archive, int totalavis,
+                    int sexe, int nbrparticipant, String tpsrestant, String agestr, int nbmaxwaydeur, long finidans,
+                    int idTypeActite,int typeUser,int typeAcces,boolean interet,String    fulldescription,int gratuit,String lienfacebook)
     {
         super();
 
@@ -113,7 +114,7 @@ public class Activite
     //    this.nomorganisateur=nomorganisateur;
         this.photo=Outils.getPhotoFormString(photostr);
         this.dejainscrit=dejainscrit;
-        this.organisateur=organisateur;
+        //this.organisateur=organisateur;
         this.archive=archive;
       //  this.totalavis=totalavis;
         this.sexe=sexe;
@@ -128,6 +129,7 @@ public class Activite
         this.interet=interet;
         this.fulldescription=fulldescription;
         this.gratuit=gratuit;
+        this.lienfacebook= lienfacebook;
     }
 
     public int getGratuit() {
@@ -155,22 +157,29 @@ public class Activite
     }
 
     public String getTpsrestant() {
-        if (tpsrestant.toLowerCase().equals("Activité passée".toLowerCase()))
+      if (archive)
+       // if (tpsrestant.toLowerCase().equals("Activité passée".toLowerCase()))
             return "Terminée";
         else
         return "Se termine dans " +tpsrestant;
     }
 
     public String getDatedebutStr() {
-        SimpleDateFormat formater = new SimpleDateFormat("dd-MM-yy à HH:mm");
+        SimpleDateFormat formater = new SimpleDateFormat("'le' EE d MMM yyyy");
         String datestr = formater.format(dateDebut);
-        return "Le " +datestr;
+        return datestr;
     }
 
-    public boolean isOrganisateur() {
-        return organisateur;
-    }
+   // public boolean isOrganisateur() {
+   //     return organisateur;
+   // }
 
+    public boolean isOrganisator(int idpersonne){
+
+        return idpersonne == idorganisateur;
+
+
+    }
     public String getNbrparticipantStr() {
 
       if (iscomplete())  return "Complete";
@@ -241,7 +250,7 @@ public class Activite
     }
 
     public boolean isArchive() {
-        return archive;
+       return archive;
     }
 
     public boolean isOrganisateur(int idpersonne){
@@ -279,7 +288,7 @@ public class Activite
         //    this.nomorganisateur=nomorganisateur;
         this.photo=activite.getPhoto();
         this.dejainscrit=activite.isDejainscrit();
-        this.organisateur=activite.isOrganisateur();
+       // this.organisateur=activite.isOrganisateur();
         this.archive=archive;
         //  this.totalavis=totalavis;
         this.sexe=activite.getSexe();
@@ -288,7 +297,18 @@ public class Activite
         this. nbmaxwaydeur=activite.getNbmaxwaydeur();
         this.finidans=activite.getFinidans();
         this.idTypeActite=activite.getIdTypeActite();
+        this.fulldescription=activite.fulldescription;
+        this.gratuit=activite.getGratuit();
+        this.lienfacebook=activite.lienfacebook;
 
+    }
+
+    public String getLienfacebook() {
+        return lienfacebook;
+    }
+
+    public void setLienfacebook(String lienfacebook) {
+        this.lienfacebook = lienfacebook;
     }
 
     public int getTypeUser() {

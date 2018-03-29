@@ -244,6 +244,16 @@
                     </RelativeLayout>
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/adresse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:textAlignment="textEnd"
+                    android:textColor="#FFA440"
+                    android:textStyle="bold|italic"
+                    tools:text="Adresse" />
+
                 <RelativeLayout
 
                     android:layout_marginTop="10dp"
@@ -252,6 +262,8 @@
                     android:layout_height="match_parent"
                     android:id="@+id/rl_description"
                  >
+
+
 
                     <TextView
                         android:padding="10dp"
@@ -265,7 +277,7 @@
                         android:layout_height="150dp"
                         android:scrollbars = "vertical"
                         android:textSize="@dimen/texte2"
-                        android:background="@drawable/borduretextfondblanc"
+
                         />
                 </RelativeLayout>
 

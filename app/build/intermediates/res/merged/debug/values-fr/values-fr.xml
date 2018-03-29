@@ -267,7 +267,7 @@
     <string name="login_mdpoublie">Mot de passe oublié ?</string>
     <string name="login_pasdecompte">Pas encore de compte ?</string>
     <string name="login_prbconnexion">Problème de connexion ?</string>
-    <string name="login_sinscrire">S\'inscrire su Wayd</string>
+    <string name="login_sinscrire">S\'inscrire sur Wayd</string>
     <string name="mailExistDeja">"L'adresse email existe déjà"</string>
     <string name="mailNonConfirme">"Email non confirmé"</string>
     <string name="mailNonConforme">"Adresse email non conforme"</string>

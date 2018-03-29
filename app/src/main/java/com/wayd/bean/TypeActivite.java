@@ -6,6 +6,7 @@ package com.wayd.bean;
 
 @SuppressWarnings("DefaultFileTemplate")
 public class TypeActivite {
+    public static final int  FACEBOOK =9 ;
     private final int typeUser;
     private boolean ischecked;
     private final String nom;

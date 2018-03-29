@@ -1090,8 +1090,8 @@ public class Wservice {
                     .getProperty("note").toString());
             boolean dejainscrit = Boolean.parseBoolean(((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("dejainscrit").toString());
-            boolean organisateur = Boolean.parseBoolean(((SoapObject) resultSOAP.getProperty(f))
-                    .getProperty("organisateur").toString());
+          //  boolean organisateur = Boolean.parseBoolean(((SoapObject) resultSOAP.getProperty(f))
+             //       .getProperty("organisateur").toString());
 
             boolean archive = Boolean.parseBoolean(((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("archive").toString());
@@ -1111,6 +1111,10 @@ public class Wservice {
                     .getProperty("age") == null ? "" : ((SoapObject) resultSOAP.getProperty(f))
                     .getProperty("age").toString();
 
+            String lienfacebook = ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("lienfacebook") == null ? null : ((SoapObject) resultSOAP.getProperty(f))
+                    .getProperty("lienfacebook").toString();
+
             int typeUser=Integer.parseInt(((SoapObject) resultSOAP
                     .getProperty(f)).getProperty("typeUser").toString());
 
@@ -1123,8 +1127,8 @@ public class Wservice {
 
             Activite activite = new Activite(id, titre, libelle, idorganisateur, datedebut, datefin,
                     latitude, longitude, adresse, nomorganisateur, pseudoorganisateur,
-                    photostr, note, dejainscrit, organisateur, archive, totalavis,
-                    sexe, nbrparticipant, tpsrestant, agestr, nbmaxwaydeur, finidans,typeactivite,typeUser,typeAcces,interet,fulldescription,gratuit);
+                    photostr, note, dejainscrit, archive, totalavis,
+                    sexe, nbrparticipant, tpsrestant, agestr, nbmaxwaydeur, finidans,typeactivite,typeUser,typeAcces,interet,fulldescription,gratuit,lienfacebook);
 
             Log.d("idtype ativite","********************"+typeactivite);
             retour.add(activite);
@@ -1448,9 +1452,48 @@ public class Wservice {
         return retour;
     }
 
-    public  ArrayList<Activite> getActivites(Double malatitude,
+    public  ArrayList<Activite> getActivitesOffset(Double malatitude,
                                             Double malongitude, int rayonmetre, int idtypeactivite,
-                                            String motcle, int typeUser, int commenceDans)
+                                            String motcle, int typeUser, int commenceDans,int offset)
+
+            throws IOException, XmlPullParserException {
+        ArrayList<Activite> retour = new ArrayList<>();
+        String METHOD = "getActivitesOffset";
+        SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(
+                SoapEnvelope.VER11);
+        SoapObject request = new SoapObject(NAMESPACE, METHOD);
+        envelope.bodyOut = request;
+        request.addProperty("idPersonne", Outils.personneConnectee.getId());
+        request.addProperty("latitudestr", String.valueOf(malatitude));
+        request.addProperty("longitudestr", String.valueOf(malongitude));
+        request.addProperty("rayonmetre", rayonmetre);
+        request.addProperty("typeactivite", idtypeactivite);
+        request.addProperty("motcle", motcle);
+        request.addProperty("typeUser", typeUser);
+        request.addProperty("commenceDans", commenceDans);
+        request.addProperty("jeton", Outils.jeton);
+        request.addProperty("offset", offset);
+
+
+        if (SECURE) {
+            HttpsTransportSE transport = new HttpsTransportSE(HOST, PORT, FILE, timeoutws);
+            //   SslRequest.allowAllSSL();
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        } else {
+            HttpTransportSE transport = new HttpTransportSE(URL, timeoutws);
+            transport.call(NAMESPACE + SOAP_ACTION_PREFIX + METHOD, envelope);
+
+        }
+        if (envelope.bodyIn != null) {
+            SoapObject resultSOAP = (SoapObject) envelope.bodyIn;
+            return getActiviteFromSOAP(resultSOAP);
+        }
+        return retour;
+    }
+    public  ArrayList<Activite> getActivites(Double malatitude,
+                                                   Double malongitude, int rayonmetre, int idtypeactivite,
+                                                   String motcle, int typeUser, int commenceDans)
 
             throws IOException, XmlPullParserException {
         ArrayList<Activite> retour = new ArrayList<>();

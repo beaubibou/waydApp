@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -46,12 +47,14 @@ import java.util.HashSet;
 public class F_ListActivite extends Fragment implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener, AsyncTaches.AsyncEffaceActivite.Async_EffaceActiviteListener{
     private ActiviteAdapter adapter;
     private Activite aEffacer;
-    private TextView TV_MessageDefaut,messageActivite;
+    private TextView TV_MessageDefaut;
+     Button       messageActivite;
     private ImageView IM_flechebas;
     private boolean longClick = false;
     private ListView listViewActivite;
     private SwipeRefreshLayout swipeContainer;
-    FloatingActionButton Float_Plus;
+    RechercheActiviteNew rechercheActiviteActivity;
+    //FloatingActionButton Float_Plus;
     boolean RECHERCHE3HEURES=true;
 
     public F_ListActivite() {
@@ -72,15 +75,17 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
         View rootView = inflater.inflate(R.layout.f_listeactivite, container, false);
         adapter = new ActiviteAdapter(getContext(), ((RechercheActiviteNew) getActivity()).getListeActivite());
         listViewActivite = (ListView) rootView.findViewById(R.id.listeActivite);
-        messageActivite = (TextView) rootView.findViewById(R.id.messageactivite);
-        messageActivite.setText("Afficher les activités dans 3 heures");
+        messageActivite = (Button) rootView.findViewById(R.id.messageactivite);
+        messageActivite.setText("Afficher les activités de la journée");
         listViewActivite.setAdapter(adapter);
         TV_MessageDefaut = (TextView) rootView.findViewById(R.id.id_messagebalise);
         IM_flechebas = (ImageView) rootView.findViewById(R.id.id_flechebas);
         listViewActivite.setOnItemClickListener(this);
         listViewActivite.setOnItemLongClickListener(this);
         adapter.notifyDataSetChanged();
+        rechercheActiviteActivity=((RechercheActiviteNew) getActivity());
         swipeContainer = (SwipeRefreshLayout) rootView.findViewById(R.id.swipeContainer);
+
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -93,16 +98,16 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
-         Float_Plus = (FloatingActionButton) rootView.findViewById(R.id.plus);
+       //  Float_Plus = (FloatingActionButton) rootView.findViewById(R.id.plus);
 
 
-        Float_Plus.setOnClickListener(new View.OnClickListener() {
+        messageActivite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if (RECHERCHE3HEURES) {
-                    ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().setCommenceDans(180);
-                    ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_PLUS, F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
+                    rechercheActiviteActivity.getCritereRechercheActivite().setCommenceDans(180);
+                    rechercheActiviteActivity.updateListeActivite(RechercheActiviteNew.FROM_PLUS, F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
                  //   messageActivite.setText(((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans());
                 //    messageActivite.setText("Click pour voir les activités en cours");
                     RECHERCHE3HEURES=!RECHERCHE3HEURES;
@@ -110,8 +115,8 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
 
                 else
                  {
-                     ((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().setCommenceDans(0);
-                     ((RechercheActiviteNew) getActivity()).updateListeActivite(RechercheActiviteNew.FROM_PLUS, F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
+                     rechercheActiviteActivity.getCritereRechercheActivite().setCommenceDans(0);
+                     rechercheActiviteActivity.updateListeActivite(RechercheActiviteNew.FROM_PLUS, F_Map_ListActivite.CENTRER_NOCHANGE);// DEmande de la part du swipe
                     // messageActivite.setText(((RechercheActiviteNew) getActivity()).getCritereRechercheActivite().getCommencantDans());
                //      messageActivite.setText("Click pour voir les activités en cours");
                      RECHERCHE3HEURES=!RECHERCHE3HEURES;
@@ -119,6 +124,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 }
             }
         });
+
 
 
         return rootView;
@@ -137,17 +143,17 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
 
 
         if (RECHERCHE3HEURES) {
-              messageActivite.setText("Afficher les activités dans 3 heures");
+              messageActivite.setText("Afficher les activités de la journée");
 
 
-            Float_Plus.setImageResource(android.R.drawable.ic_media_ff);
+       //     Float_Plus.setImageResource(android.R.drawable.ic_media_ff);
        }
 
         else
         {
 
              messageActivite.setText("Afficher les activités en cours");
-            Float_Plus.setImageResource(android.R.drawable.ic_media_rew);
+      //      Float_Plus.setImageResource(android.R.drawable.ic_media_rew);
         }
 
 
@@ -163,7 +169,8 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 TV_MessageDefaut.setVisibility(View.GONE);
                 IM_flechebas.setVisibility(View.GONE);
                 listViewActivite.setVisibility(View.GONE);
-                Float_Plus.setVisibility(View.VISIBLE);
+             //   Float_Plus.setVisibility(View.VISIBLE);
+
             }
 
             else if (((RechercheActiviteNew) getActivity()).getListeActivite().isEmpty() && RechercheActiviteNew.balise) {// Si il n'y a pas d'activité et que l'on activte la fonction ennuie/balise
@@ -172,7 +179,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 TV_MessageDefaut.setVisibility(View.VISIBLE);
                 listViewActivite.setVisibility(View.GONE);
                 IM_flechebas.setVisibility(View.VISIBLE);
-                Float_Plus.setVisibility(View.GONE);
+              //  Float_Plus.setVisibility(View.GONE);
             }
             else{
                   if (!((RechercheActiviteNew) getActivity()).getListeActivite().isEmpty() && RechercheActiviteNew.balise) {// Si il y a au moins une activité et que l'on activte la fonction ennuie/balise
@@ -181,7 +188,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 TV_MessageDefaut.setVisibility(View.GONE);
                 listViewActivite.setVisibility(View.VISIBLE);
                 IM_flechebas.setVisibility(View.GONE);
-                 Float_Plus.setVisibility(View.GONE);
+          //       Float_Plus.setVisibility(View.GONE);
 
             }
 
@@ -189,7 +196,7 @@ public class F_ListActivite extends Fragment implements AdapterView.OnItemClickL
                 IM_flechebas.setVisibility(View.GONE);
                 TV_MessageDefaut.setVisibility(View.GONE);
                 listViewActivite.setVisibility(View.VISIBLE);
-                Float_Plus.setVisibility(View.VISIBLE);
+          //      Float_Plus.setVisibility(View.VISIBLE);
             }
             }
         }

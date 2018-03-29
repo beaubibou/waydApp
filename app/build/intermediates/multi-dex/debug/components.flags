@@ -1,3 +1,4 @@
+-injars 'C:\Users\bibou\AndroidStudioProjects\wayd\app\libs\picasso-2.0.0.jar'(**.class)
 -injars 'C:\Users\bibou\AndroidStudioProjects\wayd\app\libs\ksoap2-android-assembly-3.6.2-jar-with-dependencies.jar'(**.class)
 -injars 'C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\facebook-android-sdk-4.22.0.aar\9ec34f7d011d3b241e70f961751af290\jars\classes.jar'(**.class)
 -injars 'C:\Users\bibou\.gradle\caches\transforms-1\files-1.1\design-25.3.1.aar\ff610619be359be182212d1b97b3623e\jars\classes.jar'(**.class)

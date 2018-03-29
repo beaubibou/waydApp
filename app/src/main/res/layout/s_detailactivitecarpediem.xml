@@ -13,7 +13,7 @@
 
         android:layout_width="match_parent"
         android:id="@+id/rlbandeauhaut"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
 
         >
 
@@ -176,7 +176,8 @@ android:visibility="invisible"
                             />
 
                         <TextView
-                            android:layout_margin="@dimen/marge2"
+
+                            android:layout_margin="@dimen/marge1"
                             tools:text="De 8h00 à 9h00 "
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -185,17 +186,25 @@ android:visibility="invisible"
                             android:textSize="@dimen/texte1" />
 
                     </LinearLayout>
-
+                    <TextView
+                        android:textStyle="normal|bold"
+                        android:id="@+id/lienfacebook"
+                        android:layout_width="match_parent"
+                        android:gravity="right"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/rlinfobandeauhaut"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginEnd="6dp"
+                        android:visibility="visible"
+                        android:text="Lien facebook"
+                        android:textColor="@color/com_facebook_button_background_color" />
 
                     <TextView
                         android:id="@+id/adresse"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:layout_alignParentStart="true"
-
-                        android:padding="10dp"
-                        android:paddingBottom="@dimen/marge3"
                         android:textAlignment="textEnd"
                         android:textColor="#FFA440"
                         android:textStyle="bold|italic"
@@ -221,9 +230,9 @@ android:visibility="invisible"
                             android:layout_alignParentStart="true"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                             android:layout_height="wrap_content"
-
+                            android:autoLink="all"
                             android:textSize="@dimen/texte2"
-                            android:background="@drawable/borduretextfondblanc"
+
                             />
 
                     </RelativeLayout>

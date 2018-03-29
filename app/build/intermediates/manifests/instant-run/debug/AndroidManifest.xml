@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.application.wayd"
-    android:versionCode="3261"
+    android:versionCode="3489"
     android:versionName="Wayd.1.1." >
 
     <uses-sdk
@@ -141,6 +141,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.wayd.activity.FaceBookEvenement"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.wayd.activity.DetailActiviteCARPEDIEM"
             android:screenOrientation="portrait" />

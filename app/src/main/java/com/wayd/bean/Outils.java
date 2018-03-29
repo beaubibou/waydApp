@@ -1,6 +1,7 @@
 package com.wayd.bean;
 
 import android.app.Activity;
+import android.app.Application;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -58,7 +59,7 @@ import cz.msebera.android.httpclient.client.methods.HttpGet;
 import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 
 
-public class Outils {
+public class Outils extends Application {
 
     public static boolean connected = false;
     public static String jeton = null;
@@ -70,15 +71,16 @@ public class Outils {
     public static final ArrayList<TypeActivite> listtypeactiviteWaydeur = new ArrayList<>();
     public static final ArrayList<TypeActivite> listtypeactivitePro = new ArrayList<>();
     public static Version  DERNIERE_VERSION_WAYD=null;
+
     public static final BusMessaging busMessaging = new BusMessaging();
+
     public static  ArrayList<TypeActivite> getListTypeActiviteWaydeur(){
 
         if (listtypeactiviteWaydeur.size()!=0)
     return listtypeactiviteWaydeur;
         for (TypeActivite typeActivite:listtypeactivitecomplete  ) {
             if (typeActivite.getTypeUser() == Profil.WAYDEUR || typeActivite.getTypeUser() == 2)
-                //==2 correpond à ceux en commun
-
+              if (typeActivite.getId()!=TypeActivite.FACEBOOK)
                 listtypeactiviteWaydeur.add(typeActivite);
         }
         return listtypeactiviteWaydeur;
@@ -143,59 +145,62 @@ public class Outils {
     }
 
 
-    public static int getActiviteMipMap(int type,int typeActivite) {
+    public static int getActiviteMipMap(int typeActivite,int typeUser) {
         // Le typeActivite correspond wadyeur ou pro. c'est porté par l'activité
 
-       switch (typeActivite) {
 
-           case Profil.WAYDEUR:
+        switch (typeUser) {
 
-           switch (type) {
+            case Profil.WAYDEUR:
 
-               case TypeActivite.BAR_RESTO:
+                switch (typeActivite) {
 
-                   return R.mipmap.ic_barrestorond;
+                    case TypeActivite.BAR_RESTO:
 
-               case TypeActivite.SPORT:
-                   return R.mipmap.ic_sportrnd;
+                        return R.mipmap.ic_barrestorond;
 
-               case TypeActivite.CULTURE:
-                   return R.mipmap.ic_expositionrnd;
-               case TypeActivite.JOUER:
-                   return R.mipmap.ic_jeurnd;
-               case TypeActivite.DISCUTER:
-                   return R.mipmap.ic_friendsrnd;
-               case TypeActivite.WAYDEURS_DISPO:
-                   return R.mipmap.ic_suggestionwayd;
-               case TypeActivite.AUTRE:
-                   return R.mipmap.ic_autre;
-               case TypeActivite.ENTRAIDE:
-                   return R.mipmap.ic_entraide;
+                    case TypeActivite.SPORT:
+                        return R.mipmap.ic_sportrnd;
 
-           }
+                    case TypeActivite.CULTURE:
+                        return R.mipmap.ic_expositionrnd;
+                    case TypeActivite.JOUER:
+                        return R.mipmap.ic_jeurnd;
+                    case TypeActivite.DISCUTER:
+                        return R.mipmap.ic_friendsrnd;
+                    case TypeActivite.WAYDEURS_DISPO:
+                        return R.mipmap.ic_suggestionwayd;
+                    case TypeActivite.AUTRE:
+                        return R.mipmap.ic_autre;
+                    case TypeActivite.ENTRAIDE:
+                        return R.mipmap.ic_entraide;
 
-           case Profil.PRO:
+                }
 
-               switch (type) {
+            case Profil.PRO:
 
-                   case TypeActivite.BAR_RESTO:
-                       return R.mipmap.ic_barrestopro;
+                switch (typeActivite) {
 
-                   case TypeActivite.SPORT:
-                       return R.mipmap.ic_sportpro;
-                   case TypeActivite.CULTURE:
-                       return R.mipmap.ic_expopro;
-                   case TypeActivite.JOUER:
-                       return R.mipmap.ic_jeupro;
-                   case TypeActivite.DISCUTER:
-                       return R.mipmap.ic_discuterpro;
-                   case TypeActivite.AUTRE:
-                       return R.mipmap.ic_autrepro;
+                    case TypeActivite.BAR_RESTO:
+                        return R.mipmap.ic_barrestopro;
+
+                    case TypeActivite.SPORT:
+                        return R.mipmap.ic_sportpro;
+                    case TypeActivite.CULTURE:
+                        return R.mipmap.ic_expopro;
+                    case TypeActivite.JOUER:
+                        return R.mipmap.ic_jeupro;
+                    case TypeActivite.DISCUTER:
+                        return R.mipmap.ic_discuterpro;
+                    case TypeActivite.AUTRE:
+                        return R.mipmap.ic_autrepro;
 
 
-               }
+                }
 
-       }
+            case Profil.CARPEDIEM:
+                return R.mipmap.icon_facebook;
+        }
 
         return R.mipmap.ic_expositionrnd;
     }
@@ -232,17 +237,19 @@ public class Outils {
 
 
     public static Bitmap redimendiensionnePhoto(Bitmap photo) {
-        float newheigh = photo.getHeight();
-        float newwith = photo.getWidth();
-        float ratio = (newwith / newheigh);
-        if (newheigh>200) {
+       if (photo!=null) {
+           float newheigh = photo.getHeight();
+           float newwith = photo.getWidth();
+           float ratio = (newwith / newheigh);
+           if (newheigh > 200) {
 
-            double finalwith = 200 * ratio;
-            double finalheigt = 200;
-            return Bitmap.createScaledBitmap(photo, (int) finalwith, (int) finalheigt, true);
-        }
-        else
-            return photo;
+               double finalwith = 200 * ratio;
+               double finalheigt = 200;
+               return Bitmap.createScaledBitmap(photo, (int) finalwith, (int) finalheigt, true);
+           } else
+               return photo;
+       }
+       return photo;
     }
 
     public static class TimePickerFragment extends DialogFragment

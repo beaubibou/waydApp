@@ -9,7 +9,7 @@
 
     >
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iconactivite"
+            android:id="@+id/photo"
             android:layout_marginLeft="10dp"
             android:layout_width="@dimen/photo2"
             android:layout_height="@dimen/photo2"
@@ -43,7 +43,7 @@
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/iconactivite"
+            android:layout_below="@+id/photo"
             android:progressTint="@android:color/holo_blue_dark"
             android:progressBackgroundTint="@android:color/holo_blue_dark"
             android:secondaryProgressTint="@android:color/holo_blue_dark"

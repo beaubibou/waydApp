@@ -54,7 +54,7 @@ public class DetailActivite extends MenuDrawerNew implements
     private TextView TV_sexe;
     private TextView TV_description;
     private TextView TV_Titre;
-    private TextView TV_TermineDans;
+    private TextView TV_TermineDans,TV_Adresse;
     private TextView TV_NbrInscrit, TV_SignalerActivite;
     private RatingBar ratingBar;
     private Activite activiteSelectionne;
@@ -94,6 +94,7 @@ public class DetailActivite extends MenuDrawerNew implements
         ratingBar = (RatingBar) findViewById(R.id.noteprofil);
         TV_description = (TextView) findViewById(R.id.description);
         TV_Titre = (TextView) findViewById(R.id.titre);
+        TV_Adresse = (TextView) findViewById(R.id.adresse);
         TV_TermineDans = (TextView) findViewById(R.id.terminedans);
         TV_NbrInscrit = (TextView) findViewById(R.id.nbrinscrit);
         TV_SignalerActivite = (TextView) findViewById(R.id.signaleractivite);
@@ -102,6 +103,7 @@ public class DetailActivite extends MenuDrawerNew implements
         IB_Message = (ImageButton) findViewById(R.id.messageami);
         participantAdapter = new ParticipantAdapter(getBaseContext(), listparticipant);
         TwoWayView LV_Participant = (TwoWayView) findViewById(R.id.listeparticipant);
+
         scrollView = (ScrollView) findViewById(R.id.scroll);
         LV_Participant.setAdapter(participantAdapter);
 
@@ -536,6 +538,7 @@ public class DetailActivite extends MenuDrawerNew implements
             TV_sexe.setText(activite.getSexeOrganisateur());
             TV_description.setText(convertLibelleActivite(activite.getLibelleUnicode()));
             TV_Titre.setText(activite.getTitreUnicode());
+            TV_Adresse.setText(activite.getAdresse());
             iconActivite.setImageResource(Outils.getActiviteMipMap(activite.getIdTypeActite(),activite.getTypeUser()));
 
             if (activite.getNbrparticipant() == activite.getNbmaxwaydeur()) {// Si l'acitivet complete
@@ -557,11 +560,11 @@ public class DetailActivite extends MenuDrawerNew implements
             if (activite.isDejainscrit() && !activite.isArchive())
                 gestionDejaInscrit();
 
-            if (activite.isOrganisateur() && !activite.isArchive()) {
+            if (activite.isOrganisateur(Outils.personneConnectee.getId()) && !activite.isArchive()) {
                 gestionOrganisateur();
             }
 
-            if (!activite.isDejainscrit() && !activite.isOrganisateur() && !activite.isArchive())
+            if (!activite.isDejainscrit() && !activite.isOrganisateur(Outils.personneConnectee.getId()) && !activite.isArchive())
                 gestionInscription();
 
             // Activiet le bouton de la map aprés le chargement de l'activite

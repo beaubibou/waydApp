@@ -28,7 +28,7 @@
             android:layout_alignLeft="@+id/pseudo"
             android:layout_alignStart="@+id/pseudo"
             android:lines="1"
-           tools:text="%Dernier message"
+            tools:text="%Dernier message"
             android:ellipsize="end"
             android:textSize="@dimen/texte2"
             android:layout_toStartOf="@+id/id_datecreation" />

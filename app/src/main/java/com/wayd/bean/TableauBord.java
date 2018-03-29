@@ -170,6 +170,7 @@ public class TableauBord implements Serializable, AsyncTaches.AsyncGetTdb.AsyncG
     public int getNbrsuggestion() {
 
         return nbrsuggestion;
+        //return 20;
     }
 
     public void Raz() {

@@ -43,7 +43,7 @@
                     android:id="@+id/titre1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                      android:layout_marginBottom="10dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/donneavis_commentpassee"
                     android:textAlignment="textStart"
 
@@ -60,7 +60,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                     />
+                        />
                 </RelativeLayout>
 
                 <EditText
@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:lines="4"
-               android:textSize="@dimen/texte2"
+                    android:textSize="@dimen/texte2"
                     android:hint="@string/donneavis_hint_consigne"
                     android:inputType="none"
                     android:maxLength="@string/maxLengtAvis"
@@ -191,4 +191,3 @@
     </android.support.v4.widget.DrawerLayout>
 
 </LinearLayout>
-

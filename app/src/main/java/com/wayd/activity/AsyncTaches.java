@@ -150,8 +150,9 @@ public class AsyncTaches {
         final int commencedans;
         final String motcle;
         final Context mcontext;
+        final int offset;
 
-        public AsyncGetListActivite(Async_GetListActiviteListener ecouteur, CritereRechercheActivite critereRechercheActivite, Context mcontext) {
+        public AsyncGetListActivite(Async_GetListActiviteListener ecouteur, CritereRechercheActivite critereRechercheActivite,int offset, Context mcontext) {
             super();
             this.ecouteur = ecouteur;
             this.mcontext = mcontext;
@@ -162,6 +163,7 @@ public class AsyncTaches {
             this.latitude = critereRechercheActivite.getLatitude();
             this.typeUser=critereRechercheActivite.getTypeUser();
             this.commencedans=critereRechercheActivite.getCommenceDans();
+            this.offset=offset;
 
         }
 

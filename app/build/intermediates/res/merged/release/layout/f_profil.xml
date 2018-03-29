@@ -199,32 +199,34 @@
             <RelativeLayout
                 android:id="@+id/rlcom"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="40dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                >
+                android:layout_marginTop="10dp">
+
                 <Button
-                    android:padding="5dp"
+                    android:id="@+id/supprimercompte"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Supprimer compte"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
                     android:background="@color/colorAccent"
-                    android:textSize="@dimen/texte1"
-                    android:id="@+id/supprimercompte"
-                    android:layout_marginBottom="5dp"/>
+                    android:padding="5dp"
+                    android:text="Supprimer compte"
+                    android:textSize="@dimen/texte1" />
 
                 <TextView
                     android:id="@+id/commentaires"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+       android:layout_above="@+id/supprimercompte"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/supprimercompte"
                     android:background="@drawable/borduretextfondblanc"
                     android:gravity="left"
                     android:hint="@string/f_profil_description"
                     android:padding="10dp"
+                    android:layout_marginBottom="@dimen/marge2"
                     android:scrollbars="vertical"
                     android:textSize="@dimen/texte1" />
 

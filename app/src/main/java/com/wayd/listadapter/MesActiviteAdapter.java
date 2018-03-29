@@ -79,7 +79,7 @@ public class MesActiviteAdapter extends BaseAdapter
 
         TextView nomorganisteur = (TextView) layoutItem.findViewById(R.id.pseudo);
         TextView titre = (TextView) layoutItem.findViewById(R.id.dateactivite);
-        ImageView photo = (ImageView) layoutItem.findViewById(R.id.iconactivite);
+        ImageView photo = (ImageView) layoutItem.findViewById(R.id.photo);
         TextView TV_tempsrestant= (TextView) layoutItem.findViewById(R.id.tempsrestant);
         RatingBar ratingBar = (RatingBar) layoutItem.findViewById(R.id.note);
       //  TextView TV_nbravis=(TextView) layoutItem.findViewById(R.id.id_nbravis);
